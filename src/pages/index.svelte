@@ -23,6 +23,7 @@
 </div> -->
 <style type="scss">
   h1 {
+    margin-top: 0;
     color: var(--hi);
   }
 </style>

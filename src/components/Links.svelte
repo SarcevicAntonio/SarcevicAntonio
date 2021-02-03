@@ -8,15 +8,18 @@
 </div>
 <a href="./Impressum" class="light-green-text"> Impressum </a>
 
-<style>
+<style type="scss">
   a {
     margin: 8px;
   }
-  div a {
-    color: var(--bg);
-    background-color: var(--accent);
-    padding: 8px 16px;
-    border-radius: 9999px;
-    text-decoration: none;
+  div {
+    margin: 16px 0;
+    a {
+      color: var(--bg);
+      background-color: var(--accent);
+      padding: 8px 16px;
+      border-radius: 9999px;
+      text-decoration: none;
+    }
   }
 </style>

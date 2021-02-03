@@ -12,12 +12,14 @@
   </p>
   <p>Studiert seit 2020 Informatik (M. Sc.) an der FH Münster.</p>
   <p>
-    Hat von 2016 bis 2020 Medien- und Kommunikationsinformatik (B. Sc.) an der
-    Hochschule Rhein-Waal studiert.
+    Hat einen Bachelor of Science im Studiengang Medien- und Kommunikationsinformatik erlangt.
   </p>
 </div>
 
 <style>
+  h3 {
+    margin-bottom: 0;
+  }
   p {
     max-width: 400px;
   }

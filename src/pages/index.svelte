@@ -1,14 +1,18 @@
 <script type="ts">
-  import { metatags, url } from "@roxi/routify";
-  metatags.title = "Hello Worldtify";
+  import Infos from "../components/Infos.svelte";
+  import Links from "../components/Links.svelte";
+  import { metatags } from "@roxi/routify";
+  metatags.title = "Die Vebsite von Antonio Sarcevic ";
   metatags.description = "Description coming soon...";
-
-  const msg: string = "World";
-  let value: string = "a-random-page";
 </script>
 
-<h2>Hello {msg}!</h2>
-<div>
+<h2>👋 Hallo, ich bin</h2>
+<h1>Antonio Sarcevic.</h1>
+
+<Infos />
+<Links />
+
+<!-- <div>
   <label>
     visit a page:
     <input type="text" bind:value />
@@ -16,16 +20,9 @@
       <button>go there</button>
     </a>
   </label>
-</div>
-
+</div> -->
 <style type="scss">
-  label {
-    font-size: 16px;
-    input {
-      font-size: 16px;
-    }
-    button {
-      font-size: 16px;
-    }
+  h1 {
+    color: var(--hi);
   }
 </style>

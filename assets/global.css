@@ -1,7 +1,64 @@
+:root {
+  --bg: #fffaef;
+  --accent: #66359f;
+  --hi: #6e9f35;
+  --fg: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-	font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 8px;
+  font-family: Roboto, sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.8em;
 }
 
 h2 {
-	margin-top: 0;
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2.2em;
+}
+
+a {
+  color: var(--hi);
+}
+
+.fc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fr {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont {
+  max-width: 800px;
 }

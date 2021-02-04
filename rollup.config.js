@@ -11,6 +11,8 @@ import getConfig from '@roxi/routify/lib/utils/config'
 import autoPreprocess from 'svelte-preprocess'
 import postcssImport from 'postcss-import'
 import { injectManifest } from 'rollup-plugin-workbox'
+import { mdsvex } from 'mdsvex'
+import slug from 'remark-slug'
 
 
 const { distDir } = getConfig() // use Routify's distDir for SSOT
@@ -50,6 +52,7 @@ export default {
     },
     plugins: [
         svelte({
+            extensions: ['.svelte', '.md'],
             dev: !production, // run-time checks      
             // Extract component CSS — better performance
             css: css => css.write(`bundle.css`),
@@ -58,6 +61,13 @@ export default {
                 autoPreprocess({
                     postcss: { plugins: [postcssImport()] },
                     defaults: { style: 'postcss' }
+                }),
+                mdsvex({
+                    remarkPlugins: [slug],
+                    layout: {
+                        blog: 'src/components/BlogEntry.svelte'
+                    },
+                    extension: 'md'
                 })
             ]
         }),

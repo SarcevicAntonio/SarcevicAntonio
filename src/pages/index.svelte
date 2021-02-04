@@ -12,15 +12,6 @@
 <Infos />
 <Links />
 
-<!-- <div>
-  <label>
-    visit a page:
-    <input type="text" bind:value />
-    <a href={$url('/id/'+value)}>
-      <button>go there</button>
-    </a>
-  </label>
-</div> -->
 <style type="scss">
   h1 {
     margin-top: 0;

@@ -1,3 +1,9 @@
+<script>
+  import { url } from "@roxi/routify";
+
+</script>
+
+<a href={$url("./blog")}> zum Blog </a>
 <div class="fr">
   <a href="https://twitter.com/SarcevicAntonio"> Twitter </a>
   <a href="https://www.linkedin.com/in/antonio-sarcevic-3b464a183/">
@@ -6,7 +12,7 @@
   <a href="https://github.com/SarcevicAntonio/"> GitHub </a>
   <a href="mailto:sarcevicantonio@gmail.com"> E-Mail </a>
 </div>
-<a href="./Impressum" class="light-green-text"> Impressum </a>
+<a href={$url("./impressum")} class="light-green-text"> Impressum </a>
 
 <style type="scss">
   a {

@@ -3,7 +3,7 @@
 
 </script>
 
-<a href={$url("./blog")}> zum Blog </a>
+<!-- <a href={$url("./blog")}> zum Blog </a> -->
 <div class="fr">
   <a href="https://twitter.com/SarcevicAntonio"> Twitter </a>
   <a href="https://www.linkedin.com/in/antonio-sarcevic-3b464a183/">

@@ -1,7 +1,7 @@
 <script type="ts">
-  import Infos from "../components/Infos.svelte";
-  import Links from "../components/Links.svelte";
   import { metatags } from "@roxi/routify";
+  import Infos from "../components/Infos.svelte";
+
   metatags.title = "Die Vebsite von Antonio Sarcevic ";
   metatags.description = "Description coming soon...";
 </script>
@@ -10,7 +10,6 @@
 <h1>Antonio Sarcevic.</h1>
 
 <Infos />
-<Links />
 
 <style type="scss">
   h1 {

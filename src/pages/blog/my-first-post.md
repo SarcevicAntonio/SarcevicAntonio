@@ -2,13 +2,12 @@
 title: My first Post
 published: 2020-06-21T21:36:59.459Z
 author: jakobrosenberg
-summary: |  
+summary: |
   Lorem markdownum, laude, superesse vires. Nisi iuveni, celsior.    
   Est ut erat. Cum Iovis ut donavi petitos et, at fugit vincemur ubi: a dixit
   credit, eras Aesone.
 layout: blog
 ---
-
 
 # {title}
 
@@ -18,15 +17,21 @@ Lorem markdownum, laude, superesse vires. Nisi iuveni, celsior.
 
 ```javascript
 var internic_codec = hub_cycle_post;
-matrixWebsite(basebandSharewareMashup(
-        sipRdramNumber.icf.ipPrimaryPeripheral(crm_column, 2, integer),
-        sli_wireless_type));
+matrixWebsite(
+  basebandSharewareMashup(
+    sipRdramNumber.icf.ipPrimaryPeripheral(crm_column, 2, integer),
+    sli_wireless_type
+  )
+);
 if (overwriteCmykUser + syntaxToken) {
-    cache = w;
+  cache = w;
 } else {
-    software_ipod_wired(-3, switchRootBus.vdu_mini_bookmark.bar(rtfSpamSnow,
-            bit, -2), 50);
-    file(keyboard + 4, spreadsheetFileDesktop(disk, bit, output));
+  software_ipod_wired(
+    -3,
+    switchRootBus.vdu_mini_bookmark.bar(rtfSpamSnow, bit, -2),
+    50
+  );
+  file(keyboard + 4, spreadsheetFileDesktop(disk, bit, output));
 }
 ```
 
@@ -38,11 +43,11 @@ credit, eras Aesone.
 ## Decimo Peleu
 
 Hunc est senectae vires iterum longusque: quis astu nec tamen cognataque solamen
-ignes in illa, Pandione. Favilla resto verba; hostem auditi, est plura *canos
-super Iovi* sub vocem. Blandita fulmineis candidus Nam sedet mersisque nec non
+ignes in illa, Pandione. Favilla resto verba; hostem auditi, est plura _canos
+super Iovi_ sub vocem. Blandita fulmineis candidus Nam sedet mersisque nec non
 duo tetenderat putat. [Sentiet est meque](http://excessere-ipsa.org/) adversi
-infelix coryli membraque *exegit sacerdos quercus* spumeus **interea**! Meque
-*taurorum et venit*.
+infelix coryli membraque _exegit sacerdos quercus_ spumeus **interea**! Meque
+_taurorum et venit_.
 
 1. Genitas in nullae fidem
 2. Quod dolore haud fraudate
@@ -67,7 +72,7 @@ perspicit hostem, illi cum, est aureus flumina lumine?
 ## Procrin modo concreta animorum tandem aras
 
 [Vellera viroque](http://illi.io/consulat-sed.html) iter quae crinale offensa;
-mora, mihi offensaque. Unus *nec* caede raptam *nomen* constitit aequora est!
+mora, mihi offensaque. Unus _nec_ caede raptam _nomen_ constitit aequora est!
 
 Esto est mox te ista licebit mille supposita de Aeacon sedisti quantum. Rapiunt
 sterilique victi, ecce cum sumit mihi nulla, et **corpore sua**.

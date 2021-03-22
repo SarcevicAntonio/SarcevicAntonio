@@ -8,7 +8,9 @@
   <slot />
 </div>
 
-<style>
+<a href={$url("../blog")}>go back</a>
+
+<style lang="scss">
   div {
     max-width: 800px;
     margin: 8px;
@@ -17,5 +19,3 @@
     border: 1px solid var(--hi);
   }
 </style>
-
-<a href={$url("../blog")}>go back</a>

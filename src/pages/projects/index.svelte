@@ -1,7 +1,8 @@
 <script>
   import { layout, metatags, url } from "@roxi/routify";
+  import marked from "marked";
 
-  metatags.title = "Der Blog von Antonio Sarcevic ";
+  metatags.title = "Projekte von Antonio Sarcevic";
 
   const posts = $layout.children
     .filter((c) => c.meta["frontmatter"])
@@ -12,31 +13,34 @@
     );
 </script>
 
-<h1>Tonis Blog</h1>
+<h1>Tonis Projekte</h1>
 
-<div class="posts">
-  <div class="card">
-    <span class="title">//TODO: Write Blog Posts</span>
-    <br />
-    <br />
-    <span>Hier gibt es noch nicht viel zu lesen...</span>
-  </div>
-  <!-- {#each posts as { meta, path }}
+<div>
+  {#each posts as { meta, path }}
     <div class="card">
       <a class="title" href={$url(path)}>{meta.frontmatter.title}</a>
       {@html marked(meta.frontmatter.summary)}
     </div>
-  {/each} -->
+  {/each}
+  <div class="card disabled">
+    <span class="title">Weitere Projekte Folgen...</span>
+  </div>
 </div>
 
-<a href={$url("../")}>go back</a>
-
 <style style="scss">
-  .posts {
+  div {
+    max-width: 600px;
+  }
+  .card {
     margin: 8px 0;
     padding: 8px;
-    border: 1px solid gray;
+    border: 1px solid var(--hi);
     border-radius: 8px;
-    width: 800px;
+  }
+  .title {
+    font-size: 2em;
+  }
+  .disabled {
+    border-color: gray;
   }
 </style>

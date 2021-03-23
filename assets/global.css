@@ -88,3 +88,11 @@ picture {
   margin: auto;
   display: block;
 }
+
+.card {
+  margin: 1em 0;
+  padding: 0 1em;
+  border: 1px solid var(--hi);
+  border-radius: 1em;
+  max-width: 75ch;
+}

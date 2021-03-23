@@ -5,8 +5,8 @@
     <br />
     <p>
       Antonio Sarcevic<br />
-      Neustr. 35<br />
-      46459 Rees <br />
+      Bischopinkstr. 48<br />
+      48151 Münster <br />
     </p>
     <br />
     <p>

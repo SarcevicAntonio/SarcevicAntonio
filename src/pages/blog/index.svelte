@@ -1,5 +1,6 @@
 <script>
-  import { layout, metatags, url } from "@roxi/routify";
+  import { layout, metatags } from "@roxi/routify";
+  import EntryList from "../../components/EntryList.svelte";
 
   metatags.title = "Der Blog von Antonio Sarcevic ";
 
@@ -14,29 +15,4 @@
 
 <h1>Tonis Blog</h1>
 
-<div class="posts">
-  <div class="card">
-    <span class="title">//TODO: Write Blog Posts</span>
-    <br />
-    <br />
-    <span>Hier gibt es noch nicht viel zu lesen...</span>
-  </div>
-  <!-- {#each posts as { meta, path }}
-    <div class="card">
-      <a class="title" href={$url(path)}>{meta.frontmatter.title}</a>
-      {@html marked(meta.frontmatter.summary)}
-    </div>
-  {/each} -->
-</div>
-
-<a href={$url("../")}>go back</a>
-
-<style style="scss">
-  .posts {
-    margin: 8px 0;
-    padding: 8px;
-    border: 1px solid gray;
-    border-radius: 8px;
-    width: 800px;
-  }
-</style>
+<EntryList {posts} />

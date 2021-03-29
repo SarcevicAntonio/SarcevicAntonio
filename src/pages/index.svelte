@@ -2,11 +2,11 @@
   import { metatags } from "@roxi/routify";
   import Infos from "../components/Infos.svelte";
 
-  metatags.title = "Die Vebsite von Antonio Sarcevic ";
+  metatags.title = "The Website of Antonio Sarcevic ";
   metatags.description = "Description coming soon...";
 </script>
 
-<h2>👋 Hallo, ich bin</h2>
+<h2>👋 Hello, I am</h2>
 <h1>Antonio Sarcevic.</h1>
 
 <Infos />

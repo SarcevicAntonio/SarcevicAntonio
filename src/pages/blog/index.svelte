@@ -2,7 +2,7 @@
   import { layout, metatags } from "@roxi/routify";
   import EntryList from "../../components/EntryList.svelte";
 
-  metatags.title = "Der Blog von Antonio Sarcevic ";
+  metatags.title = "Toni's Blog";
 
   const posts = $layout.children
     .filter((c) => c.meta["frontmatter"])
@@ -13,6 +13,6 @@
     );
 </script>
 
-<h1>Tonis Blog</h1>
+<h1>Toni's Blog</h1>
 
 <EntryList {posts} />

@@ -1,51 +1,52 @@
 ---
-title: Wieso ich Svelte liebe
+title: Why I ❤ Svelte
 summary: |
-  In diesem Artikel erkläre ich, wieso ich in Svelte verliebt bin und wieso Sie es auch sein sollten.
+  In this article I explain why I am in love with Svelte and why you should be too.
+published: 2021-03-29
 layout: blog
 ---
 
 # {title}
 
-[Svelte](https://svelte.dev/) unterscheidet sich von SPA Frameworks wie Angular, Vue und React dadurch, dass es ein _Compiler_ ist, der die Komponenten baut, und dadurch möglichst effizientes JavaScript produziert.
+[Svelte](https://svelte.dev/) differs from SPA frameworks like Angular, Vue and React in that it is a _compiler_ that builds the components, thereby producing more efficient JavaScript.
 
-Bei Angular, Vue und React muss im Browser das gesamte Framework geladen werden, während Svelte durch den Bau-Schritt dies nicht benötigt.
-Hier werden die Komponenten bzw. die Webapplikation zu möglichst kleinen JavaScript Bundles kompiliert.
-Durch kleinere Bundles kann die App initial schneller von Besuchern geladen werden. [RealWorld App Vergleich von Bundle Sizes.](https://medium.com/dailyjs/a-realworld-comparison-of-front-end-frameworks-2020-4e50655fe4c1#31f0)
+Angular, Vue and React require the entire framework to be loaded in the browser, while Svelte does not need this due to the build step.
+With Svelte, individual components or an entire web app are compiled into JavaScript bundles that are as small as possible.
+Smaller bundles allow the app to be loaded faster by visitors initially. [RealWorld App Comparison of Bundle Sizes.](https://medium.com/dailyjs/a-realworld-comparison-of-front-end-frameworks-2020-4e50655fe4c1#31f0)
 
-Außerdem bietet Svelte eine bessere Performance bei Laufzeit als andere Frameworks.
-Der Compiler baut aus Komponenten effizientes JavaScript was chirurgisch das DOM verändert.
-Dadurch wird kein Abgleichen mit einem Virtual DOM benötigt.
-[RealWorld App Vergleich von Performance.](https://medium.com/dailyjs/a-realworld-comparison-of-front-end-frameworks-2020-4e50655fe4c1#ac34)
+In addition, Svelte provides better runtime performance than other frameworks.
+The compiler builds efficient JavaScript from your component source files which surgically changes the DOM.
+This eliminates the need for comparing against a Virtual DOM.
+[RealWorld App Comparison of Performance.](https://medium.com/dailyjs/a-realworld-comparison-of-front-end-frameworks-2020-4e50655fe4c1#ac34)
 
-Außerdem erlaubt der Svelte Compiler eine eigene Syntax, welche zu einfachem, boilerplate freiem Code führt.
-Svelte nutzt im Gegensatz zu React kein JSX, sondern eine eigene Syntax, die auf normalem HTML, CSS und JavaScript basiert.
-Die Syntax ist somit ein Superset von HTML welches als Single File Component gekapselte Komponenten definieren kann.
-[Beispiel einer geschachtelten Komponente.](https://svelte.dev/examples#nested-components)
+In addition, the Svelte compiler allows its own syntax, which leads to simple, boilerplate-free code.
+Svelte, unlike React, does not use JSX, but its own syntax based on normal HTML, CSS and JavaScript.
+The syntax is thus a superset of HTML which can define encapsulated components as a single file component.
+[Example of a nested component.](https://svelte.dev/examples#nested-components)
 
-Der Compiler bietet außerdem noch andere Vorteile wie eingebautes [Accessibility Testing](https://svelte.dev/repl/5ed4cb37c0ef43e4a709d6e8f37069c2?version=3.35.0) und eine [Transition und Animation API](https://svelte.dev/repl/f78106a749934114ae274828f1e3390c?version=3.35.0) die mitgeliefert werden kann.
-Nur die Features die genutzt werden landen im fertigen Bundle, weshalb eine Vielzahl von Features mitgeliefert werden kann.
+The compiler also offers other benefits such as built-in [accessibility testing](https://svelte.dev/repl/5ed4cb37c0ef43e4a709d6e8f37069c2?version=3.35.0) and a [transition and animation API](https://svelte.dev/repl/f78106a749934114ae274828f1e3390c?version=3.35.0) that are included.
+Only the features that are used end up in the final bundle, so a variety of features can be included inside Svelte.
 
-Svelte hat zusätzlich einen 100 % Score auf [Custom Elements Everywhere](https://custom-elements-everywhere.com/#svelte), eine Seite bei der die Kompatibilität von Frameworks mit Web Components getestet wird.
-Außerdem kann der Svelte Compiler auch genutzt werden, [um Web Components als Output zu generieren](https://dev.to/silvio/how-to-create-a-web-components-in-svelte-2g4j).
-Dadurch wäre es möglich, dass bei einem wechsel des Frameworks auch Komponenten als performante Web Components exportiert werden und mitgenommen werden können.
-In einem Webcomponents.dev Artikel mit dem Titel ["All the Ways to Make a Web Component"](https://webcomponents.dev/blog/all-the-ways-to-make-a-web-component/) hat Svelte bei der Bundle Size von einer Komponente den dritten Platz und bei der Performance den vierten Platz belegt.
-Damit ist Svelte als einzige Bibliothek (neben dem regulären HTMLElement-basierten approach) in beiden Kategorien unter der Top 5.
+Svelte also has a 100% score on [Custom Elements Everywhere](https://custom-elements-everywhere.com/#svelte), a site that tests the compatibility of frameworks with Web Components.
+Furthermore, the Svelte compiler can also be used [to generate Web Components as output](https://dev.to/silvio/how-to-create-a-web-components-in-svelte-2g4j).
+Thus it would be possible to change out the framework of an existing, previously Svelte based Application by compiling the Svelte components to high-performance Web Components and using them in a rewrite.
+In a Webcomponents.dev article titled ["All the Ways to Make a Web Component"](https://webcomponents.dev/blog/all-the-ways-to-make-a-web-component/), Svelte ranked third for bundle size of a single Web Component and fourth for performance.
+This makes Svelte the only library (besides the regular HTMLElement-based approach) in the top 5 in both categories.
 
-Svelte ist zwar noch relativ neu, jedoch gibt es schon eine ziemlich aktive, gut organisierte und hilfreiche Community.
-Projekte wie [Routify](https://routify.dev/) bieten z.B. einen einfachen Ordnerstruktur-basierten Router der sogar als Server Side Renderd App ausgeliefert werden kann.
-[Elder.js](https://elderguide.com/tech/elderjs/) ist ein Framework zu erstellen von riesigen, statischen und SEO freundlichen Webapplikationen.
-Mit [`@sveltejs/vite-plugin-svelte`](https://www.npmjs.com/package/@sveltejs/vite-plugin-svelte) kann das blitzschnelle [Vite](https://vitejs.dev/) als Dev-Sever und Bundler genutzt werden.
-[Svelte hat außerdem den ersten Platz in den Kategorien Satisfacion und Interest in der Rubrik Front-end Frameworks im State of JS 2020 Survey erreicht.](https://2020.stateofjs.com/en-US/technologies/front-end-frameworks/#front_end_frameworks_experience_ranking)
+While Svelte is still relatively new, there is already a fairly active, well-organized, and helpful community.
+For example, projects like [Routify](https://routify.dev/) provide a simple folder structure based router that can easily be delivered as a server side rendered app. _This website is written using Routify!_
+[Elder.js](https://elderguide.com/tech/elderjs/) is a framework to create huge, static and SEO friendly web applications.
+With [`@sveltejs/vite-plugin-svelte`](https://www.npmjs.com/package/@sveltejs/vite-plugin-svelte), the lightning fast [Vite](https://vitejs.dev/) can be used as a dev sever and production bundler.
+[Svelte also took first place in the Satisfaction and Interest categories in the Front-end Frameworks section of the State of JS 2020 Survey.](https://2020.stateofjs.com/en-US/technologies/front-end-frameworks/#front_end_frameworks_experience_ranking)
 
-[`svelte-preprocess`](https://github.com/sveltejs/svelte-preprocess) ist ein offizieller Preprocessor der das Benutzen von u.a. [TypeScript](https://www.typescriptlang.org/) und [Sass/SCSS](https://sass-lang.com/) innerhalb von Svelte Komponenten ohne komplizierte Konfigurationen ermöglicht.
+[`svelte-preprocess`](https://github.com/sveltejs/svelte-preprocess) is an official preprocessor that enables the use of [TypeScript](https://www.typescriptlang.org/) and [Sass/SCSS](https://sass-lang.com/) (among other technologies) within Svelte components without complicated configurations.
 
 ## TLDR Pro Svelte:
 
-- kleinere .js Bundles für den Client
-- bessere Performance, da kein Virtual DOM
-- einfache, boilerplate-freie, auf HTML basierte Syntax
-- weitere Vorteile wie integriertes Accessibility Testing und Transition API
-- Kompatibel mit Web Components und auch als möglicher Output des Compilers
-- Aktive und hiflreiche Community
-- TypeScript kompatibel, dank `svelte-preprocess` sogar ohne Konfiguration
+- smaller .js bundles for the client bringing faster initial load times
+- better performance, as no Virtual DOM
+- simple, boilerplate-free, HTML-based syntax
+- other advantages like integrated accessibility testing and transition API
+- Compatible with Web Components and also as possible output of the compiler
+- Active and helpful community
+- TypeScript compatible, thanks to `svelte-preprocess` even without configuration

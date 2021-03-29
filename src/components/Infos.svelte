@@ -1,18 +1,18 @@
 <div class="fc">
-  <h3>👤 Infos zur Person</h3>
-  <p>Programmiert am liebsten in Svelte mit TypeScript und SCSS.</p>
+  <h3>👤 About Toni</h3>
+  <p>Likes to program in Svelte with TypeScript and SCSS.</p>
   <p>
-    Arbeitet aber auch gerne mit Web Components, Angular, Figma, Docker und der
+    Also enjoys working with Web Components, Angular, Figma, Docker and
     GitlabCI.
     <br />
-    Ab und zu sogar mit NodeJS, Ruby on Rails und Java.
+    Now and then even with NodeJS, Ruby on Rails and Java.
   </p>
   <p>
-    Arbeitet seit 2019/3 als Webentwickler beim Westphalia-Datalab in Münster.
+    Working as a web developer at Westphalia-Datalab in Münster since 2019/3.
   </p>
-  <p>Studiert seit 2020 Informatik (M. Sc.) an der FH Münster.</p>
+  <p>Studies Informatics (M. Sc.) at the FH Münster since 2020.</p>
   <p>
-    Hat einen Bachelor of Science im Studiengang Medien- und Kommunikationsinformatik erlangt.
+    Earned a Bachelor of Science degree in Media and Communications Informatics.
   </p>
 </div>
 

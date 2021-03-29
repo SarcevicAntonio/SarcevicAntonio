@@ -6,4 +6,4 @@
   <slot />
 </div>
 
-<a href={$url(".")}>Zurück zu allen Einträgen</a>
+<a href={$url(".")}> &#129044; Back</a>

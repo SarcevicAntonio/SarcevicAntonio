@@ -3,7 +3,7 @@
 
   const links = [
     ["./index", "Home"],
-    ["./projects", "Projekte"],
+    ["./projects", "Projects"],
     ["./blog", "Blog"],
   ];
 </script>

@@ -6,6 +6,10 @@ published: 2021-03-29
 layout: blog
 ---
 
+<script>
+  import Resources from '../../components/Resources.svelte'
+</script>
+
 # {title}
 
 During my 1th semester of my Informatics Masters's degree, we got tasked to create an offline-first booking app for internal use as part of a distributed database course. The idea was that there is a company offering cruise ship tickets and they need an internal booking app for sales agents to use on offline tablets when they recruit new customers.
@@ -29,5 +33,10 @@ CouchDB is for the most part pretty easy to work with, except when it comes to u
 
 ## Final Results
 
-- <a href="https://github.com/SarcevicAntonio/Booking-App" target="_blank">Project Repo on GitHub</a>
-- <a href="/files/projects/pirate-bay-tours/VI___Dokumentation.pdf" target="_blank">Project Documentation (23 pages, written in german)</a>
+<Resources items={[{
+href: "https://github.com/SarcevicAntonio/Booking-App",
+txt: "Project Repo on GitHub"
+},{
+href: "/files/projects/pirate-bay-tours/VI___Dokumentation.pdf",
+txt: "Project Documentation (23 pages, written in german)"
+}]}/>

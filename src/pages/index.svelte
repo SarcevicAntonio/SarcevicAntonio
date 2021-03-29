@@ -3,7 +3,8 @@
   import Infos from "../components/Infos.svelte";
 
   metatags.title = "The Website of Antonio Sarcevic ";
-  metatags.description = "Description coming soon...";
+  metatags.description =
+    "My little space on the web where I might write stuff n things.";
 </script>
 
 <h2>👋 Hello, I am</h2>

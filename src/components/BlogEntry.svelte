@@ -1,9 +1,14 @@
 <script>
-  import { url } from "@roxi/routify";
+  import { metatags, url } from "@roxi/routify";
+
+  export let title;
+  export let summary;
+  metatags.title = `'${title}' on Toni's Blog`;
+  metatags.description = summary;
 </script>
 
-<div class="card">
+<article class="card">
   <slot />
-</div>
+</article>
 
 <a href={$url(".")}> &#129044; Back</a>

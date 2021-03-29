@@ -3,13 +3,14 @@
   import Nav from "../components/Nav.svelte";
 </script>
 
-<div class="fc">
-  <!-- routify:options preload="proximity" -->
-  <!-- TODO: reenable when posts are there -->
+<!-- routify:options preload="proximity" -->
+<!-- TODO: reenable when posts are there -->
+<nav class="fc">
   <Nav />
+</nav>
+<main class="fc">
   <slot />
+</main>
+<footer class="fc">
   <Footer />
-</div>
-
-<style type="scss">
-</style>
+</footer>

@@ -1,5 +1,5 @@
 <div class="fc">
-  <h3>👤 About Toni</h3>
+  <h2>👤 About Toni</h2>
   <p>Likes to program in Svelte with TypeScript and SCSS.</p>
   <p>
     Also enjoys working with Web Components, Angular, Figma, Docker and
@@ -17,8 +17,9 @@
 </div>
 
 <style>
-  h3 {
+  h2 {
     margin-bottom: 0;
+    font-size: 2em;
   }
   p {
     max-width: 400px;

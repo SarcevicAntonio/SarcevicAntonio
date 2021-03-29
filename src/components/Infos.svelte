@@ -18,7 +18,6 @@
 
 <style>
   h2 {
-    margin-bottom: 0;
     font-size: 2em;
   }
   p {

@@ -19,10 +19,10 @@
 <style>
   .pill {
     color: var(--fg);
-    background-color: var(--hi);
-  }
-  .active {
     background-color: white;
     border-color: var(--hi);
+  }
+  .active {
+    background-color: var(--hi);
   }
 </style>

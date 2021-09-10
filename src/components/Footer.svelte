@@ -13,7 +13,7 @@
   <a class="pill" href="https://github.com/SarcevicAntonio/"> GitHub </a>
   <a class="pill" href="mailto:sarcevicantonio@gmail.com"> E-Mail </a>
 </div>
-<a href={$url("./impressum")} class="light-green-text"> Impressum </a>
+<!-- <a href={$url("./impressum")} class="light-green-text"> Impressum </a> -->
 <p>© {new Date().getFullYear()} Antonio Sarcevic</p>
 
 <style type="scss">

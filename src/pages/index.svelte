@@ -7,8 +7,7 @@
     "My little space on the web where I might write stuff n things.";
 </script>
 
-<h2>👋 Hello, I am</h2>
-<h1>Antonio Sarcevic.</h1>
+<h1><span class="hello">👋 Hello, I am</span><br /> Antonio Sarcevic.</h1>
 
 <Infos />
 
@@ -16,5 +15,9 @@
   h1 {
     margin-top: 0;
     color: var(--hi);
+  }
+  .hello {
+    color: var(--fg);
+    font-size: 0.53em;
   }
 </style>

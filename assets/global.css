@@ -1,8 +1,11 @@
 :root {
-  --bg: #fffaef;
-  --accent: #66359f;
-  --hi: #6e9f35;
-  --fg: black;
+  --bg: hsl(281, 100%, 97%);
+  --bgg: hsl(161, 100%, 97%);
+  /* --accent: hsl(268, 50%, 42%); */
+  --accent: hsl(281, 50%, 42%);
+  /* --hi: hsl(88, 50%, 42%); */
+  --hi: hsl(161, 50%, 42%);
+  --fg: #000000;
 }
 
 * {
@@ -12,9 +15,15 @@
 body {
   margin: 0;
   padding: 8px;
-  font-family: Roboto, sans-serif;
-  background-color: var(--bg);
+  font-family: "Atkinson Hyperlegible", Roboto, sans-serif;
+  background: rgb(255,250,239);
+  background: linear-gradient(120deg, var(--bg) 0%, var(--bgg) 100%);;
   color: var(--fg);
+}
+
+pre,
+code {
+  font-family: "Fira Code", "Roboto Mono", monospace;
 }
 
 h1,
@@ -95,4 +104,9 @@ picture {
   border: 1px solid var(--hi);
   border-radius: 1em;
   max-width: 75ch;
+  background-color: white;
+}
+
+.posts p {
+  text-align: center;
 }

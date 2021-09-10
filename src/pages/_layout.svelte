@@ -4,7 +4,6 @@
 </script>
 
 <!-- routify:options preload="proximity" -->
-<!-- TODO: reenable when posts are there -->
 <nav class="fc">
   <Nav />
 </nav>

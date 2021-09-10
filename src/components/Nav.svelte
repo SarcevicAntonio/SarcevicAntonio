@@ -22,7 +22,7 @@
     background-color: var(--hi);
   }
   .active {
-    background-color: var(--bg);
+    background-color: white;
     border-color: var(--hi);
   }
 </style>

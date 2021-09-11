@@ -4,6 +4,9 @@ summary: |
   In this article I explain why I am in love with Svelte and why you should be too.
 published: 2021-03-29
 layout: blog
+tags:
+  - svelte
+  - web-dev
 ---
 
 # {title}
@@ -22,7 +25,7 @@ This eliminates the need for comparing against a Virtual DOM.
 In addition, the Svelte compiler allows its own syntax, which leads to simple, boilerplate-free code.
 Svelte, unlike React, does not use JSX, but its own syntax based on normal HTML, CSS and JavaScript.
 The syntax is thus a superset of HTML which can define encapsulated components as a single file component.
-[Example of a nested component.](https://svelte.dev/examples#nested-components)
+[Example of a nested component.](https://svelte.dev/examples#nested-components) The syntax allows you to be super concise and it feels like Svelte is getting out of your way as much as possible, only making the tedious things in classic web dev more smooth. Because its a superset of HTML you can still do about everything you have learned about classic web dev! Old-school libraries just work, because [if they spit out some HTML you can even use Svelte to render it for you!](https://svelte.dev/repl/30d2efe6622f4150a73405b706d58321?version=3.42.5)
 
 The compiler also offers other benefits such as built-in [accessibility testing](https://svelte.dev/repl/5ed4cb37c0ef43e4a709d6e8f37069c2?version=3.35.0) and a [transition and animation API](https://svelte.dev/repl/f78106a749934114ae274828f1e3390c?version=3.35.0) that are included.
 Only the features that are used end up in the final bundle, so a variety of features can be included inside Svelte.
@@ -31,7 +34,7 @@ Svelte also has a 100% score on [Custom Elements Everywhere](https://custom-elem
 Furthermore, the Svelte compiler can also be used [to generate Web Components as output](https://dev.to/silvio/how-to-create-a-web-components-in-svelte-2g4j).
 Thus it would be possible to change out the framework of an existing, previously Svelte based Application by compiling the Svelte components to high-performance Web Components and using them in a rewrite.
 In a Webcomponents.dev article titled ["All the Ways to Make a Web Component"](https://webcomponents.dev/blog/all-the-ways-to-make-a-web-component/), Svelte ranked third for bundle size of a single Web Component and fourth for performance.
-This makes Svelte the only library (besides the regular HTMLElement-based approach) in the top 5 in both categories.
+This makes Svelte the only library (besides the regular HTMLElement-based approach) in the top 5 in both categories. (Note: Prism is currently above Svelte in both bundle size and performance. That said Prism was just an experimental Project that will no longer be developed, [according to its GitHub Description](https://github.com/kaleidawave/prism).)
 
 While Svelte is still relatively new, there is already a fairly active, well-organized, and helpful community.
 For example, projects like [Routify](https://routify.dev/) provide a simple folder structure based router that can easily be delivered as a server side rendered app. _This website is written using Routify!_
@@ -45,7 +48,7 @@ With [`@sveltejs/vite-plugin-svelte`](https://www.npmjs.com/package/@sveltejs/vi
 
 - smaller .js bundles for the client bringing faster initial load times
 - better performance, as no Virtual DOM
-- simple, boilerplate-free, HTML-based syntax
+- simple, boilerplate-free, HTML-based syntax gets out of your way
 - other advantages like integrated accessibility testing and transition API
 - Compatible with Web Components and also as possible output of the compiler
 - Active and helpful community

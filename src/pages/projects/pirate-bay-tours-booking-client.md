@@ -4,6 +4,9 @@ summary: |
   During my 1th semester of my Informatics Masters's degree, we got tasked to create an offline-first booking app for internal use by a cruise line.
 published: 2021-03-29
 layout: blog
+tags:
+  - software-engineering
+  - web-dev
 ---
 
 <script>
@@ -23,7 +26,7 @@ We had the following loose requirements:
 
 The issue is, that you don't want too much overbooking. So we generate an allowance per tour for every sales agent at sync that gets used up when the user makes reservations. Our solution implemented CouchDB with a WebApp based frontend plus a server side script for pending bookings that were above the allowance.
 
-A more detailed description of the booking algorithm can be found inside the Project Documentation linked below. Its written in german but DeepL exists 😉 It also covers data strucutres used and the component organization of the frontend plus a user manual.
+A more detailed description of the booking algorithm can be found inside the Project Documentation linked below. Its written in german but DeepL exists 😉 It also covers data structures used and the component organization of the frontend plus a user manual.
 
 ![UI of Pirate Bay Tours Booking Client](/files/projects/pirate-bay-tours/pbt-ui.png)
 

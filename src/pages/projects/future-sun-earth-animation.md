@@ -5,7 +5,7 @@ summary: |
 published: 2021-03-28
 layout: blog
 tags:
-  - project-management
+  - projectManagement
   - animation
 ---
 

@@ -6,7 +6,7 @@ published: 2021-03-29
 layout: blog
 tags:
   - svelte
-  - web-dev
+  - webDev
 ---
 
 # {title}

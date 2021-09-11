@@ -5,8 +5,8 @@ summary: |
 published: 2021-03-29
 layout: blog
 tags:
-  - software-engineering
-  - web-dev
+  - softwareEngineering
+  - webDev
 ---
 
 <script>

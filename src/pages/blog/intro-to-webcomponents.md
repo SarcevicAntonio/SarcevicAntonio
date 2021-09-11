@@ -5,8 +5,8 @@ summary: |
 published: 2021-09-10
 layout: blog
 tags:
-  - web-dev
-  - web-components
+  - webDev
+  - webComponents
 ---
 
 # {title}

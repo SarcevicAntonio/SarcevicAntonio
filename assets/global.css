@@ -12,7 +12,7 @@
 
 body {
   margin: 0;
-  padding: 8px;
+  padding: 1em;
   font-family: "Atkinson Hyperlegible", Roboto, sans-serif;
   background: var(--bg);
   background: linear-gradient(120deg, var(--bg) 0%, var(--bgg) 100%);
@@ -43,18 +43,6 @@ h6 {
   word-break: break-word;
 }
 
-h1 {
-  font-size: 3.8em;
-}
-
-h2 {
-  font-size: 3em;
-}
-
-h3 {
-  font-size: 2.2em;
-}
-
 a {
   color: var(--accent);
 }
@@ -77,8 +65,8 @@ a {
 .pill {
   color: var(--bg);
   background-color: var(--accent);
-  margin: 8px;
-  padding: 8px 16px;
+  margin: .5em;
+  padding: .5em 1em;
   border-radius: 9999px;
   text-decoration: none;
   border: 1px solid transparent;

@@ -15,9 +15,10 @@
   h1 {
     margin-top: 0;
     color: var(--hi);
+    font-size: 4rem;
   }
   .hello {
     color: var(--fg);
-    font-size: 0.53em;
+    font-size: 0.6em;
   }
 </style>

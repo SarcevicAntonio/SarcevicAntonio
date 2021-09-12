@@ -17,9 +17,6 @@
 </div>
 
 <style>
-  h2 {
-    font-size: 2em;
-  }
   p {
     text-align: center;
   }

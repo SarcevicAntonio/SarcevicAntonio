@@ -27,7 +27,6 @@
 <style>
   h2 {
     margin-top: 1rem;
-    font-size: 2em;
   }
   ul {
     list-style: none;

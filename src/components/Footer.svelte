@@ -20,4 +20,7 @@
   div {
     margin: 16px 0;
   }
+  p {
+    text-align: center;
+  }
 </style>

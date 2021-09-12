@@ -21,7 +21,6 @@
     font-size: 2em;
   }
   p {
-    max-width: 400px;
     text-align: center;
   }
 </style>

@@ -1,9 +1,7 @@
 :root {
   --bg: hsl(281, 100%, 97%);
   --bgg: hsl(161, 100%, 97%);
-  /* --accent: hsl(268, 50%, 42%); */
   --accent: hsl(281, 50%, 42%);
-  /* --hi: hsl(88, 50%, 42%); */
   --hi: hsl(161, 50%, 42%);
   --fg: #000000;
 }
@@ -16,14 +14,23 @@ body {
   margin: 0;
   padding: 8px;
   font-family: "Atkinson Hyperlegible", Roboto, sans-serif;
-  background: rgb(255,250,239);
-  background: linear-gradient(120deg, var(--bg) 0%, var(--bgg) 100%);;
+  background: var(--bg);
+  background: linear-gradient(120deg, var(--bg) 0%, var(--bgg) 100%);
   color: var(--fg);
 }
 
-pre,
-code {
-  font-family: "Fira Code", "Roboto Mono", monospace;
+nav,
+main,
+footer {
+  max-width: 75ch;
+  margin: 0 auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  margin: auto;
+  display: block;
 }
 
 h1,
@@ -33,6 +40,7 @@ h4,
 h5,
 h6 {
   text-align: center;
+  word-break: break-word;
 }
 
 h1 {
@@ -66,10 +74,6 @@ a {
   align-items: center;
 }
 
-.cont {
-  max-width: 800px;
-}
-
 .pill {
   color: var(--bg);
   background-color: var(--accent);
@@ -91,19 +95,11 @@ a {
   transform: translateY(-2px);
 }
 
-img,
-picture {
-  max-width: 100%;
-  margin: auto;
-  display: block;
-}
-
 .card {
   margin: 1em 0;
   padding: 0 1em;
   border: 1px solid var(--hi);
   border-radius: 0.5em;
-  max-width: 75ch;
   background-color: white;
 }
 

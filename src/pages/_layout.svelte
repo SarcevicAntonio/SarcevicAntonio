@@ -4,12 +4,12 @@
 </script>
 
 <!-- routify:options preload="proximity" -->
-<nav class="fc">
+<nav>
   <Nav />
 </nav>
-<main class="fc">
+<main>
   <slot />
 </main>
-<footer class="fc">
+<footer>
   <Footer />
 </footer>

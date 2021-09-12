@@ -80,7 +80,7 @@ effect on the earth, a lava texture was placed on the layer above the earth and 
 shape as the earth. The layer was then set to overlay and some erasing of key areas was done to get
 the desired look.
 
-![First draft of storyboard](/files/projects/ip-project/Idea_storyboard.png)
+![First draft of storyboard](/files/projects/ip-project/Idea_storyboard.jpg)
 First draft of storyboard by Laura Cosio.
 
 After research had been completed, a final storyboard was created to document the timeline of the
@@ -94,7 +94,7 @@ version of the storyboard as clear as possible for the graphics team. After the 
 storyboard were confirmed by the research team as correct, time frames were calculated for each
 scene and important dates added to give an idea of how fast transitions should occur.
 
-![Final storyboard](/files/projects/ip-project/completeSB.png)
+![Final storyboard](/files/projects/ip-project/completeSB.jpg)
 Final of storyboard by Laura Cosio.
 
 ## 9.2 Scene 4: melting ice caps, sea levels rising; Animation: Close-Up View
@@ -275,9 +275,9 @@ Thanks for reading this blog entry. Be sure to check out the entire animation an
 href: "https://www.youtube.com/watch?v=fLTLAEGBFCM",
 txt: "Watch the Final Animation on YouTube!"
 },{
-href: "/files/projects/ip-project/Poster_IP17__Scientific_Visualization_and_Animation.pdf",
+href: "https://drive.google.com/file/d/1oseXq7SSCHLi1o5h5Jd3G6Cztf0dfsnk/view?usp=sharing",
 txt: "Project Overview Poster"
 },{
-href: "/files/projects/ip-project/Projectdokumentation_IP17__Scientific_Visualization_and_Animation.pdf",
+href: "https://drive.google.com/file/d/1UtDlqpbofqS9DVGsCI-wCC8Z0nVL93qp/view?usp=sharing",
 txt: "Project Documentation (186 Pages)"
 }]}/>

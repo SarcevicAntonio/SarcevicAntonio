@@ -3,17 +3,13 @@ title: Pirate Bay Tours Booking Client
 summary: |
   During my 1th semester of my Informatics Masters's degree, we got tasked to create an offline-first booking app for internal use by a cruise line.
 published: 2021-03-29
-layout: blog
+layout: ../../layouts/PostLayout.astro
 tags:
   - softwareEngineering
   - webDev
 ---
 
-<script>
-  import Resources from '../../components/Resources.svelte'
-</script>
-
-# {title}
+# Pirate Bay Tours Booking Client
 
 During my 1th semester of my Informatics Masters's degree, we got tasked to create an offline-first booking app for internal use as part of a distributed database course. The idea was that there is a company offering cruise ship tickets and they need an internal booking app for sales agents to use on offline tablets when they recruit new customers.
 
@@ -36,10 +32,11 @@ CouchDB is for the most part pretty easy to work with, except when it comes to u
 
 ## Final Results
 
-<Resources items={[{
-href: "https://github.com/SarcevicAntonio/Booking-App",
-txt: "Project Repo on GitHub"
-},{
-href: "/files/projects/pirate-bay-tours/VI___Dokumentation.pdf",
-txt: "Project Documentation (23 pages, written in german)"
-}]}/>
+<div class="resources">
+  <a class="pill" href="https://github.com/SarcevicAntonio/Booking-App" target="_blank" rel="noreferrer">
+  Project Repo on GitHub
+  </a>
+  <a class="pill" href="/files/projects/pirate-bay-tours/VI___Dokumentation.pdf" target="_blank" rel="noreferrer">
+  Project Documentation (23 pages, written in german)
+  </a>
+</div>

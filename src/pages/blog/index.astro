@@ -1,0 +1,18 @@
+---
+  import BaseLayout from "../../layouts/BaseLayout.astro"
+  import EntryList from "../../components/EntryList.astro"
+
+  let allPosts = Astro.fetchContent('./*.md');
+
+  const title = "Toni's Blog";
+---
+
+<head>
+  <title>{title}</title>
+</head>
+
+<BaseLayout>
+<h1>{title}</h1>
+<EntryList posts={allPosts}></EntryList>
+
+</BaseLayout>

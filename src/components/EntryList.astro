@@ -1,0 +1,44 @@
+---
+  import { Markdown } from 'astro/components'
+
+  let { posts } = Astro.props;
+  posts = posts.sort((a, b) => new Date(b.published) - new Date(a.published));
+
+---
+
+<div class="posts">
+  {posts.map(({ title, url, summary, tags }) =>
+    <div class="card">
+      <h2>
+        <a class="title" href={url}>{title}</a>
+      </h2>
+      <Markdown content={summary}></Markdown>
+      <ul class="tag-list">
+        {tags.map(tag => <li><a href={"/tag/"+tag}>#{tag}</a></li>)}
+      </ul>
+    </div>
+  )}
+</div>
+
+<style>
+  h2 {
+    margin-top: 1rem;
+  }
+  a {
+    position: relative;
+    text-decoration: none;
+  }
+  a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0.1em;
+    height: 0.1em;
+    background-color: var(--accent);
+    transition: right var(--tran-s);
+  }
+  a:hover::after {
+    right: 0;
+  }
+</style>

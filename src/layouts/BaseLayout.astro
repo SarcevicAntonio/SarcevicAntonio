@@ -1,0 +1,45 @@
+---
+  import Footer from "../components/Footer.svelte";
+  import Nav from "../components/Nav.astro";
+---
+<html lang="en">
+
+  <head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="/favicon.png" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="theme-color" content="#6e9f35" />
+	<link rel="apple-touch-icon" href="/images/touch-icons/logo-192.png" />
+	<link rel="stylesheet" href="/global.css" />
+	<title>The Website of Antonio Sarcevic</title>
+	<meta name="description" content="My little space on the web where I might write about stuff I made or things I find interesting." />
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fira+Code&display=swap"
+		rel="stylesheet"
+	/>
+
+	<!-- Prism Theme -->
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/gh/PrismJS/prism-themes@v1.8.0/themes/prism-nord.css"
+	/>
+</head>
+
+
+<body>
+
+<nav>
+  <Nav />
+</nav>
+<main>
+  <slot />
+</main>
+<footer>
+  <Footer />
+</footer>
+</body>
+</html>

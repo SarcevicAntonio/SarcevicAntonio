@@ -3,13 +3,13 @@ title: Why I ❤ Svelte
 summary: |
   In this article I explain why I am in love with Svelte and why you should be too.
 published: 2021-03-29
-layout: blog
+layout: ../../layouts/PostLayout.astro
 tags:
   - svelte
   - webDev
 ---
 
-# {title}
+# Why I ❤ Svelte
 
 [Svelte](https://svelte.dev/) differs from SPA frameworks like Angular, Vue and React in that it is a _compiler_ that builds the components, thereby producing more efficient JavaScript.
 
@@ -37,7 +37,7 @@ In a Webcomponents.dev article titled ["All the Ways to Make a Web Component"](h
 This makes Svelte the only library (besides the regular HTMLElement-based approach) in the top 5 in both categories. (Note: Prism is currently above Svelte in both bundle size and performance. That said Prism was just an experimental Project that will no longer be developed, [according to its GitHub Description](https://github.com/kaleidawave/prism).)
 
 While Svelte is still relatively new, there is already a fairly active, well-organized, and helpful community.
-For example, projects like [Routify](https://routify.dev/) provide a simple folder structure based router that can easily be delivered as a server side rendered app. _This website is written using Routify!_
+For example, projects like [Routify](https://routify.dev/) provide a simple folder structure based router that can easily be delivered as a server side rendered app. _This website is written using Routify!_ (Note: Not anymore actually, I rewrote it in Astro because it fits the use case better).
 [Elder.js](https://elderguide.com/tech/elderjs/) is a framework to create huge, static and SEO friendly web applications.
 With [`@sveltejs/vite-plugin-svelte`](https://www.npmjs.com/package/@sveltejs/vite-plugin-svelte), the lightning fast [Vite](https://vitejs.dev/) can be used as a dev sever and production bundler.
 [Svelte also took first place in the Satisfaction and Interest categories in the Front-end Frameworks section of the State of JS 2020 Survey.](https://2020.stateofjs.com/en-US/technologies/front-end-frameworks/#front_end_frameworks_experience_ranking)

@@ -1,0 +1,17 @@
+---
+  import BaseLayout from "../../layouts/BaseLayout.astro"
+  import tags from "../../tags"
+
+  const title = "Tags Toni writes about";
+---
+
+<head>
+  <title>{title}</title>
+</head>
+
+<BaseLayout>
+  <h1>{title}</h1>
+  <ul class="tag-list">
+    {tags.map(tag => <li><a href={"/tag/"+tag}>#{tag}</a></li>)}
+  </ul>
+</BaseLayout>

@@ -1,0 +1,34 @@
+---
+import BaseLayout from "./BaseLayout.astro"
+const { content } = Astro.props;
+---
+<html>
+  <head>
+    <title>{content.title}</title>
+  </head>
+
+  <body>
+    <BaseLayout>
+      <article class="card">
+        <slot />
+      </article>
+      <a class="pill" href="../"> <span>⬅</span> Back</a>
+    </BaseLayout>
+  </body>
+</html>
+
+<style>
+.pill {
+  margin: 0;
+}
+a span {
+  margin-left: 0px;
+  margin-right: 0px;
+  transition: margin 0.4s ease-in-out;
+}
+
+a:hover span {
+  margin-left: -0.5em;
+  margin-right: 0.5em;
+}
+</style>

@@ -1,0 +1,35 @@
+---
+  const currentPage = Astro.request.url.pathname;
+
+  const links = [
+    { path: "/", name: "Home"},
+    { path: "/projects", name: "Projects"},
+    { path: "/blog", name: "Blog"},
+    { path: "/tag", name: "Tags"},
+  ];
+
+  function isActive(path) {
+    if (path === currentPage) return true
+    if (path !== "/" && currentPage.includes(path)) return true
+    return false;
+  }
+---
+<div class="fr">
+  {links.map(({path, name}) => (
+    <a class="pill" href={path} aria-current={`${isActive(path) ? 'page' : 'false'}`}> 
+      {name}
+    </a>
+  ))
+  }
+</div>
+
+<style>
+  .pill {
+    color: var(--fg);
+    background-color: white;
+    border-color: var(--hi);
+  }
+  a[aria-current="page"] {
+    background-color: var(--hi);
+  }
+</style>

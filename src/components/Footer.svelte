@@ -1,7 +1,3 @@
-<script>
-  import { url } from "@roxi/routify";
-</script>
-
 <div class="fr">
   <a class="pill" href="https://twitter.com/SarcevicAntonio"> Twitter </a>
   <a

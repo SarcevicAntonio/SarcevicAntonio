@@ -3,13 +3,13 @@ title: Introduction to Web Components
 summary: |
   During my 1th semester of my Informatics Masters's degree, I wrote a paper on web components, detailing the value, usage and authoring of Web Components.
 published: 2021-09-10
-layout: blog
+layout: ../../layouts/PostLayout.astro
 tags:
   - webDev
   - webComponents
 ---
 
-# {title}
+# Introduction to Web Components
 
 ## 1 Introduction
 

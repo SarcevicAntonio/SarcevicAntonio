@@ -4,6 +4,8 @@
   --accent: hsl(281, 50%, 42%);
   --hi: hsl(161, 50%, 42%);
   --fg: #000000;
+
+  --tran-s: 0.4s ease-in-out;
 }
 
 * {
@@ -71,7 +73,7 @@ a {
   text-decoration: none;
   border: 1px solid transparent;
   box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
-  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transition: box-shadow var(--tran-s), transform var(--tran-s);
 }
 
 .pill:hover {
@@ -93,4 +95,31 @@ a {
 
 .posts p {
   text-align: center;
+}
+
+.resources {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.tag-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: -1em;
+  justify-content: center;
+}
+.tag-list li {
+  margin-right: 1em;
+  margin-top: 1em;
+  border: 1px solid var(--hi);
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background-color: var(--bgg);
 }

@@ -1,0 +1,25 @@
+---
+  import Infos from "../components/Infos.svelte";
+	import BaseLayout from "../layouts/BaseLayout.astro"
+---
+
+<BaseLayout>
+<h1>
+  <span class="hello">👋 Hello, I am</span>
+  <br />
+  Antonio Sarcevic.
+</h1>
+<Infos />
+</BaseLayout>
+
+<style >
+  h1 {
+    margin-top: 0;
+    color: var(--hi);
+    font-size: 4rem;
+  }
+  .hello {
+    color: var(--fg);
+    font-size: 0.6em;
+  }
+</style>

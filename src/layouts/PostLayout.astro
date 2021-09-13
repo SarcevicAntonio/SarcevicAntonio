@@ -4,6 +4,12 @@ const { content } = Astro.props;
 ---
 <html>
   <head>
+    <!-- Prism Theme -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/PrismJS/prism-themes@v1.8.0/themes/prism-nord.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PrismJS/prism-themes@v1.8.0/themes/prism-nord.css"></noscript>
+    <!-- Font: Fira Code -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"></noscript>
     <title>{content.title}</title>
   </head>
 

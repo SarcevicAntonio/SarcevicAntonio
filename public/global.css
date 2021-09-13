@@ -47,19 +47,6 @@ h6 {
 
 a {
   color: var(--accent);
-  text-decoration: none;
-  background-image: linear-gradient(var(--bgg), var(--bgg)),
-    linear-gradient(var(--accent), var(--accent)),
-    linear-gradient(var(--hi), var(--hi));
-  background-size: 1em 0.08em, 100% 0.08em, 0 0.08em;
-  background-position: calc(1em * -1) 100%, 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size var(--tran-s), background-position var(--tran-s);
-}
-
-a:hover {
-  background-size: 1em 0.08em, 0 0.08em, 100% 0.08em;
-  background-position: calc(100% + 1em) 100%, 100% 100%, 0 100%;
 }
 
 .fc {

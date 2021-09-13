@@ -24,21 +24,4 @@
   h2 {
     margin-top: 1rem;
   }
-  a {
-    position: relative;
-    text-decoration: none;
-  }
-  a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 100%;
-    bottom: 0.1em;
-    height: 0.1em;
-    background-color: var(--accent);
-    transition: right var(--tran-s);
-  }
-  a:hover::after {
-    right: 0;
-  }
 </style>

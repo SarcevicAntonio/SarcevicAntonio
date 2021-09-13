@@ -16,7 +16,7 @@ body {
   margin: 0;
   padding: 1em;
   font-family: "Atkinson Hyperlegible", Roboto, sans-serif;
-  background: var(--bg);
+  background: var(--bgg);
   background: linear-gradient(120deg, var(--bg) 0%, var(--bgg) 100%);
   color: var(--fg);
 }
@@ -47,6 +47,19 @@ h6 {
 
 a {
   color: var(--accent);
+  text-decoration: none;
+  background-image: linear-gradient(var(--bgg), var(--bgg)),
+    linear-gradient(var(--accent), var(--accent)),
+    linear-gradient(var(--hi), var(--hi));
+  background-size: 1em 0.08em, 100% 0.08em, 0 0.08em;
+  background-position: calc(1em * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--tran-s), background-position var(--tran-s);
+}
+
+a:hover {
+  background-size: 1em 0.08em, 0 0.08em, 100% 0.08em;
+  background-position: calc(100% + 1em) 100%, 100% 100%, 0 100%;
 }
 
 .fc {
@@ -67,13 +80,14 @@ a {
 .pill {
   color: var(--bg);
   background-color: var(--accent);
-  margin: .5em;
-  padding: .5em 1em;
+  margin: 0.5em;
+  padding: 0.5em 1em;
   border-radius: 9999px;
   text-decoration: none;
   border: 1px solid transparent;
   box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
   transition: box-shadow var(--tran-s), transform var(--tran-s);
+  background-image: none;
 }
 
 .pill:hover {
@@ -113,13 +127,11 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: -1em;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .tag-list li {
   margin-right: 1em;
   margin-top: 1em;
-  border: 1px solid var(--hi);
   padding: 0.5em;
   border-radius: 0.5em;
-  background-color: var(--bgg);
 }

@@ -2,34 +2,21 @@
 import BaseLayout from "./BaseLayout.astro"
 const { content } = Astro.props;
 ---
-<html>
-  <head>
+<head>
+  <!-- Prism Theme -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/PrismJS/prism-themes@v1.8.0/themes/prism-nord.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PrismJS/prism-themes@v1.8.0/themes/prism-nord.css"></noscript>
+  <!-- Font: Fira Code -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"></noscript>
+</head>
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@SarcevicAntonio" />
-    <meta name="twitter:title" content={content.title} />
-    <meta name="twitter:description" content={content.summary} />
-
-    <!-- Prism Theme -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/gh/PrismJS/prism-themes@v1.8.0/themes/prism-nord.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PrismJS/prism-themes@v1.8.0/themes/prism-nord.css"></noscript>
-    <!-- Font: Fira Code -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"></noscript>
-    <title>{content.title}</title>
-	  <meta name="description" content={content.summary} />
-  </head>
-
-  <body>
-    <BaseLayout>
-      <article class="card">
-        <slot />
-      </article>
-      <a class="pill" href="../"> <span>⬅</span> Back</a>
-    </BaseLayout>
-  </body>
-</html>
+<BaseLayout title={content.title} description={content.summary}>
+  <article class="card">
+    <slot />
+  </article>
+  <a class="pill" href="../"> <span>⬅</span> Back</a>
+</BaseLayout>
 
 <style>
 .pill {

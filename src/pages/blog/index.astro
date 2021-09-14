@@ -7,13 +7,7 @@
   const title = "Toni's Blog";
 ---
 
-<head>
-  <title>{title}</title>
-	<meta name="description" content="Where I write about things I find interesting." />
-</head>
-
-<BaseLayout>
-<h1>{title}</h1>
-<EntryList posts={allPosts}></EntryList>
-
+<BaseLayout title={title}>
+  <h1>{title}</h1>
+  <EntryList posts={allPosts}></EntryList>
 </BaseLayout>

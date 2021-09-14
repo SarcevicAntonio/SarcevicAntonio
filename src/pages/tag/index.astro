@@ -5,12 +5,7 @@
   const title = "Tags Toni writes about";
 ---
 
-<head>
-  <title>{title}</title>
-	<meta name="description" content="Where I write about stuff I made or things I find interesting." />
-</head>
-
-<BaseLayout>
+<BaseLayout title={title}>
   <h1>{title}</h1>
   <ul class="tag-list">
     {tags.map(tag => <li><a href={"/tag/"+tag}>#{tag}</a></li>)}

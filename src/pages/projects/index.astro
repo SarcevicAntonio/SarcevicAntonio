@@ -3,17 +3,10 @@
   import EntryList from "../../components/EntryList.astro"
 
   let allPosts = Astro.fetchContent('./*.md');
-
   const title = "Toni's Projects";
 ---
 
-<head>
-  <title>{title}</title>
-  	<meta name="description" content="My little space on the web and where I write about stuff I made." />
-</head>
-
-<BaseLayout>
-<h1>{title}</h1>
-<EntryList posts={allPosts}></EntryList>
-
+<BaseLayout title={title}>
+  <h1>{title}</h1>
+  <EntryList posts={allPosts}></EntryList>
 </BaseLayout>

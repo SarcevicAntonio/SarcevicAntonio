@@ -16,13 +16,7 @@
   const title = "Toni's posts about #" + tag;
 ---
 
-<head>
-  <title>{title}</title>
-	<meta name="description" content={"Where I write about #" + tag}/>
-</head>
-
-<BaseLayout>
-<h1>{title}</h1>
-<EntryList posts={allPosts}></EntryList>
-
+<BaseLayout title={title}>
+  <h1>{title}</h1>
+  <EntryList posts={allPosts}></EntryList>
 </BaseLayout>

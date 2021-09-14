@@ -561,9 +561,9 @@ base. However, it is easier to implement more complex, data-dependent and applic
 components with frameworks, since the available features such as data binding and dependency
 injection are very helpful.
 
-# My Counter Web Component Code
+## My Counter Web Component Code
 
-## my-counter.js (Vanilla Web Component)
+### my-counter.js (Vanilla Web Component)
 
 ```js
 const counterTemplate = document.createElement("template");
@@ -626,7 +626,7 @@ class MyCounter extends HTMLElement {
 window.customElements.define("my-counter", MyCounter);
 ```
 
-## MyCounter.svelte (Svelte w/ customElement option)
+### MyCounter.svelte (Svelte w/ customElement option)
 
 ```html
 <svelte:options tag="my-svelte-counter" />

@@ -20,6 +20,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 1em;
@@ -133,4 +137,33 @@ a {
 .tag-list li:hover {
   box-shadow: var(--shadow-pill);
   transform: translateY(-2px);
+}
+
+/** Markdown Stuff **/
+
+.icon-link::before {
+  content: "#\a0";
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  display: inline-block;
+  speak: none;
+}
+
+.toc {
+  margin-top: 1em;
+}
+.toc ol {
+  margin-bottom: 0.5em;
+}
+
+.toc::before {
+  margin-top: 1em;
+  content: "Table of Contents";
+  font-weight: 700;
+}
+
+.toc li {
+  list-style: none;
 }

@@ -9,6 +9,10 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.20.5"
+    "@jsdevtools/rehype-toc": "^3.0.2",
+    "astro": "^0.20.5",
+    "rehype-autolink-headings": "^6.1.0",
+    "rehype-external-links": "^1.0.0",
+    "rehype-slug": "^5.0.0"
   }
 }

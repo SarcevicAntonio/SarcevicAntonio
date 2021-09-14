@@ -8,8 +8,33 @@
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
+  markdownOptions: {
+    rehypePlugins: [
+      "rehype-slug",
+      "rehype-autolink-headings",
+      [
+        "@jsdevtools/rehype-toc",
+        {
+          customizeTOC: (toc) => {
+            const leafs = countLeafs(toc);
+            console.log(leafs);
+            if (leafs < 3) return false;
+            return toc;
+          },
+        },
+      ],
+      "rehype-external-links",
+    ],
+  },
   // Comment out "renderers: []" to enable Astro's default component support.
-  renderers: [
-    '@astrojs/renderer-svelte'
-  ],
+  renderers: ["@astrojs/renderer-svelte"],
 });
+
+function countLeafs(node) {
+  if (!node.children) return 1;
+  let count = 0;
+  node.children.forEach((child) => {
+    count += countLeafs(child);
+  });
+  return count;
+}

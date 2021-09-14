@@ -1,3 +1,5 @@
+/** Variables **/
+
 :root {
   --bg: hsl(281, 100%, 97%);
   --bgg: hsl(161, 100%, 97%);
@@ -6,7 +8,13 @@
   --fg: #000000;
 
   --tran-s: 0.4s ease-in-out;
+
+  --shadow-pill: 0 0.5px 0.5px rgba(0, 0, 0, 0.05),
+    0 1.4px 1.4px rgba(0, 0, 0, 0.071), 0 2.8px 2.8px rgba(0, 0, 0, 0.089),
+    0 5.8px 5.8px rgba(0, 0, 0, 0.11), 0 16px 16px rgba(0, 0, 0, 0.16);
 }
+
+/** Default Element Styling **/
 
 * {
   box-sizing: border-box;
@@ -49,6 +57,8 @@ a {
   color: var(--accent);
 }
 
+/** Utility Classes **/
+
 .fc {
   display: flex;
   flex-direction: column;
@@ -73,17 +83,6 @@ a {
   text-decoration: none;
   border: 1px solid transparent;
   box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
-  transition: box-shadow var(--tran-s), transform var(--tran-s);
-  background-image: none;
-}
-
-.pill:hover {
-  box-shadow: 0 0.1px 0.2px rgba(0, 0, 0, 0.038),
-    0 0.3px 0.4px rgba(0, 0, 0, 0.056), 0 0.6px 0.6px rgba(0, 0, 0, 0.069),
-    0 0.9px 1px rgba(0, 0, 0, 0.08), 0 1.4px 1.5px rgba(0, 0, 0, 0.091),
-    0 2.1px 2.4px rgba(0, 0, 0, 0.104), 0 3.5px 4px rgba(0, 0, 0, 0.122),
-    0 7px 8px rgba(0, 0, 0, 0.16);
-  transform: translateY(-2px);
 }
 
 .card {
@@ -116,9 +115,22 @@ a {
   margin-top: -1em;
   justify-content: flex-end;
 }
+
 .tag-list li {
   margin-right: 1em;
   margin-top: 1em;
   padding: 0.5em;
   border-radius: 0.5em;
+}
+
+/** Hover Animation **/
+
+.pill,
+.tag-list li {
+  transition: box-shadow var(--tran-s), transform var(--tran-s);
+}
+.pill:hover,
+.tag-list li:hover {
+  box-shadow: var(--shadow-pill);
+  transform: translateY(-2px);
 }

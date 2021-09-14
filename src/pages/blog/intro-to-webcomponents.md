@@ -506,7 +506,7 @@ used to build framework agnostic components and design systems. This has the adv
 components only have to be defined once and can be used in different frameworks if they support
 Web Components well.
 
-### 2.9 Disadvantages ofWeb Components
+### 2.9 Disadvantages of Web Components
 
 Web Components provide a basis for creating framework agnostic components by using
 JavaScript APIs. However, this is also a major disadvantage of Web Components. Search engine

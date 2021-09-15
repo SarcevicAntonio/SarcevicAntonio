@@ -13,6 +13,7 @@ const { content } = Astro.props;
 
 <BaseLayout title={content.title} description={content.summary}>
   <article class="card">
+    <div class="flexer"><span>{new Date(content.published).toLocaleDateString()}</span></div>
     <slot />
   </article>
   <a class="pill" href="../"> <span>⬅</span> Back</a>
@@ -36,5 +37,12 @@ a:hover span {
 article {
   font-size: 1.1em;
   line-height: 1.6;
+}
+
+.flexer {
+  margin-top: 0.5em;
+  margin-bottom: -2.3em;
+  display: flex;
+  justify-content: flex-end;
 }
 </style>

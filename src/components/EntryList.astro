@@ -2,18 +2,18 @@
   import { Markdown } from 'astro/components'
 
   let { posts } = Astro.props;
-  posts = posts.sort((a, b) => new Date(b.published) - new Date(a.published));
-
+  posts = posts.sort((a, b) => new Date(b.published).valueOf() - new Date(a.published).valueOf());
 ---
 
 <div class="posts">
-  {posts.map(({ title, url, summary, tags }) =>
+  {posts.map(({ title, url, summary, tags, published }) =>
     <div class="card">
       <h2>
         <a class="title" href={url}>{title}</a>
       </h2>
       <Markdown content={summary}></Markdown>
       <ul class="tag-list">
+        <li class="no-hover">{new Date(published).toLocaleDateString()}</li>
         {tags.map(tag => <li><a href={"/tag/"+tag}>#{tag}</a></li>)}
       </ul>
     </div>
@@ -23,5 +23,10 @@
 <style>
   h2 {
     margin-top: 1rem;
+  }
+
+  .no-hover:hover {
+    box-shadow: none;
+    transform: none;
   }
 </style>

@@ -11,9 +11,10 @@ tags:
 
 # Introduction to Web Components
 
+During my 1th semester of my Informatics Masters's degree, late 2020, I wrote a paper on web components, value, usage and authoring of Web Components and also a part about creating Web Components with Svelte. The paper was originally written in german, so I thought I post a translated version here.
+
 ## 1 Introduction
 
-During my 1th semester of my Informatics Masters's degree, I wrote a paper on web components, value, usage and authoring of Web Components and also a part about creating Web Components with Svelte. The paper was originally written in english, so I thought I post a translated version here:
 
 The field of web development is constantly changing. Methods and technologies are constantly being
 rethought and innovated. Dynamic websites, for example, can be written as server-side applications

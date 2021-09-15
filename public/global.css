@@ -116,8 +116,6 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: -1em;
-  justify-content: flex-end;
 }
 
 .tag-list li {

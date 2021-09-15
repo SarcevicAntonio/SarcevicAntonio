@@ -17,7 +17,6 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
         {
           customizeTOC: (toc) => {
             const leafs = countLeafs(toc);
-            console.log(leafs);
             if (leafs < 3) return false;
             return toc;
           },

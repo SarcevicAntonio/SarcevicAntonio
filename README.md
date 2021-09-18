@@ -1,4 +1,4 @@
-# [Antonio Sarcevic](sarcevic.dev)
+# [Antonio Sarcevic](https://www.sarcevic.dev/)
 
 Pronouns: He/Him
 
@@ -12,4 +12,4 @@ Studies Informatics (M. Sc.) at the FH Münster since 2020.
 
 Earned a Bachelor of Science degree in Media and Communications Informatics.
 
-[Read More @ sarcevic.dev](https://www.sarcevic.dev/)
+[Read more on sarcevic.dev!](https://www.sarcevic.dev/)

@@ -19,16 +19,18 @@ Smaller bundles allow the app to be loaded faster by visitors initially. [RealWo
 
 In addition, Svelte provides better runtime performance than other frameworks.
 The compiler builds efficient JavaScript from your component source files which surgically changes the DOM.
-This eliminates the need for comparing against a Virtual DOM.
+This eliminates the need for continuously comparing against a Virtual DOM.
 [RealWorld App Comparison of Performance.](https://medium.com/dailyjs/a-realworld-comparison-of-front-end-frameworks-2020-4e50655fe4c1#ac34)
+
+Those two things in combination, _compiling_ our sourcecode to regular imperative JS code that _surgically updates the DOM_, ultimately means we are doing less work in the users browsers, making the current approach seem silly in comparison.
 
 In addition, the Svelte compiler allows its own syntax, which leads to simple, boilerplate-free code.
 Svelte, unlike React, does not use JSX, but its own syntax based on normal HTML, CSS and JavaScript.
 The syntax is thus a superset of HTML which can define encapsulated components as a single file component.
-[Example of a nested component.](https://svelte.dev/examples#nested-components) The syntax allows you to be super concise and it feels like Svelte is getting out of your way as much as possible, only making the tedious things in classic web dev more smooth. Because its a superset of HTML you can still do about everything you have learned about classic web dev! Old-school libraries just work, because [if they spit out some HTML you can even use Svelte to render it for you!](https://svelte.dev/repl/30d2efe6622f4150a73405b706d58321?version=3.42.5)
+[Example of a nested component.](https://svelte.dev/examples#nested-components) The syntax allows you to be super concise and it feels like Svelte is getting out of your way as much as possible, allowing to to add as much or as little sugar as you want. Because its a superset of HTML you can still do about everything you have learned about classic web dev! Old-school libraries just work, because [if they output some HTML as a String you can use Svelte to render it for you!](https://svelte.dev/repl/30d2efe6622f4150a73405b706d58321?version=3.42.5)
 
-The compiler also offers other benefits such as built-in [accessibility testing](https://svelte.dev/repl/5ed4cb37c0ef43e4a709d6e8f37069c2?version=3.35.0) and a [transition and animation API](https://svelte.dev/repl/f78106a749934114ae274828f1e3390c?version=3.35.0) that are included.
-Only the features that are used end up in the final bundle, so a variety of features can be included inside Svelte.
+The compiler also offers other special features such as built-in [accessibility testing](https://svelte.dev/repl/5ed4cb37c0ef43e4a709d6e8f37069c2?version=3.35.0) and a [transition and animation API](https://svelte.dev/repl/f78106a749934114ae274828f1e3390c?version=3.35.0) that are included.
+Only the features that are used end up in the final bundle, so a variety of features can be included inside Svelte without every end-user having to pay the cost.
 
 Svelte also has a 100% score on [Custom Elements Everywhere](https://custom-elements-everywhere.com/#svelte), a site that tests the compatibility of frameworks with Web Components.
 Furthermore, the Svelte compiler can also be used [to generate Web Components as output](https://dev.to/silvio/how-to-create-a-web-components-in-svelte-2g4j).
@@ -52,4 +54,4 @@ With [`@sveltejs/vite-plugin-svelte`](https://www.npmjs.com/package/@sveltejs/vi
 - other advantages like integrated accessibility testing and transition API
 - Compatible with Web Components and also as possible output of the compiler
 - Active and helpful community
-- TypeScript compatible, thanks to `svelte-preprocess` even without configuration
+- TypeScript compatible, thanks to `svelte-preprocess`

@@ -9,7 +9,7 @@ tags:
   - webDev
 ---
 
-# Toasting in Svelte 🍞
+# How to create and publish a Toast library package with SvelteKit
 
 In this article I will explain how to create reusable toast package for Svelte using SvelteKit.
 We will cover what a toast is and use Svelte Components and a Store to create one ourselves.
@@ -24,16 +24,18 @@ They are sometimes also called by other names like [Notifications in Carbon Desi
 They all have in common, that they can display information to users, without interrupting them, unlike a modal or dialog which require some kind of action from the user.
 Toasts typically also dismiss themselves after a timeout, but some versions also include a cancel button, so the user can dismiss the toast themselves if they are done with it.
 
-When creating a package, you need to think about how someone would use it. The closest browser-native analog old-school is probably the JavaScript `alert(msg)` method, which isn't exactly the same as a toast, because it blocks the user from interacting with the page until he closed the alert window.
-I want to make creating toasts as easy as creating alert windows are.
+## Package Goals
+
+When creating a package, you need to think about how someone would use it. The closest browser-native analog is probably the "old-school" JavaScript `alert(msg)` method, which isn't exactly the same as a toast, because it blocks the user from interacting with the page until he closed the alert window.
+I want to make displaying toasts as easy as displaying native alert windows.
 So my package probably will export some kind of `addToast(mgs)` function, that can be called to create a new toast.
 
-We might also want to be able to support different types of toast notifications, for example a 'warn' type toast that is displayed on a red background to signify the user, that something went wrong or it didn't submit a form for example. Being able to set how long a toast stays could also be useful, for example if the text gets a little longer, you might want the toast to be displayed for longer.
+We might also want to be able to support different types of toast notifications, for example a 'warn' type toast that is displayed on a red background to signify the user, that something went wrong, like it didn't submit a form for example. Being able to set how long a toast stays visible could also be useful, for example if the text gets longer and you want the toast to be displayed for longer.
 
-## Using SvelteKit to build packages
+## Using SvelteKit to create packages
 
-The cooles thing about [SvelteKit](https://kit.svelte.dev/), in my opinion, is the option to bundle your `src/lib` folder as an npm Package in a snap.
-Normally you think of SvelteKit as an application framework, where the `src/routes` folder become the public pages of your application, and the `src/lib` folder is used for an apps internal library.
+The cooles thing about [SvelteKit](https://kit.svelte.dev/) is the option to bundle your `src/lib` folder as an npm Package in a snap.
+Normally you think of SvelteKit as an application framework, where the contents of the `src/routes` folder are the public pages of your application, and the `src/lib` folder is used for an apps shared code or internal library.
 But using `svelte-kit package` reverses this paradigm and your `src/lib` folder becomes the public facing package and the `src/routes` can be used for testing, as a demo and a documentation.
 Using a `src/lib/index.js` file you can configure the packages entry point root and SvelteKit even creates type definitions inside `.d.ts` files for you!
 [You can read more about packaging libraries with SvelteKit in the Docs.](https://kit.svelte.dev/docs#packaging)
@@ -103,13 +105,15 @@ export function addToast(msg, type = "info", removeAfter = 5000) {
 }
 ```
 
-Since we call `removeToast()`, we need to define this function too. This function simply calls `.update()` on the store, and filters the store value array using the id that gets passed as an argument:
+Since we call `removeToast()`, we need to define this function too. This function simply calls `.update()` on the store, and filters the stores array value using the id that gets passed as an argument:
 
 ```js
 export function removeToast(id) {
   toasts.update((all) => all.filter((toast) => toast.id !== id));
 }
 ```
+
+This concludes the store for our toast notifications. You can view [the complete file in TypeScript on my toast libraries GitHub page](https://github.com/SarcevicAntonio/as-toast/blob/main/src/lib/toastStore.ts).
 
 ### Creating a toast component
 

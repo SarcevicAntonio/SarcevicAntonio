@@ -11,10 +11,9 @@ tags:
 
 # How to create and publish a Toast library package with SvelteKit
 
-In this article I will explain how to create reusable toast library npm package for Svelte using SvelteKit.
+In this article I will explain how to create a reusable toast library npm package for Svelte using SvelteKit.
 We will cover what a toast is and use Svelte Components and a Store to create one ourselves.
-
-If you want to jump straight into the code, have [this REPL](https://svelte.dev/repl/ff8317744f4b4c3e8972a313a044e882?version=3.44.1).
+If you just want to jump straight into the code, have [this REPL](https://svelte.dev/repl/ff8317744f4b4c3e8972a313a044e882?version=3.44.1).
 
 ## What are toasts?
 
@@ -163,6 +162,8 @@ Inside the div, we add a span with the status role to display our toast message.
 Beside the span we place a button that calls our `removeToast` function we imported and passes in the id of the current toast we are displaying.
 
 ```html
+<!-- ... -->
+
 <div class={toast.type} in:fly={{ y: -20 }} out:fade>
   <span role="status">
     {@html toast.msg}
@@ -176,6 +177,8 @@ Beside the span we place a button that calls our `removeToast` function we impor
 Last up we will define our styles. We add some padding, margin, border-radius, and a box-shadow to our div and then we add some margin to our button. Now we define the types we want to support with our toast component. For now we just define text and background color styles for `.info` and `.warn`.
 
 ```html
+<!-- ... -->
+
 <style>
   div {
     padding: 1.2em;
@@ -209,6 +212,34 @@ Notice the CSS Custom Properties inside the rules for `.info` and `.warn`. This 
 
 ### Creating toasts list component
 
+We can now store our toasts, add toasts, remove toasts and display a single toast, but we still need a Component that reads our store and renders a `Toast` component for every store entry. We do this inside the `Toasts.svelte` file. 
+
+Let's start with the Script block again. We need to import the `Toast` component from `./Toast.svelte`, then import the `toast` store from `./toastStore` and let's also import `flip` from `svelte/animate` for smooth list-item transitions. And thats about it. This component pretty much just plugs everything together, so no logic is needed inside the `<script>` tag.
+
+```html
+<script>
+  import { flip } from "svelte/animate";
+  import Toast from "./Toast.svelte";
+  import { toasts } from "./toastStore";
+</script>
+```
+
+We will wrap our entire markup section in a `{if $toasts.length}` block, as to not render anything if there are no toasts in the store. Notice the `$` in front of the store: this tells Svelte that you want to access the value of the store and Svelte will take care of the subscription for you. Inside the `if` block we place a `<ul>` that will house all of our toast entries. Next we place a `{#each $toasts as toast (toast.id)}` block to render each of the toast entries. The part in parentheses at the end is our key, which helps Svelte track each toast entry and it's associated markup. It is also required for our flip animation that we will add to our `<li>` element inside the `each` block. Inside the `<li>` you can finally place the `Toast` component and pass in the `toast` from the `each` block.
+
+```html
+{#if $toasts.length}
+  <ul>
+    {#each $toasts as toast (toast.id)}
+      <li animate:flip>
+        <Toast {toast} />
+      </li>
+    {/each}
+  </ul>
+{/if}
+```
+
 
 
 ## Check out my toast package
+
+

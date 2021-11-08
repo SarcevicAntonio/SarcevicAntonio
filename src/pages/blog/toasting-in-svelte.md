@@ -37,17 +37,15 @@ The usage of the package we will be creating could look like this:
 
 ```html
 <script>
-    import { Toasts, addToast } from "my-toast-lib-name";
-    let value = "Hello World"
+  import { Toasts, addToast } from "my-toast-lib-name";
+  let value = "Hello World";
 </script>
 
-<Toasts/>
+<Toasts />
 
-<input bind:value/>
-<button on:click={() => {addToast(value)}}>
-  Add as default info Toast
-</button>
-<button on:click={() => {addToast(value, 'warn', 8000)}}>
+<input bind:value />
+<button on:click="{() => {addToast(value)}}">Add as default info Toast</button>
+<button on:click="{() => {addToast(value, 'warn', 8000)}}">
   Add as warning Toast that displays longer
 </button>
 ```
@@ -172,9 +170,7 @@ Beside the span we place a button that calls our `removeToast` function we impor
   <span role="status">
     {@html toast.msg}
   </span>
-  <button on:click={() => {
-    removeToast(toast.id)
-  }}>
+  <button on:click="{() => {removeToast(toast.id)}}">
     ❌
   </button>
 </div>
@@ -289,7 +285,7 @@ Open up `src/routes/index.svelte` and replace it's contents with the an example 
 
 <Toasts/>
 
-<button on:click={() => {addToast("hi")}}>
+<button on:click="{() => {addToast("hi")}}">
 	Toast "Hi"
 </button>
 ```
@@ -310,7 +306,7 @@ When everything works we can just set up a new npm script in our `package.json`.
 }
 ```
 
-Finally, the last step is to run that npm script with `npm run package` and SvelteKit will build our package inside the `package` folder. I won't cover how to publish this package to NPM so either check the [npm docs on publishing packages](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) search the internet for an article that covers that if you need help.
+Finally, the last step is to run that npm script with `npm run package` and SvelteKit will build our package inside the `package` folder. I won't cover how to publish this package to NPM so either check the [npm docs on publishing packages](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) or search the internet for an article that covers that if you need help.
 
 ## Check out my toast package
 

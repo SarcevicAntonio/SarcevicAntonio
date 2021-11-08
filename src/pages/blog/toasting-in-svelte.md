@@ -1,7 +1,7 @@
 ---
-title: How to create and publish a Toast library package with SvelteKit
+title: How to create a toast notification library package with SvelteKit
 summary: |
-  Toasting in Svelte 🍞
+  Creating a toast notification library with Svelte and packaging it up for NPM with SvelteKit!
 published: 2021-10-14
 layout: ../../layouts/PostLayout.astro
 tags:
@@ -11,27 +11,27 @@ tags:
 
 # How to create and publish a Toast library package with SvelteKit
 
-In this article I will explain how to create a reusable toast library npm package for Svelte using SvelteKit.
-We will cover what a toast is and use Svelte Components and a Store to create one ourselves.
-If you just want to jump straight into the code, have [this REPL](https://svelte.dev/repl/ff8317744f4b4c3e8972a313a044e882?version=3.44.1), but this article also coves how you can use SvelteKit to package it all up.
+This article explains how to create a reusable toast library package for Svelte using SvelteKit.
+We will cover what a toast is, use Svelte Components and a Store to create one ourselves, and cover how SvelteKit can help us package the library.
+If you only care about the code, have [this REPL](https://svelte.dev/repl/ff8317744f4b4c3e8972a313a044e882?version=3.44.1).
 
 ## What are toasts?
 
-By toasts, I mean notification-like floating text messages, that display brief informational text for users, without requiring action.
+By toasts, I mean notification-like floating text messages that display brief informational text for users without requiring action.
 They are sometimes also called by other names like [Notifications in Carbon Design](https://www.carbondesignsystem.com/components/notification), [Snackbars in Material Design](https://material.io/components/snackbars) or [Alert in MUI](https://mui.com/components/alert/).
 
 ![Anatomy of a Toast Component, with the Toast as a Container for Text Content and a Cancel Button](/files/blog/toasting-in-svelte/Anatomy.png)
 
-They all have in common, that they can display information to users, without interrupting them, unlike a modal or dialog which require some kind of action from the user.
-Toasts typically also dismiss themselves after a timeout, but some versions also include a cancel button, so the user can dismiss the toast themselves if they are done with it.
+They all have in common that they can display information to users without interrupting them, unlike a modal or dialog that require some kind of user interaction.
+Toasts typically also dismiss themselves after a timeout, but some versions also include a cancel button, so users can dismiss the toast themselves if they are done with it.
 
 ## Package Goals
 
-When creating a package, you need to think about how someone would use it. The closest browser-native analog is probably the "old-school" JavaScript `alert(msg)` method, which isn't exactly the same as a toast, because it blocks the user from interacting with the page until he closed the alert window.
-I want to make displaying toasts as easy as displaying native alert windows.
-So my package probably will export some kind of `addToast(mgs)` function, that can be called to create a new toast.
+When creating a package, you need to think about how someone would use it. The closest browser-native analog is probably the "old-school" JavaScript `alert(msg)` method, which isn't exactly the same as a toast, because it blocks the user from interacting with the page until they have closed the alert window.
+Displaying toasts should be as easy as creating native alert windows is.
+So my package probably will export a function called `addToast(mgs)` that can be called to create a new toast.
 
-We might also want to be able to support different types of toast notifications, for example a 'warn' type toast that is displayed on a red background to signify the user, that something went wrong, like it didn't submit a form for example. Being able to set how long a toast stays visible could also be useful, for example if the text gets longer and you want the toast to be displayed for longer.
+We might also want to be able to support different types of toast notifications, for example a 'warn' type toast. Toasts with the type 'warn' could be displayed on a red background to signify users that something went wrong, like failing to submit a form for example. Being able to set how long a toast stays visible could also be useful, for example if the text gets longer and you want the toast to be displayed for longer.
 
 The usage of the package we will be creating could look like this:
 
@@ -54,8 +54,8 @@ The usage of the package we will be creating could look like this:
 
 ## Using SvelteKit to create packages
 
-The cooles thing about [SvelteKit](https://kit.svelte.dev/) is the option to bundle your `src/lib` folder as an npm Package in a snap.
-Normally you think of SvelteKit as an application framework, where the contents of the `src/routes` folder are the public pages of your application, and the `src/lib` folder is used for an apps shared code or internal library.
+The coolest thing about [SvelteKit](https://kit.svelte.dev/) is the option to bundle your `src/lib` folder as an npm package in a snap.
+Usually, you think of SvelteKit as an application framework, where the contents of the `src/routes` folder are the public pages of your application, and the `src/lib` folder is for shared code, i.e. an internal library.
 But using `svelte-kit package` reverses this paradigm and your `src/lib` folder becomes the public facing package and the `src/routes` can be used for testing, as a demo and a documentation.
 Using a `src/lib/index.js` file you can configure the packages entry point root and SvelteKit even creates type definitions inside `.d.ts` files for you!
 [You can read more about packaging libraries with SvelteKit in the Docs.](https://kit.svelte.dev/docs#packaging)
@@ -278,7 +278,7 @@ export { addToast } from "./toastStore";
 
 We are pretty much done with the library. Let's first give it a spin to check if everything works like we want to.
 
-Open up `src/routes/index.svelte` and replace it's contents with the an example usage of our Package. Notice here that we import from `$lib` to import files from our `src/lib` folder.
+Open up `src/routes/index.svelte` and replace it's contents with the an example usage of our package. Notice here that we import from `$lib` to import files from our `src/lib` folder.
 
 ```html
 <!-- src/routes/index.svelte -->

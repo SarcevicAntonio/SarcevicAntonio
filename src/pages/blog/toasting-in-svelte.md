@@ -287,7 +287,7 @@ Open up `src/routes/index.svelte` and replace it's contents with the an example 
 ```html
 <!-- src/routes/index.svelte -->
 <script>
-	import { Toasts, addToast } from "$lib/";
+  import { Toasts, addToast } from "$lib/";
 </script>
 
 <Toasts />
@@ -295,7 +295,19 @@ Open up `src/routes/index.svelte` and replace it's contents with the an example 
 <button on:click="{() => {addToast('hi')}}">Toast "Hi"</button>
 ```
 
-Run `npm install` to install our dev dependencies and then run `npm run dev -- --open` to start the development server and open it up in your default browser. The SvelteKit App should load and you should be able to click the Button to spawn a toast. If it doesn't work then check out the Terminal or Browser Dev Console to spot errors.
+Next up we want to install our dev dependencies:
+
+```
+npm install
+```
+
+And then lets open the development server and open that up in our default browser:
+
+```
+npm run dev -- --open
+```
+
+The SvelteKit App should load and you should be able to click the Button to spawn a toast. If it doesn't work then check out the Terminal or Browser Dev Console to spot errors.
 
 When everything works we can just set up a new npm script in our `package.json`. Inside that file add a new line inside the `"scripts"` section with the key `"package"` and the value `"svelte-kit package"`.
 
@@ -311,15 +323,25 @@ When everything works we can just set up a new npm script in our `package.json`.
 }
 ```
 
-Because SvelteKit creates type definitions in `.d.ts` files we need to make sure we have `typescript` and `svelte2tsx` installed. To install those simply run `npm install -D typescript svelte2tsx`.
+Because SvelteKit creates type definitions in `.d.ts` files we need to make sure we have `typescript` and `svelte2tsx` installed. To install those simply run:
 
-Finally, the last step is to run that npm script with `npm run package` and SvelteKit will build our package inside the `package` folder. I won't cover how to publish this package to NPM so either check the [npm docs on publishing packages](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) or search the internet for an article that covers that if you need help.
+```
+npm install -D typescript svelte2tsx
+```
+
+Finally, the last step is to run that new npm package script and SvelteKit will build our package inside the `package` folder:
+
+```
+npm run package
+```
+
+I won't cover how to publish this package to NPM so either check the [npm docs on publishing packages](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) or search the internet for an article that covers that if you need help.
 
 ## Check out my toast package
 
 I based this tutorial ony [my own Toast package](https://as-toast.vercel.app/) that you can also use which features full customization using CSS Custom Properties.
 
-![My own Toast Package that shows of the CSS customization in various themes ](/files/blog/toasting-in-svelte/as-toast.png)
+[![My own Toast Package that shows of the CSS customization in various themes ](/files/blog/toasting-in-svelte/as-toast.png)](https://as-toast.vercel.app/)
 
 ### Quick Start
 

@@ -9,7 +9,7 @@ tags:
   - webDev
 ---
 
-# How to create and publish a Toast library package with SvelteKit
+# How to create a toast notification library package with SvelteKit
 
 This article explains how to create a reusable toast library package for Svelte using SvelteKit.
 We will cover what a toast is, use Svelte Components and a Store to create one ourselves, and cover how SvelteKit can help us package the library.

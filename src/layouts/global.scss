@@ -1,6 +1,6 @@
 /** Variables **/
 
-:root {
+@mixin light {
   --b: hsl(0, 0%, 100%);
   --bg: hsl(281, 100%, 97%);
   --bgg: hsl(161, 100%, 97%);
@@ -15,23 +15,39 @@
     0 5.8px 5.8px rgba(0, 0, 0, 0.11), 0 16px 16px rgba(0, 0, 0, 0.16);
 }
 
+@mixin dark {
+  --b: hsl(0, 0%, 0%);
+  --bg: hsl(281, 100%, 3%);
+  --bgg: hsl(161, 100%, 3%);
+  --accent: hsl(281, 50%, 58%);
+  --hi: hsl(161, 50%, 58%);
+  --fg: hsl(0, 0%, 100%);
+
+  --tran-s: 0.4s ease-in-out;
+
+  --shadow-pill: 0 0.5px 0.5px rgba(255, 255, 255, 0.05),
+    0 1.4px 1.4px rgba(255, 255, 255, 0.071),
+    0 2.8px 2.8px rgba(255, 255, 255, 0.089),
+    0 5.8px 5.8px rgba(255, 255, 255, 0.11),
+    0 8px 8px rgba(255, 255, 255, 0.16);
+}
+
+:root {
+  @include light;
+}
+
+.light {
+  @include light;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --b: hsl(0, 0%, 0%);
-    --bg: hsl(281, 100%, 3%);
-    --bgg: hsl(161, 100%, 3%);
-    --accent: hsl(281, 50%, 58%);
-    --hi: hsl(161, 50%, 58%);
-    --fg: hsl(0, 0%, 100%);
-
-    --tran-s: 0.4s ease-in-out;
-
-    --shadow-pill: 0 0.5px 0.5px rgba(255, 255, 255, 0.05),
-      0 1.4px 1.4px rgba(255, 255, 255, 0.071),
-      0 2.8px 2.8px rgba(255, 255, 255, 0.089),
-      0 5.8px 5.8px rgba(255, 255, 255, 0.11),
-      0 16px 16px rgba(255, 255, 255, 0.16);
+    @include dark;
   }
+}
+
+.dark {
+  @include dark;
 }
 
 /** Default Element Styling **/
@@ -83,8 +99,10 @@ h6 {
   word-break: break-word;
 }
 
+button,
 a {
   color: var(--accent);
+  font: inherit;
 }
 
 /** Utility Classes **/

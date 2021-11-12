@@ -13,7 +13,7 @@ tags:
 
 This article explains how to create a reusable toast library package for Svelte using SvelteKit.
 We will cover what a toast is, use Svelte Components and a Store to create one ourselves, and cover how SvelteKit can help us package the library.
-If you only care about the code, have [this REPL](https://svelte.dev/repl/ff8317744f4b4c3e8972a313a044e882?version=3.44.1).
+If you only care about the code, have [this REPL](https://svelte.dev/repl/ff8317744f4b4c3e8972a313a044e882?version=3.44.1) or [simply use my svelte toast package `as-toast`](#check-out-my-toast-package).
 
 ## What are toasts?
 
@@ -22,8 +22,8 @@ They are sometimes also called by other names like [Notifications in Carbon Desi
 
 ![Anatomy of a Toast Component, with the Toast as a Container for Text Content and a Cancel Button](/files/blog/toasting-in-svelte/Anatomy.png)
 
-They all have in common that they can display information to users without interrupting them, unlike a modal or dialog that require some kind of user interaction.
-Toasts typically also dismiss themselves after a timeout, but some versions also include a cancel button, so users can dismiss the toast themselves if they are done with it.
+All of these have in common that they can display information to users without interrupting them, unlike a modal or dialog that requires user interaction.
+Toasts typically dismiss themselves after a timeout, but some versions also include a cancel button, so users can dismiss the toast themselves if they're done with it.
 
 ## Package Goals
 
@@ -31,7 +31,7 @@ When creating a package, you need to think about how someone would use it. The c
 Displaying toasts should be as easy as creating native alert windows is.
 So my package probably will export a function called `addToast(mgs)` that can be called to create a new toast.
 
-We might also want to be able to support different types of toast notifications, for example a 'warn' type toast. Toasts with the type 'warn' could be displayed on a red background to signify users that something went wrong, like failing to submit a form for example. Being able to set how long a toast stays visible could also be useful, for example if the text gets longer and you want the toast to be displayed for longer.
+I want to support different types of toast notifications, for example 'info' and 'warn' toasts. Toasts with the type 'warn' could be displayed on a red background to signify users that something went wrong, like failing to submit a form for example. Being able to set how long a toast stays visible could also be useful, for example if the text gets longer and you want the toast to be displayed for longer.
 
 The usage of the package we will be creating could look like this:
 
@@ -52,10 +52,10 @@ The usage of the package we will be creating could look like this:
 
 ## Using SvelteKit to create packages
 
-The coolest thing about [SvelteKit](https://kit.svelte.dev/) is the option to bundle your `src/lib` folder as an npm package in a snap.
-Usually, you think of SvelteKit as an application framework, where the contents of the `src/routes` folder are the public pages of your application, and the `src/lib` folder is for shared code, i.e. an internal library.
-But using `svelte-kit package` reverses this paradigm and your `src/lib` folder becomes the public facing package and the `src/routes` can be used for testing, as a demo and a documentation.
-Using a `src/lib/index.js` file you can configure the packages entry point root and SvelteKit even creates type definitions inside `.d.ts` files for you!
+The coolest thing about [SvelteKit](https://kit.svelte.dev/), IMO, is the option to bundle your `src/lib` folder as an npm package in a snap.
+Usually, you think of SvelteKit as an application framework, where the contents of the `src/routes` folder become the public pages of your application, and the `src/lib` folder is for shared code, i.e. an internal library.
+But you can use `svelte-kit package` to reverse this paradigm: your `src/lib` folder becomes the public facing package and the `src/routes` could be used for testing, as a demo and for documentation.
+We can also configure the packages entry point (or package root) using a `src/lib/index.js` file and SvelteKit even creates TypeScript definitions inside `.d.ts` files for you!
 [You can read more about packaging libraries with SvelteKit in the Docs.](https://kit.svelte.dev/docs#packaging)
 
 To get started, create a new SvelteKit project using `npm init svelte@next my-toast-lib-name` (note: the `@next` is only needed while SvelteKit isn't at 1.0 yet and will not be needed after an official release). Select your preferred options, then go to the new folder.
@@ -65,7 +65,7 @@ After this setup, we can get started with creating the toast package.
 
 To build the toast package, we start by creating a couple of files inside the `src/lib` folder.
 
-- `toastStore.js`: this will create a store that holds all active toast notifications and also exports functions to add and remove toasts.
+- `toastStore.js`: this will create a store that holds all active toast notifications and exports functions to add and remove toasts.
 
 - `Toast.svelte`: this will display a single toast notification.
 
@@ -279,15 +279,13 @@ Open up `src/routes/index.svelte` and replace it's contents with the an example 
 ```html
 <!-- src/routes/index.svelte -->
 <script>
-	  import { addToast } from "$lib/toastStore.js";
-		import Toasts from "$lib/Toasts.svelte";
+  import { addToast } from "$lib/";
+  import Toasts from "$lib/";
 </script>
 
-<Toasts/>
+<Toasts />
 
-<button on:click="{() => {addToast("hi")}}">
-	Toast "Hi"
-</button>
+<button on:click="{() => {addToast('hi')}}">Toast "Hi"</button>
 ```
 
 Run `npm install` to install our dev dependencies and then run `npm run dev -- --open` to start the development server and open it up in your default browser. The SvelteKit App should load and you should be able to click the Button to spawn a toast. If it doesn't work then check out the Terminal or Browser Dev Console to spot errors.
@@ -306,8 +304,29 @@ When everything works we can just set up a new npm script in our `package.json`.
 }
 ```
 
+Because SvelteKit creates type definitions in `.d.ts` files we need to make sure we have `typescript` and `svelte2tsx` installed. To install those simply run `npm install -D typescript svelte2tsx`.
+
 Finally, the last step is to run that npm script with `npm run package` and SvelteKit will build our package inside the `package` folder. I won't cover how to publish this package to NPM so either check the [npm docs on publishing packages](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) or search the internet for an article that covers that if you need help.
 
 ## Check out my toast package
 
-You can also just use [my own Toast package](https://as-toast.vercel.app/) that features full customization using CSS Custom Properties
+I based this tutorial ony [my own Toast package](https://as-toast.vercel.app/) that you can also use which features full customization using CSS Custom Properties.
+
+![My own Toast Package that shows of the CSS customization in various themes ](/files/blog/toasting-in-svelte/as-toast.png)
+
+### Quick Start
+
+1. `npm i -D as-toast`
+1. `import { Toasts, addToast } from "as-toast"`
+1. `addToast('Hello Toast.');`
+1. `addToast('This toast is a warning.', 'warn');`
+1. `addToast('This toast will display for about 11,574 days.', undefined, 9001);`
+
+### Links
+
+- [Open quick start in Svelte REPL](https://svelte.dev/repl/ac1ac6289ab948b488fe2f17d122aaac?version=3.42.6)
+- [View a demo](https://as-toast.vercel.app/#demo)
+- [View the docs](https://as-toast.vercel.app/#docs)
+- [View Theme Ideas 🎨](https://as-toast.vercel.app/#themes)
+- [Vist package on npm](https://www.npmjs.com/package/as-toast)
+- [Visit project repo on GitHub](https://github.com/SarcevicAntonio/as-toast).

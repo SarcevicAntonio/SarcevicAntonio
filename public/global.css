@@ -1,17 +1,37 @@
 /** Variables **/
 
 :root {
+  --b: hsl(0, 0%, 100%);
   --bg: hsl(281, 100%, 97%);
   --bgg: hsl(161, 100%, 97%);
   --accent: hsl(281, 50%, 42%);
   --hi: hsl(161, 50%, 42%);
-  --fg: #000000;
+  --fg: hsl(0, 0%, 0%);
 
   --tran-s: 0.4s ease-in-out;
 
   --shadow-pill: 0 0.5px 0.5px rgba(0, 0, 0, 0.05),
     0 1.4px 1.4px rgba(0, 0, 0, 0.071), 0 2.8px 2.8px rgba(0, 0, 0, 0.089),
     0 5.8px 5.8px rgba(0, 0, 0, 0.11), 0 16px 16px rgba(0, 0, 0, 0.16);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --b: hsl(0, 0%, 0%);
+    --bg: hsl(281, 100%, 3%);
+    --bgg: hsl(161, 100%, 3%);
+    --accent: hsl(281, 50%, 58%);
+    --hi: hsl(161, 50%, 58%);
+    --fg: hsl(0, 0%, 100%);
+
+    --tran-s: 0.4s ease-in-out;
+
+    --shadow-pill: 0 0.5px 0.5px rgba(255, 255, 255, 0.05),
+      0 1.4px 1.4px rgba(255, 255, 255, 0.071),
+      0 2.8px 2.8px rgba(255, 255, 255, 0.089),
+      0 5.8px 5.8px rgba(255, 255, 255, 0.11),
+      0 16px 16px rgba(255, 255, 255, 0.16);
+  }
 }
 
 /** Default Element Styling **/
@@ -22,6 +42,7 @@
 
 html {
   scroll-behavior: smooth;
+  min-height: 100%;
 }
 
 body {
@@ -31,6 +52,11 @@ body {
   background: var(--bgg);
   background: linear-gradient(120deg, var(--bg) 0%, var(--bgg) 100%);
   color: var(--fg);
+}
+
+pre,
+code {
+  font-family: "Fira Code";
 }
 
 nav,
@@ -94,7 +120,7 @@ a {
   padding: 0 1em;
   border: 1px solid var(--hi);
   border-radius: 0.5em;
-  background-color: white;
+  background-color: var(--b);
 }
 
 .posts p {

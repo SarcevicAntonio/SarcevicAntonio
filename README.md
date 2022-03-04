@@ -2,7 +2,7 @@
 
 Pronouns: He/Him
 
-Loves to program in Svelte with TypeScript and SCSS.
+Loves to program in Svelte with TypeScript and plain CSS.
 
 Also enjoys working with Web Components, Angular, Figma, Docker and GitlabCI.
 

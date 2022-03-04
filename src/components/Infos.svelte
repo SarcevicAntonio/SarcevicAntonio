@@ -1,6 +1,6 @@
 <div class="fc">
   <h2>👤 About Toni</h2>
-  <p>Likes to program in Svelte with TypeScript and SCSS.</p>
+  <p>Likes to program in Svelte with TypeScript and plain CSS.</p>
   <p>
     Also enjoys working with Web Components, Angular, Figma, Docker and
     GitlabCI.

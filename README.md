@@ -5,14 +5,10 @@
 
 Pronouns: He/Him
 
-Loves to program in Svelte with TypeScript and plain CSS.
+Loves to program User Interfaces in Svelte with TypeScript and plain CSS.
 
-Also enjoys working with Web Components, Angular, Figma, Docker and GitlabCI.
-
-Working as a web developer at Westphalia DataLab in Münster since 2019/3.
+Working as a web developer at Clancy.Digital from Münster since 2022/4.
 
 Studies Informatics (M. Sc.) at the FH Münster since 2020.
-
-Earned a Bachelor of Science degree in Media and Communications Informatics.
 
 [Read more on sarcevic.dev!](https://www.sarcevic.dev/)

@@ -1,14 +1,23 @@
 <div class="fc">
   <h2>👤 About Toni</h2>
-  <p>Likes to program in Svelte with TypeScript and plain CSS.</p>
   <p>
-    Also enjoys working with Web Components, Angular, Figma, Docker and
-    GitlabCI.
-    <br />
-    Now and then even with NodeJS, Ruby on Rails and Java.
+    Loves to program User Interfaces in Svelte with TypeScript and plain CSS.
   </p>
   <p>
-    Working as a web developer at Westphalia-Datalab in Münster since 2019/3.
+    Enjoys designing User Interfaces with Figma.
+  </p>
+  <p>
+    Has professional experience with with Angular, Docker and GitlabCI.
+  </p>
+  <p>
+    Dabbled with Web Components, Vue, NodeJS, Python, Ruby on Rails and Java.
+  </p>
+  <p>
+    Working as a web developer at Clancy.Digital from Münster since 2022/4.
+  </p>
+  <p>
+    Worked as a web developer at Westphalia DataLab in Münster from 2019/3 -
+    2022/3.
   </p>
   <p>Studies Informatics (M. Sc.) at the FH Münster since 2020.</p>
   <p>

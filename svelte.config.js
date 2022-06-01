@@ -11,6 +11,9 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { mdsvex } from 'mdsvex'
 
 export default /** @type {import('@sveltejs/kit').Config} */ {
+  experimental: {
+    inspector: true
+  },
   extensions: ['.svelte', ...mdsvexConfig.extensions],
   preprocess: [mdsvex(mdsvexConfig), preprocess()],
   kit: {

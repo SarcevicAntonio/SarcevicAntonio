@@ -2,16 +2,16 @@ import type { SiteConfig } from '$lib/types/site'
 
 export const site: SiteConfig = {
   protocol: 'https://',
-  domain: (import.meta.env.URARA_SITE_DOMAIN as string) ?? 'urara-demo.netlify.app',
-  title: 'Urara',
-  subtitle: 'Sweet & Powerful SvelteKit Blog Template',
+  domain: (import.meta.env.URARA_SITE_DOMAIN as string) ?? 'sarcevic.dev',
+  title: 'Antonio Sarcevic',
+  subtitle: 'my personal blog',
   lang: 'en-US',
   description: 'Powered by SvelteKit/Urara',
   author: {
-    name: 'John Doe',
-    photo: '/assets/maskable@192.png',
-    status: '🌸',
-    bio: 'lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    name: 'Antonio Sarcevic',
+    photo: '/assets/pic.png',
+    status: '🌻',
+    bio: 'Loves to program User Interfaces in Svelte with TypeScript and plain CSS.    '
   },
   themeColor: '#3D4451'
 }

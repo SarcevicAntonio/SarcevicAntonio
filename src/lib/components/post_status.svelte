@@ -43,7 +43,8 @@
       ? 'text-neutral-content !bg-neutral/50 hover:!bg-neutral/80'
       : 'text-base-content/75 px-0 hover:underline'} {featured
       ? 'text-neutral-content/75'
-      : ''} badge badge-lg badge-ghost text-left bg-transparent border-none font-bold tooltip tooltip-bottom u-url u-uid"
+      : ''} badge badge-lg badge-ghost text-left bg-transparent border-none font-bold tooltip-bottom u-url u-uid"
+    class:tooltip={stringUpdated !== stringPublished}
     data-tip="Updated: {stringUpdated}">
     {stringPublished}
     <time class="hidden dt-published" datetime={jsonPublished} itemprop="datePublished">

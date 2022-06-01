@@ -24,7 +24,7 @@
         <meta property="og:image" content={site.protocol + site.domain + post.photo} />
         <meta name="twitter:card" content="summary_large_image" />
       {:else}
-        <meta property="og:image" content={icon.maskable512.src ?? icon.any512.src} />
+        <meta property="og:image" content={icon.maskable512?.src ?? icon.any512.src} />
         <meta name="twitter:card" content="summary" />
       {/if}
       {#if post.tags}
@@ -37,7 +37,7 @@
     {/if}
   {:else}
     <meta property="og:type" content="website" />
-    <meta property="og:image" content={icon.maskable512.src ?? icon.any512.src} />
+    <meta property="og:image" content={icon.maskable512?.src ?? icon.any512.src} />
     <meta property="og:description" content={site.description} />
     {#if page}
       <meta property="og:title" content={page.title ?? page.path.slice(1)} />

@@ -6,7 +6,7 @@ published: 2021-03-29
 updated: 2022-03-02
 tags:
   - project
-  - webDev
+  - web dev
 ---
 
 During my 1th semester of my Informatics Masters's degree, we got tasked to create an offline-first booking app for internal use as part of a distributed database course. The idea was that there is a company offering cruise ship tickets and they need an internal booking app for sales agents to use on offline tablets when they recruit new customers.

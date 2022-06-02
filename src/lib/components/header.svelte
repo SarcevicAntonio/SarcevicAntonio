@@ -8,7 +8,7 @@
   import Nav from '$lib/components/header_nav.svelte'
   import Search from '$lib/components/header_search.svelte'
   export let path: string
-  let currentTheme: string
+  let currentTheme: string = "as-dark"
   let currentThemeColor: string
   let search: boolean = false
   let pin: boolean = true
@@ -37,7 +37,7 @@
 
   if (browser)
     currentTheme =
-      localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+      localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'as-dark' : 'as-light')
 </script>
 
 <svelte:head>
@@ -72,7 +72,7 @@
           </div>
           <ul
             tabindex="0"
-            class="flex shadow-2xl menu dropdown-content bg-base-100 text-base-content rounded-box w-52 p-2 gap-2 overflow-y-auto h-[21.5rem]"
+            class="flex shadow-2xl menu dropdown-content bg-base-100 text-base-content rounded-box w-80 p-2 gap-2 overflow-y-auto h-[21.5rem]"
             class:hidden={!pin}>
             {#each theme as { name, text }}
               <button

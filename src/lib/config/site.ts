@@ -13,5 +13,5 @@ export const site: SiteConfig = {
     status: '🌻',
     bio: 'Loves to program User Interfaces in Svelte with TypeScript and plain CSS.    '
   },
-  themeColor: '#3D4451'
+  themeColor: '#bef264'
 }

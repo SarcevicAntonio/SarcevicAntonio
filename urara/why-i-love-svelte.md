@@ -6,7 +6,7 @@ date: 2021-03-29
 updated: 2021-03-29
 tags:
   - svelte
-  - webDev
+  - web dev
 ---
 
 [Svelte](https://svelte.dev/) differs from SPA frameworks like Angular, Vue and React in that it is a _compiler_ that builds the components, thereby producing more efficient JavaScript.

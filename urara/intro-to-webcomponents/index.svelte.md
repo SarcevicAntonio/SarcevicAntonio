@@ -6,8 +6,7 @@ published: 2021-09-10
 updated: 2022-03-02
 tags:
   - svelte
-  - webDev
-  - webComponents
+  - web dev
 ---
 
 <script>

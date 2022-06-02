@@ -171,3 +171,18 @@ pre.twoslash data-lsp:hover::before {
 .card {
   overflow: visible !important;
 }
+
+.resources {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1em;
+  align-items: center;
+}
+.pill {
+  @apply bg-neutral-content/20 rounded-full px-2 py-1;
+}
+.pill:hover {
+  @apply bg-neutral-content/30;
+}

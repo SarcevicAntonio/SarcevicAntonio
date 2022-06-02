@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@iconify-json/heroicons-outline': ^1.1.1
   '@iconify-json/heroicons-solid': ^1.1.1
+  '@polymer/paper-button': ^3.0.1
   '@sveltejs/adapter-auto': ^1.0.0-next.46
   '@sveltejs/adapter-node': ^1.0.0-next.74
   '@sveltejs/adapter-static': ^1.0.0-next.31
@@ -44,6 +45,9 @@ specifiers:
   vite: ^2.9.9
   vite-plugin-pwa: ^0.12.0
   workbox-window: ^6.5.3
+
+dependencies:
+  '@polymer/paper-button': 3.0.1
 
 devDependencies:
   '@iconify-json/heroicons-outline': 1.1.1
@@ -1386,6 +1390,95 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
+  /@polymer/font-roboto/3.0.2:
+    resolution: {integrity: sha512-tx5TauYSmzsIvmSqepUPDYbs4/Ejz2XbZ1IkD7JEGqkdNUJlh+9KU85G56Tfdk/xjEZ8zorFfN09OSwiMrIQWA==}
+    dev: false
+
+  /@polymer/iron-a11y-keys-behavior/3.0.1:
+    resolution: {integrity: sha512-lnrjKq3ysbBPT/74l0Fj0U9H9C35Tpw2C/tpJ8a+5g8Y3YJs1WSZYnEl1yOkw6sEyaxOq/1DkzH0+60gGu5/PQ==}
+    dependencies:
+      '@polymer/polymer': 3.5.0
+    dev: false
+
+  /@polymer/iron-behaviors/3.0.1:
+    resolution: {integrity: sha512-IMEwcv1lhf1HSQxuyWOUIL0lOBwmeaoSTpgCJeP9IBYnuB1SPQngmfRuHKgK6/m9LQ9F9miC7p3HeQQUdKAE0w==}
+    dependencies:
+      '@polymer/iron-a11y-keys-behavior': 3.0.1
+      '@polymer/polymer': 3.5.0
+    dev: false
+
+  /@polymer/iron-checked-element-behavior/3.0.1:
+    resolution: {integrity: sha512-aDr0cbCNVq49q+pOqa6CZutFh+wWpwPMLpEth9swx+GkAj+gCURhuQkaUYhIo5f2egDbEioR1aeHMnPlU9dQZA==}
+    dependencies:
+      '@polymer/iron-form-element-behavior': 3.0.1
+      '@polymer/iron-validatable-behavior': 3.0.1
+      '@polymer/polymer': 3.5.0
+    dev: false
+
+  /@polymer/iron-flex-layout/3.0.1:
+    resolution: {integrity: sha512-7gB869czArF+HZcPTVSgvA7tXYFze9EKckvM95NB7SqYF+NnsQyhoXgKnpFwGyo95lUjUW9TFDLUwDXnCYFtkw==}
+    dependencies:
+      '@polymer/polymer': 3.5.0
+    dev: false
+
+  /@polymer/iron-form-element-behavior/3.0.1:
+    resolution: {integrity: sha512-G/e2KXyL5AY7mMjmomHkGpgS0uAf4ovNpKhkuUTRnMuMJuf589bKqE85KN4ovE1Tzhv2hJoh/igyD6ekHiYU1A==}
+    dependencies:
+      '@polymer/polymer': 3.5.0
+    dev: false
+
+  /@polymer/iron-meta/3.0.1:
+    resolution: {integrity: sha512-pWguPugiLYmWFV9UWxLWzZ6gm4wBwQdDy4VULKwdHCqR7OP7u98h+XDdGZsSlDPv6qoryV/e3tGHlTIT0mbzJA==}
+    dependencies:
+      '@polymer/polymer': 3.5.0
+    dev: false
+
+  /@polymer/iron-validatable-behavior/3.0.1:
+    resolution: {integrity: sha512-wwpYh6wOa4fNI+jH5EYKC7TVPYQ2OfgQqocWat7GsNWcsblKYhLYbwsvEY5nO0n2xKqNfZzDLrUom5INJN7msQ==}
+    dependencies:
+      '@polymer/iron-meta': 3.0.1
+      '@polymer/polymer': 3.5.0
+    dev: false
+
+  /@polymer/paper-behaviors/3.0.1:
+    resolution: {integrity: sha512-6knhj69fPJejv8qR0kCSUY+Q0XjaUf0OSnkjRjmTJPAwSrRYtgqE+l6P1FfA+py1X/cUjgne9EF5rMZAKJIg1g==}
+    dependencies:
+      '@polymer/iron-behaviors': 3.0.1
+      '@polymer/iron-checked-element-behavior': 3.0.1
+      '@polymer/paper-ripple': 3.0.2
+      '@polymer/polymer': 3.5.0
+    dev: false
+
+  /@polymer/paper-button/3.0.1:
+    resolution: {integrity: sha512-JRNBc+Oj9EWnmyLr7FcCr8T1KAnEHPh6mosln9BUdkM+qYaYsudSICh3cjTIbnj6AuF5OJidoLkM1dlyj0j6Zg==}
+    dependencies:
+      '@polymer/iron-flex-layout': 3.0.1
+      '@polymer/paper-behaviors': 3.0.1
+      '@polymer/paper-styles': 3.0.1
+      '@polymer/polymer': 3.5.0
+    dev: false
+
+  /@polymer/paper-ripple/3.0.2:
+    resolution: {integrity: sha512-DnLNvYIMsiayeICroYxx6Q6Hg1cUU8HN2sbutXazlemAlGqdq80qz3TIaVdbpbt/pvjcFGX2HtntMlPstCge8Q==}
+    dependencies:
+      '@polymer/iron-a11y-keys-behavior': 3.0.1
+      '@polymer/polymer': 3.5.0
+    dev: false
+
+  /@polymer/paper-styles/3.0.1:
+    resolution: {integrity: sha512-y6hmObLqlCx602TQiSBKHqjwkE7xmDiFkoxdYGaNjtv4xcysOTdVJsDR/R9UHwIaxJ7gHlthMSykir1nv78++g==}
+    dependencies:
+      '@polymer/font-roboto': 3.0.2
+      '@polymer/iron-flex-layout': 3.0.1
+      '@polymer/polymer': 3.5.0
+    dev: false
+
+  /@polymer/polymer/3.5.0:
+    resolution: {integrity: sha512-0OyN+LQ68tudbWYm7BeU4WELiqXvRn1HIpSnW0u7iFTdxJakJGLehh7PFgKL1noe9a0HHSKznQIfz+hMxzgBtA==}
+    dependencies:
+      '@webcomponents/shadycss': 1.11.0
+    dev: false
+
   /@rollup/plugin-babel/5.3.1_o5sqowbm3tib3dowmwlyo7rr74:
     resolution: {integrity: sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q==}
     engines: {node: '>= 10.0.0'}
@@ -1895,6 +1988,10 @@ packages:
       magic-string: 0.26.2
       vite: 2.9.9
     dev: true
+
+  /@webcomponents/shadycss/1.11.0:
+    resolution: {integrity: sha512-L5O/+UPum8erOleNjKq6k58GVl3fNsEQdSOyh0EUhNmi7tHUyRuCJy1uqJiWydWcLARE5IPsMoPYMZmUGrz1JA==}
+    dev: false
 
   /acorn-jsx/5.3.2_acorn@8.7.1:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}

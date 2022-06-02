@@ -73,7 +73,7 @@
           in:fly={{ x: 100, duration: 300, delay: 500 }}
           out:fly={{ x: -100, duration: 300 }}
           class="bg-base-300 text-base-content shadow-inner text-center md:rounded-box p-10 -mb-2 md:mb-0 relative z-10">
-          <div class="prose items-center">
+          <div class="prose items-center m-auto">
             <h2>
               Not found: [{#each tags as tag, i}
                 '{tag}'{#if i + 1 < tags.length},{/if}

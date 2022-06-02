@@ -147,9 +147,9 @@ export const date: DateConfig = {
   toPublishedString: {
     locales: 'de-DE',
     options: {
+      day: 'numeric',
       year: 'numeric',
-      month: 'numeric',
-      day: 'numeric'
+      month: 'numeric'
     }
   },
   toUpdatedString: {

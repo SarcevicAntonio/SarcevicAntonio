@@ -1,10 +1,9 @@
 ---
 title: About Me
-published: 2021-03-24
-updated: 2021-03-24
+published: 1997-09-01
+updated: 2022-03-02
+flags: "unlisted"
 ---
-
-## 👤 About Toni
 
 Loves to program User Interfaces in Svelte with TypeScript and plain CSS.
 

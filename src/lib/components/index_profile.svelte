@@ -27,5 +27,13 @@
         {site.author.pgp.text}
       </a>
     {/if}
+    <a href="https://twitter.com/SarcevicAntonio" rel="nofollow noopener noreferer" target="_blank" class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4">
+      <span class="i-heroicons-solid-external-link !w-4 !h-4 mr-1" />
+      Twitter
+    </a>
+    <a href="https://github.com/SarcevicAntonio/" rel="nofollow noopener noreferer" target="_blank" class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4">
+      <span class="i-heroicons-solid-external-link !w-4 !h-4 mr-1" />
+      GitHub
+    </a>
   </div>
 </div>

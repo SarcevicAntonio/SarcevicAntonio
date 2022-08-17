@@ -142,6 +142,10 @@ export const header: HeaderConfig = {
     {
       text: 'About Me',
       link: '/about-me'
+    },
+    {
+      text: 'Things I build',
+      link: '/things-i-build'
     }
   ]
 }

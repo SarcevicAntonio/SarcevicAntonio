@@ -2,16 +2,16 @@
 title: About Me
 published: 1997-09-01
 updated: 2022-03-02
-flags: "unlisted"
+flags: 'unlisted'
 ---
 
 Loves to program User Interfaces in Svelte with TypeScript and plain CSS.
 
 Enjoys designing User Interfaces with Figma.
 
-Has professional experience with with Angular, Docker and GitlabCI.
+Has professional experience with Angular, Ruby on Rails, PostgreSQL, MongoDB, Docker, GitlabCI, GitHub Actions, Cypress and Playwright.
 
-Dabbled with Web Components, Vue, NodeJS, Python, Ruby on Rails and Java.
+Dabbled with Web Components, Vue, NodeJS, Python and Java.
 
 Working as a web developer at Clancy.Digital from Münster since 2022/4.
 

@@ -35,5 +35,11 @@
       <span class="i-heroicons-solid-external-link !w-4 !h-4 mr-1" />
       GitHub
     </a>
+
+    <a rel="me" href="https://mastodon.online/@sarcevic" rel="nofollow noopener noreferer" target="_blank" class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4">
+      <span class="i-heroicons-solid-external-link !w-4 !h-4 mr-1" />
+      Mastodon
+    </a>
+
   </div>
 </div>

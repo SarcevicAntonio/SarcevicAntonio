@@ -3,28 +3,28 @@ import type { ThemeConfig, HeadConfig, HeaderConfig, FooterConfig, DateConfig, F
 export const theme: ThemeConfig = [
   {
     name: 'as-light',
-    text: '🌻🌕 AS Light'
+    text: '🌕 Light'
   },
   {
     name: 'as-dark',
-    text: '🌻🌑 AS Dark'
+    text: '🌑 Dark'
   },
-  {
-    name: 'original-light',
-    text: '🚀🌕 Original Light'
-  },
-  {
-    name: 'original-dark',
-    text: '🚀🌑 Original Dark'
-  },
-  {
-    name: 'light',
-    text: '🌼🌕 daisyUI Light'
-  },
-  {
-    name: 'dark',
-    text: '🌼🌑 daisyUI Dark'
-  },
+  // {
+  //   name: 'original-light',
+  //   text: '🚀🌕 Original Light'
+  // },
+  // {
+  //   name: 'original-dark',
+  //   text: '🚀🌑 Original Dark'
+  // },
+  // {
+  //   name: 'light',
+  //   text: '🌼🌕 daisyUI Light'
+  // },
+  // {
+  //   name: 'dark',
+  //   text: '🌼🌑 daisyUI Dark'
+  // },
   {
     name: 'cupcake',
     text: '🧁 Cupcake'

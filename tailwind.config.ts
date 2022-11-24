@@ -29,22 +29,22 @@ export default {
           'base-100': '#1e0d33'
         }
       },
-      {
-        'original-light': {
-          primary: 'hsl(161, 50%, 42%)',
-          secondary: 'hsl(281, 50%, 42%)',
-          'base-100': 'hsl(161, 100%, 97%)'
-        }
-      },
-      {
-        'original-dark': {
-          primary: 'hsl(161, 50%, 58%)',
-          secondary: 'hsl(281, 50%, 58%)',
-          'base-100': 'hsl(281, 100%, 6%)'
-        }
-      },
-      'light',
-      'dark',
+      // {
+      //   'original-light': {
+      //     primary: 'hsl(161, 50%, 42%)',
+      //     secondary: 'hsl(281, 50%, 42%)',
+      //     'base-100': 'hsl(161, 100%, 97%)'
+      //   }
+      // },
+      // {
+      //   'original-dark': {
+      //     primary: 'hsl(161, 50%, 58%)',
+      //     secondary: 'hsl(281, 50%, 58%)',
+      //     'base-100': 'hsl(281, 100%, 6%)'
+      //   }
+      // },
+      // 'light',
+      // 'dark',
       'cupcake',
       'bumblebee',
       'emerald',

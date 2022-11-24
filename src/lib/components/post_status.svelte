@@ -9,15 +9,15 @@
   const jsonUpdated = new Date(post.updated ?? post.published ?? post.created).toJSON()
 </script>
 
-<div class:md:mb-4={!preview && post.type !== 'article'} class="flex font-semibold gap-1.5">
-  <a
-    class:hidden={preview}
-    rel="author"
-    class="opacity-75 hover:opacity-100 hover:text-primary duration-500 ease-in-out p-author h-card"
-    href={site.protocol + site.domain}>
-    {site.author.name}
-  </a>
-  {#if post.published}
+{#if !post.flags?.includes('unlisted')}
+  <div class:md:mb-4={!preview && post.type !== 'article'} class="flex font-semibold gap-1.5">
+    <a
+      class:hidden={preview}
+      rel="author"
+      class="opacity-75 hover:opacity-100 hover:text-primary duration-500 ease-in-out p-author h-card"
+      href={site.protocol + site.domain}>
+      {site.author.name}
+    </a>
     <span class:hidden={preview} class="opacity-50">/</span>
     <a href={post.path} class="u-url u-uid swap group/time">
       <time
@@ -33,5 +33,5 @@
         {stringUpdated}
       </time>
     </a>
-  {/if}
-</div>
+  </div>
+{/if}

@@ -27,5 +27,12 @@ export default defineConfig({
             handleMissingId: 'warn'
         },
         csp: { mode: 'auto' }
+    },
+    vitePlugin: {
+        experimental: {
+            inspector: {
+                holdMode: true
+            }
+        }
     }
 });

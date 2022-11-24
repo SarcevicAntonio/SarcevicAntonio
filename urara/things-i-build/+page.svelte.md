@@ -1,11 +1,11 @@
 ---
 title: Things I build
 toc: false
+flags:
+	- unlisted
 ---
 
-# Apps
-
-## doTogether
+# doTogether
 
 - ![Logo](https://do-together.vercel.app/favicon.svg)
 - simple realtime-multiplayer todo list for recurring tasks

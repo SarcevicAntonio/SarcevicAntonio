@@ -1,6 +1,8 @@
 ---
 title: About Me
 toc: false
+flags:
+	- unlisted
 ---
 
 Loves to program User Interfaces in Svelte with TypeScript and plain CSS.

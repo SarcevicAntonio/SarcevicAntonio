@@ -2,7 +2,7 @@
 title: Why I ❤ Svelte
 summary: |
   In this article I explain why I am in love with Svelte and why you should be too.
-date: 2021-03-29
+created: 2021-03-29
 updated: 2021-03-29
 tags:
   - svelte

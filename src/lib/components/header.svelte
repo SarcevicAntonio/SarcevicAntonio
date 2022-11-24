@@ -58,9 +58,6 @@
   {#if !search}
     <div in:fly={{ x: -50, duration: 300, delay: 300 }} out:fly={{ x: -50, duration: 300 }} class="navbar">
       <div class="navbar-start">
-        {#if headerConfig.nav}
-          <Nav {path} {title} {pin} {scrollY} nav={headerConfig.nav} />
-        {/if}
         <a href="/" data-sveltekit-prefetch class="btn btn-ghost normal-case text-lg">{site.title}</a>
       </div>
       <div class="navbar-end">

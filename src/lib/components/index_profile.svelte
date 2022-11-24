@@ -1,5 +1,8 @@
 <script lang="ts">
   import { site } from '$lib/config/site'
+  import { header } from '$lib/config/general'
+  import { page } from '$app/stores'
+  $: path = $page.url.pathname
 </script>
 
 <div
@@ -50,33 +53,83 @@
         {/each}
       </div>
     {/if}
+    <!-- NAV -->
+    <ul>
+      {#each header.nav as { text, link, children, icon }}
+        {#if link && !children}
+          <li>
+            <a
+              data-sveltekit-prefetch
+              class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4"
+              class:font-bold={link === path}
+              href={link}>
+              <span class="{icon} !w-4 !h-4 mr-1" />
+              {text}
+            </a>
+          </li>
+        {:else if children}
+          <li>
+            <span class:font-bold={children.some(({ link }) => link === path)} class="!rounded-btn gap-1">
+              {text}
+              <span class="i-heroicons-solid-chevron-down -mr-1" />
+            </span>
+            <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+            <ul tabindex="0" class="menu rounded-box bg-base-100 text-base-content shadow-lg p-2">
+              {#each children as { text, link }}
+                <li>
+                  <a data-sveltekit-prefetch class:font-bold={link === path} href={link}>{text}</a>
+                </li>
+              {/each}
+            </ul>
+          </li>
+        {/if}
+      {/each}
+    </ul>
 
-    <div>
-      <a
-        href="https://github.com/SarcevicAntonio/"
-        rel="nofollow noopener noreferer"
-        target="_blank"
-        class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4">
-        <span class="i-mdi-github !w-4 !h-4 mr-1" />
-        GitHub
-      </a>
-
-      <a
-        href="https://mastodon.online/@sarcevic"
-        rel="me nofollow noopener noreferer"
-        target="_blank"
-        class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4">
-        <span class="i-mdi-mastodon !w-4 !h-4 mr-1" />
-        Mastodon
-      </a>
-      <a
-        href="https://twitter.com/SarcevicAntonio"
-        rel="nofollow noopener noreferer"
-        target="_blank"
-        class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4">
-        <span class="i-mdi-twitter !w-4 !h-4 mr-1" />
-        Twitter
-      </a>
-    </div>
+    <!-- SOCIALS -->
+    <ul>
+      <li>
+        <a
+          href="https://github.com/SarcevicAntonio/"
+          rel="nofollow noopener noreferer"
+          target="_blank"
+          class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4">
+          <span class="i-mdi-github !w-4 !h-4 mr-1" />
+          GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://mastodon.online/@sarcevic"
+          rel="me nofollow noopener noreferer"
+          target="_blank"
+          class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4">
+          <span class="i-mdi-mastodon !w-4 !h-4 mr-1" />
+          Mastodon
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://twitter.com/SarcevicAntonio"
+          rel="nofollow noopener noreferer"
+          target="_blank"
+          class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4">
+          <span class="i-mdi-twitter !w-4 !h-4 mr-1" />
+          Twitter
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
+
+<style>
+  ul {
+    display: flex;
+    margin: auto;
+    gap: 1em;
+  }
+
+  li {
+    display: flex;
+  }
+</style>

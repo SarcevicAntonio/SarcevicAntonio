@@ -9,7 +9,8 @@ export type HeadConfig = {
 }
 
 export type HeaderConfig = {
-  nav?: {
+  nav: {
+    icon: string
     text: string
     link?: string
     children?: {
@@ -32,7 +33,7 @@ export type FooterConfig = {
   since?: string
 }
 
-export type DateConfig = { locales: string; options: Intl.DateTimeFormatOptions }
+export type DateConfig = { locales?: string; options: Intl.DateTimeFormatOptions }
 
 export type FeedConfig = {
   /** feed entry limit. */

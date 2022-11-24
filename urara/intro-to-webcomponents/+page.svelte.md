@@ -10,15 +10,19 @@ tags:
 ---
 
 <script>
-  import { browser } from '$app/env';
+  import { browser } from '$app/environment';
 
   if (browser) {
      import("@polymer/paper-button/paper-button.js")
-     import("./button.js")
-     import("./counter.js")
   }
-
 </script>
+
+<svelte:head>
+
+<script src="./button.js"></script>
+<script src="./counter.js"></script>
+
+</svelte:head>
 
 During my 1th semester of my Informatics Masters's degree, late 2020, I wrote a paper on web components, their value, usage and authoring. I also wrote a part about creating Web Components with Svelte. The paper was originally written in german, so I thought I post a translated version here.
 

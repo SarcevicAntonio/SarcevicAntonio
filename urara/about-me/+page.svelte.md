@@ -1,8 +1,6 @@
 ---
 title: About Me
-published: 1997-09-01
-updated: 2022-03-02
-flags: 'unlisted'
+toc: false
 ---
 
 Loves to program User Interfaces in Svelte with TypeScript and plain CSS.

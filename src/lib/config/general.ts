@@ -86,7 +86,7 @@ export const theme: ThemeConfig = [
     text: '🐣 Fantasy'
   },
   {
-    name: 'wirefream',
+    name: 'wireframe',
     text: '📱 Wireframe'
   },
   {
@@ -164,21 +164,12 @@ export const footer: FooterConfig = {
 }
 
 export const date: DateConfig = {
-  toPublishedString: {
-    locales: 'de-DE',
-    options: {
-      day: 'numeric',
-      year: 'numeric',
-      month: 'numeric'
-    }
-  },
-  toUpdatedString: {
-    locales: 'de-DE',
-    options: {
-      year: 'numeric',
-      month: 'numeric',
-      day: 'numeric'
-    }
+  locales: 'de-DE',
+  options: {
+    year: '2-digit',
+    weekday: 'long',
+    month: 'short',
+    day: 'numeric'
   }
 }
 

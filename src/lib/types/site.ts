@@ -1,3 +1,5 @@
+import type { FFFAuthor } from 'fff-flavored-frontmatter'
+
 export type SiteConfig = {
   /** @deprecated - use `description` instead */
   descr?: string
@@ -15,17 +17,23 @@ export type SiteConfig = {
   description?: string
   /** site keywords. `<meta name="keywords" content={site.keywords}>` */
   keywords?: string[]
-  author: {
-    name: string
-    photo?: string
+  author: Omit<FFFAuthor, 'url'> & {
     status?: string
     bio?: string
-    github?: string
-    twitter?: string
-    pgp?: {
-      text: string
-      link: string
-    }
+    metadata?: (
+      | {
+          text: string
+          icon?: string
+          link?: string
+          rel?: string
+        }
+      | {
+          text?: string
+          icon: string
+          link?: string
+          rel?: string
+        }
+    )[]
   }
   /** for web app manifest only.
    * ```

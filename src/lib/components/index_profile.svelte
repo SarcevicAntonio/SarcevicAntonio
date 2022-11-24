@@ -50,5 +50,33 @@
         {/each}
       </div>
     {/if}
+
+    <div>
+      <a
+        href="https://github.com/SarcevicAntonio/"
+        rel="nofollow noopener noreferer"
+        target="_blank"
+        class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4">
+        <span class="i-mdi-github !w-4 !h-4 mr-1" />
+        GitHub
+      </a>
+
+      <a
+        href="https://mastodon.online/@sarcevic"
+        rel="me nofollow noopener noreferer"
+        target="_blank"
+        class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4">
+        <span class="i-mdi-mastodon !w-4 !h-4 mr-1" />
+        Mastodon
+      </a>
+      <a
+        href="https://twitter.com/SarcevicAntonio"
+        rel="nofollow noopener noreferer"
+        target="_blank"
+        class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4">
+        <span class="i-mdi-twitter !w-4 !h-4 mr-1" />
+        Twitter
+      </a>
+    </div>
   </div>
 </div>

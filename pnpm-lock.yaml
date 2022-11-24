@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@iconify-json/heroicons-outline': ^1.1.4
   '@iconify-json/heroicons-solid': ^1.1.5
+  '@iconify-json/mdi': ^1.1.36
   '@polymer/paper-button': ^3.0.1
   '@sveltejs/adapter-auto': next
   '@sveltejs/adapter-netlify': 1.0.0-next.84
@@ -54,6 +55,7 @@ specifiers:
   workbox-window: ^6.5.4
 
 dependencies:
+  '@iconify-json/mdi': 1.1.36
   '@polymer/paper-button': 3.0.1
 
 devDependencies:
@@ -1342,13 +1344,18 @@ packages:
       '@iconify/types': 1.1.0
     dev: true
 
+  /@iconify-json/mdi/1.1.36:
+    resolution: {integrity: sha512-3aWCVjDIseO8COo8zPkmxOZUFjdWsvTQQnk6zVrOaJh2K8oKuBznw10FSJZgQM7qAn6S54/oejyqkWfODRZV1Q==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
   /@iconify/types/1.1.0:
     resolution: {integrity: sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==}
     dev: true
 
   /@iconify/types/2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-    dev: true
 
   /@iconify/utils/2.0.2:
     resolution: {integrity: sha512-13B3wJxDLmSNBEIEpKleKSkJVQgdAy9ra3Xsu233i/5qD5yXBGhpOFxTB/k8cqme0xVsMKBPV5vbvq9MgQlX+w==}

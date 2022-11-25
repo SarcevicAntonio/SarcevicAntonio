@@ -19,8 +19,8 @@ tags:
 
 <svelte:head>
 
-<script src="./button.js"></script>
-<script src="./counter.js"></script>
+<script src="/intro-to-webcomponents/button.js"></script>
+<script src="/intro-to-webcomponents/counter.js"></script>
 
 </svelte:head>
 

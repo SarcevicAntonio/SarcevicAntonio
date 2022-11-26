@@ -34,18 +34,18 @@
     {/if}
     {#if currentComment}
       {#key currentComment}
-        <Giscus
+        <!-- <Giscus
           repo="SarcevicAntonio/SarcevicAntonio"
           repoId="MDEwOlJlcG9zaXRvcnkxODkzMDAxNjM="
           category="Comments"
           categoryId="DIC_kwDOC0h9w84CSwfL"
           reactionsEnabled="1"
           theme={$currentTheme}
-          inputPosition="top" />
-        <!-- <svelte:component
+          inputPosition="top" /> -->
+        <svelte:component
           this={comments[`/src/lib/components/comments/${currentComment}.svelte`].default}
           {post}
-          config={currentConfig} /> -->
+          config={currentConfig} />
       {/key}
     {/if}
   </div>

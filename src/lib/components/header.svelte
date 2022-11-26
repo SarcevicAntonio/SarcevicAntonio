@@ -8,9 +8,9 @@
   import { hslToHex } from '$lib/utils/color'
   import Nav from '$lib/components/header_nav.svelte'
   import Search from '$lib/components/header_search.svelte'
+  import { currentTheme } from '$lib/stores/theme'
   export let path: string
   let title: string
-  let currentTheme: string
   let currentThemeColor: string
   let search: boolean = false
   let pin: boolean = true
@@ -19,8 +19,8 @@
 
   storedTitle.subscribe(storedTitle => (title = storedTitle as string))
 
-  $: if (browser && currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme)
+  $: if (browser && $currentTheme) {
+    document.documentElement.setAttribute('data-theme', $currentTheme)
     currentThemeColor = hslToHex(
       ...(getComputedStyle(document.documentElement)
         .getPropertyValue('--b1')
@@ -40,7 +40,7 @@
   }
 
   if (browser)
-    currentTheme =
+    $currentTheme =
       localStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
 </script>
 
@@ -78,11 +78,11 @@
               <button
                 data-theme={name}
                 on:click={() => {
-                  currentTheme = name
+                  $currentTheme = name
                   localStorage.setItem('theme', name)
                 }}
-                class:border-2={currentTheme === name}
-                class:border-primary={currentTheme === name}
+                class:border-2={$currentTheme === name}
+                class:border-primary={$currentTheme === name}
                 class="btn btn-ghost w-full hover:bg-primary group rounded-lg flex bg-base-100 p-2 transition-all">
                 <p class="flex-1 text-left text-base-content group-hover:text-primary-content transition-color">
                   {text ?? name}

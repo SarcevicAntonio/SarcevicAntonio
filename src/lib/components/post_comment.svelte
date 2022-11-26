@@ -1,6 +1,8 @@
 <script lang="ts">
+  import { currentTheme } from '$lib/stores/theme'
   import type { CommentConfig } from '$lib/types/post'
   import { toSnake } from '$lib/utils/case'
+  import Giscus from '@giscus/svelte'
   export let post: Urara.Post
   export let config: CommentConfig
   const comments = import.meta.glob<{ default: unknown }>('/src/lib/components/comments/*.svelte', { eager: true })
@@ -32,10 +34,18 @@
     {/if}
     {#if currentComment}
       {#key currentComment}
-        <svelte:component
+        <Giscus
+          repo="SarcevicAntonio/SarcevicAntonio"
+          repoId="MDEwOlJlcG9zaXRvcnkxODkzMDAxNjM="
+          category="Comments"
+          categoryId="DIC_kwDOC0h9w84CSwfL"
+          reactionsEnabled="1"
+          theme={$currentTheme.substring(3)}
+          inputPosition="top" />
+        <!-- <svelte:component
           this={comments[`/src/lib/components/comments/${currentComment}.svelte`].default}
           {post}
-          config={currentConfig} />
+          config={currentConfig} /> -->
       {/key}
     {/if}
   </div>

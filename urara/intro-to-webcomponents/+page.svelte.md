@@ -485,7 +485,7 @@ be able to be set externally by an attribute:
 
 <figure class="flex-col">
   <section class="example mark-buttons-red">
-  <my-counter/>
+  <my-counter count="30"></my-counter>
   </section>
   <figcaption>
     my-counter component

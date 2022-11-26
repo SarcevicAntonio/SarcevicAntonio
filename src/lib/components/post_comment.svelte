@@ -40,7 +40,7 @@
           category="Comments"
           categoryId="DIC_kwDOC0h9w84CSwfL"
           reactionsEnabled="1"
-          theme={$currentTheme.substring(3)}
+          theme={$currentTheme}
           inputPosition="top" />
         <!-- <svelte:component
           this={comments[`/src/lib/components/comments/${currentComment}.svelte`].default}

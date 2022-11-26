@@ -2,12 +2,12 @@ import type { ThemeConfig, HeadConfig, HeaderConfig, FooterConfig, DateConfig, F
 
 export const theme: ThemeConfig = [
   {
-    name: 'as-light',
-    text: '🌕 Light'
+    name: 'light',
+    text: '☀️ Light'
   },
   {
-    name: 'as-dark',
-    text: '🌑 Dark'
+    name: 'dark',
+    text: '🌙 Dark'
   }
   // {
   //   name: 'original-light',

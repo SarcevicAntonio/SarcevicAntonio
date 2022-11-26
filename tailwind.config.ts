@@ -12,7 +12,7 @@ export default {
   daisyui: {
     themes: [
       {
-        'as-light': {
+        'light': {
           primary: '#a3e635',
           secondary: '#c084fc',
           accent: '#1FB2A6',
@@ -21,7 +21,7 @@ export default {
         }
       },
       {
-        'as-dark': {
+        'dark': {
           primary: '#bef264',
           secondary: '#c084fc',
           accent: '#1FB2A6',
@@ -45,34 +45,34 @@ export default {
       // },
       // 'light',
       // 'dark',
-      'cupcake',
-      'bumblebee',
-      'emerald',
-      'corporate',
-      'synthwave',
-      'retro',
-      'cyberpunk',
-      'valentine',
-      'halloween',
-      'garden',
-      'forest',
-      'aqua',
-      'lofi',
-      'pastel',
-      'fantasy',
-      'wireframe',
-      'black',
-      'luxury',
-      'dracula',
-      'cmyk',
-      'autumn',
-      'business',
-      'acid',
-      'lemonade',
-      'night',
-      'coffee',
-      'winter'
+      // 'cupcake',
+      // 'bumblebee',
+      // 'emerald',
+      // 'corporate',
+      // 'synthwave',
+      // 'retro',
+      // 'cyberpunk',
+      // 'valentine',
+      // 'halloween',
+      // 'garden',
+      // 'forest',
+      // 'aqua',
+      // 'lofi',
+      // 'pastel',
+      // 'fantasy',
+      // 'wireframe',
+      // 'black',
+      // 'luxury',
+      // 'dracula',
+      // 'cmyk',
+      // 'autumn',
+      // 'business',
+      // 'acid',
+      // 'lemonade',
+      // 'night',
+      // 'coffee',
+      // 'winter'
     ],
-    darkTheme: 'as-dark'
+    darkTheme: 'dark'
   }
 }

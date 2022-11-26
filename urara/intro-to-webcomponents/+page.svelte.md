@@ -718,7 +718,12 @@ window.customElements.define('my-counter', MyCounter)
 
 <style>
 
+  paper-button {
+    background-color: white;
+  }
+
   .example {
+    @apply shadow-inner;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -727,6 +732,10 @@ window.customElements.define('my-counter', MyCounter)
     color: black;
     padding: 1em;
     width: 100%;
+    background-color: hsl(var(--b3));
+    background-image: radial-gradient(hsl(var(--b1)) 20%, transparent 0%);
+    background-position: 50% 50%;
+    background-size: 8px 8px;
   }
 
   .example button {

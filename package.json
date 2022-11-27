@@ -80,6 +80,7 @@
   "dependencies": {
     "@giscus/svelte": "^2.2.4",
     "@iconify-json/mdi": "^1.1.36",
+    "@iconify-json/material-symbols": "^1.1.24",
     "@polymer/paper-button": "^3.0.1"
   }
 }

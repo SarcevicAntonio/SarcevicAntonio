@@ -4,6 +4,7 @@ specifiers:
   '@giscus/svelte': ^2.2.4
   '@iconify-json/heroicons-outline': ^1.1.4
   '@iconify-json/heroicons-solid': ^1.1.5
+  '@iconify-json/material-symbols': ^1.1.24
   '@iconify-json/mdi': ^1.1.36
   '@polymer/paper-button': ^3.0.1
   '@sveltejs/adapter-auto': next
@@ -58,6 +59,7 @@ specifiers:
 
 dependencies:
   '@giscus/svelte': 2.2.4
+  '@iconify-json/material-symbols': 1.1.24
   '@iconify-json/mdi': 1.1.36
   '@polymer/paper-button': 3.0.1
 
@@ -1508,6 +1510,12 @@ packages:
     dependencies:
       '@iconify/types': 1.1.0
     dev: true
+
+  /@iconify-json/material-symbols/1.1.24:
+    resolution: {integrity: sha512-yg7KGVbrQ5NU/BZWj+rfEoeR3JA8ehCvY1SgrW+iuZjzZk3qm1sQcwQ5AktvEx/Hx9qnqQMMpscQJRPJxOq6rQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
 
   /@iconify-json/mdi/1.1.36:
     resolution: {integrity: sha512-3aWCVjDIseO8COo8zPkmxOZUFjdWsvTQQnk6zVrOaJh2K8oKuBznw10FSJZgQM7qAn6S54/oejyqkWfODRZV1Q==}

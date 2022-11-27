@@ -1,7 +1,7 @@
 ---
 title: Introduction to Web Components
 summary: |
-  During my 1th semester of my Informatics Masters's degree, I wrote a paper on web components, detailing the value, usage and authoring of Web Components. I also explain how to build Web Components with Svelte.
+  🧱 During my 1th semester of my Informatics Masters's degree, I wrote a paper on web components, detailing the value, usage and authoring of Web Components. I also explain how to build Web Components with Svelte.
 published: 2021-09-10
 updated: 2022-03-02
 tags:

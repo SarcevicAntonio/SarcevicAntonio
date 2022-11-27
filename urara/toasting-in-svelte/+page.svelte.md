@@ -1,7 +1,7 @@
 ---
-title: How to create a toast notification library package with SvelteKit
+title: Create a toast notification package with SvelteKit
 summary: |
-  Creating a toast notification library with Svelte and packaging it up for NPM with SvelteKit!
+  📦 How to create a notification store and component as a library with Svelte and packaging it up for NPM with SvelteKit!
 published: 2021-10-14
 updated: 2021-10-14
 tags:
@@ -35,17 +35,15 @@ The usage of the package we will be creating could look like this:
 
 ```html
 <script>
-  import { Toasts, addToast } from "my-toast-lib-name";
-  let value = "Hello World";
+  import { Toasts, addToast } from 'my-toast-lib-name'
+  let value = 'Hello World'
 </script>
 
 <Toasts />
 
 <input bind:value />
 <button on:click="{() => {addToast(value)}}">Add as default info Toast</button>
-<button on:click="{() => {addToast(value, 'warn', 8000)}}">
-  Add as warning Toast that displays longer
-</button>
+<button on:click="{() => {addToast(value, 'warn', 8000)}}">Add as warning Toast that displays longer</button>
 ```
 
 ## Using SvelteKit to create packages
@@ -91,9 +89,9 @@ So, to create a new writeable store for our toasts we import the writeable store
 ```js
 // src/lib/toastStore.js
 
-import { writable } from "svelte/store";
+import { writable } from 'svelte/store'
 
-export const toasts = writable([]);
+export const toasts = writable([])
 ```
 
 Next up, we will create and export a new function that can be used to add a new toast. This function arguments include a message for the toast, a type of toast (defaulting to 'info'), and number `removeAfter` which says how long the toast will be visible for (defaulting to 5000 ms).
@@ -111,28 +109,28 @@ All in all, our `addToast()` function could look something like this:
 ```js
 // ... src/lib/toastStore.js
 
-export function addToast(msg, type = "info", removeAfter = 5000) {
+export function addToast(msg, type = 'info', removeAfter = 5000) {
   // 1. create unique identifier
-  const id = new Date().valueOf() + msg;
+  const id = new Date().valueOf() + msg
 
   // 2. add new toast using store.update
-  toasts.update((all) => [
+  toasts.update(all => [
     {
       id,
       msg,
       type,
-      removeAfter,
+      removeAfter
     },
-    ...all,
-  ]);
+    ...all
+  ])
 
   // 3. set timeout for the removal of the toast after some time
   setTimeout(() => {
-    removeToast(id);
-  }, removeAfter);
+    removeToast(id)
+  }, removeAfter)
 
   // 4. return the unique identifier
-  return id;
+  return id
 }
 ```
 
@@ -142,7 +140,7 @@ Since we call `removeToast`, we need to define this function too. This function 
 // ... src/lib/toastStore.js
 
 export function removeToast(id) {
-  toasts.update((all) => all.filter((toast) => toast.id !== id));
+  toasts.update(all => all.filter(toast => toast.id !== id))
 }
 ```
 
@@ -156,10 +154,10 @@ Let's start of with the `<script>` tag. Import the `removeToast` function from `
 <!-- src/lib/Toast.svelte -->
 
 <script>
-  import { fade, fly } from "svelte/transition";
-  import { removeToast } from "./toastStore";
+  import { fade, fly } from 'svelte/transition'
+  import { removeToast } from './toastStore'
 
-  export let toast;
+  export let toast
 </script>
 ```
 
@@ -228,9 +226,9 @@ Let's start with the Script block again. We need to import the `Toast` component
 <!-- src/lib/Toasts.svelte -->
 
 <script>
-  import { flip } from "svelte/animate";
-  import Toast from "./Toast.svelte";
-  import { toasts } from "./toastStore";
+  import { flip } from 'svelte/animate'
+  import Toast from './Toast.svelte'
+  import { toasts } from './toastStore'
 </script>
 ```
 
@@ -274,8 +272,8 @@ One thing we still need to code is our `index.js` file which describes the top l
 
 ```js
 // src/lib/index.js
-export { default as Toasts } from "./Toasts.svelte";
-export { addToast } from "./toastStore";
+export { default as Toasts } from './Toasts.svelte'
+export { addToast } from './toastStore'
 ```
 
 We are pretty much done with the library. Let's first give it a spin to check if everything works like we want to.
@@ -285,7 +283,7 @@ Open up `src/routes/index.svelte` and replace it's contents with the an example 
 ```html
 <!-- src/routes/index.svelte -->
 <script>
-  import { Toasts, addToast } from "$lib/";
+  import { Toasts, addToast } from '$lib/'
 </script>
 
 <Toasts />

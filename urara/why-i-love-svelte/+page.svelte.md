@@ -1,7 +1,7 @@
 ---
-title: Why I ❤ Svelte
+title: Why I Love Svelte
 summary: |
-  In this article I explain why I am in love with Svelte and why you should be too.
+  🧡 In this article I explain why I am in love with Svelte and why you should be too.
 published: 2021-03-29
 updated: 2021-03-29
 tags:

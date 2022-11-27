@@ -1,7 +1,7 @@
 ---
-title: The Future of the Sun and the Earth – A Scientific Animation
+title: Future of Sun and Earth – A Scientific Animation
 summary: |
-  During my 5th semester of my Media and Communications Informatics Bachelor's degree, I got to lead a team of 15 talented fellow students.
+  🌍 During my 5th semester of my Media and Communications Informatics Bachelor's degree, I got to lead a team of 15 talented fellow students.
 published: 2021-03-28
 updated: 2022-03-02
 tags:
@@ -75,7 +75,8 @@ the desired look.
 
 <figure class="flex-col">
 
-  ![Six different panels showing six different stages of the Sun expanding and the Earth changing shown from space.](/future-sun-earth-animation/Idea_storyboard.jpg)
+![Six different panels showing six different stages of the Sun expanding and the Earth changing shown from space.](/future-sun-earth-animation/Idea_storyboard.jpg)
+
   <figcaption>
     First draft of storyboard by Laura Cosio.
   </figcaption>
@@ -92,11 +93,10 @@ version of the storyboard as clear as possible for the graphics team. After the 
 storyboard were confirmed by the research team as correct, time frames were calculated for each
 scene and important dates added to give an idea of how fast transitions should occur.
 
-
-
 <figure class="flex-col">
 
-  ![14 different scenes showing different stages with different close up shots and space shots.](/future-sun-earth-animation/completeSB.jpg)
+![14 different scenes showing different stages with different close up shots and space shots.](/future-sun-earth-animation/completeSB.jpg)
+
   <figcaption>
     Final of storyboard by Laura Cosio.
   </figcaption>
@@ -166,7 +166,6 @@ the Material Output node. Recreate this material by using CTRL and A to add the 
 values from the image.
 
 ![Finished Ocean Material](/future-sun-earth-animation/s4/2-5_Ocean_Material.png)
-
 
 ### 9.2.3 Ice sheets
 
@@ -279,15 +278,32 @@ Thanks for reading this blog entry. Be sure to check out the entire animation an
   🌍 Click here or on the image to see the full animation! ☀️
 </a>
 
-
-<div class="resources">
-  <a class="pill" href="https://www.youtube.com/watch?v=fLTLAEGBFCM" target="_blank" rel="noreferrer">
-  Watch the Final Animation on YouTube!
-  </a>
-  <a class="pill" href="https://drive.google.com/file/d/1UtDlqpbofqS9DVGsCI-wCC8Z0nVL93qp/view?usp=sharing" target="_blank" rel="noreferrer">
-  Project Overview Poster
-  </a>
-  <a class="pill" href="https://drive.google.com/file/d/1oseXq7SSCHLi1o5h5Jd3G6Cztf0dfsnk/view?usp=sharing" target="_blank" rel="noreferrer">
-  Project Documentation (186 Pages)
-  </a>
-</div>
+<ul>
+  <li>
+    <a
+      href="https://www.youtube.com/watch?v=fLTLAEGBFCM"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Watch the Final Animation on YouTube!
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://drive.google.com/file/d/1UtDlqpbofqS9DVGsCI-wCC8Z0nVL93qp/view?usp=sharing"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Project Overview Poster
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://drive.google.com/file/d/1oseXq7SSCHLi1o5h5Jd3G6Cztf0dfsnk/view?usp=sharing"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Project Documentation (186 Pages)
+    </a>
+  </li>
+</ul>

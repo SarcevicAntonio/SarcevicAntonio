@@ -3,11 +3,13 @@
   const { label, desc, icon, links } = thing
 </script>
 
-<section>
-  <img src={icon} alt="Icon" />
-  <div>
-    <h3>{label}</h3>
-    <p>{desc}</p>
+<section class="flex flex-col md:flex-row">
+  <div class="flex gap-4">
+    <img src={icon} alt="Icon" />
+    <div class="flex-col">
+      <h3>{label}</h3>
+      <p>{desc}</p>
+    </div>
   </div>
   <ul>
     {#each links as [label, href, icon]}
@@ -25,8 +27,6 @@
 
 <style lang="postcss">
   section {
-    display: flex;
-    gap: 1em;
     margin: 0;
     padding: 1em;
     border-radius: 0.5em;
@@ -41,10 +41,6 @@
   img {
     flex-basis: 4rem;
     margin: 0;
-  }
-
-  div {
-    margin-bottom: 0.5em;
   }
 
   p,

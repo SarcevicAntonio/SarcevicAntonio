@@ -6,7 +6,7 @@
 <section>
   <img src={icon} alt="Icon" />
   <div>
-    <h2>{label}</h2>
+    <h3>{label}</h3>
     <p>{desc}</p>
   </div>
   <ul>
@@ -48,7 +48,7 @@
   }
 
   p,
-  h2 {
+  h3 {
     margin: 0;
   }
 

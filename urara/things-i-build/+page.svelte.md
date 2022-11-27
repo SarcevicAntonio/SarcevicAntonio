@@ -31,6 +31,8 @@ flags:
 </script>
 <!-- ``` -->
 
+## Recent
+
 <ul>
 {#each things as thing}
   <li>

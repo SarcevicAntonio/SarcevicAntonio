@@ -1,7 +1,9 @@
 import Thing from './Thing.svelte'
+import Callout from './Callout.svelte'
 
 const MD = {
-  Thing
+  Thing,
+  Callout
 }
 
 export default MD

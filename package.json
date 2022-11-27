@@ -1,12 +1,12 @@
 {
   "name": "urara",
-  "type": "module",
   "version": "0.0.1",
-  "license": "WTFPL",
-  "repository": "importantimport/urara",
   "homepage": "https://github.com/importantimport/urara",
   "bugs": "https://github.com/importantimport/urara/issues",
+  "repository": "importantimport/urara",
+  "license": "WTFPL",
   "author": "藍+85CD",
+  "type": "module",
   "scripts": {
     "clean": "node urara.js clean",
     "tsc": "tsc -p tsconfig.node.json",
@@ -24,9 +24,15 @@
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. ."
   },
+  "dependencies": {
+    "@giscus/svelte": "^2.2.4",
+    "@polymer/paper-button": "^3.0.1"
+  },
   "devDependencies": {
     "@iconify-json/heroicons-outline": "^1.1.4",
     "@iconify-json/heroicons-solid": "^1.1.5",
+    "@iconify-json/material-symbols": "^1.1.24",
+    "@iconify-json/mdi": "^1.1.36",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/adapter-netlify": "1.0.0-next.84",
     "@sveltejs/adapter-node": "next",
@@ -76,11 +82,5 @@
     "vite": "^3.2.4",
     "vite-plugin-pwa": "^0.13.3",
     "workbox-window": "^6.5.4"
-  },
-  "dependencies": {
-    "@giscus/svelte": "^2.2.4",
-    "@iconify-json/mdi": "^1.1.36",
-    "@iconify-json/material-symbols": "^1.1.24",
-    "@polymer/paper-button": "^3.0.1"
   }
 }

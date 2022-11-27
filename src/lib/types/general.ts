@@ -8,7 +8,7 @@ export type HeadConfig = {
   me?: string[]
 }
 
-export type HeaderConfig = {
+export type HeaerConfig = {
   nav: {
     icon: string
     text: string

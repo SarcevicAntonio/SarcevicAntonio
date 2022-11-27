@@ -10,9 +10,17 @@ tags:
   - guide
 ---
 
+<script>
+  import MD from "$lib/md";
+</script>
+
 This article explains how to create a reusable toast library package for Svelte using SvelteKit.
 We will cover what a toast is, use Svelte Components and a Store to create one ourselves, and cover how SvelteKit can help us package the library.
 If you only care about the code, have [this REPL](https://svelte.dev/repl/ff8317744f4b4c3e8972a313a044e882?version=3.44.1) or [simply use my svelte toast package `as-toast`](#check-out-my-toast-package).
+
+<MD.Callout type="warning" title="Requirements">
+You need to have a SvelteKit compatible JavaScript runtime like Node.js (>= 16) installed on your system.
+</MD.Callout>
 
 ## What are toasts?
 

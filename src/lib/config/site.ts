@@ -9,7 +9,7 @@ export const site: SiteConfig = {
   description: 'Powered by SvelteKit/Urara',
   author: {
     name: 'Antonio Sarcevic',
-    avatar: '/assets/pic.png',
+    avatar: '/assets/pic.jpg',
     status: '🌻',
     bio: 'Loves to program User Interfaces in Svelte with TypeScript and plain CSS.    '
   },

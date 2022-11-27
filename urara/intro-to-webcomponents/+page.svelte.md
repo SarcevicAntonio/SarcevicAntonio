@@ -7,6 +7,7 @@ updated: 2022-03-02
 tags:
   - svelte
   - web dev
+  - longform
 ---
 
 <script>

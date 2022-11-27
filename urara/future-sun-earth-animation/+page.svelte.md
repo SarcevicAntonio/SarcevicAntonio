@@ -6,6 +6,7 @@ published: 2021-03-28
 updated: 2022-03-02
 tags:
   - project
+  - 3d
 ---
 
 During my 5th semester of my Media and Communications Informatics Bachelor's degree I got to lead a team of 15 talented fellow students.

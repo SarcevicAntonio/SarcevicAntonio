@@ -7,6 +7,7 @@ updated: 2021-10-14
 tags:
   - svelte
   - web dev
+  - guide
 ---
 
 This article explains how to create a reusable toast library package for Svelte using SvelteKit.

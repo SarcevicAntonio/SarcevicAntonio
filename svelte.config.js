@@ -26,7 +26,10 @@ export default defineConfig({
         prerender: {
             handleMissingId: 'warn'
         },
-        csp: { mode: 'auto' }
+        csp: { mode: 'auto' },
+        files: {
+            serviceWorker: 'src/sw'
+        }
     },
     vitePlugin: {
         experimental: {

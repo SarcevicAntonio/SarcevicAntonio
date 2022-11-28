@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { LayoutData } from './$types'
-  // import { onMount } from 'svelte'
-  // import { browser, dev } from '$app/environment'
+  import { onMount } from 'svelte'
+  import { browser, dev } from '$app/environment'
   import { fly } from 'svelte/transition'
   import { genTags } from '$lib/utils/posts'
   import { posts, tags } from '$lib/stores/posts'
@@ -15,16 +15,14 @@
 
   posts.set(data.res)
   tags.set(genTags(data.res))
-  // onMount(
-  //   () =>
-  //     !dev &&
-  //     browser &&
-  //     registerSW({
-  //       immediate: true,
-  //       onRegistered: r => r && setInterval(async () => await r.update(), 198964),
-  //       onRegisterError: error => console.error(error)
-  //     })
-  // )
+  onMount(
+    () => !dev && browser && 'serviceWorker' in navigator && navigator.serviceWorker.register('/sw.js')
+    //     registerSW({
+    //       immediate: true,
+    //       onRegistered: r => r && setInterval(async () => await r.update(), 198964),
+    //       onRegisterError: error => console.error(error)
+    //     })
+  )
 </script>
 
 <Head />

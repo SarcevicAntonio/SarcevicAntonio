@@ -19,7 +19,7 @@
 <section class="p-4 rounded-lg border {type}">
   <div class="flex gap-2 items-center mb-2">
     <div class={viewIcon} />
-    <span>
+    <span class="font-bold">
       {viewTitle}
     </span>
   </div>
@@ -33,23 +33,35 @@
     border-color: var(--color, var(--view-c));
   }
 
-  .info {
-    --view-bg: hsl(var(--in));
-    --view-c: hsl(var(--inc));
+  :global(.prose) section :global(:where(strong):not(:where([class~='not-prose'] *))) {
+    color: inherit;
   }
 
-  :global([data-theme='dark']) .info {
+  section > :global(:nth-child(2)) {
+    margin-top: 0;
+  }
+
+  section > :global(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .info {
     --view-bg: hsl(var(--inc));
     --view-c: hsl(var(--in));
   }
 
-  .warning {
-    --view-bg: hsl(var(--wa));
-    --view-c: hsl(var(--wac));
+  :global([data-theme='light']) .info {
+    --view-bg: hsl(var(--in));
+    --view-c: hsl(var(--inc));
   }
 
-  :global([data-theme='dark']) .warning {
+  .warning {
     --view-bg: hsl(var(--wac));
     --view-c: hsl(var(--wa));
+  }
+
+  :global([data-theme='light']) .warning {
+    --view-bg: hsl(var(--wa));
+    --view-c: hsl(var(--wac));
   }
 </style>

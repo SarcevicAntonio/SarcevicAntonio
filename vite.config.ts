@@ -41,6 +41,7 @@ export default defineConfig({
     }),
     sveltekit(),
     SvelteKitPWA({
+      selfDestroying: true,
       registerType: 'autoUpdate',
       manifest: false,
       scope: '/'

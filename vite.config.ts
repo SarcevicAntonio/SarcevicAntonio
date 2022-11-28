@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 // vite plugin
 import UnoCSS from 'unocss/vite'
 import { presetTagify, presetIcons, extractorSvelte } from 'unocss'
-import { SvelteKitPWA } from '@vite-pwa/sveltekit'
+// import { SvelteKitPWA } from '@vite-pwa/sveltekit'
 import { sveltekit } from '@sveltejs/kit/vite'
 // postcss & tailwindcss
 import TailwindCSS from 'tailwindcss'
@@ -40,11 +40,11 @@ export default defineConfig({
       ]
     }),
     sveltekit(),
-    SvelteKitPWA({
-      selfDestroying: true,
-      registerType: 'autoUpdate',
-      manifest: false,
-      scope: '/'
-    })
+    // SvelteKitPWA({
+    //   selfDestroying: true,
+    //   registerType: 'autoUpdate',
+    //   manifest: false,
+    //   scope: '/'
+    // })
   ]
 })

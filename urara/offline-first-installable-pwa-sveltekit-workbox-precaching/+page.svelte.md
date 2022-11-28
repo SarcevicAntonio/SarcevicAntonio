@@ -163,7 +163,7 @@ Service Workers can be used to progressively enhance web apps. They act as a pro
 
 <MD.Callout title="Learn More">
 
-Learn more about Service Workers: [developer.mozilla.org - Service Worker API](/offline-first-installable-pwa-sveltekit-workbox-precaching/https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+Learn more about Service Workers: [developer.mozilla.org - Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 
 </MD.Callout>
 

@@ -29,6 +29,9 @@ export default defineConfig({
         csp: { mode: 'auto' },
         files: {
             serviceWorker: 'src/sw'
+        },
+        serviceWorker: {
+            register: false
         }
     },
     vitePlugin: {

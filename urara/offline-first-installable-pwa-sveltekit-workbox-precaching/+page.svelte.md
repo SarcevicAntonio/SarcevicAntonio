@@ -68,16 +68,16 @@ The App Icon will be displayed in the users operating system launcher when they 
 
 <MD.Callout title="Hint">
 
-If you don't have any icons yet, you can **download [this zip file](app-icons.zip)** with pre-made icons, and **extract them into the `/static/` folder inside your SvelteKit app.**
+If you don't have any icons yet, you can **download [this zip file](/offline-first-installable-pwa-sveltekit-workbox-precaching/app-icons.zip)** with pre-made icons, and **extract them into the `/static/` folder inside your SvelteKit app.**
 
-You can then skip to the next section: [👉 Web App Manifest](./#web-app-manifest)
+You can then skip to the next section: [👉 Web App Manifest](/offline-first-installable-pwa-sveltekit-workbox-precaching/#web-app-manifest)
 
 </MD.Callout>
 
 To create an App Icon, I used [Figma](https://www.figma.com/) and created a simple Icon inside a frame. I recommend using shapes instead of bitmaps, to have a scalable image, that always looks crisp.
 
 If you are done designing your App Icon, you can export the needed images by selecting the icon's frame and adding the following options in the "Export" section in the right panel at the bottom:
-![Figma: a frame with an icon focused is focused and the 'Export' section in the bottom of the right panel is shown](figma-icon.png)
+![Figma: a frame with an icon focused is focused and the 'Export' section in the bottom of the right panel is shown](/offline-first-installable-pwa-sveltekit-workbox-precaching/figma-icon.png)
 **Export settings:**
 
 1. Size: 192w, Suffix: 192, Format: PNG.
@@ -86,7 +86,7 @@ If you are done designing your App Icon, you can export the needed images by sel
 
 When you got the export settings right, **click the "Export icon" button and export the files to your SvelteKit app's `/static/` folder.**
 
-![Figma overlayed with a macOS export dialog pointing to the '/static/' folder of the SvelteKit app](figma-export.png)
+![Figma overlayed with a macOS export dialog pointing to the '/static/' folder of the SvelteKit app](/offline-first-installable-pwa-sveltekit-workbox-precaching/figma-export.png)
 
 ## Web App Manifest
 
@@ -153,7 +153,7 @@ We also need to modify the head of our web app's entry HTML file, so the browser
 
 We can open the "Manifest" section of the "Application" tab inside dev tools to see how the browser interprets the metadata from our linked manifest file:
 
-![Chrome Devtools showing the 'Manifest' section of the 'Application' tab displaying the title of the Web App Manifest](devtools-app-manifest.png)
+![Chrome Devtools showing the 'Manifest' section of the 'Application' tab displaying the title of the Web App Manifest](/offline-first-installable-pwa-sveltekit-workbox-precaching/devtools-app-manifest.png)
 
 This section will also tell us if we have something missing, like the icons or important metadata.
 
@@ -163,7 +163,7 @@ Service Workers can be used to progressively enhance web apps. They act as a pro
 
 <MD.Callout title="Learn More">
 
-Learn more about Service Workers: [developer.mozilla.org - Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+Learn more about Service Workers: [developer.mozilla.org - Service Worker API](/offline-first-installable-pwa-sveltekit-workbox-precaching/https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 
 </MD.Callout>
 
@@ -237,17 +237,17 @@ const config = {
 
 We can open the "Service Workers" section of the "Application" tab inside dev tools to see how the browser registered the Service worker:
 
-![Chrome Devtools showing the 'Service Worker' section of the 'Application' tab displaying the registered Service Worker](devtools-service-worker.png)
+![Chrome Devtools showing the 'Service Worker' section of the 'Application' tab displaying the registered Service Worker](/offline-first-installable-pwa-sveltekit-workbox-precaching/devtools-service-worker.png)
 
 If the Service Worker isn't registered, you may have to run the production version of the SvelteKit app by running `npm run build` and then `npm run preview` inside the terminal.
 
 ## Our final PWA
 
 And that's pretty much it! In Chrome you can install the web app with this button in the URL bar:
-![Web Application running in Chrome overlayed with the 'Install app?' dialog](app-installation.png)
+![Web Application running in Chrome overlayed with the 'Install app?' dialog](/offline-first-installable-pwa-sveltekit-workbox-precaching/app-installation.png)
 The installed application will appear in a separate window so it can be used outside the browser window:
 
-![Web Application running in a separate window](installed-app.png)
+![Web Application running in a separate window](/offline-first-installable-pwa-sveltekit-workbox-precaching/installed-app.png)
 To test how the app behaves offline you can switch to "Offline" inside the dropdown at the top of the Network tab. After a reload the app still loads because we can still use our precached files - even without a network connection.
 
 <MD.Callout type="warning" title="Attention">
@@ -256,7 +256,7 @@ Depending on your browser, the service worker won't work correclty in dev mode, 
 
 </MD.Callout>
 
-![Chrome Devtools showing the 'Network' tab displaying the words (Service Worker) in the Size column of our resources](offline-capable.png)
+![Chrome Devtools showing the 'Network' tab displaying the words (Service Worker) in the Size column of our resources](/offline-first-installable-pwa-sveltekit-workbox-precaching/offline-capable.png)
 You can see in the Size column of the Network tab that these files are being served by our Service Worker.
 
 ## A quick note on waiting Service Workers
@@ -265,7 +265,7 @@ When updating your app you will run into situations where you are seeing an old 
 
 The new version of the Service Worker is loaded right away, but it will wait before taking control of the web app until every tab is closed, and the old Service worker can hand the web app over to the new one. You can see it waiting in the "Service Workers" section of the "Applications" tab of the dev tools:
 
-![Chrome Devtools showing the 'Service Worker' section of the 'Application' tab displaying two active Service Worker versions, one 'activated and is running' and one 'waiting to activate'](devtools-service-worker-waiting.png)
+![Chrome Devtools showing the 'Service Worker' section of the 'Application' tab displaying two active Service Worker versions, one 'activated and is running' and one 'waiting to activate'](/offline-first-installable-pwa-sveltekit-workbox-precaching/devtools-service-worker-waiting.png)
 
 So if you see an old version of the app, close every tab, and reopen it. The new Service worker should take over and serve the new version of the web app. You can also check the "Update on reload" toggle to skip the waiting phase while developing your app.
 

@@ -3,8 +3,8 @@
   const { label, desc, icon, links } = thing
 </script>
 
-<section class="flex flex-col md:flex-row">
-  <div class="flex gap-4">
+<article class="flex flex-col gap-4 md:gap-0 md:flex-row">
+  <div class="flex gap-6">
     <img src={icon} alt="Icon" />
     <div class="flex-col">
       <h3>{label}</h3>
@@ -23,19 +23,20 @@
       </li>
     {/each}
   </ul>
-</section>
+</article>
 
 <style lang="postcss">
-  section {
+  article {
     margin: 0;
     padding: 1em;
     border-radius: 0.5em;
     align-items: center;
-    @apply transition-shadow;
+    @apply transition-all;
   }
 
-  section:hover {
+  article:hover {
     @apply shadow-xl;
+    transform: translateY(-0.125rem);
   }
 
   img {

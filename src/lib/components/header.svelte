@@ -59,7 +59,9 @@
     <div in:fly={{ x: -50, duration: 300, delay: 300 }} out:fly={{ x: -50, duration: 300 }} class="navbar">
       <div class="navbar-start">
         {#if path !== '/'}
-          <a href="/" data-sveltekit-prefetch class="btn btn-ghost normal-case text-lg">{site.title}</a>
+          <a href="/" data-sveltekit-prefetch class="btn btn-ghost btn-square normal-case text-lg ">
+            <span class="i-material-symbols-home-rounded" />
+          </a>
         {/if}
       </div>
       <div class="navbar-end">

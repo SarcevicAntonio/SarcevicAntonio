@@ -2,6 +2,7 @@
   import { site } from '$lib/config/site'
   import { header } from '$lib/config/general'
   import { page } from '$app/stores'
+  import AsLogo from './as_logo.svelte'
   $: path = $page.url.pathname
 </script>
 
@@ -121,7 +122,8 @@
     </ul>
   </div>
 </div>
-
+<AsLogo />
+  
 <style>
   ul {
     display: flex;

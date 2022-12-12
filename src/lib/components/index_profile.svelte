@@ -7,7 +7,7 @@
 </script>
 
 <div
-  class="h-card flex flex-col gap-4 sticky card card-body p-4 items-right xl:border-2 xl:py-8 border-base-content/10 xl:ml-auto xl:mr-8 xl:max-w-xs">
+  class="z-10 h-card flex flex-col gap-4 sticky card card-body p-4 items-right xl:border-2 xl:py-8 border-base-content/10 xl:ml-auto xl:mr-8 xl:max-w-xs">
   <a href={site.protocol + site.domain} class="hidden u-url u-uid">{site.author.name}</a>
   <figure class="relative mx-auto group">
     <img
@@ -123,7 +123,7 @@
   </div>
 </div>
 <AsLogo />
-  
+
 <style>
   ul {
     display: flex;

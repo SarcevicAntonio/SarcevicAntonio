@@ -16,32 +16,51 @@
   $: viewIcon = icon || defaultIcons[type]
 </script>
 
-<section class="p-4 rounded-lg border {type}">
-  <div class="flex gap-2 items-center mb-2">
+<section class="border {type}">
+  <div class="flex gap-2 items-center title">
     <div class={viewIcon} />
     <span class="font-bold">
       {viewTitle}
     </span>
   </div>
-  <slot />
+  <div class="content">
+    <slot />
+  </div>
 </section>
 
 <style>
   section {
+    border-color: var(--color, var(--view-c));
+    border-radius: 0.5rem;
+  }
+
+  .title {
     background-color: var(--background-color, var(--view-bg));
     color: var(--color, var(--view-c));
-    border-color: var(--color, var(--view-c));
+
+    padding: 1em;
+    padding-bottom: 1.75em;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
   }
 
   :global(.prose) section :global(:where(strong):not(:where([class~='not-prose'] *))) {
     color: inherit;
   }
 
-  section > :global(:nth-child(2)) {
+  .content {
+    background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+    padding: 1em;
+    padding-top: 0.75em;
+    margin-top: -1em;
+    border-radius: 0.5rem;
+  }
+
+  .content > :global(:nth-child(1)) {
     margin-top: 0;
   }
 
-  section > :global(:last-child) {
+  .content > :global(:last-child) {
     margin-bottom: 0;
   }
 

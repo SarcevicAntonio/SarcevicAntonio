@@ -16,7 +16,7 @@
   $: viewIcon = icon || defaultIcons[type]
 </script>
 
-<section class="border {type}">
+<section class={type}>
   <div class="flex gap-2 items-center title">
     <div class={viewIcon} />
     <span class="font-bold">
@@ -30,7 +30,7 @@
 
 <style>
   section {
-    border-color: var(--color, var(--view-c));
+    border: 1px solid var(--color, var(--view-c));
     border-radius: 0.5rem;
   }
 
@@ -49,9 +49,12 @@
   }
 
   .content {
+    border: 1px solid var(--color, var(--view-c));
+
     background-color: hsl(var(--b1) / var(--tw-bg-opacity));
     padding: 1em;
     padding-top: 0.75em;
+    margin: -1px;
     margin-top: -1em;
     border-radius: 0.5rem;
   }

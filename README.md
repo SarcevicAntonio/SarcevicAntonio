@@ -8,6 +8,8 @@ Working as a web developer at Web Computing in Münster since 2022/10.
 
 [Read more on sarcevic.dev!](https://www.sarcevic.dev/)
 
+[Visual Studio Code Settings](https://gist.github.com/SarcevicAntonio/47997ff8700cb5a37877367e77ba8679)
+
 
 <picture>
 <source 

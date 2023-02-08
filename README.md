@@ -25,4 +25,4 @@ Working as a web developer at Web Computing in Münster since 2022/10.
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SarcevicAntonio&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
-![Spotify recently played](https://spotify-recently-played-readme.vercel.app/api?user=11135180220)
+[![My Last.fm](https://lastfm-recently-played.vercel.app/api?user=LinkPlay9&loved=true&loved_style=3)](https://www.last.fm/user/LinkPlay9)

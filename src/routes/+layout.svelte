@@ -8,8 +8,11 @@
   // import { registerSW } from 'virtual:pwa-register'
   import Header from '$lib/components/header.svelte'
   import Head from '$lib/components/head_static.svelte'
+  import { inject } from '@vercel/analytics'
   import 'uno.css'
   import '../app.pcss'
+
+  inject({ mode: dev ? 'development' : 'production' })
 
   export let data: LayoutData
 

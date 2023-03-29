@@ -14,7 +14,7 @@ export default defineConfig({
   preprocess: [mdsvex(mdsvexConfig), preprocess()],
   kit: {
     adapter: adapter({
-      runtime: 'edge'
+      edge: true
     }),
     // Object.keys(process.env).some(key => ['VERCEL', 'CF_PAGES', 'NETLIFY'].includes(key))
     //   ? adapterAuto()

@@ -2,7 +2,9 @@
 
 Pronouns: He/Him
 
-Loves to program User Interfaces in Svelte with TypeScript and plain CSS. Working as a web developer in Münster since 2019.
+Loves to craft User Interfaces in Svelte with semantic HTML, TypeScript and plain CSS.
+
+Working as a Web Developer in Münster since 2019.
 
 [Read more on sarcevic.dev!](https://www.sarcevic.dev/)
 

@@ -5,22 +5,35 @@ flags:
 	- unlisted
 ---
 
-- Loves to program User Interfaces in Svelte with TypeScript and plain CSS.
+<script>
+  import ExternalLinks from '$lib/components/external_links.svelte'
+</script>
 
-- Enjoys designing User Interfaces with Figma.
+## Antonio Sarcevic
 
-- Has professional experience with Angular, Ruby on Rails, PostgreSQL, MongoDB, Docker, GitlabCI, GitHub Actions, Cypress and Playwright.
+Loves to craft User Interfaces in Svelte with semantic HTML, TypeScript and plain CSS.
 
-- Dabbled with Web Components, Vue, NodeJS, Python and Java.
+Working as a Web Developer in Münster since 2019.
 
-- Working as a web developer at Web Computing in Münster since 2022/10.
+<ExternalLinks/>
 
-- Worked as a web developer at Clancy Digital remote from Münster from 2022/4 - 2022/9.
+### Personality
 
-- Worked as a web developer at Westphalia DataLab in Münster from 2019/3 - 2022/3.
+- Open Minded
+- Communicative
+- Honest
+- Empathic
+- Goal & User-Driven
+- Team Player
+- Quick Learner
 
-<!-- - Studies Informatics (M. Sc.) at the FH Münster since 2020. -->
+### Skills
 
-- Earned a Bachelor of Science degree in Media and Communications Informatics.
+- Web Development
+- UI Design
+- Problem-Solving
 
-[Download full CV here!](/assets/CV.pdf)
+[🏗️ Things I Build](/things-i-build/)
+
+
+[📄 Download full Curriculum Vitae](/assets/AntonioSarcevic_CV.pdf)

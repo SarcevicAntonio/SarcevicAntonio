@@ -3,6 +3,7 @@
   import { header } from '$lib/config/general'
   import { page } from '$app/stores'
   import AsLogo from './as_logo.svelte'
+  import ExternalLinks from '$lib/components/external_links.svelte'
   $: path = $page.url.pathname
 </script>
 
@@ -88,38 +89,7 @@
     </ul>
 
     <!-- SOCIALS -->
-    <ul>
-      <li>
-        <a
-          href="https://github.com/SarcevicAntonio/"
-          rel="nofollow noopener noreferer"
-          target="_blank"
-          class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4">
-          <span class="i-mdi-github !w-4 !h-4 mr-1" />
-          GitHub
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://mastodon.online/@sarcevic"
-          rel="me nofollow noopener noreferer"
-          target="_blank"
-          class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4">
-          <span class="i-mdi-mastodon !w-4 !h-4 mr-1" />
-          Mastodon
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/SarcevicAntonio"
-          rel="nofollow noopener noreferer"
-          target="_blank"
-          class="btn btn-ghost btn-xs bg-base-300 font-mono rounded-full mt-4">
-          <span class="i-mdi-twitter !w-4 !h-4 mr-1" />
-          Twitter
-        </a>
-      </li>
-    </ul>
+    <ExternalLinks />
   </div>
 </div>
 <AsLogo />
@@ -127,8 +97,8 @@
 <style>
   ul {
     display: flex;
-    margin: auto;
     gap: 1em;
+    margin-bottom: 1rem;
   }
 
   li {

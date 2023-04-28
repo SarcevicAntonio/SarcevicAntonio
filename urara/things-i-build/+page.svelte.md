@@ -9,10 +9,10 @@ flags:
 <script>
 	import MD from "$lib/md";
   const things = [
-    {
+{
       label: 'doTogether',
       icon: 'https://do-together.vercel.app/favicon.svg',
-      desc: 'Simple realtime-multiplayer todo list for recurring tasks',
+      desc: 'stupidly simple realtime-multiplayer todo list for recurring tasks',
       links: [
         ['Live Version', 'https://do-together.vercel.app/', 'i-material-symbols-open-in-browser'],
         ['Source Code', 'https://github.com/SarcevicAntonio/doTogether', 'i-mdi-github']
@@ -21,12 +21,21 @@ flags:
     {
       label: 'kcalCalc',
       icon: 'https://kcal-calc.vercel.app/favicon.svg',
-      desc: 'Free calorie counting app made to fit my needs',
+      desc: 'free calorie counting app designed for fast user interactions',
       links: [
         ['Live Version', 'https://kcal-calc.vercel.app/', 'i-material-symbols-open-in-browser'],
         ['Source Code', 'https://github.com/SarcevicAntonio/kcalCalc', 'i-mdi-github']
       ]
-    }
+    },
+        {
+      label: 'SvelteLab',
+      icon: 'https://sveltelab.dev/favicon.svg',
+      desc: 'supercharged web IDE/REPL for SvelteKit projects',
+      links: [
+        ['Live Version', 'https://sveltelab.dev', 'i-material-symbols-open-in-browser'],
+        ['Source Code', 'https://github.com/sveltelab/sveltelab', 'i-mdi-github']
+      ]
+    },
   ]
 </script>
 <!-- ``` -->

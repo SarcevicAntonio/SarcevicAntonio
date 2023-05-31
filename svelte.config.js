@@ -1,44 +1,18 @@
-// svelte adapter
-import adapterAuto from '@sveltejs/adapter-auto';
-import adapterNode from '@sveltejs/adapter-node';
-import adapterStatic from '@sveltejs/adapter-static';
-// svelte preprocessor
-import { mdsvex } from 'mdsvex';
-import mdsvexConfig from './mdsvex.config.js';
-import preprocess from 'svelte-preprocess';
-const defineConfig = (config) => config;
-export default defineConfig({
-    extensions: ['.svelte', ...mdsvexConfig.extensions],
-    preprocess: [mdsvex(mdsvexConfig), preprocess()],
-    kit: {
-        adapter: Object.keys(process.env).some(key => ['VERCEL', 'CF_PAGES', 'NETLIFY'].includes(key))
-            ? adapterAuto()
-            : process.env.ADAPTER === 'node'
-                ? adapterNode({ out: 'build' })
-                : adapterStatic({
-                    pages: 'build',
-                    assets: 'build',
-                    fallback: undefined
-                }),
-        trailingSlash: !Object.keys(process.env).some(key => ['VERCEL', 'CF_PAGES', 'NETLIFY'].includes(key)) && process.env.ADAPTER !== 'node'
-            ? 'always'
-            : undefined,
-        prerender: {
-            handleMissingId: 'warn'
-        },
-        csp: { mode: 'auto' },
-        files: {
-            serviceWorker: 'src/sw'
-        },
-        serviceWorker: {
-            register: false
-        }
-    },
-    vitePlugin: {
-        experimental: {
-            inspector: {
-                holdMode: true
-            }
-        }
-    }
-});
+import adapter from '@sveltejs/adapter-auto';
+import { vitePreprocess } from '@sveltejs/kit/vite';
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
+	// for more information about preprocessors
+	preprocess: vitePreprocess(),
+
+	kit: {
+		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
+		// If your environment is not supported or you settled on a specific environment, switch out the adapter.
+		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
+		adapter: adapter()
+	}
+};
+
+export default config;

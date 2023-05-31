@@ -31,7 +31,7 @@
 	}
 	h2 {
 		font-family: 'Staatliches';
-		font-size: var(--step-3);
+		font-size: var(--step-5);
 		text-align: center;
 	}
 
@@ -43,7 +43,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 3em;
-		font-size: var(--step-0);
+		font-size: var(--step-1);
 		justify-content: center;
 	}
 

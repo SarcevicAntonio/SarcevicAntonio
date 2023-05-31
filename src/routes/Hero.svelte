@@ -23,7 +23,7 @@
 			>
 				<path
 					d="M14 287C127.5 -104 564 311 532.5 14"
-					stroke="#CCFF00"
+					stroke="var(--as-accent)"
 					stroke-width="1rem"
 					stroke-linecap="round"
 				/>
@@ -106,12 +106,6 @@
 	}
 
 	@media only screen and (max-width: 250px) {
-		.hero {
-			min-height: revert;
-		}
-		.scroll-indicator {
-			display: none;
-		}
 		section {
 			flex-direction: column;
 		}

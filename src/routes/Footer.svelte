@@ -28,7 +28,7 @@
 		background-color: var(--as-text-1);
 		font-family: 'Space Mono', sans-serif;
 		padding-block: 1rem;
-		padding-inline: 1rem;
+		padding-inline: 2rem;
 	}
 	.content {
 		margin: auto;

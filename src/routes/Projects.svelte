@@ -71,8 +71,7 @@
 	img {
 		max-width: var(--step-7);
 		border-radius: 30%;
-		filter: drop-shadow(0px 12px 33px rgba(0, 0, 0, 0.09))
-			drop-shadow(0px 1.50259px 4.13211px rgba(0, 0, 0, 0.045));
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 		transition: filter 0.2s ease-in-out;
 	}
 

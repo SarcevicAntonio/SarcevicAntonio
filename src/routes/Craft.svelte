@@ -1,0 +1,131 @@
+<script>
+	import MaterialSymbolsFavoriteRounded from '~icons/material-symbols/favorite-rounded'
+	import SimpleIconsSvelte from '~icons/simple-icons/svelte'
+	import SimpleIconsHtml5 from '~icons/simple-icons/html5'
+	import SimpleIconsTypescript from '~icons/simple-icons/typescript'
+	import SimpleIconsCss3 from '~icons/simple-icons/css3'
+	import SimpleIconsFigma from '~icons/simple-icons/figma'
+	import SimpleIconsAngular from '~icons/simple-icons/angular'
+	import SimpleIconsFirebase from '~icons/simple-icons/firebase'
+	import SimpleIconsDocker from '~icons/simple-icons/docker'
+	import SimpleIconsGithub from '~icons/simple-icons/github'
+	import SimpleIconsGitlab from '~icons/simple-icons/gitlab'
+	import SimpleIconsCypress from '~icons/simple-icons/cypress'
+	import SimpleIconsPlaywright from '~icons/simple-icons/playwright'
+	import SimpleIconsWebcomponentsdotorg from '~icons/simple-icons/webcomponentsdotorg'
+	import SimpleIconsRuby from '~icons/simple-icons/ruby'
+	import SimpleIconsVuedotjs from '~icons/simple-icons/vuedotjs'
+	import SimpleIconsNodedotjs from '~icons/simple-icons/nodedotjs'
+	import SimpleIconsPython from '~icons/simple-icons/python'
+	import SimpleIconsJava from '~icons/simple-icons/java'
+	import SimpleIconsCsharp from '~icons/simple-icons/csharp'
+	import MaterialSymbolsDocs from '~icons/material-symbols/docs'
+	import { differenceInYears } from 'date-fns'
+</script>
+
+<section>
+	<h2>Craft</h2>
+	<MaterialSymbolsFavoriteRounded />
+	<br />
+	<SimpleIconsSvelte />
+	<SimpleIconsHtml5 />
+	<SimpleIconsCss3 />
+	<SimpleIconsTypescript />
+	<SimpleIconsFigma />
+	<p>
+		Love to program User Interfaces in HTML, CSS, TypeScript and Svelte.
+		<br />
+		Also enjoy designing User Interfaces in Figma.
+	</p>
+	<br />
+	<SimpleIconsAngular />
+	<SimpleIconsFirebase />
+	<SimpleIconsDocker />
+	<SimpleIconsGithub />
+	<SimpleIconsGitlab />
+	<SimpleIconsCypress />
+	<SimpleIconsPlaywright />
+	<br />
+	<div class="sub">
+		<SimpleIconsWebcomponentsdotorg />
+		<SimpleIconsRuby />
+		<SimpleIconsVuedotjs />
+		<SimpleIconsNodedotjs />
+		<SimpleIconsPython />
+		<SimpleIconsJava />
+		<SimpleIconsCsharp />
+	</div>
+	<p>
+		Have experience with Angular, Firebase, Docker, GitHub Actions, GitlabCI, Cypress, Playwright,
+		Web Components, Ruby on Rails, Vue, NodeJS, Python and Java
+	</p>
+	<br />
+	<div class="count">+{differenceInYears(new Date(), new Date(2019, 2, 1))} years</div>
+	<p>
+		Worked as a web developer since 2019.
+		<br />
+		Earned a Bachelor of Science degree in Media and Communications Informatics.
+	</p>
+	<a href="/assets/AntonioSarcevic_CV.pdf">
+		<MaterialSymbolsDocs />
+		Full Resume
+	</a>
+</section>
+
+<style>
+	section {
+		margin-block: 8rem;
+		padding-inline: 1rem;
+		text-align: center;
+		font-size: var(--step-1);
+		font-family: 'Space Mono', sans-serif;
+		max-width: 70ch;
+		margin: auto;
+	}
+
+	h2 {
+		font-family: 'Staatliches';
+		font-size: var(--step-5);
+		text-align: center;
+		margin-block-end: 0.25em;
+	}
+
+	section :global(svg) {
+		font-size: var(--step-4);
+	}
+
+	.sub :global(svg) {
+		margin-block-start: 0.5em;
+		font-size: var(--step-3);
+	}
+
+	.count {
+		font-size: var(--step-3);
+		font-weight: 700;
+	}
+
+	a {
+		display: inline-flex;
+		font-size: var(--step-0);
+		border: 0.15em solid var(--as-text-2);
+		border-radius: 10000rem;
+		padding: 0.25em 1em;
+		gap: 0.5em;
+		align-items: center;
+		color: var(--as-text-2);
+		text-decoration: none;
+		transition: box-shadow 0.2s ease-in-out;
+		background-color: var(--as-back-1);
+	}
+
+	a:hover {
+		text-decoration: underline;
+		border-color: var(--as-text-1);
+		color: var(--as-text-1);
+		box-shadow: 0px 7px 22px 6px rgba(0, 0, 0, 0.08), 0px 4px 4px 1px rgba(0, 0, 0, 0.11);
+	}
+
+	a :global(svg) {
+		font-size: inherit;
+	}
+</style>

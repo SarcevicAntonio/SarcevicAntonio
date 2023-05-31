@@ -1,6 +1,6 @@
 :root {
-	--as-back-1: #F5F5F5;
+	--as-back-1: #f5f5f5;
 }
 html {
-background-color: var(--as-back-1);
+	background-color: var(--as-back-1);
 }

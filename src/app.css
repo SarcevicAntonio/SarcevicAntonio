@@ -3,6 +3,8 @@
 	--as-back-2: #e4e4e4;
 
 	--as-text-1: #2e2e2e;
+	--as-text-2: #3d3d3d;
+	--as-text-3: #575757;
 
 	--as-accent: #ccff00;
 }
@@ -13,21 +15,24 @@
 		--as-back-2: #484848;
 
 		--as-text-1: #f5f5f5;
-		--as-accent: #82a300;
+		--as-text-2: #dadada;
+		--as-text-3: #c1c1c1;
+
+		--as-accent: #ccff0099;
 	}
 }
 /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,18,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
 	--step--2: clamp(0.69rem, calc(0.66rem + 0.15vw), 0.78rem);
-	--step--1: clamp(0.83rem, calc(0.80rem + 0.18vw), 0.94rem);
-	--step-0: clamp(1.00rem, calc(0.96rem + 0.22vw), 1.13rem);
-	--step-1: clamp(1.20rem, calc(1.15rem + 0.26vw), 1.35rem);
+	--step--1: clamp(0.83rem, calc(0.8rem + 0.18vw), 0.94rem);
+	--step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
+	--step-1: clamp(1.2rem, calc(1.15rem + 0.26vw), 1.35rem);
 	--step-2: clamp(1.44rem, calc(1.38rem + 0.31vw), 1.62rem);
 	--step-3: clamp(1.73rem, calc(1.65rem + 0.38vw), 1.94rem);
 	--step-4: clamp(2.07rem, calc(1.98rem + 0.45vw), 2.33rem);
-	--step-5: clamp(2.49rem, calc(2.38rem + 0.54vw), 2.80rem);
- }
+	--step-5: clamp(2.49rem, calc(2.38rem + 0.54vw), 2.8rem);
+}
 
 html {
 	background-color: var(--as-back-1);

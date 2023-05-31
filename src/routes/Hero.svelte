@@ -30,7 +30,7 @@
 			</svg>
 		</div>
 	</section>
-	<div class="scroll-indicator">
+	<div class="scroll-indicator" title="Scroll to see more">
 		<PajamasScrollDown />
 	</div>
 </div>
@@ -49,11 +49,13 @@
 		left: 50%;
 		translate: -50%;
 		font-size: clamp(1rem, calc(1rem + 2vw), 6rem);
+		color: var(--as-text-3);
 	}
 
 	section {
 		display: flex;
 		align-items: center;
+		padding-inline: 1rem;
 	}
 
 	.image {
@@ -94,6 +96,7 @@
 	}
 
 	.tagline {
+		color: var(--as-text-2);
 		margin-inline-start: 0.5em;
 		font-family: 'Space Mono', sans-serif;
 	}

@@ -1,0 +1,6 @@
+:root {
+	--as-back-1: #F5F5F5;
+}
+html {
+background-color: var(--as-back-1);
+}

@@ -45,5 +45,6 @@
 
 	ul {
 		padding-inline-start: 1.5rem;
+		overflow: auto;
 	}
 </style>

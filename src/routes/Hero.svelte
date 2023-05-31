@@ -104,7 +104,7 @@
 	.line {
 		position: absolute;
 		inset-block-end: -25%;
-		inset-inline-start: -25%;
+		inset-inline-start: -10%;
 		z-index: -1;
 	}
 

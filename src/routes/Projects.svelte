@@ -1,14 +1,14 @@
 <script>
 	const projects = [
 		{
-			label: 'SvelteLab',
-			icon: 'https://sveltelab.dev/icon-maskable.png',
-			link: 'https://github.com/sveltelab/sveltelab',
-		},
-		{
 			label: 'doTogether',
 			icon: 'https://do-together.vercel.app/icon-maskable.png',
 			link: 'https://github.com/SarcevicAntonio/doTogether',
+		},
+		{
+			label: 'SvelteLab',
+			icon: 'https://sveltelab.dev/icon-maskable.png',
+			link: 'https://github.com/sveltelab/sveltelab',
 		},
 		{
 			label: 'kcalCalc',
@@ -70,9 +70,11 @@
 
 	img {
 		max-width: var(--step-7);
-		border-radius: 30%;
+		border-radius: 50%;
 		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-		transition: filter 0.2s ease-in-out;
+		transition-property: filter, border-radius;
+		transition-duration: 0.2s;
+		transition-timing-function: ease-in-out;
 	}
 
 	a:hover {
@@ -80,6 +82,7 @@
 	}
 
 	a:hover img {
+		border-radius: 25%;
 		filter: drop-shadow(0px 28px 33px rgba(0, 0, 0, 0.06))
 			drop-shadow(0px 14.0137px 16.5161px rgba(0, 0, 0, 0.04562))
 			drop-shadow(0px 8.44118px 9.94853px rgba(0, 0, 0, 0.0390953))

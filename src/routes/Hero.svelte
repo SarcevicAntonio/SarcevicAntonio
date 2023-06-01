@@ -117,7 +117,7 @@
 		}
 	}
 
-	@media only screen and (max-width: 250px) {
+	@media only screen and (max-width: 400px) {
 		section {
 			flex-direction: column;
 		}

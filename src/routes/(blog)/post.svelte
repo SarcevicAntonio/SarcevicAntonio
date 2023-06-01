@@ -8,6 +8,12 @@
 	export let updated
 </script>
 
+<svelte:head>
+	<title>
+		{title} — sarcevic.dev
+	</title>
+</svelte:head>
+
 <article>
 	<h1>{title}</h1>
 	<aside>

@@ -31,6 +31,7 @@
 		background-color: var(--as-text-1);
 		padding-block: 1rem;
 		padding-inline: 2rem;
+		font-size: var(--step--1);
 	}
 	.content {
 		margin: auto;
@@ -39,7 +40,7 @@
 
 	h2 {
 		font-family: 'Space Mono', sans-serif;
-		font-size: var(--step-1);
+		font-size: var(--step-0);
 		font-weight: 400;
 	}
 

@@ -1,3 +1,5 @@
+@import 'globals.css';
+
 :root {
 	--as-back-1: #f5f5f5;
 	--as-back-2: #e4e4e4;
@@ -35,11 +37,6 @@
 	--step-5: clamp(2.49rem, calc(1.71rem + 3.91vw), 4.74rem);
 	--step-6: clamp(2.99rem, calc(1.83rem + 5.78vw), 6.31rem);
 	--step-7: clamp(3.58rem, calc(1.9rem + 8.4vw), 8.41rem);
-}
-
-html {
-	background-color: var(--as-back-1);
-	color: var(--as-text-1);
 }
 
 html,

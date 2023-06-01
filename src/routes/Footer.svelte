@@ -26,7 +26,6 @@
 		font-size: var(--step-0);
 		color: var(--as-back-1);
 		background-color: var(--as-text-1);
-		font-family: 'Space Mono', sans-serif;
 		padding-block: 1rem;
 		padding-inline: 2rem;
 	}

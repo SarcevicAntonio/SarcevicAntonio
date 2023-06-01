@@ -5,7 +5,10 @@
 <div class="hero">
 	<section>
 		<div class="image">
-			<img src="/toni-transparent.png" alt="Antonio Sarcevic in a blue shirt, grey hoodie and green cap" />
+			<img
+				src="/toni-transparent.png"
+				alt="Antonio Sarcevic in a blue shirt, grey hoodie and green cap"
+			/>
 		</div>
 		<div class="text">
 			<h1>
@@ -24,7 +27,7 @@
 			>
 				<path
 					d="M14 287C127.5 -104 564 311 532.5 14"
-					stroke="var(--as-accent)"
+					stroke="currentColor"
 					stroke-width="1rem"
 					stroke-linecap="round"
 				/>
@@ -83,7 +86,6 @@
 	}
 
 	h1 {
-		font-family: 'Staatliches';
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -99,7 +101,6 @@
 	.tagline {
 		color: var(--as-text-2);
 		margin-inline-start: 0.5em;
-		font-family: 'Space Mono', sans-serif;
 	}
 
 	.line {
@@ -107,6 +108,13 @@
 		inset-block-end: -25%;
 		inset-inline-start: -10%;
 		z-index: -1;
+		color: var(--as-accent);
+	}
+
+	@media (prefers-contrast: more) {
+		.scroll-indicator {
+			color: var(--as-back-2);
+		}
 	}
 
 	@media only screen and (max-width: 250px) {

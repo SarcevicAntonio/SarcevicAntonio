@@ -1,0 +1,17 @@
+html {
+	background-color: var(--as-back-1);
+	color: var(--as-text-1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Staatliches';
+}
+
+body {
+	font-family: 'Space Mono', sans-serif;
+}

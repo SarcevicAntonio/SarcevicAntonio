@@ -1,5 +1,14 @@
 <script lang="ts">
+	import { onMount, tick } from 'svelte'
+	import { quintOut } from 'svelte/easing'
+	import { draw } from 'svelte/transition'
 	import PajamasScrollDown from '~icons/pajamas/scroll-down'
+
+	let visible = false
+	onMount(async () => {
+		visible = true
+		await tick()
+	})
 
 	let scroll_y: number
 	let inner_height: number
@@ -34,12 +43,15 @@
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
 			>
-				<path
-					d="M14 287C127.5 -104 564 311 532.5 14"
-					stroke="currentColor"
-					stroke-width="1rem"
-					stroke-linecap="round"
-				/>
+				{#if visible}
+					<path
+						in:draw={{ duration: 2000, easing: quintOut }}
+						d="M14 287C127.5 -104 564 311 532.5 14"
+						stroke="currentColor"
+						stroke-width="1rem"
+						stroke-linecap="round"
+					/>
+				{/if}
 			</svg>
 		</div>
 	</section>
@@ -86,6 +98,7 @@
 	}
 
 	.text {
+		pointer-events: none;
 		margin-inline-start: -2rem;
 		position: relative;
 		font-size: clamp(1rem, calc(1rem + 2vw), 6rem);
@@ -125,6 +138,13 @@
 		inset-block-end: -25%;
 		inset-inline-start: -10%;
 		color: var(--as-accent);
+		&:hover path {
+			transition: 0.2s;
+			d: path('M21.0006 186.499C-34.9994 474.999 255 -118 525 42.4996');
+		}
+	}
+	path {
+		transition: 0.2s;
 	}
 
 	@media (prefers-contrast: more) {

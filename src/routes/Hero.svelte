@@ -106,6 +106,7 @@
 		font-size: clamp(2rem, calc(1rem + 8vw), 8rem);
 		line-height: 1;
 		font-weight: 400;
+		color: var(--as-text-2);
 	}
 
 	.first-name {
@@ -113,7 +114,7 @@
 	}
 
 	.tagline {
-		color: var(--as-text-2);
+		color: var(--as-text-1);
 		margin-inline-start: 0.5em;
 	}
 

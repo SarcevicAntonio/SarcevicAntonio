@@ -27,13 +27,13 @@
 	<h2>Craft</h2>
 	<MaterialSymbolsFavoriteRounded aria-hidden="true" />
 	<br />
-	<SimpleIconsSvelte aria-hidden="true" />
 	<SimpleIconsHtml5 aria-hidden="true" />
 	<SimpleIconsCss3 aria-hidden="true" />
 	<SimpleIconsTypescript aria-hidden="true" />
 	<SimpleIconsFigma aria-hidden="true" />
+	<SimpleIconsSvelte aria-hidden="true" />
 	<p>
-		Love to program User Interfaces in HTML, CSS, TypeScript and Svelte.
+		Love to program User Interfaces in HTML, CSS, TypeScript and SvelteKit.
 		<br />
 		Also enjoy designing User Interfaces in Figma.
 	</p>
@@ -57,7 +57,7 @@
 	</div>
 	<p>
 		Have experience with Angular, Firebase, Docker, GitHub Actions, GitlabCI, Cypress, Playwright,
-		Web Components, Ruby on Rails, Vue, NodeJS, Python and Java
+		Web Components, Ruby on Rails, Vue, NodeJS, Python
 	</p>
 	<br />
 	<div class="count">+{differenceInYears(new Date(), new Date(2019, 2, 1))} years</div>
@@ -95,6 +95,7 @@
 	.sub :global(svg) {
 		margin-block-start: 0.5em;
 		font-size: var(--step-3);
+		color: var(--as-text-2);
 	}
 
 	.count {

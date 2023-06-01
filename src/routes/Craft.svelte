@@ -30,12 +30,12 @@
 	<SimpleIconsHtml5 aria-hidden="true" />
 	<SimpleIconsCss3 aria-hidden="true" />
 	<SimpleIconsTypescript aria-hidden="true" />
-	<SimpleIconsFigma aria-hidden="true" />
 	<SimpleIconsSvelte aria-hidden="true" />
+	<SimpleIconsFigma aria-hidden="true" />
 	<p>
 		Love to program User Interfaces in HTML, CSS, TypeScript and SvelteKit.
 		<br />
-		Also enjoy designing User Interfaces in Figma.
+		Also love designing User Interfaces in Figma.
 	</p>
 	<br />
 	<SimpleIconsAngular aria-hidden="true" />

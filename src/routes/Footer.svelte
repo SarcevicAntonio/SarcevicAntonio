@@ -32,7 +32,7 @@
 	}
 	.content {
 		margin: auto;
-		max-width: 100rem;
+		max-width: 50rem;
 	}
 
 	h2 {

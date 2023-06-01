@@ -3,7 +3,10 @@
 for feature parity:
 
 - [ ] theme toggle
-- [ ] port blog articles
+- [ ] port blog
+  - [ ] render
+  - [ ] title, dates
+  - [ ] tags
 - [ ] sitemap
 - [ ] rss
 - [ ] GitHub comments

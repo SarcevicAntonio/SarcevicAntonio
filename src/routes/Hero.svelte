@@ -15,12 +15,14 @@
 				alt="Antonio Sarcevic in a blue shirt, grey hoodie and green cap"
 			/>
 		</div>
-		<div class="text">
-			<h1>
-				<span class="first-name">Antonio</span>
-				<span class="last-name">Sarcevic</span>
-			</h1>
-			<p class="tagline">excited by&nbsp;ui development</p>
+		<div class="text-container">
+			<div class="text">
+				<h1>
+					<span class="first-name">Antonio</span>
+					<span class="last-name">Sarcevic</span>
+				</h1>
+				<p class="tagline">excited by&nbsp;ui development</p>
+			</div>
 			<svg
 				aria-hidden="true"
 				class="line"
@@ -62,7 +64,7 @@
 		left: 50%;
 		translate: -50%;
 		font-size: clamp(1rem, calc(1rem + 2vw), 6rem);
-		color: var(--as-text-3);
+		color: var(--as-text-2);
 		opacity: var(--opacity);
 	}
 
@@ -70,10 +72,6 @@
 		display: flex;
 		align-items: center;
 		padding-inline: 1rem;
-	}
-
-	.image {
-		z-index: -2;
 	}
 
 	img {
@@ -88,6 +86,11 @@
 		margin-inline-start: -2rem;
 		position: relative;
 		font-size: clamp(1rem, calc(1rem + 2vw), 6rem);
+		z-index: 2;
+	}
+
+	.text-container {
+		position: relative;
 	}
 
 	h1,
@@ -117,7 +120,6 @@
 		position: absolute;
 		inset-block-end: -25%;
 		inset-inline-start: -10%;
-		z-index: -1;
 		color: var(--as-accent);
 	}
 

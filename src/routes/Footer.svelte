@@ -4,7 +4,7 @@
 
 <footer>
 	<div class="content">
-		<p class="notice">Crafted with 💖 by Antonio Sarcevic in Münster during 2023.</p>
+		<h2 class="notice">Crafted with 💖 by Antonio Sarcevic in Münster during 2023.</h2>
 		<p>This Site is powered by the following dependencies:</p>
 		<ul>
 			{#each dependencies as dependency}
@@ -13,8 +13,10 @@
 					.replace('git+', '')
 					.replace('.git', '')}
 				<li>
-					<a target="_blank" rel="noreferrer" href={link}>{dependency.name}</a>
-					@{dependency.installedVersion} ({dependency.licenseType})
+					<a target="_blank" rel="noreferrer" href={link}>
+						{dependency.name}
+						@{dependency.installedVersion} ({dependency.licenseType})
+					</a>
 				</li>
 			{/each}
 		</ul>
@@ -23,6 +25,7 @@
 
 <style>
 	footer {
+		font-family: 'Space Mono', sans-serif;
 		font-size: var(--step-0);
 		color: var(--as-back-1);
 		background-color: var(--as-text-1);
@@ -45,5 +48,14 @@
 	ul {
 		padding-inline-start: 1.5rem;
 		overflow: auto;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	a:focus,
+	a:hover {
+		text-decoration: underline;
 	}
 </style>

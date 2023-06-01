@@ -6,7 +6,7 @@
 	import MdiFlower from '~icons/mdi/flower'
 </script>
 
-<section>
+<section id="first">
 	<h2>Values</h2>
 	<MdiYinYang />
 	<MdiHeadLightbulbOutline />
@@ -18,6 +18,7 @@
 
 <style>
 	section {
+		scroll-margin-block-start: 2rem;
 		margin-block: 8rem;
 		padding-inline: 1rem;
 		text-align: center;

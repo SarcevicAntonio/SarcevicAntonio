@@ -41,13 +41,14 @@
 			</svg>
 		</div>
 	</section>
-	<div
+	<a
+		href="#first"
 		class="scroll-indicator"
 		title="Scroll to see more"
 		style:--opacity={(scroll_y / (inner_height / 2)) * -1 + 1}
 	>
 		<PajamasScrollDown aria-hidden="true" />
-	</div>
+	</a>
 </div>
 
 <style>

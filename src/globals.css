@@ -1,4 +1,5 @@
 html {
+	scroll-behavior: smooth;
 	background-color: var(--as-text-1);
 	color: var(--as-text-1);
 }

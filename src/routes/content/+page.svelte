@@ -1,30 +1,53 @@
 <script>
+	import { page } from '$app/stores'
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 	import MaterialSymbolsDocs from '~icons/material-symbols/docs'
 
 	export let data
+
+	$: filter_tag = $page.url.searchParams.get('tag')
 </script>
 
 <h1>Content</h1>
 
-<ul>
-	{#each data.content as { title, summary, href, published }}
-		<li>
-			<a {href}>
-				<h2>{title}</h2>
-				<p>{summary}</p>
-				<p class="meta">
-					<MaterialSymbolsDocs />
-					{new Date(published).toLocaleDateString(undefined, {
-						year: 'numeric',
-						month: 'long',
-						day: 'numeric',
-					})}
-				</p>
-			</a>
-		</li>
-	{/each}
-</ul>
+<section class="tags">
+	<ul>
+		{#each [...data.all_tags] as tag}
+			{@const url = new URL($page.url)}
+			{@const _ = url.searchParams.set('tag', tag)}
+			<li aria-current={filter_tag === tag}>
+				<a href={url.href}>
+					#{tag}
+				</a>
+			</li>
+		{/each}
+	</ul>
+	{#if filter_tag}
+		<a href="/content">Show all content</a>
+	{/if}
+</section>
+
+<section class="posts">
+	<ul>
+		{#each data.content as { title, summary, href, published }}
+			<li>
+				<a {href}>
+					<h2>{title}</h2>
+					<p>{summary}</p>
+					<p class="meta">
+						<MaterialSymbolsDocs />
+						{new Date(published).toLocaleDateString(undefined, {
+							year: 'numeric',
+							month: 'long',
+							day: 'numeric',
+						})}
+					</p>
+				</a>
+			</li>
+		{/each}
+	</ul>
+</section>
+
 <a href="/" class="index-link">
 	<MaterialSymbolsArrowBackRounded aria-hidden="true" />
 	Go to index
@@ -39,14 +62,32 @@
 	ul {
 		padding: 0;
 		list-style: none;
+	}
+
+	.tags {
+		text-align: center;
+	}
+
+	.tags > ul {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+	}
+
+	.tags > ul > li[aria-current='true'] {
+		text-decoration: underline;
+	}
+
+	.posts > ul {
 		max-width: 50rem;
 		margin-inline: auto;
 	}
 
-	li {
+	.posts > ul > li {
 		border: 0.2rem solid var(--as-text-1);
 		padding: 1rem;
 		border-radius: 2rem;
+		margin-block-end: 2rem;
 	}
 
 	h2 {

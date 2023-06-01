@@ -1,13 +1,7 @@
 <script lang="ts">
 	import MaterialSymbolsArrowForwardRounded from '~icons/material-symbols/arrow-forward-rounded'
 	import MaterialSymbolsDocs from '~icons/material-symbols/docs'
-	type BlogMetadata = {
-		title: string
-		summary: string
-		published: string
-		href: string
-		tags: string[]
-	}
+	import type { BlogMetadata } from './+layout'
 
 	export let content: BlogMetadata[]
 </script>
@@ -51,12 +45,15 @@
 	.header {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: baseline;
+		max-width: 75rem;
+		margin: auto;
 		margin-block-end: 0.25em;
 	}
 
 	h2 {
 		font-size: var(--step-5);
+		margin-block: 0;
 	}
 
 	.header a {
@@ -76,15 +73,28 @@
 
 	ul.scroller {
 		margin: 0;
+		margin-inline: -1rem;
 		padding: 0;
+		padding-block-end: 1rem;
 		list-style: none;
+		display: flex;
+		overflow: auto;
+		gap: 1rem;
 	}
 
 	li {
-		max-width: 25rem;
+		width: 25rem;
 		border: 0.25rem solid var(--as-text-1);
 		padding: 1rem;
 		border-radius: 2rem;
+	}
+
+	li:first-child {
+		margin-inline-start: max(calc(50vw - 38rem), 1rem);
+	}
+
+	li:last-child {
+		margin-inline-end: max(calc(50vw - 38rem), 1rem);
 	}
 
 	h3 {

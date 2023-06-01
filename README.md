@@ -4,12 +4,13 @@ for feature parity:
 
 - [ ] theme toggle
 - [ ] port blog
-  - [ ] render
-  - [ ] title, dates
-  - [ ] tags
-- [ ] sitemap
-- [ ] rss
-- [ ] GitHub comments
+  - [x] render
+  - [x] title, dates
+  - [x] tags (partially, only one tag atm but dats good enough tbh)
+  - [ ] sitemap
+  - [ ] rss
+  - [ ] GitHub comments
+  - [ ] port more complex articles
 
 wishlist:
 

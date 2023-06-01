@@ -26,7 +26,7 @@
 		display: grid;
 		place-content: center;
 		position: relative;
-		min-height: 100dvh;
+		min-height: 100svh;
 	}
 
 	section {

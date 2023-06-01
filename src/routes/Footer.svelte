@@ -32,7 +32,9 @@
 		padding-block: 1rem;
 		padding-inline: 2rem;
 		font-size: var(--step--1);
+		margin-block-start: 5rem;
 	}
+
 	.content {
 		margin: auto;
 		max-width: 50rem;

@@ -55,7 +55,7 @@
 
 <style>
 	.hero {
-		min-height: 100dvh;
+		min-height: 100svh;
 		display: grid;
 		place-content: center;
 		position: relative;

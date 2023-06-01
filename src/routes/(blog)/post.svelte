@@ -1,6 +1,6 @@
 <script>
-	import { page } from '$app/stores'
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
+	import Giscus from '@giscus/svelte'
 
 	export let title
 	export let tags
@@ -52,14 +52,27 @@
 	</a>
 </section>
 
+<section>
+	<Giscus
+		repo="SarcevicAntonio/SarcevicAntonio"
+		repoId="MDEwOlJlcG9zaXRvcnkxODkzMDAxNjM="
+		category="Comments"
+		categoryId="DIC_kwDOC0h9w84CSwfL"
+		reactionsEnabled="1"
+		inputPosition="top"
+	/>
+</section>
+
 <style>
-	article {
+	article,
+	section {
 		margin: auto;
 		max-width: 50rem;
 	}
 
 	h1 {
 		text-align: center;
+		position: sticky;
 		font-size: var(--step-5);
 	}
 
@@ -79,7 +92,7 @@
 	}
 
 	.links {
-		margin-block: 5rem;
+		margin-block: 2rem;
 	}
 
 	.index-link {

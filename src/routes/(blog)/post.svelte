@@ -1,10 +1,15 @@
 <script>
+	import { page } from '$app/stores'
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
+	import Content from '../Content.svelte'
 
 	export let title
 	export let tags
 	export let published
 	export let updated
+
+	const content_url = new URL($page.url)
+	content_url.pathname = '/content'
 </script>
 
 <article>
@@ -27,9 +32,13 @@
 			</p>
 		{/if}
 		<ul class="tags">
-			{#each tags as item}
+			{#each tags as tag}
+				{@const url = new URL(content_url)}
+				{@const __ = url.searchParams.set('tag', tag)}
 				<li>
-					#{item}
+					<a href={url.href}>
+						#{tag}
+					</a>
 				</li>
 			{/each}
 		</ul>
@@ -63,16 +72,19 @@
 		max-width: 100%;
 	}
 
-	.index-link {
+	a {
 		color: inherit;
 		text-decoration: none;
+	}
+
+	.index-link {
 		display: block;
 		text-align: center;
 		margin-block: 5rem;
 	}
 
-	.index-link:hover,
-	.index-link:focus {
+	a:hover,
+	a:focus {
 		text-decoration: underline;
 	}
 
@@ -93,6 +105,6 @@
 		padding: 0;
 		list-style: none;
 		display: inline-flex;
-		gap: 0.5em;
+		gap: 1em;
 	}
 </style>

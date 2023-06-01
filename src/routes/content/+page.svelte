@@ -11,19 +11,21 @@
 <h1>Content</h1>
 
 <section class="tags">
-	<ul>
-		{#each [...data.all_tags] as tag}
-			{@const url = new URL($page.url)}
-			{@const _ = url.searchParams.set('tag', tag)}
-			<li aria-current={filter_tag === tag}>
-				<a href={url.href}>
-					#{tag}
-				</a>
-			</li>
-		{/each}
-	</ul>
 	{#if filter_tag}
 		<a href="/content">Show all content</a>
+		<p>Listing content with #{filter_tag}</p>
+	{:else}
+		<ul>
+			{#each [...data.all_tags] as tag}
+				{@const url = new URL($page.url)}
+				{@const _ = url.searchParams.set('tag', tag)}
+				<li aria-current={filter_tag === tag}>
+					<a href={url.href}>
+						#{tag}
+					</a>
+				</li>
+			{/each}
+		</ul>
 	{/if}
 </section>
 
@@ -109,11 +111,20 @@
 
 	a {
 		color: inherit;
+	}
+
+	.index-link,
+	.posts a {
 		text-decoration: none;
 	}
 
-	a:hover,
-	a:focus {
+	.index-link:hover,
+	.index-link:focus {
+		text-decoration: underline;
+	}
+
+	.posts a:hover > h2,
+	.posts a:focus > h2 {
 		text-decoration: underline;
 	}
 

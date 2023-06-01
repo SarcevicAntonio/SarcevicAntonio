@@ -9,9 +9,8 @@
 <section>
 	<div class="header">
 		<h2>Content</h2>
-		<a href="/content">
-			/content
-			<MaterialSymbolsArrowForwardRounded />
+		<a href="/content" class="arrow-link end">
+			/content<MaterialSymbolsArrowForwardRounded />
 		</a>
 	</div>
 
@@ -58,17 +57,6 @@
 
 	.header a {
 		font-size: var(--step-0);
-	}
-
-	.header a :global(svg) {
-		position: relative;
-		inset-inline-start: 0rem;
-		transition: inset-inline-start 0.2s ease-in-out;
-	}
-
-	.header a:hover :global(svg),
-	.header a:focus :global(svg) {
-		inset-inline-start: 0.5rem;
 	}
 
 	ul.scroller {

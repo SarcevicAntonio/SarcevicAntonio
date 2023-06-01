@@ -41,14 +41,12 @@
 </article>
 
 <section class="links">
-	<a href="/content" class="index-link">
-		<MaterialSymbolsArrowBackRounded aria-hidden="true" />
-		/content
+	<a href="/content" class="arrow-link">
+		<MaterialSymbolsArrowBackRounded aria-hidden="true" />/content
 	</a>
 
-	<a href="/" class="index-link">
-		<MaterialSymbolsArrowBackRounded aria-hidden="true" />
-		/
+	<a href="/" class="arrow-link">
+		<MaterialSymbolsArrowBackRounded aria-hidden="true" />/
 	</a>
 </section>
 
@@ -93,22 +91,10 @@
 
 	.links {
 		margin-block: 2rem;
-	}
-
-	.index-link {
-		margin-block: 1rem;
-		display: block;
-		text-align: center;
-		& :global(svg) {
-			vertical-align: sub;
-			position: relative;
-			inset-inline-start: 0rem;
-			transition: inset-inline-start 0.2s ease-in-out;
-		}
-
-		&:hover :global(svg),
-		&:focus :global(svg) {
-			inset-inline-start: -0.5rem;
+		& > * {
+			display: block;
+			text-align: center;
+			margin-block: 1rem;
 		}
 	}
 

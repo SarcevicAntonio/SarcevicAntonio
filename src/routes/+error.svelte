@@ -1,4 +1,5 @@
 <script>
+	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 	import { page } from '$app/stores'
 </script>
 
@@ -13,7 +14,9 @@
 				Sorry about that 🫤
 			</p>
 			<p>
-				<a href="/">Go to index instead</a>
+				<a href="/" class="arrow-link">
+					<MaterialSymbolsArrowBackRounded aria-hidden="true" />/
+				</a>
 			</p>
 		{:else}
 			<p>{$page.error?.message}</p>

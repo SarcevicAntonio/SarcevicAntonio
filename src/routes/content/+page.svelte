@@ -12,10 +12,13 @@
 
 <section class="tags">
 	{#if filter_tag}
-		<a href="/content">Show all content</a>
-		<p>Listing content with #{filter_tag}</p>
+		<p>posts with tag #{filter_tag}</p>
+		<a href="/content" class="arrow-link">
+			<MaterialSymbolsArrowBackRounded />
+			remove filter
+		</a>
 	{:else}
-		<p>Filter by tag:</p>
+		<p>filter by tag:</p>
 		<ul>
 			{#each [...data.all_tags] as tag}
 				<li aria-current={filter_tag === tag}>
@@ -49,9 +52,8 @@
 	</ul>
 </section>
 
-<a href="/" class="index-link">
-	<MaterialSymbolsArrowBackRounded aria-hidden="true" />
-	Go to index
+<a href="/" class="arrow-link">
+	<MaterialSymbolsArrowBackRounded aria-hidden="true" />/
 </a>
 
 <style>
@@ -77,7 +79,6 @@
 		}
 	}
 
-	.index-link,
 	.posts a {
 		text-decoration: none;
 	}
@@ -120,25 +121,8 @@
 		}
 	}
 
-	.index-link {
+	.arrow-link {
 		display: block;
 		text-align: center;
-		margin-block: 5rem;
-
-		&:hover,
-		&:focus {
-			text-decoration: underline;
-		}
-
-		& :global(svg) {
-			position: relative;
-			inset-inline-start: 0rem;
-			transition: inset-inline-start 0.2s ease-in-out;
-		}
-
-		&:hover :global(svg),
-		&:focus :global(svg) {
-			inset-inline-start: -0.5rem;
-		}
 	}
 </style>

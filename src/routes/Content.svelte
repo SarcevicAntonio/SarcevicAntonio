@@ -70,7 +70,8 @@
 		gap: 1rem;
 	}
 
-	li {
+	li > a {
+		display: block;
 		width: 25rem;
 		border: 0.25rem solid var(--as-text-1);
 		padding: 1rem;
@@ -109,8 +110,8 @@
 		text-decoration: none;
 	}
 
-	a:hover,
-	a:focus {
+	a:hover > h3,
+	a:focus > h3 {
 		text-decoration: underline;
 	}
 </style>

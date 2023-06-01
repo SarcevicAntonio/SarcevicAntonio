@@ -89,7 +89,8 @@
 			margin-inline: auto;
 		}
 
-		& ul > li {
+		& ul > li > a {
+			display: block;
 			border: 0.2rem solid var(--as-text-1);
 			padding: 1rem;
 			border-radius: 2rem;

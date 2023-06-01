@@ -10,7 +10,7 @@
 	<div class="header">
 		<h2>Content</h2>
 		<a href="/content">
-			View All
+			/content
 			<MaterialSymbolsArrowForwardRounded />
 		</a>
 	</div>

@@ -7,7 +7,7 @@
 </script>
 
 <section id="first">
-	<h2>Values</h2>
+	<h2>Core Values</h2>
 	<MdiYinYang />
 	<MdiHeadLightbulbOutline />
 	<MaterialSymbolsAndroidChat />

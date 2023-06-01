@@ -15,6 +15,7 @@
 		<a href="/content">Show all content</a>
 		<p>Listing content with #{filter_tag}</p>
 	{:else}
+		<p>Filter by tag:</p>
 		<ul>
 			{#each [...data.all_tags] as tag}
 				<li aria-current={filter_tag === tag}>

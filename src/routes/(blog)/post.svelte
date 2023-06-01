@@ -42,7 +42,12 @@
 
 <a href="/" class="index-link">
 	<MaterialSymbolsArrowBackRounded aria-hidden="true" />
-	Go to index
+	/content
+</a>
+
+<a href="/" class="index-link">
+	<MaterialSymbolsArrowBackRounded aria-hidden="true" />
+	/
 </a>
 
 <style>

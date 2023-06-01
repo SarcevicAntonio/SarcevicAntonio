@@ -5,7 +5,7 @@
 <div class="hero">
 	<section>
 		<div class="image">
-			<img src="/toni-transparent.png" alt="me in a blue shirt, grey hoodie and green cap" />
+			<img src="/toni-transparent.png" alt="Antonio Sarcevic in a blue shirt, grey hoodie and green cap" />
 		</div>
 		<div class="text">
 			<h1>
@@ -14,6 +14,7 @@
 			</h1>
 			<p class="tagline">excited by&nbsp;ui development</p>
 			<svg
+				aria-hidden="true"
 				class="line"
 				width="100%"
 				height="auto"
@@ -31,7 +32,7 @@
 		</div>
 	</section>
 	<div class="scroll-indicator" title="Scroll to see more">
-		<PajamasScrollDown />
+		<PajamasScrollDown aria-hidden="true" />
 	</div>
 </div>
 

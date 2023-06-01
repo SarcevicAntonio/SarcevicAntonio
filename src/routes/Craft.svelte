@@ -25,35 +25,35 @@
 
 <section>
 	<h2>Craft</h2>
-	<MaterialSymbolsFavoriteRounded />
+	<MaterialSymbolsFavoriteRounded aria-hidden="true" />
 	<br />
-	<SimpleIconsSvelte />
-	<SimpleIconsHtml5 />
-	<SimpleIconsCss3 />
-	<SimpleIconsTypescript />
-	<SimpleIconsFigma />
+	<SimpleIconsSvelte aria-hidden="true" />
+	<SimpleIconsHtml5 aria-hidden="true" />
+	<SimpleIconsCss3 aria-hidden="true" />
+	<SimpleIconsTypescript aria-hidden="true" />
+	<SimpleIconsFigma aria-hidden="true" />
 	<p>
 		Love to program User Interfaces in HTML, CSS, TypeScript and Svelte.
 		<br />
 		Also enjoy designing User Interfaces in Figma.
 	</p>
 	<br />
-	<SimpleIconsAngular />
-	<SimpleIconsFirebase />
-	<SimpleIconsDocker />
-	<SimpleIconsGithub />
-	<SimpleIconsGitlab />
-	<SimpleIconsCypress />
-	<SimpleIconsPlaywright />
+	<SimpleIconsAngular aria-hidden="true" />
+	<SimpleIconsFirebase aria-hidden="true" />
+	<SimpleIconsDocker aria-hidden="true" />
+	<SimpleIconsGithub aria-hidden="true" />
+	<SimpleIconsGitlab aria-hidden="true" />
+	<SimpleIconsCypress aria-hidden="true" />
+	<SimpleIconsPlaywright aria-hidden="true" />
 	<br />
 	<div class="sub">
-		<SimpleIconsWebcomponentsdotorg />
-		<SimpleIconsRuby />
-		<SimpleIconsVuedotjs />
-		<SimpleIconsNodedotjs />
-		<SimpleIconsPython />
-		<SimpleIconsJava />
-		<SimpleIconsCsharp />
+		<SimpleIconsWebcomponentsdotorg aria-hidden="true" />
+		<SimpleIconsRuby aria-hidden="true" />
+		<SimpleIconsVuedotjs aria-hidden="true" />
+		<SimpleIconsNodedotjs aria-hidden="true" />
+		<SimpleIconsPython aria-hidden="true" />
+		<SimpleIconsJava aria-hidden="true" />
+		<SimpleIconsCsharp aria-hidden="true" />
 	</div>
 	<p>
 		Have experience with Angular, Firebase, Docker, GitHub Actions, GitlabCI, Cypress, Playwright,
@@ -118,7 +118,8 @@
 		background-color: var(--as-back-1);
 	}
 
-	a:hover {
+	a:hover,
+	a:focus {
 		text-decoration: underline;
 		border-color: var(--as-text-1);
 		color: var(--as-text-1);

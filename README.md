@@ -1,5 +1,7 @@
 # website rewrite
 
+- [ ] check for different way to use icones. maybe unocss-icons?
+
 for feature parity:
 
 - [ ] theme toggle
@@ -21,3 +23,5 @@ wishlist:
 - [ ] recent github actions
 - [ ] recent tweets / toots
 - [ ] recent tumblr posts
+- [ ] multiple tag search
+  - isn't it just a checkbox form?!

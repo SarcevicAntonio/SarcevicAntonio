@@ -21,13 +21,12 @@ export async function load() {
 		if (!found) {
 			continue
 		}
-		const module = (await modules[path]()) as { metadata: any }
+		const { metadata } = (await modules[path]()) as { metadata: BlogMetadata }
 		const href = path
 			.slice(blog_parens_index + BLOG_GROUP.length)
 			.slice(0, -1 * BLOG_POST_SUFFIX.length)
-		blog_posts.push({ ...module.metadata, href })
+		blog_posts.push({ ...metadata, href })
 	}
-	console.log(blog_posts)
 
 	return {
 		content: [...blog_posts],

@@ -2,6 +2,7 @@
 	export let title
 	export let published
 	export let updated
+	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 </script>
 
 <article>
@@ -27,11 +28,15 @@
 	<slot />
 </article>
 
+<a href="/" class="index-link">
+	<MaterialSymbolsArrowBackRounded aria-hidden="true" />
+	Go to index
+</a>
+
 <style>
 	article {
 		margin: auto;
 		max-width: 50rem;
-		margin-block-end: 5em;
 	}
 
 	h1 {
@@ -47,5 +52,22 @@
 
 	article :global(img) {
 		max-width: 100%;
+	}
+
+	.index-link {
+		display: block;
+		text-align: center;
+		margin-block: 5rem;
+	}
+
+	.index-link :global(svg) {
+		vertical-align: sub;
+		position: relative;
+		inset-inline-start: 0rem;
+		transition: inset-inline-start 0.2s ease-in-out;
+	}
+
+	.index-link:hover :global(svg) {
+		inset-inline-start: -0.5rem;
 	}
 </style>

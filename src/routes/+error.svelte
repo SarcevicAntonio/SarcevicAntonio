@@ -13,7 +13,7 @@
 				Sorry about that 🫤
 			</p>
 			<p>
-				<a href="/">Go to `/` instead</a>
+				<a href="/">Go to index instead</a>
 			</p>
 		{:else}
 			<p>{$page.error?.message}</p>

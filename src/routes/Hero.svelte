@@ -11,6 +11,8 @@
 	<section>
 		<div class="image">
 			<img
+				width="100%"
+				height="100%"
 				src="/toni-transparent.png"
 				alt="Antonio Sarcevic in a blue shirt, grey hoodie and green cap"
 			/>
@@ -79,7 +81,7 @@
 		border-radius: 100%;
 		background-color: var(--as-back-2);
 		max-width: 28rem;
-		height: auto;
+		height: 100%;
 		width: 100%;
 	}
 

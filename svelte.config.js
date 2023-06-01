@@ -1,3 +1,4 @@
+import preprocess from 'svelte-preprocess'
 import adapter from '@sveltejs/adapter-auto'
 import { vitePreprocess } from '@sveltejs/kit/vite'
 import { mdsvex } from 'mdsvex'
@@ -9,6 +10,9 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			layout: 'src/routes/(blog)/post.svelte',
+		}),
+		preprocess({
+			postcss: true,
 		}),
 	],
 

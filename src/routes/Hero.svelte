@@ -1,6 +1,11 @@
-<script>
+<script lang="ts">
 	import PajamasScrollDown from '~icons/pajamas/scroll-down'
+
+	let scroll_y: number
+	let inner_height: number
 </script>
+
+<svelte:window bind:scrollY={scroll_y} bind:innerHeight={inner_height} />
 
 <div class="hero">
 	<section>
@@ -34,7 +39,11 @@
 			</svg>
 		</div>
 	</section>
-	<div class="scroll-indicator" title="Scroll to see more">
+	<div
+		class="scroll-indicator"
+		title="Scroll to see more"
+		style:--opacity={(scroll_y / (inner_height / 2)) * -1 + 1}
+	>
 		<PajamasScrollDown aria-hidden="true" />
 	</div>
 </div>
@@ -54,6 +63,7 @@
 		translate: -50%;
 		font-size: clamp(1rem, calc(1rem + 2vw), 6rem);
 		color: var(--as-text-3);
+		opacity: var(--opacity);
 	}
 
 	section {
@@ -118,6 +128,7 @@
 
 		.scroll-indicator {
 			color: var(--as-text-1);
+			opacity: 1;
 		}
 	}
 

@@ -14,4 +14,5 @@ h6 {
 
 body {
 	font-family: 'Space Mono', sans-serif;
+	font-size: var(--step-0);
 }

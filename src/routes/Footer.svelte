@@ -25,8 +25,6 @@
 
 <style>
 	footer {
-		font-family: 'Space Mono', sans-serif;
-		font-size: var(--step-0);
 		color: var(--as-back-1);
 		background-color: var(--as-text-1);
 		padding-block: 1rem;
@@ -37,8 +35,10 @@
 		max-width: 100rem;
 	}
 
-	.notice {
+	h2 {
+		font-family: 'Space Mono', sans-serif;
 		font-size: var(--step-1);
+		font-weight: 400;
 	}
 
 	a {

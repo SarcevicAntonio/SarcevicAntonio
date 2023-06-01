@@ -11,7 +11,9 @@
 				{@const link = dependency.link
 					.replace('git://', 'https://')
 					.replace('git+', '')
-					.replace('.git', '')}
+					.replace('.git', '')
+					.replace('ssh://', 'https://')}
+
 				<li>
 					<a target="_blank" rel="noreferrer" href={link}>
 						{dependency.name}

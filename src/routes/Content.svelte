@@ -1,4 +1,5 @@
 <script lang="ts">
+	import MaterialSymbolsArrowForwardRounded from '~icons/material-symbols/arrow-forward-rounded'
 	import MaterialSymbolsDocs from '~icons/material-symbols/docs'
 	type BlogMetadata = {
 		title: string
@@ -12,7 +13,14 @@
 </script>
 
 <section>
-	<h2>Content</h2>
+	<div class="header">
+		<h2>Content</h2>
+		<a href="/content">
+			View All
+			<MaterialSymbolsArrowForwardRounded />
+		</a>
+	</div>
+
 	<ul class="scroller">
 		{#each content as { title, summary, href, published }}
 			<li>
@@ -40,9 +48,30 @@
 		font-size: var(--step-1);
 	}
 
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-block-end: 0.25em;
+	}
+
 	h2 {
 		font-size: var(--step-5);
-		margin-block-end: 0.25em;
+	}
+
+	.header a {
+		font-size: var(--step-0);
+	}
+
+	.header a :global(svg) {
+		position: relative;
+		inset-inline-start: 0rem;
+		transition: inset-inline-start 0.2s ease-in-out;
+	}
+
+	.header a:hover :global(svg),
+	.header a:focus :global(svg) {
+		inset-inline-start: 0.5rem;
 	}
 
 	ul.scroller {
@@ -53,7 +82,7 @@
 
 	li {
 		max-width: 25rem;
-		border: 0.5rem solid var(--as-text-1);
+		border: 0.25rem solid var(--as-text-1);
 		padding: 1rem;
 		border-radius: 2rem;
 	}
@@ -72,6 +101,7 @@
 		font-size: var(--step-0);
 	}
 
+	.header a :global(svg),
 	.meta :global(svg) {
 		vertical-align: sub;
 	}
@@ -81,7 +111,8 @@
 		text-decoration: none;
 	}
 
-	a:hover {
+	a:hover,
+	a:focus {
 		text-decoration: underline;
 	}
 </style>

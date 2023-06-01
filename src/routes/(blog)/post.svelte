@@ -64,9 +64,16 @@
 	}
 
 	.index-link {
+		color: inherit;
+		text-decoration: none;
 		display: block;
 		text-align: center;
 		margin-block: 5rem;
+	}
+
+	.index-link:hover,
+	.index-link:focus {
+		text-decoration: underline;
 	}
 
 	.index-link :global(svg) {
@@ -76,7 +83,8 @@
 		transition: inset-inline-start 0.2s ease-in-out;
 	}
 
-	.index-link:hover :global(svg) {
+	.index-link:hover :global(svg),
+	.index-link:focus :global(svg) {
 		inset-inline-start: -0.5rem;
 	}
 

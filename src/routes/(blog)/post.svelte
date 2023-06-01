@@ -1,15 +1,11 @@
 <script>
 	import { page } from '$app/stores'
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
-	import Content from '../Content.svelte'
 
 	export let title
 	export let tags
 	export let published
 	export let updated
-
-	const content_url = new URL($page.url)
-	content_url.pathname = '/content'
 </script>
 
 <article>
@@ -33,10 +29,8 @@
 		{/if}
 		<ul class="tags">
 			{#each tags as tag}
-				{@const url = new URL(content_url)}
-				{@const __ = url.searchParams.set('tag', tag)}
 				<li>
-					<a href={url.href}>
+					<a href="/content?tag={tag}">
 						#{tag}
 					</a>
 				</li>

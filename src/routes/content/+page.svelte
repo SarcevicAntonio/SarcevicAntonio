@@ -17,10 +17,8 @@
 	{:else}
 		<ul>
 			{#each [...data.all_tags] as tag}
-				{@const url = new URL($page.url)}
-				{@const _ = url.searchParams.set('tag', tag)}
 				<li aria-current={filter_tag === tag}>
-					<a href={url.href}>
+					<a href="/content?tag={tag}">
 						#{tag}
 					</a>
 				</li>

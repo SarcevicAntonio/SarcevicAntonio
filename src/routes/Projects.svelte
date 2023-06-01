@@ -75,11 +75,13 @@
 		transition-timing-function: ease-in-out;
 	}
 
-	a:hover, a:focus {
+	a:hover,
+	a:focus {
 		text-decoration: underline;
 	}
 
-	a:hover img, a:focus img {
+	a:hover img,
+	a:focus img {
 		border-radius: 25%;
 		filter: drop-shadow(0px 28px 33px rgba(0, 0, 0, 0.06))
 			drop-shadow(0px 14.0137px 16.5161px rgba(0, 0, 0, 0.04562))

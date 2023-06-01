@@ -1,18 +1,18 @@
 # website rewrite
 
-- [ ] check for different way to use icones. maybe unocss-icons?
-
 for feature parity:
 
 - [ ] theme toggle
+- [ ] icon
 - [ ] port blog
+  - [ ] sitemap
+  - [ ] rss
+  - [ ] port more complex articles
+  - [ ] heading links
   - [x] render
   - [x] title, dates
   - [x] tags (partially, only one tag atm but dats good enough tbh)
-  - [ ] sitemap
-  - [ ] rss
-  - [ ] GitHub comments
-  - [ ] port more complex articles
+  - [x] GitHub comments
 
 wishlist:
 

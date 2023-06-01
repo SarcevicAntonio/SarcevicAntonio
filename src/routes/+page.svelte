@@ -4,6 +4,7 @@
 	import Hero from './Hero.svelte'
 	import Projects from './Projects.svelte'
 	import Values from './Values.svelte'
+	export let data
 </script>
 
 <Hero />
@@ -12,6 +13,6 @@
 
 <Craft />
 
-<Content />
+<Content content={data.content} />
 
 <Projects />

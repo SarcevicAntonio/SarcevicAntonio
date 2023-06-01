@@ -10,6 +10,7 @@ h4,
 h5,
 h6 {
 	font-family: 'Staatliches';
+	font-weight: 400;
 }
 
 body::before {

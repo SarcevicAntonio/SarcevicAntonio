@@ -1,13 +1,15 @@
 <script>
+	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
+
 	export let title
+	export let tags
 	export let published
 	export let updated
-	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 </script>
 
 <article>
 	<h1>{title}</h1>
-	<div class="dates">
+	<aside>
 		<p>
 			published: {new Date(published).toLocaleDateString(undefined, {
 				year: 'numeric',
@@ -24,7 +26,14 @@
 				})}
 			</p>
 		{/if}
-	</div>
+		<ul class="tags">
+			{#each tags as item}
+				<li>
+					#{item}
+				</li>
+			{/each}
+		</ul>
+	</aside>
 	<slot />
 </article>
 
@@ -44,7 +53,7 @@
 		font-size: var(--step-5);
 	}
 
-	.dates {
+	aside {
 		text-align: end;
 		font-size: var(--step--1);
 		color: var(--as-text-2);
@@ -69,5 +78,13 @@
 
 	.index-link:hover :global(svg) {
 		inset-inline-start: -0.5rem;
+	}
+
+	ul.tags {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: inline-flex;
+		gap: 0.5em;
 	}
 </style>

@@ -112,8 +112,12 @@
 	}
 
 	@media (prefers-contrast: more) {
-		.scroll-indicator {
+		.line {
 			color: var(--as-back-2);
+		}
+
+		.scroll-indicator {
+			color: var(--as-text-1);
 		}
 	}
 

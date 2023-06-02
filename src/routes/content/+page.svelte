@@ -8,6 +8,14 @@
 	$: filter_tag = $page.url.searchParams.get('tag')
 </script>
 
+<svelte:head>
+	{#if filter_tag}
+		<title>#{filter_tag} content — sarcevic.dev</title>
+	{:else}
+		<title>content — sarcevic.dev</title>
+	{/if}
+</svelte:head>
+
 <h1>Content</h1>
 
 <section class="tags">

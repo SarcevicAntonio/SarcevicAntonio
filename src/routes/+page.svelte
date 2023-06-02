@@ -7,6 +7,10 @@
 	export let data
 </script>
 
+<svelte:head>
+	<title>sarcevic.dev — my website</title>
+</svelte:head>
+
 <Hero />
 
 <Values />

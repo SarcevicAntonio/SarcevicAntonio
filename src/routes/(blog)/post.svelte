@@ -14,6 +14,7 @@
 	</title>
 </svelte:head>
 
+<!-- Remember if you edit markup here to change it in get_blog_posts html render cleanup -->
 <article>
 	<h1>{title}</h1>
 	<aside>

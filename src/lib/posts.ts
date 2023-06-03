@@ -1,4 +1,3 @@
-import { compile } from 'mdsvex'
 import { parseHTML } from 'linkedom'
 
 const BLOG_GROUP_NAME = '(blog)'
@@ -17,7 +16,6 @@ export type BlogMetadata = {
 export async function get_blog_posts(render = false) {
 	const blog_posts: BlogMetadata[] = []
 	const modules = import.meta.glob(`/src/routes/**/+page.svx`)
-	const markdowns = import.meta.glob(`/src/routes/**/+page.svx`, { as: 'raw' })
 
 	for (const path in modules) {
 		// need work around just importing from (blog) folder because of (parens)...
@@ -28,22 +26,26 @@ export async function get_blog_posts(render = false) {
 			continue
 		}
 
-		const module = await modules[path]()
-		const { metadata } = module as { metadata: BlogMetadata }
-		// feel like there should be a better way to do this
-		// but i guess with file based routing this should be fine
+		const module = (await modules[path]()) as {
+			metadata: BlogMetadata
+			default: { render: () => { html: string } }
+		}
+		const { metadata } = module
+
 		const href = path
 			.slice(group_name_index + BLOG_GROUP_NAME.length)
 			.slice(0, -1 * BLOG_FILE_NAME.length)
 
-		if (render) {
-			let html = module.default.render().html
-			const linkedom = parseHTML(html)
-			const article = linkedom.document.getElementsByTagName('article')
-			html = article[0].innerHTML.replaceAll('\n', '').replaceAll('	', '')
-			blog_posts.push({ ...metadata, href, html })
-		} else {
+		if (!render) {
 			blog_posts.push({ ...metadata, href })
+		} else {
+			const rendered_html = module.default.render().html
+			const linkedom = parseHTML(rendered_html)
+			const [article] = linkedom.document.getElementsByTagName('article')
+			article.getElementsByTagName('aside')[0].remove()
+			article.getElementsByTagName('h1')[0].remove()
+			const html = article.innerHTML.replaceAll('\n', '').replaceAll('	', '')
+			blog_posts.push({ ...metadata, href, html })
 		}
 	}
 

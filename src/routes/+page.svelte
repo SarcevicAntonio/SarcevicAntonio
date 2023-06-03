@@ -1,4 +1,5 @@
 <script>
+	import Contact from './Contact.svelte'
 	import Content from './Content.svelte'
 	import Craft from './Craft.svelte'
 	import Hero from './Hero.svelte'
@@ -20,3 +21,5 @@
 <Content content={data.content} />
 
 <Projects />
+
+<Contact />

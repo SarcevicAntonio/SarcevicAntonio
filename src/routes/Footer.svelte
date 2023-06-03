@@ -29,10 +29,10 @@
 	footer {
 		color: var(--as-back-1);
 		background-color: var(--as-text-1);
-		padding-block: 1rem;
-		padding-inline: 2rem;
+		padding: 1rem;
 		font-size: var(--step--1);
 		margin-block-start: 5rem;
+		margin-inline: -1rem;
 	}
 
 	.content {

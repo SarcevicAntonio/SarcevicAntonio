@@ -87,7 +87,8 @@
 	}
 
 	article :global(img) {
-		max-width: 100%;
+		max-width: calc(100% + 2rem);
+		margin-inline: -1rem;
 	}
 
 	a {

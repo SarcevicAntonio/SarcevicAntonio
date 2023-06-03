@@ -20,7 +20,6 @@
 	section {
 		scroll-margin-block-start: 2rem;
 		margin-block: 8rem;
-		padding-inline: 1rem;
 		text-align: center;
 		font-size: var(--step-1);
 	}

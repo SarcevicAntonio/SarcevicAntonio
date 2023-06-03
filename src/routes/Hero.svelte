@@ -86,7 +86,6 @@
 	section {
 		display: flex;
 		align-items: center;
-		padding-inline: 1rem;
 	}
 
 	img {

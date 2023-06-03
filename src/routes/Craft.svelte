@@ -75,7 +75,6 @@
 <style>
 	section {
 		margin-block: 8rem;
-		padding-inline: 1rem;
 		text-align: center;
 		font-size: var(--step-1);
 		max-width: 70ch;

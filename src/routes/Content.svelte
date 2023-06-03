@@ -37,7 +37,6 @@
 <style>
 	section {
 		margin-block: 8rem;
-		padding-inline: 1rem;
 		font-size: var(--step-1);
 	}
 

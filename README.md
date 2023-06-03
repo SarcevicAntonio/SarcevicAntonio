@@ -14,8 +14,9 @@ for feature parity:
   - [x] tags (partially, only one tag atm but dats good enough tbh)
   - [x] GitHub comments
 
-wishlist:
+wishlist (unpriorized):
 
+- [ ] image optimization
 - [ ] visitor/render counter
 - [ ] generated article and oG images
 - [ ] recent youtube videos

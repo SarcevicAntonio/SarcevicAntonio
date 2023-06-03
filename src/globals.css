@@ -10,7 +10,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Staatliches';
+	font-family: 'Staatliches', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	font-weight: 400;
 }
 
@@ -21,7 +21,7 @@ body::before {
 
 body {
 	background-color: var(--as-back-1);
-	font-family: 'Space Mono', sans-serif;
+	font-family: 'Space Mono', 'Courier New', Courier, monospace, sans-serif;
 	font-size: var(--step-0);
 	padding-inline: 1rem;
 }

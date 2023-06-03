@@ -15,6 +15,7 @@ specifiers:
   eslint-config-prettier: ^8.5.0
   eslint-plugin-svelte: ^2.26.0
   license-report: ^6.4.0
+  marked: ^5.0.4
   mdsvex: ^0.10.6
   postcss: ^8.4.23
   postcss-load-config: ^4.0.1
@@ -34,6 +35,7 @@ dependencies:
   '@fontsource/staatliches': 5.0.2
   '@giscus/svelte': 2.2.8_svelte@3.59.1
   date-fns: 2.30.0
+  marked: 5.0.4
 
 devDependencies:
   '@iconify/json': 2.2.72
@@ -1940,6 +1942,12 @@ packages:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
+
+  /marked/5.0.4:
+    resolution: {integrity: sha512-r0W8/DK56fAkV0qfUCO9cEt/VlFWUzoJOqEigvijmsVkTuPOHckh7ZutNJepRO1AxHhK96/9txonHg4bWd/aLA==}
+    engines: {node: '>= 18'}
+    hasBin: true
+    dev: false
 
   /mdsvex/0.10.6_svelte@3.59.1:
     resolution: {integrity: sha512-aGRDY0r5jx9+OOgFdyB9Xm3EBr9OUmcrTDPWLB7a7g8VPRxzPy4MOBmcVYgz7ErhAJ7bZ/coUoj6aHio3x/2mA==}

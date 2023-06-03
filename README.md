@@ -26,3 +26,6 @@ wishlist (unpriorized):
 - [ ] recent tumblr posts
 - [ ] multiple tag search
   - isn't it just a checkbox form?!
+- [ ] alt paths for blog entries
+- [ ] static prerenderd everything. i want to just serve html if possible
+- [ ] analytics (hand crafted micro analytics?)

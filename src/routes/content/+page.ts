@@ -1,17 +1,13 @@
+import { get_all_tags } from '$lib/posts.js'
+
 export async function load({ parent, url }) {
 	let { content } = await parent()
 
-	const all_tags = new Set<string>()
-	content.forEach(({ tags }) =>
-		tags.forEach((tag) => {
-			all_tags.add(tag)
-		})
-	)
+	const all_tags = await get_all_tags(content)
 
-	const filter_tag = url.searchParams.get('tags')
-
-	if (filter_tag) {
-		content = content.filter((post) => post.tags.includes(filter_tag))
+	const tag_filter = url.searchParams.get('tags')
+	if (tag_filter) {
+		content = content.filter((post) => post.tags.includes(tag_filter))
 	}
 
 	return { all_tags, content }

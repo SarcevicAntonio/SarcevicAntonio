@@ -36,7 +36,7 @@
 		<ul class="tags">
 			{#each tags as tag}
 				<li>
-					<a href="/content?tag={tag}">
+					<a href="/content?tags={tag}">
 						#{tag}
 					</a>
 				</li>

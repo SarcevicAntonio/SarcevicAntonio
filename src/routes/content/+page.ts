@@ -8,7 +8,7 @@ export async function load({ parent, url }) {
 		})
 	)
 
-	const filter_tag = url.searchParams.get('tag')
+	const filter_tag = url.searchParams.get('tags')
 
 	if (filter_tag) {
 		content = content.filter((post) => post.tags.includes(filter_tag))

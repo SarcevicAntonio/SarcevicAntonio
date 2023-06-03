@@ -30,7 +30,7 @@
 		<ul>
 			{#each [...data.all_tags] as tag}
 				<li aria-current={filter_tag === tag}>
-					<a href="/content?tag={tag}">
+					<a href="/content?tags={tag}">
 						#{tag}
 					</a>
 				</li>

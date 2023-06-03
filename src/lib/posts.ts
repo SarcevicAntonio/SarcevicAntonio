@@ -1,4 +1,5 @@
-import { marked } from 'marked'
+import { compile } from 'mdsvex'
+import { parseHTML } from 'linkedom'
 
 const BLOG_GROUP_NAME = '(blog)'
 const BLOG_FILE_NAME = '/+page.svx'
@@ -36,8 +37,10 @@ export async function get_blog_posts(render = false) {
 			.slice(0, -1 * BLOG_FILE_NAME.length)
 
 		if (render) {
-			const markdown = await markdowns[path]()
-			const html = marked(markdown).replaceAll('\n', '')
+			let html = module.default.render().html
+			const linkedom = parseHTML(html)
+			const article = linkedom.document.getElementsByTagName('article')
+			html = article[0].innerHTML.replaceAll('\n', '').replaceAll('	', '')
 			blog_posts.push({ ...metadata, href, html })
 		} else {
 			blog_posts.push({ ...metadata, href })
@@ -55,14 +58,4 @@ export async function get_all_tags(posts: BlogMetadata[]) {
 		})
 	)
 	return [...all_tags]
-}
-
-function strip_script_tags(html: string) {
-	const el = document.createElement('html')
-	el.innerHTML = html
-	const scripts = el.getElementsByTagName('script')
-	for (const script of scripts) {
-		script.remove()
-	}
-	return el.innerHTML
 }

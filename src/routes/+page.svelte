@@ -1,4 +1,5 @@
 <script>
+	import Activity from './Activity.svelte'
 	import Contact from './Contact.svelte'
 	import Content from './Content.svelte'
 	import Craft from './Craft.svelte'
@@ -23,3 +24,5 @@
 <Projects />
 
 <Contact />
+
+<Activity lastfm={data.lastfm_data} />

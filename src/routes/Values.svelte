@@ -6,7 +6,7 @@
 	import MdiFlower from '~icons/mdi/flower'
 </script>
 
-<section id="first">
+<section>
 	<h2>Core Values</h2>
 	<MdiYinYang />
 	<MdiHeadLightbulbOutline />

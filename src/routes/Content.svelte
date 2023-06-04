@@ -6,7 +6,7 @@
 	export let content: BlogMetadata[]
 </script>
 
-<section>
+<section id="first">
 	<div class="header">
 		<h2>Content</h2>
 		<a href="/content" class="arrow-link end">

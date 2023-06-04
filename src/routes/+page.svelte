@@ -15,13 +15,14 @@
 
 <Hero />
 
+<Content content={data.content} />
+
+<Projects />
+
 <Values />
 
 <Craft />
 
-<Content content={data.content} />
-
-<Projects />
 
 <Contact />
 

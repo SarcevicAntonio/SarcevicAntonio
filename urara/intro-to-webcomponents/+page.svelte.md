@@ -455,7 +455,7 @@ builds the components, producing the most efficient JavaScript possible. Angular
 require the entire framework to be loaded in the browser, whereas Svelte does not by virtue of the
 build step. The advantages are also smaller bundle sizes and better performance, since no
 matching with a Virtual DOM is needed. Also, the Svelte compiler allows its own syntax, which leads
-to simpler code. (For more on why Svelte is awesome you can read my article [Why I ❤ Svelte](/why-i-love-svelte).)
+to simpler code.
 
 With the `customElement` option of the Svelte Complier a Web Component compliant output can
 be generated, whereby Svelte components can be used in other frameworks, or completely without

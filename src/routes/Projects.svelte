@@ -62,7 +62,10 @@
 		align-items: center;
 		gap: 1rem;
 		color: var(--as-text-2);
-		text-decoration: none;
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
 	}
 
 	img {
@@ -72,11 +75,6 @@
 		transition-property: filter, border-radius;
 		transition-duration: 0.2s;
 		transition-timing-function: ease-in-out;
-	}
-
-	a:hover,
-	a:focus {
-		text-decoration: underline;
 	}
 
 	a:hover img,

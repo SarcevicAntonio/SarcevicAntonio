@@ -114,12 +114,11 @@
 		text-decoration: none;
 		transition: box-shadow 0.2s ease-in-out;
 		background-color: var(--as-back-1);
-	}
-
-	a:hover,
-	a:focus {
-		text-decoration: underline;
-		box-shadow: 0px 7px 22px 6px rgba(0, 0, 0, 0.08), 0px 4px 4px 1px rgba(0, 0, 0, 0.11);
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+			box-shadow: 0px 7px 22px 6px rgba(0, 0, 0, 0.08), 0px 4px 4px 1px rgba(0, 0, 0, 0.11);
+		}
 	}
 
 	a :global(svg) {

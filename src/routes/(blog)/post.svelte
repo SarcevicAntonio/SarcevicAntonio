@@ -100,6 +100,10 @@
 	a {
 		color: inherit;
 		text-decoration: none;
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
 	}
 
 	.links {
@@ -109,11 +113,6 @@
 			text-align: center;
 			margin-block: 1rem;
 		}
-	}
-
-	a:hover,
-	a:focus {
-		text-decoration: underline;
 	}
 
 	ul.tags {

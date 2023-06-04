@@ -77,6 +77,13 @@
 		padding: 0.75rem 1rem;
 		height: calc(100% - 2.5rem);
 		border-radius: 1rem;
+		color: inherit;
+		text-decoration: none;
+
+		&:hover > h3,
+		&:focus > h3 {
+			text-decoration: underline;
+		}
 	}
 
 	li:first-child {
@@ -105,15 +112,5 @@
 	.header a :global(svg),
 	.meta :global(svg) {
 		vertical-align: sub;
-	}
-
-	a {
-		color: inherit;
-		text-decoration: none;
-	}
-
-	a:hover > h3,
-	a:focus > h3 {
-		text-decoration: underline;
 	}
 </style>

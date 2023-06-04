@@ -91,10 +91,9 @@
 
 	a {
 		text-decoration: none;
-	}
-
-	a:focus,
-	a:hover {
-		text-decoration: underline;
+		&:focus,
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 </style>

@@ -5,9 +5,9 @@ summary: |
 published: 2021-10-14
 updated: 2021-10-14
 tags:
-  - svelte
-  - web dev
   - guide
+  - svelte
+  - software
 ---
 
 <script>

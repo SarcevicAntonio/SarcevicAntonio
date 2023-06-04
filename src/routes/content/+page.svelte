@@ -5,7 +5,7 @@
 
 	export let data
 
-	$: filter_tag = $page.url.searchParams.get('tag')
+	$: filter_tag = $page.url.searchParams.get('tags')
 </script>
 
 <svelte:head>
@@ -79,6 +79,7 @@
 		text-align: center;
 		& ul {
 			display: flex;
+			flex-wrap: wrap;
 			gap: 1rem;
 			justify-content: center;
 		}
@@ -87,8 +88,12 @@
 		}
 	}
 
-	.posts a {
+	section a {
 		text-decoration: none;
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
 	}
 
 	.posts {

@@ -5,8 +5,8 @@ summary: |
 published: 2021-03-29
 updated: 2022-03-02
 tags:
-  - university
   - software
+  - university project
 alt_href: |
   pirate-bay-tours-booking-client
 ---

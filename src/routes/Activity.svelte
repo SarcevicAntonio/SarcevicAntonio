@@ -33,4 +33,13 @@
 		margin: auto;
 		text-align: start;
 	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+		&:focus,
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 </style>

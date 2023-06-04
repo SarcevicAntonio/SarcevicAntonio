@@ -65,6 +65,7 @@
 		text-decoration: none;
 		&:hover,
 		&:focus {
+			color: var(--as-text-1);
 			text-decoration: underline;
 		}
 	}

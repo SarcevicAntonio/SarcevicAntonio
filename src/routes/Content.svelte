@@ -36,6 +36,7 @@
 
 <style>
 	section {
+		scroll-margin-block-start: 2rem;
 		margin-block: 8rem;
 		font-size: var(--step-1);
 	}
@@ -95,12 +96,12 @@
 	}
 
 	h3 {
-		font-size: var(--step-3);
+		font-size: var(--step-2);
 		margin-block: 0;
 	}
 
 	p {
-		margin-block: 1rem;
+		margin-block: 0.75rem;
 		font-size: var(--step--1);
 	}
 

@@ -18,7 +18,6 @@
 
 <style>
 	section {
-		scroll-margin-block-start: 2rem;
 		margin-block: 8rem;
 		text-align: center;
 		font-size: var(--step-1);

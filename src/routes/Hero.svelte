@@ -22,7 +22,7 @@
 			<img
 				width="448px"
 				height="448px"
-				src="/toni-transparent.png"
+				src="./toni-transparent.png"
 				alt="Antonio Sarcevic in a blue shirt, grey hoodie and green cap"
 			/>
 		</div>

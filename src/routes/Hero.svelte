@@ -142,13 +142,6 @@
 		inset-block-end: -25%;
 		inset-inline-start: -10%;
 		color: var(--as-accent);
-		&:hover path {
-			d: path('M21.0006 186.499C-34.9994 474.999 255 -118 525 42.4996');
-		}
-	}
-	path {
-		transition: 2s;
-		transition-timing-function: ease-in-out;
 	}
 
 	@media (prefers-contrast: more) {

@@ -3,6 +3,7 @@
 - [ ] try high dynamic range colors (and gradients?)
 - [ ] port blog
   - [ ] style callouts
+  - [ ] toc
   - [ ] codeblocks and syntax highlighting
 - [ ] font size and family options for article
 - [ ] contact

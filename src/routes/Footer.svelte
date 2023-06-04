@@ -19,7 +19,7 @@
 			</li>
 		</ul>
 		<h2 class="notice">Crafted with 💖 by Antonio Sarcevic in Münster during 2023.</h2>
-		<p>This Site is powered by the following dependencies:</p>
+		<p>sarcevic.dev is powered by the following dependencies</p>
 		<ul class="credits">
 			{#each dependencies as dependency}
 				{@const link = dependency.link

@@ -87,9 +87,14 @@
 		color: var(--as-text-2);
 	}
 
-	article :global(img) {
-		max-width: calc(100% + 2rem);
-		margin-inline: -1rem;
+	article {
+		& :global(img) {
+			max-width: calc(100% + 2rem);
+			margin-inline: -1rem;
+		}
+		& :global(p) {
+			line-height: 1.7;
+		}
 	}
 
 	a {
@@ -116,6 +121,7 @@
 		padding: 0;
 		list-style: none;
 		display: inline-flex;
+		flex-wrap: wrap;
 		gap: 1em;
 	}
 </style>

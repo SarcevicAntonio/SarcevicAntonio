@@ -15,15 +15,35 @@
 
 <Hero />
 
-<Content content={data.content} />
+<section id="first">
+	<Content content={data.content} />
+</section>
 
-<Projects />
+<section>
+	<Projects />
+</section>
 
-<Values />
+<section>
+	<Values />
+</section>
 
-<Craft />
+<section>
+	<Craft />
+</section>
 
+<section>
+	<Contact />
+</section>
 
-<Contact />
+<section>
+	<Activity lastfm={data.lastfm_data} />
+</section>
 
-<Activity lastfm={data.lastfm_data} />
+<style>
+	section {
+		text-align: center;
+		scroll-margin-block-start: 2rem;
+		margin-block: 25vh;
+		font-size: var(--step-1);
+	}
+</style>

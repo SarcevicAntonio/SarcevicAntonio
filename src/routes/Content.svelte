@@ -6,41 +6,33 @@
 	export let content: BlogMetadata[]
 </script>
 
-<section id="first">
-	<div class="header">
-		<h2>Content</h2>
-		<a href="/content" class="arrow-link end">
-			/content<MaterialSymbolsArrowForwardRounded />
-		</a>
-	</div>
+<div class="header">
+	<h2>Content</h2>
+	<a href="/content" class="arrow-link end">
+		/content<MaterialSymbolsArrowForwardRounded />
+	</a>
+</div>
 
-	<ul class="scroller">
-		{#each content as { title, summary, href, published }}
-			<li>
-				<a {href}>
-					<h3>{title}</h3>
-					<p>{summary}</p>
-					<p class="meta">
-						<MaterialSymbolsDocs />
-						{new Date(published).toLocaleDateString(undefined, {
-							year: 'numeric',
-							month: 'long',
-							day: 'numeric',
-						})}
-					</p>
-				</a>
-			</li>
-		{/each}
-	</ul>
-</section>
+<ul class="scroller">
+	{#each content as { title, summary, href, published }}
+		<li>
+			<a {href}>
+				<h3>{title}</h3>
+				<p>{summary}</p>
+				<p class="meta">
+					<MaterialSymbolsDocs />
+					{new Date(published).toLocaleDateString(undefined, {
+						year: 'numeric',
+						month: 'long',
+						day: 'numeric',
+					})}
+				</p>
+			</a>
+		</li>
+	{/each}
+</ul>
 
 <style>
-	section {
-		scroll-margin-block-start: 2rem;
-		margin-block: 8rem;
-		font-size: var(--step-1);
-	}
-
 	.header {
 		display: flex;
 		justify-content: space-between;
@@ -108,7 +100,7 @@
 	.meta {
 		font-size: var(--step-0);
 		margin-block-start: auto;
-		margin-block-end:0 ;
+		margin-block-end: 0;
 	}
 
 	.header a :global(svg),

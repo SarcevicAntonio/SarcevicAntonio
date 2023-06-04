@@ -23,8 +23,8 @@
 	import { differenceInYears } from 'date-fns'
 </script>
 
-<section>
-	<h2>Craft</h2>
+<h2>Craft</h2>
+<div>
 	<MaterialSymbolsFavoriteRounded aria-hidden="true" />
 	<br />
 	<SimpleIconsHtml5 aria-hidden="true" />
@@ -32,12 +32,14 @@
 	<SimpleIconsTypescript aria-hidden="true" />
 	<SimpleIconsSvelte aria-hidden="true" />
 	<SimpleIconsFigma aria-hidden="true" />
-	<p>
-		Love to program User Interfaces in HTML, CSS, TypeScript and SvelteKit.
-		<br />
-		Also love designing User Interfaces in Figma.
-	</p>
+</div>
+<p>
+	Love to program User Interfaces in HTML, CSS, TypeScript and SvelteKit.
 	<br />
+	Also love designing User Interfaces in Figma.
+</p>
+<br />
+<div>
 	<SimpleIconsAngular aria-hidden="true" />
 	<SimpleIconsFirebase aria-hidden="true" />
 	<SimpleIconsDocker aria-hidden="true" />
@@ -55,39 +57,31 @@
 		<SimpleIconsJava aria-hidden="true" />
 		<SimpleIconsCsharp aria-hidden="true" />
 	</div>
-	<p>
-		Have experience with Angular, Firebase, Docker, GitHub Actions, GitlabCI, Cypress, Playwright,
-		Web Components, Ruby on Rails, Vue, NodeJS, Python
-	</p>
+</div>
+<p>
+	Have experience with Angular, Firebase, Docker, GitHub Actions, GitlabCI, Cypress, Playwright, Web
+	Components, Ruby on Rails, Vue, NodeJS, Python
+</p>
+<br />
+<div class="count">+{differenceInYears(new Date(), new Date(2019, 2, 1))} years</div>
+<p>
+	Worked as a web developer since 2019.
 	<br />
-	<div class="count">+{differenceInYears(new Date(), new Date(2019, 2, 1))} years</div>
-	<p>
-		Worked as a web developer since 2019.
-		<br />
-		Earned a Bachelor of Science degree in Media and Communications Informatics.
-	</p>
-	<a href="/assets/AntonioSarcevic_CV.pdf">
-		<MaterialSymbolsDocs />
-		Full Resume
-	</a>
-</section>
+	Earned a Bachelor of Science degree in Media and Communications Informatics.
+</p>
+<a href="/assets/AntonioSarcevic_CV.pdf">
+	<MaterialSymbolsDocs />
+	Full Resume
+</a>
 
 <style>
-	section {
-		margin-block: 8rem;
-		text-align: center;
-		font-size: var(--step-1);
-		max-width: 70ch;
-		margin: auto;
-	}
-
 	h2 {
 		font-size: var(--step-5);
 		text-align: center;
 		margin-block-end: 0.25em;
 	}
 
-	section :global(svg) {
+	div :global(svg) {
 		font-size: var(--step-4);
 	}
 

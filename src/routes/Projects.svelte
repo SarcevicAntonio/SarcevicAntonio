@@ -18,27 +18,19 @@
 	]
 </script>
 
-<section>
-	<h2>Projects</h2>
-	<ul>
-		{#each projects as { label, icon, link }}
-			<li>
-				<a href={link}>
-					<img src={icon} alt="" />
-					{label}
-				</a>
-			</li>
-		{/each}
-	</ul>
-</section>
+<h2>Projects</h2>
+<ul>
+	{#each projects as { label, icon, link }}
+		<li>
+			<a href={link}>
+				<img src={icon} alt="" />
+				{label}
+			</a>
+		</li>
+	{/each}
+</ul>
 
 <style>
-	section {
-		margin-block: 8rem;
-		text-align: center;
-		font-size: var(--step-1);
-	}
-
 	h2 {
 		font-size: var(--step-5);
 		text-align: center;

@@ -34,26 +34,18 @@
 	]
 </script>
 
-<section>
-	<h2>Connect</h2>
-	<ul>
-		{#each links as { href, title, icon }}
-			<li>
-				<a {href} {title}>
-					<svelte:component this={icon} aria-hidden="true" />
-				</a>
-			</li>
-		{/each}
-	</ul>
-</section>
+<h2>Connect</h2>
+<ul>
+	{#each links as { href, title, icon }}
+		<li>
+			<a {href} {title}>
+				<svelte:component this={icon} aria-hidden="true" />
+			</a>
+		</li>
+	{/each}
+</ul>
 
 <style>
-	section {
-		margin-block: 8rem;
-		text-align: center;
-		font-size: var(--step-1);
-	}
-
 	h2 {
 		font-size: var(--step-5);
 		text-align: center;

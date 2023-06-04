@@ -1,22 +1,24 @@
 # website rewrite
 
-- [ ] font size and family options for article
+- [ ] play with fonts
 - [ ] contact
 - [ ] dark / light theme
   - [ ] giscus
 - [ ] /favicon
 - [ ] static prerenderd everything. i want to just serve html if possible
-- [ ] recent youtube videos
-- [ ] last.fm last 7 days
+- [ ] more blog entries
+  - [ ] web3 thing
+  - [ ] for youtube videos
+- [ ] play with last.fm api more
 - [ ] /robots.txt
 - [ ] /uses
 - [ ] image optimization
-
+- [ ] generated article and OG images
 - [ ] alt paths for blog entries
+- [ ] font size and family options for article
 - [ ] recent tweets / toots / bleeps
 - [ ] recent tumblr posts
 - [ ] recent github actions
-- [ ] generated article and OG images
 - [ ] multiple tag search
   - isn't it just a checkbox form?!
 - [ ] analytics (hand crafted micro analytics?)

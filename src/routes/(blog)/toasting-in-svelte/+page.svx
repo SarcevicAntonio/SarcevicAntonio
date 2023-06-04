@@ -16,7 +16,7 @@ tags:
 
 This article explains how to create a reusable toast library package for Svelte using SvelteKit.
 We will cover what a toast is, use Svelte Components and a Store to create one ourselves, and cover how SvelteKit can help us package the library.
-If you only care about the code, have [this REPL](https://svelte.dev/repl/ff8317744f4b4c3e8972a313a044e882?version=3.44.1) or [simply use my svelte toast package `as-toast`](#check-out-my-toast-package).
+If you only care about the code, have [this REPL](https://svelte.dev/repl/ff8317744f4b4c3e8972a313a044e882?version=3.44.1).
 
 <Callout type="warning" title="Requirements">
 You need to have a SvelteKit compatible JavaScript runtime like Node.js (>= 16) installed on your system.
@@ -342,25 +342,3 @@ npm run package
 
 I won't cover how to publish this package to NPM so either check the [npm docs on publishing packages](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) or search the internet for an article that covers that if you need help.
 
-## Check out my toast package
-
-I based this tutorial ony [my own Toast package](https://as-toast.vercel.app/) that you can also use which features full customization using CSS Custom Properties.
-
-[![My own Toast Package that shows of the CSS customization in various themes ](./as-toast.png)](https://as-toast.vercel.app/)
-
-### Quick Start
-
-1. `npm i -D as-toast`
-1. `import { Toasts, addToast } from "as-toast"`
-1. `addToast('Hello Toast.');`
-1. `addToast('This toast is a warning.', 'warn');`
-1. `addToast('This toast will display for about 11,574 days.', undefined, 9001);`
-
-### Links
-
-- [Open quick start in Svelte REPL](https://svelte.dev/repl/ac1ac6289ab948b488fe2f17d122aaac?version=3.42.6)
-- [View a demo](https://as-toast.vercel.app/#demo)
-- [View the docs](https://as-toast.vercel.app/#docs)
-- [View Theme Ideas 🎨](https://as-toast.vercel.app/#themes)
-- [Vist package on npm](https://www.npmjs.com/package/as-toast)
-- [Visit project repo on GitHub](https://github.com/SarcevicAntonio/as-toast).

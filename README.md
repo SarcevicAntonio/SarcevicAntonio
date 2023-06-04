@@ -1,6 +1,5 @@
 # website rewrite
 
-- [ ] remix tags
 - [ ] font size and family options for article
 - [ ] contact
 - [ ] dark / light theme

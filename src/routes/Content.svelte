@@ -70,12 +70,13 @@
 	}
 
 	li > a {
-		display: block;
+		display: flex;
+		flex-direction: column;
 		width: min(23rem, calc(100vw - 6rem));
 		border: 0.25rem solid var(--as-text-1);
-		padding: 1rem;
+		padding: 0.75rem 1rem;
 		height: calc(100% - 2.5rem);
-		border-radius: 2rem;
+		border-radius: 1rem;
 	}
 
 	li:first-child {
@@ -92,12 +93,13 @@
 	}
 
 	p {
-		margin-block: 0;
+		margin-block: 1rem;
 		font-size: var(--step--1);
 	}
 
 	.meta {
 		font-size: var(--step-0);
+		margin-top: auto;
 	}
 
 	.header a :global(svg),

@@ -1,10 +1,6 @@
 # website rewrite
 
-- [ ] try high dynamic range colors (and gradients?)
-- [ ] port blog
-  - [ ] style callouts
-  - [ ] toc
-  - [ ] codeblocks and syntax highlighting
+- [ ] remix tags
 - [ ] font size and family options for article
 - [ ] contact
 - [ ] dark / light theme

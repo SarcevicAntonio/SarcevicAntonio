@@ -14,6 +14,8 @@ tags:
   import Callout from "$lib/Callout.svelte"
 </script>
 
+## Table Of Contents
+
 In this guide we will create an offline-first and installable Progressive Web App using [SvelteKit](https://kit.svelte.dev/) and [`workbox-precaching`](https://developer.chrome.com/docs/workbox/modules/workbox-precaching/).
 
 <Callout type="warning" title="Requirements">

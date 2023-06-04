@@ -20,10 +20,12 @@ tags:
 
 <svelte:head>
 
-<script src="./attachments/button.js"></script>
-<script src="./attachments/counter.js"></script>
+<script src="/attachments/button.js"></script>
+<script src="/attachments/counter.js"></script>
 
 </svelte:head>
+
+## Table Of Contents
 
 During my 1th semester of my Informatics Masters's degree, late 2020, I wrote a paper on web components, their value, usage and authoring. I also wrote a part about creating Web Components with Svelte. The paper was originally written in german, so I thought I post a translated version here.
 

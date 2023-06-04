@@ -15,6 +15,15 @@
 	</title>
 </svelte:head>
 
+<section class="links">
+	<a href="/" class="arrow-link">
+		<MaterialSymbolsArrowBackRounded aria-hidden="true" />/
+	</a>
+	<a href="/content" class="arrow-link">
+		<MaterialSymbolsArrowBackRounded aria-hidden="true" />/content
+	</a>
+</section>
+
 <!-- Remember if you edit markup here to change it in get_blog_posts html render cleanup -->
 <article>
 	<h1>{title}</h1>
@@ -48,16 +57,6 @@
 	<slot />
 </article>
 
-<section class="links">
-	<a href="/content" class="arrow-link">
-		<MaterialSymbolsArrowBackRounded aria-hidden="true" />/content
-	</a>
-
-	<a href="/" class="arrow-link">
-		<MaterialSymbolsArrowBackRounded aria-hidden="true" />/
-	</a>
-</section>
-
 <section>
 	<Giscus
 		repo="SarcevicAntonio/SarcevicAntonio"
@@ -67,6 +66,16 @@
 		reactionsEnabled="1"
 		inputPosition="top"
 	/>
+</section>
+
+<section class="links">
+	<a href="/content" class="arrow-link">
+		<MaterialSymbolsArrowBackRounded aria-hidden="true" />/content
+	</a>
+
+	<a href="/" class="arrow-link">
+		<MaterialSymbolsArrowBackRounded aria-hidden="true" />/
+	</a>
 </section>
 
 <style>

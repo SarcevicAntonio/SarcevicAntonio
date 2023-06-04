@@ -26,6 +26,7 @@ specifiers:
   prism-themes: ^1.9.0
   rehype-autolink-headings: ^6.1.1
   rehype-slug: ^5.1.0
+  remark-toc: ^8.0.1
   svelte: ^3.54.0
   svelte-check: ^3.0.1
   svelte-preprocess: ^5.0.3
@@ -46,6 +47,7 @@ dependencies:
   prism-themes: 1.9.0
   rehype-autolink-headings: 6.1.1
   rehype-slug: 5.1.0
+  remark-toc: 8.0.1
 
 devDependencies:
   '@iconify/json': 2.2.72
@@ -991,6 +993,10 @@ packages:
     resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
     dev: true
 
+  /@types/extend/3.0.1:
+    resolution: {integrity: sha512-R1g/VyKFFI2HLC1QGAeTtCBWCo6n75l41OnsVYNbmKG+kempOESaodf6BeJyUM3Q0rKa/NQcTHbB2+66lNnxLw==}
+    dev: false
+
   /@types/hast/2.3.4:
     resolution: {integrity: sha512-wLEm0QvaoawEDoTRwzTXp4b4jpwiJDvR5KMnFnVodm3scufTlBOWRD6N1OBf9TZMhjlNsSfcO5V+7AF4+Vy+9g==}
     dependencies:
@@ -1004,6 +1010,12 @@ packages:
   /@types/json-schema/7.0.12:
     resolution: {integrity: sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==}
     dev: true
+
+  /@types/mdast/3.0.11:
+    resolution: {integrity: sha512-Y/uImid8aAwrEA24/1tcRZwpxX3pIFTSilcNDKSPn+Y2iDywSEachzRuvgAYYLR3wpGXAsMbv5lvKLDZLeYPAw==}
+    dependencies:
+      '@types/unist': 2.0.6
+    dev: false
 
   /@types/pug/2.0.6:
     resolution: {integrity: sha512-SnHmG9wN1UVmagJOnyo/qkk0Z7gejYxOYYmaAwr5u2yFYfsupN3sg10kyzN8Hep/2zbHxCnsumxOoRIRMBwKCg==}
@@ -2598,6 +2610,24 @@ packages:
       safe-buffer: 5.2.1
     dev: true
 
+  /mdast-util-to-string/3.2.0:
+    resolution: {integrity: sha512-V4Zn/ncyN1QNSqSBxTrMOLpjr+IKdHl2v3KVLoWmDPscP4r9GcCi71gjgvUV1SFSKh92AjAG4peFuBl2/YgCJg==}
+    dependencies:
+      '@types/mdast': 3.0.11
+    dev: false
+
+  /mdast-util-toc/6.1.1:
+    resolution: {integrity: sha512-Er21728Kow8hehecK2GZtb7Ny3omcoPUVrmObiSUwmoRYVZaXLR751QROEFjR8W/vAQdHMLj49Lz20J55XaNpw==}
+    dependencies:
+      '@types/extend': 3.0.1
+      '@types/mdast': 3.0.11
+      extend: 3.0.2
+      github-slugger: 2.0.0
+      mdast-util-to-string: 3.2.0
+      unist-util-is: 5.2.1
+      unist-util-visit: 4.1.2
+    dev: false
+
   /mdsvex/0.10.6_svelte@3.59.1:
     resolution: {integrity: sha512-aGRDY0r5jx9+OOgFdyB9Xm3EBr9OUmcrTDPWLB7a7g8VPRxzPy4MOBmcVYgz7ErhAJ7bZ/coUoj6aHio3x/2mA==}
     peerDependencies:
@@ -3469,6 +3499,14 @@ packages:
       hast-util-to-string: 2.0.0
       unified: 10.1.2
       unist-util-visit: 4.1.2
+    dev: false
+
+  /remark-toc/8.0.1:
+    resolution: {integrity: sha512-7he2VOm/cy13zilnOTZcyAoyoolV26ULlon6XyCFU+vG54Z/LWJnwphj/xKIDLOt66QmJUgTyUvLVHi2aAElyg==}
+    dependencies:
+      '@types/mdast': 3.0.11
+      mdast-util-toc: 6.1.1
+      unified: 10.1.2
     dev: false
 
   /resolve-alpn/1.2.1:

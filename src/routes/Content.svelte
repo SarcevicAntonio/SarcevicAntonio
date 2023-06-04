@@ -71,9 +71,10 @@
 
 	li > a {
 		display: block;
-		width: 25rem;
+		width: min(23rem, calc(100vw - 6rem));
 		border: 0.25rem solid var(--as-text-1);
 		padding: 1rem;
+		height: calc(100% - 2.5rem);
 		border-radius: 2rem;
 	}
 

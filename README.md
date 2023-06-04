@@ -1,7 +1,6 @@
 # website rewrite
 
 - [ ] port blog
-  - [ ] sitemap
   - [ ] port more complex articles
   - [ ] heading links
 - [ ] contact

@@ -12,6 +12,7 @@ h5,
 h6 {
 	font-family: 'Staatliches', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	font-weight: 400;
+	scroll-margin-block-start: 1em;
 }
 
 body::before {
@@ -51,5 +52,25 @@ body {
 		&:focus svg {
 			inset-inline-start: 0.5rem;
 		}
+	}
+}
+
+.autolink-header {
+	color: var(--as-text-2);
+	font-size: 0.8em;
+	padding-inline-end: 0.2em;
+	margin-inline-start: -1ch;
+	vertical-align: baseline;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		color: var(--as-text-1);
+		text-decoration: underline;
+	}
+}
+
+@media (max-width: 1000px) {
+	.autolink-header {
+		margin-inline-start: unset;
 	}
 }

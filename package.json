@@ -45,6 +45,8 @@
 		"@fontsource/staatliches": "^5.0.2",
 		"@giscus/svelte": "^2.2.8",
 		"date-fns": "^2.30.0",
-		"linkedom": "^0.14.26"
+		"linkedom": "^0.14.26",
+		"rehype-autolink-headings": "^6.1.1",
+		"rehype-slug": "^5.1.0"
 	}
 }

@@ -1,5 +1,5 @@
 <section>
-	<h2>Contact</h2>
+	<h2>Connect</h2>
 	<p>...</p>
 </section>
 

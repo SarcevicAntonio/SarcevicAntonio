@@ -81,6 +81,11 @@
 		font-size: clamp(1rem, calc(1rem + 2vw), 6rem);
 		color: var(--as-text-2);
 		opacity: var(--opacity);
+
+		&:hover,
+		&:focus {
+			color: var(--as-text-1);
+		}
 	}
 
 	section {

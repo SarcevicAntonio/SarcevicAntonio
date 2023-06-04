@@ -13,7 +13,7 @@
 	<MaterialSymbolsAndroidChat />
 	<MdiHandHeartOutline />
 	<MdiFlower />
-	<p>Balance, Open Mindedness, Communication, Honesty & Joy</p>
+	<p>Balance, Open Mindedness, Clear Communication, Honesty & Joy</p>
 </section>
 
 <style>

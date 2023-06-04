@@ -2,7 +2,6 @@
 
 - [ ] port blog
   - [ ] port more complex articles
-  - [ ] heading links
 - [ ] contact
 - [ ] theme toggle
 - [ ] /favicon

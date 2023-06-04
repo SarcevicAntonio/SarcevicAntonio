@@ -49,6 +49,8 @@ export async function get_blog_posts(render = false) {
 		}
 	}
 
+	blog_posts.sort((a, b) => new Date(b.published).valueOf() - new Date(a.published).valueOf())
+
 	return blog_posts
 }
 

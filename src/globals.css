@@ -1,5 +1,5 @@
 html {
-	scroll-behavior: smooth;
+	/* scroll-behavior: smooth; */
 	background-color: var(--as-text-1);
 	color: var(--as-text-1);
 }
@@ -79,3 +79,26 @@ body {
 	outline-width: 1rem;
 	outline-offset: 0.5rem;
 }
+
+/* from scrollbar.app */ 
+
+* {
+	--sb-track-color: var(--as-back-2);
+	--sb-thumb-color: var(--as-text-2);
+ 
+	scrollbar-color: var(--sb-thumb-color) 
+						  var(--sb-track-color);
+ }
+ 
+ *::-webkit-scrollbar {
+	width: 0.5em;
+ }
+ 
+ *::-webkit-scrollbar-track {
+	background: var(--sb-track-color);
+ }
+ 
+ *::-webkit-scrollbar-thumb {
+	background: var(--sb-thumb-color);
+	border-radius: 1rem;
+	}

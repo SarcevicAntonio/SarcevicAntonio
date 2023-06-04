@@ -5,6 +5,7 @@ specifiers:
   '@fontsource/staatliches': ^5.0.2
   '@giscus/svelte': ^2.2.8
   '@iconify/json': ^2.2.72
+  '@polymer/paper-button': ^3.0.1
   '@sveltejs/adapter-auto': ^2.0.0
   '@sveltejs/kit': ^1.5.0
   '@typescript-eslint/eslint-plugin': ^5.45.0
@@ -38,6 +39,7 @@ dependencies:
   '@fontsource/space-mono': 5.0.2
   '@fontsource/staatliches': 5.0.2
   '@giscus/svelte': 2.2.8_svelte@3.59.1
+  '@polymer/paper-button': 3.0.1
   date-fns: 2.30.0
   linkedom: 0.14.26
   rehype-autolink-headings: 6.1.1
@@ -777,6 +779,95 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
+  /@polymer/font-roboto/3.0.2:
+    resolution: {integrity: sha512-tx5TauYSmzsIvmSqepUPDYbs4/Ejz2XbZ1IkD7JEGqkdNUJlh+9KU85G56Tfdk/xjEZ8zorFfN09OSwiMrIQWA==}
+    dev: false
+
+  /@polymer/iron-a11y-keys-behavior/3.0.1:
+    resolution: {integrity: sha512-lnrjKq3ysbBPT/74l0Fj0U9H9C35Tpw2C/tpJ8a+5g8Y3YJs1WSZYnEl1yOkw6sEyaxOq/1DkzH0+60gGu5/PQ==}
+    dependencies:
+      '@polymer/polymer': 3.5.1
+    dev: false
+
+  /@polymer/iron-behaviors/3.0.1:
+    resolution: {integrity: sha512-IMEwcv1lhf1HSQxuyWOUIL0lOBwmeaoSTpgCJeP9IBYnuB1SPQngmfRuHKgK6/m9LQ9F9miC7p3HeQQUdKAE0w==}
+    dependencies:
+      '@polymer/iron-a11y-keys-behavior': 3.0.1
+      '@polymer/polymer': 3.5.1
+    dev: false
+
+  /@polymer/iron-checked-element-behavior/3.0.1:
+    resolution: {integrity: sha512-aDr0cbCNVq49q+pOqa6CZutFh+wWpwPMLpEth9swx+GkAj+gCURhuQkaUYhIo5f2egDbEioR1aeHMnPlU9dQZA==}
+    dependencies:
+      '@polymer/iron-form-element-behavior': 3.0.1
+      '@polymer/iron-validatable-behavior': 3.0.1
+      '@polymer/polymer': 3.5.1
+    dev: false
+
+  /@polymer/iron-flex-layout/3.0.1:
+    resolution: {integrity: sha512-7gB869czArF+HZcPTVSgvA7tXYFze9EKckvM95NB7SqYF+NnsQyhoXgKnpFwGyo95lUjUW9TFDLUwDXnCYFtkw==}
+    dependencies:
+      '@polymer/polymer': 3.5.1
+    dev: false
+
+  /@polymer/iron-form-element-behavior/3.0.1:
+    resolution: {integrity: sha512-G/e2KXyL5AY7mMjmomHkGpgS0uAf4ovNpKhkuUTRnMuMJuf589bKqE85KN4ovE1Tzhv2hJoh/igyD6ekHiYU1A==}
+    dependencies:
+      '@polymer/polymer': 3.5.1
+    dev: false
+
+  /@polymer/iron-meta/3.0.1:
+    resolution: {integrity: sha512-pWguPugiLYmWFV9UWxLWzZ6gm4wBwQdDy4VULKwdHCqR7OP7u98h+XDdGZsSlDPv6qoryV/e3tGHlTIT0mbzJA==}
+    dependencies:
+      '@polymer/polymer': 3.5.1
+    dev: false
+
+  /@polymer/iron-validatable-behavior/3.0.1:
+    resolution: {integrity: sha512-wwpYh6wOa4fNI+jH5EYKC7TVPYQ2OfgQqocWat7GsNWcsblKYhLYbwsvEY5nO0n2xKqNfZzDLrUom5INJN7msQ==}
+    dependencies:
+      '@polymer/iron-meta': 3.0.1
+      '@polymer/polymer': 3.5.1
+    dev: false
+
+  /@polymer/paper-behaviors/3.0.1:
+    resolution: {integrity: sha512-6knhj69fPJejv8qR0kCSUY+Q0XjaUf0OSnkjRjmTJPAwSrRYtgqE+l6P1FfA+py1X/cUjgne9EF5rMZAKJIg1g==}
+    dependencies:
+      '@polymer/iron-behaviors': 3.0.1
+      '@polymer/iron-checked-element-behavior': 3.0.1
+      '@polymer/paper-ripple': 3.0.2
+      '@polymer/polymer': 3.5.1
+    dev: false
+
+  /@polymer/paper-button/3.0.1:
+    resolution: {integrity: sha512-JRNBc+Oj9EWnmyLr7FcCr8T1KAnEHPh6mosln9BUdkM+qYaYsudSICh3cjTIbnj6AuF5OJidoLkM1dlyj0j6Zg==}
+    dependencies:
+      '@polymer/iron-flex-layout': 3.0.1
+      '@polymer/paper-behaviors': 3.0.1
+      '@polymer/paper-styles': 3.0.1
+      '@polymer/polymer': 3.5.1
+    dev: false
+
+  /@polymer/paper-ripple/3.0.2:
+    resolution: {integrity: sha512-DnLNvYIMsiayeICroYxx6Q6Hg1cUU8HN2sbutXazlemAlGqdq80qz3TIaVdbpbt/pvjcFGX2HtntMlPstCge8Q==}
+    dependencies:
+      '@polymer/iron-a11y-keys-behavior': 3.0.1
+      '@polymer/polymer': 3.5.1
+    dev: false
+
+  /@polymer/paper-styles/3.0.1:
+    resolution: {integrity: sha512-y6hmObLqlCx602TQiSBKHqjwkE7xmDiFkoxdYGaNjtv4xcysOTdVJsDR/R9UHwIaxJ7gHlthMSykir1nv78++g==}
+    dependencies:
+      '@polymer/font-roboto': 3.0.2
+      '@polymer/iron-flex-layout': 3.0.1
+      '@polymer/polymer': 3.5.1
+    dev: false
+
+  /@polymer/polymer/3.5.1:
+    resolution: {integrity: sha512-JlAHuy+1qIC6hL1ojEUfIVD58fzTpJAoCxFwV5yr0mYTXV1H8bz5zy0+rC963Cgr9iNXQ4T9ncSjC2fkF9BQfw==}
+    dependencies:
+      '@webcomponents/shadycss': 1.11.2
+    dev: false
+
   /@rollup/plugin-inject/5.0.3:
     resolution: {integrity: sha512-411QlbL+z2yXpRWFXSmw/teQRMkXcAAC8aYTemc15gwJRpvEVDQwoe+N/HTFD8RFG8+88Bme9DK2V9CVm7hJdA==}
     engines: {node: '>=14.0.0'}
@@ -1056,6 +1147,10 @@ packages:
       '@typescript-eslint/types': 5.59.8
       eslint-visitor-keys: 3.4.1
     dev: true
+
+  /@webcomponents/shadycss/1.11.2:
+    resolution: {integrity: sha512-vRq+GniJAYSBmTRnhCYPAPq6THYqovJ/gzGThWbgEZUQaBccndGTi1hdiUP15HzEco0I6t4RCtXyX0rsSmwgPw==}
+    dev: false
 
   /acorn-jsx/5.3.2_acorn@8.8.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}

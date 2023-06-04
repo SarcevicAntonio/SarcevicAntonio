@@ -5,13 +5,9 @@ summary: |
 published: 2021-03-29
 updated: 2022-03-02
 tags:
-  - university
-  - software
+  - project
+  - web dev
 ---
-
-<script>
-  import pdf from "./VI_Dokumentation.pdf"
-</script>
 
 During my 1th semester of my Informatics Masters's degree, we got tasked to create an offline-first booking app for internal use as part of a distributed database course. The idea was that there is a company offering cruise ship tickets and they need an internal booking app for sales agents to use on offline tablets when they recruit new customers.
 
@@ -34,6 +30,15 @@ CouchDB is for the most part pretty easy to work with, except when it comes to u
 
 ## Final Results
 
-[Project Repo on GitHub](https://github.com/SarcevicAntonio/Booking-App)
-
-[Project Documentation (23 pages, written in german)]({pdf})
+<ul>
+  <li>
+  <a class="pill" href="https://github.com/SarcevicAntonio/Booking-App" target="_blank" rel="noreferrer">
+  Project Repo on GitHub
+  </a>
+  </li>
+  <li>
+  <a class="pill" href="/attachments/VI___Dokumentation.pdf" target="_blank" rel="noreferrer">
+  Project Documentation (23 pages, written in german)
+  </a>
+  </li>
+</ul>

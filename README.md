@@ -2,13 +2,12 @@
 
 - [ ] try high dynamic range colors (and gradients?)
 - [ ] port blog
-  - [ ] port more complex articles
+  - [ ] style callouts
+  - [ ] codeblocks and syntax highlighting
+- [ ] font size and family options for article
 - [ ] contact
-- [ ] visitor preference panel
-  - [ ] dark / light theme
-    - [ ] giscus
-  - [ ] font size and family options
-  - [ ] contrast options
+- [ ] dark / light theme
+  - [ ] giscus
 - [ ] /favicon
 - [ ] static prerenderd everything. i want to just serve html if possible
 - [ ] recent youtube videos

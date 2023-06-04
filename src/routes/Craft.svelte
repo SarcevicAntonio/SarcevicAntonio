@@ -103,25 +103,18 @@
 	}
 
 	a {
-		display: inline-flex;
 		font-size: var(--step-0);
-		border: 0.15em solid var(--as-text-1);
-		border-radius: 10000rem;
-		padding: 0.25em 1em;
-		gap: 0.5em;
-		align-items: center;
 		color: var(--as-text-1);
 		text-decoration: none;
-		transition: box-shadow 0.2s ease-in-out;
 		background-color: var(--as-back-1);
 		&:hover,
 		&:focus {
 			text-decoration: underline;
-			box-shadow: 0px 7px 22px 6px rgba(0, 0, 0, 0.08), 0px 4px 4px 1px rgba(0, 0, 0, 0.11);
 		}
-	}
 
-	a :global(svg) {
-		font-size: inherit;
+		& :global(svg) {
+			vertical-align: sub;
+			font-size: 1.2em;
+		}
 	}
 </style>

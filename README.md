@@ -1,6 +1,5 @@
 # website rewrite
 
-- [ ] put content and projects up top
 - [ ] try high dynamic range colors (and gradients?)
 - [ ] port blog
   - [ ] port more complex articles

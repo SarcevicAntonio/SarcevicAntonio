@@ -62,6 +62,7 @@
 		align-items: center;
 		gap: 1rem;
 		color: var(--as-text-2);
+		text-decoration: none;
 		&:hover,
 		&:focus {
 			text-decoration: underline;

@@ -14,9 +14,15 @@
 				Sorry about that 🫤
 			</p>
 			<p>
+				Maybe you can find what you were looking for under
+				<a href="/content" class="arrow-link">
+					<MaterialSymbolsArrowBackRounded aria-hidden="true" />/content</a
+				>.
+			</p>
+			<p>
 				<a href="/" class="arrow-link">
-					<MaterialSymbolsArrowBackRounded aria-hidden="true" />/
-				</a>
+					<MaterialSymbolsArrowBackRounded aria-hidden="true" />Or go to the main page /</a
+				>.
 			</p>
 		{:else}
 			<p>{$page.error?.message}</p>

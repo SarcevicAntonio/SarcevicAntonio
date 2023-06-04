@@ -122,9 +122,12 @@
 			margin-block-end: 0;
 		}
 
-		& a:hover > h2,
-		& a:focus > h2 {
-			text-decoration: underline;
+		& a:hover,
+		& a:focus {
+			text-decoration: none;
+			& > h2 {
+				text-decoration: underline;
+			}
 		}
 	}
 

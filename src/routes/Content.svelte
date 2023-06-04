@@ -75,7 +75,7 @@
 		width: min(23rem, calc(100vw - 6rem));
 		border: 0.25rem solid var(--as-text-1);
 		padding: 0.75rem 1rem;
-		height: calc(100% - 2.5rem);
+		height: calc(100% - 2rem);
 		border-radius: 1rem;
 		color: inherit;
 		text-decoration: none;
@@ -106,7 +106,8 @@
 
 	.meta {
 		font-size: var(--step-0);
-		margin-top: auto;
+		margin-block-start: auto;
+		margin-block-end:0 ;
 	}
 
 	.header a :global(svg),

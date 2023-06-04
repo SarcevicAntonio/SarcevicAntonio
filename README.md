@@ -3,7 +3,11 @@
 - [ ] port blog
   - [ ] port more complex articles
 - [ ] contact
-- [ ] theme toggle
+- [ ] visitor preference panel
+  - [ ] dark / light theme
+    - [ ] giscus
+  - [ ] font size and family options
+  - [ ] contrast options
 - [ ] /favicon
 - [ ] static prerenderd everything. i want to just serve html if possible
 - [ ] recent youtube videos

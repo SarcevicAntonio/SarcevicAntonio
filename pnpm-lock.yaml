@@ -27,6 +27,7 @@ specifiers:
   svelte: ^3.54.0
   svelte-check: ^3.0.1
   svelte-preprocess: ^5.0.3
+  svelte-preprocess-import-assets: ^1.0.0
   tslib: ^2.4.1
   typescript: ^5.0.0
   unplugin-icons: ^0.16.1
@@ -62,6 +63,7 @@ devDependencies:
   svelte: 3.59.1
   svelte-check: 3.4.3_sxhny56dlbcmwov4vk7qwrzshi
   svelte-preprocess: 5.0.4_kpl6jewuwqyogmjayljaqbq36e
+  svelte-preprocess-import-assets: 1.0.0_svelte@3.59.1
   tslib: 2.5.2
   typescript: 5.0.4
   unplugin-icons: 0.16.1
@@ -3659,6 +3661,24 @@ packages:
       svelte: ^3.19.0 || ^4.0.0-next.0
     dependencies:
       svelte: 3.59.1
+    dev: true
+
+  /svelte-parse-markup/0.1.1_svelte@3.59.1:
+    resolution: {integrity: sha512-xCBSldaZdwi0u0ANASVCUFynCaV8z5D6sQOnzPcYSEoD9dd40MLzOKMBVmuTf/LUuPvc+cUvF132MnwdG7mDig==}
+    peerDependencies:
+      svelte: ^3.0.0
+    dependencies:
+      svelte: 3.59.1
+    dev: true
+
+  /svelte-preprocess-import-assets/1.0.0_svelte@3.59.1:
+    resolution: {integrity: sha512-iuRDcuTtZnqDnq+50LWGj6YF0tziqM7QK3X+o63uKfpsZw4sFnYzb8uerEY1s9EulPa4GVeMjWZDCPgOZu1chA==}
+    peerDependencies:
+      svelte: ^3.37.0
+    dependencies:
+      magic-string: 0.30.0
+      svelte: 3.59.1
+      svelte-parse-markup: 0.1.1_svelte@3.59.1
     dev: true
 
   /svelte-preprocess/5.0.4_kpl6jewuwqyogmjayljaqbq36e:

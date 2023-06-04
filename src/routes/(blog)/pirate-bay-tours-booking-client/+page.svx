@@ -10,8 +10,7 @@ tags:
 ---
 
 <script>
-  import pbt_ui from "./pbt-ui.png"
-  import vi_docs from "./VI___Dokumentation.pdf"
+  import pdf from "./VI_Dokumentation.pdf"
 </script>
 
 During my 1th semester of my Informatics Masters's degree, we got tasked to create an offline-first booking app for internal use as part of a distributed database course. The idea was that there is a company offering cruise ship tickets and they need an internal booking app for sales agents to use on offline tablets when they recruit new customers.
@@ -27,7 +26,7 @@ The issue is, that you don't want too much overbooking. So we generate an allowa
 
 A more detailed description of the booking algorithm can be found inside the Project Documentation linked below. Its written in german but DeepL exists 😉 It also covers data structures used and the component organization of the frontend plus a user manual.
 
-![UI of Pirate Bay Tours Booking Client]({pbt_ui})
+![UI of Pirate Bay Tours Booking Client](./pbt-ui.png)
 
 The web app was originally written using just jQuery and PouchDB. I later rewrote it in Svelte because i wanted to learn it. It's excellent. I've also added more features (auth, printing of reservations, adding themes, markdown tour descriptions) since the new codebase is much better to work in.
 
@@ -35,5 +34,6 @@ CouchDB is for the most part pretty easy to work with, except when it comes to u
 
 ## Final Results
 
-- [Project Repo on GitHub](https://github.com/SarcevicAntonio/Booking-App)
-- [Project Documentation (23 pages, written in german)]({vi_docs})
+[Project Repo on GitHub](https://github.com/SarcevicAntonio/Booking-App)
+
+[Project Documentation (23 pages, written in german)]({pdf})

@@ -4,6 +4,7 @@ import { vitePreprocess } from '@sveltejs/kit/vite'
 import { mdsvex } from 'mdsvex'
 import slug from 'rehype-slug'
 import autolink from 'rehype-autolink-headings'
+import { importAssets } from 'svelte-preprocess-import-assets'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -35,6 +36,7 @@ const config = {
 		preprocess({
 			postcss: true,
 		}),
+		importAssets(),
 	],
 
 	kit: {

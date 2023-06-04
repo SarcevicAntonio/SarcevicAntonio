@@ -1,6 +1,7 @@
 <script>
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 	import Giscus from '@giscus/svelte'
+	import 'prism-themes/themes//prism-a11y-dark.css'
 
 	export let title
 	export let tags
@@ -87,16 +88,6 @@
 		color: var(--as-text-2);
 	}
 
-	article {
-		& :global(img) {
-			max-width: calc(100% + 2rem);
-			margin-inline: -1rem;
-		}
-		& :global(p) {
-			line-height: 1.7;
-		}
-	}
-
 	a {
 		color: inherit;
 		text-decoration: none;
@@ -123,5 +114,19 @@
 		display: inline-flex;
 		flex-wrap: wrap;
 		gap: 1em;
+	}
+
+	article {
+		& :global(img) {
+			max-width: calc(100% + 2rem);
+			margin-inline: -1rem;
+		}
+		& :global(p) {
+			line-height: 1.7;
+		}
+
+		& :global(pre) {
+			background-color: black;
+		}
 	}
 </style>

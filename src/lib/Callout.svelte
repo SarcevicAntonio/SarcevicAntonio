@@ -45,8 +45,12 @@
 		margin-inline: -1rem;
 		margin-block-end: 0.5rem;
 		padding: 0.5rem 1rem;
-		font-size: 1.1em;
 		background-color: var(--as-text-1);
 		color: var(--as-back-1);
+	}
+
+	.warning .title {
+		font-size: var(--step-1);
+		font-weight: 800;
 	}
 </style>

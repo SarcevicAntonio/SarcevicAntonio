@@ -1,3 +1,24 @@
+*:focus {
+	outline-width: 1rem;
+	outline-offset: 0.5rem;
+}
+
+/* from scrollbar.app */
+
+*::-webkit-scrollbar {
+	width: 0.5em;
+	height: 0.5em;
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--as-back-2);
+}
+
+*::-webkit-scrollbar-thumb {
+	background: var(--as-text-2);
+	border-radius: 1rem;
+}
+
 html {
 	/* scroll-behavior: smooth; */
 	background-color: var(--as-text-1);
@@ -25,6 +46,12 @@ body {
 	font-family: 'Space Mono', 'Courier New', Courier, monospace, sans-serif;
 	font-size: var(--step-0);
 	padding-inline: 1rem;
+}
+
+code,
+pre {
+	font-family: 'JetBrains Mono', 'Input Mono', 'Fira Code', 'Roboto Mono', Consolas, Monaco,
+		'Andale Mono', 'Ubuntu Mono', monospace !important;
 }
 
 .arrow-link {
@@ -73,25 +100,4 @@ body {
 	.autolink-header {
 		margin-inline-start: unset;
 	}
-}
-
-*:focus {
-	outline-width: 1rem;
-	outline-offset: 0.5rem;
-}
-
-/* from scrollbar.app */
-
-*::-webkit-scrollbar {
-	width: 0.5em;
-	height: 0.5em;
-}
-
-*::-webkit-scrollbar-track {
-	background: var(--as-back-2);
-}
-
-*::-webkit-scrollbar-thumb {
-	background: var(--as-text-2);
-	border-radius: 1rem;
 }

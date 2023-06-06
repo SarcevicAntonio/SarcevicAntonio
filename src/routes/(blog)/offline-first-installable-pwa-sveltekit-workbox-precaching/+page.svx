@@ -234,7 +234,7 @@ We can open the "Service Workers" section of the "Application" tab inside dev to
 
 ## Prerender Start URL
 
-Since our start URL is going to be the root page, we will prerender this route. We can prerender this route easily by **creating a new file called `+page.js` in the same directory as our root `+page.svelte*`**. Inside the file just set [the prerender page option](https://kit.svelte.dev/docs/page-options#prerender).
+Since our start URL is going to be the root page, we will prerender this route. We can prerender this route easily by **creating a new file called `+page.js` in the same directory as our root `+page.svelte`**. Inside the file just set [the prerender page option](https://kit.svelte.dev/docs/page-options#prerender).
 
 `/src/routes/+page.js`
 

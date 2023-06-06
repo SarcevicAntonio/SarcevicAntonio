@@ -72,6 +72,7 @@
 		border-radius: 1rem;
 		color: inherit;
 		text-decoration: none;
+		text-align: start;
 
 		&:hover > h3,
 		&:focus > h3 {

@@ -6,6 +6,7 @@
   - [ ] giscus
 - [ ] /favicon
 - [ ] static prerenderd everything. i want to just serve html if possible
+- [ ] zod schemas to validate blog posts (to avoid bugs by missing inputs)
 - [ ] more blog entries
   - [ ] web3 thing
   - [ ] for youtube videos

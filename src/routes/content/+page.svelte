@@ -16,6 +16,10 @@
 	{/if}
 </svelte:head>
 
+<a href="/" class="arrow-link top-padding">
+	<MaterialSymbolsArrowBackRounded aria-hidden="true" />/
+</a>
+
 <h1>Content</h1>
 
 <section class="tags">
@@ -141,5 +145,9 @@
 	.arrow-link {
 		display: block;
 		text-align: center;
+	}
+
+	.top-padding {
+		margin-block: 2rem;
 	}
 </style>

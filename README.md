@@ -1,25 +1,11 @@
-# website rewrite
+# [Antonio Sarcevic](https://www.sarcevic.dev/)
 
-- [ ] play with fonts
-- [ ] contact
-- [ ] dark / light theme
-  - [ ] giscus
-- [ ] /favicon
-- [ ] static prerenderd everything. i want to just serve html if possible
-- [ ] zod schemas to validate blog posts (to avoid bugs by missing inputs)
-- [ ] more blog entries
-  - [ ] web3 thing
-  - [ ] for youtube videos
-- [ ] play with last.fm api more
-- [ ] /robots.txt
-- [ ] /uses
-- [ ] image optimization
-- [ ] generated article and OG images
-- [ ] alt paths for blog entries
-- [ ] font size and family options for article
-- [ ] recent tweets / toots / bleeps
-- [ ] recent tumblr posts
-- [ ] recent github actions
-- [ ] multiple tag search
-  - isn't it just a checkbox form?!
-- [ ] analytics (hand crafted micro analytics?)
+Pronouns: He/Him
+
+Loves to craft User Interfaces in Svelte with semantic HTML, TypeScript and plain CSS.
+
+Working as a Web Developer in Münster since 2019.
+
+[Read more on sarcevic.dev!](https://www.sarcevic.dev/)
+
+![A selection of different user interfaces I designed and implemented showcased in device mockups](https://i.imgur.com/JfIKTti.png)

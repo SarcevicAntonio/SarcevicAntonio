@@ -34,9 +34,9 @@
 	<SimpleIconsFigma aria-hidden="true" />
 </div>
 <p>
-	Love to program User Interfaces in HTML, CSS, TypeScript and SvelteKit.
+	Love to program User Interfaces with semantic HTML, modern CSS, TypeScript and SvelteKit.
 	<br />
-	Also love designing User Interfaces in Figma.
+	Also love designing Components and User Interfaces in Figma.
 </p>
 <br />
 <div>

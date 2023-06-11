@@ -1,10 +1,11 @@
+- [ ] play with last.fm api more
+  - [ ] fixup time calculation
 - [ ] (dark / light theme toggle)
 - [ ] (font preferences toggle)
 - [ ] zod schemas to validate blog posts (to avoid bugs by missing inputs)
 - [ ] more blog entries
   - [ ] web3 thing
   - [ ] for youtube videos
-- [ ] play with last.fm api more
 - [ ] /robots.txt
 - [ ] /uses
 - [ ] image optimization

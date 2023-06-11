@@ -16,19 +16,19 @@
 <Hero />
 
 <section id="first">
-	<Content content={data.content} />
-</section>
-
-<section>
-	<Projects />
-</section>
-
-<section>
 	<Values />
 </section>
 
 <section>
+	<Content content={data.content} />
+</section>
+
+<section>
 	<Craft />
+</section>
+
+<section>
+	<Projects />
 </section>
 
 <section>

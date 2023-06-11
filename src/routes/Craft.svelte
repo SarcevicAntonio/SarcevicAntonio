@@ -60,7 +60,7 @@
 </div>
 <p>
 	Have experience with Angular, Firebase, Docker, GitHub Actions, GitlabCI, Cypress, Playwright, Web
-	Components, Ruby on Rails, Vue, NodeJS, Python
+	Components, Ruby on Rails, Vue, NodeJS, Python, Java and C#.
 </p>
 <br />
 <div class="count">+{differenceInYears(new Date(), new Date(2019, 2, 1))} years</div>

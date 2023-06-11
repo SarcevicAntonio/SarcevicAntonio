@@ -108,7 +108,7 @@
 
 		& ul > li > a {
 			display: block;
-			border: 0.2rem solid var(--as-text-1);
+			border: 0.25rem solid var(--as-text-1);
 			padding: 1rem;
 			border-radius: 1rem;
 			margin-block-end: 2rem;

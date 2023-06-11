@@ -14,7 +14,7 @@ export const GET: RequestHandler = async () => {
 	})
 }
 
-// based of https://github.com/importantimport/urara
+// credit to: https://github.com/importantimport/urara
 function get_sitemap(content: BlogMetadata[]): string {
 	return /*XML*/ `<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

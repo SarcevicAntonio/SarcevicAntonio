@@ -65,8 +65,8 @@
 	img {
 		max-width: var(--step-7);
 		border-radius: 50%;
-		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-		transition-property: filter, border-radius;
+		box-shadow: 0px 0.125rem 0.25rem rgba(0, 0, 0, 0.05), 0px 0.25rem 0.5rem rgba(0, 0, 0, 0.04);
+		transition-property: box-shadow, border-radius, scale;
 		transition-duration: 0.2s;
 		transition-timing-function: ease-in-out;
 	}
@@ -74,13 +74,19 @@
 	a:hover img,
 	a:focus img {
 		border-radius: 25%;
-		filter: drop-shadow(0px 28px 33px rgba(0, 0, 0, 0.06))
-			drop-shadow(0px 14.0137px 16.5161px rgba(0, 0, 0, 0.04562))
-			drop-shadow(0px 8.44118px 9.94853px rgba(0, 0, 0, 0.0390953))
-			drop-shadow(0px 5.40955px 6.37554px rgba(0, 0, 0, 0.0342537))
-			drop-shadow(0px 3.50603px 4.13211px rgba(0, 0, 0, 0.03))
-			drop-shadow(0px 2.20701px 2.60112px rgba(0, 0, 0, 0.0257463))
-			drop-shadow(0px 1.26806px 1.4945px rgba(0, 0, 0, 0.0209047))
-			drop-shadow(0px 0.558108px 0.65777px rgba(0, 0, 0, 0.01438));
+		scale: 1.05;
+		box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	}
+
+	@media (prefers-reduced-motion) {
+		img {
+			transition-duration: 0.4s;
+		}
+
+		a:hover img,
+		a:focus img {
+			border-radius: 33%;
+			scale: 1;
+		}
 	}
 </style>

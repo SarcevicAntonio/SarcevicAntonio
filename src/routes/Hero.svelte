@@ -1,7 +1,8 @@
 <script lang="ts">
+	import { prefers_reduced_motion } from '$lib/reduced_motion'
 	import { onMount, tick } from 'svelte'
 	import { quintOut } from 'svelte/easing'
-	import { draw } from 'svelte/transition'
+	import { draw, fade } from 'svelte/transition'
 	import PajamasScrollDown from '~icons/pajamas/scroll-down'
 
 	let visible = false
@@ -12,6 +13,8 @@
 
 	let scroll_y: number
 	let inner_height: number
+
+	$: transition = $prefers_reduced_motion ? fade : draw
 </script>
 
 <svelte:window bind:scrollY={scroll_y} bind:innerHeight={inner_height} />
@@ -45,7 +48,7 @@
 			>
 				{#if visible}
 					<path
-						in:draw={{ duration: 2000, easing: quintOut }}
+						in:transition={{ duration: 2000, easing: quintOut }}
 						d="M14 287C127.5 -104 564 311 532.5 14"
 						stroke="currentColor"
 						stroke-width="1rem"

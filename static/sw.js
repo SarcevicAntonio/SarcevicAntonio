@@ -1,6 +1,6 @@
 /// <reference lib="webworker" />
 
-// implementation from https://github.com/NekR/self-destroying-sw
+// credit to: https://github.com/NekR/self-destroying-sw
 
 self.addEventListener('install', () => {
 	self.skipWaiting()

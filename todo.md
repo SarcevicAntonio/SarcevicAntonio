@@ -1,5 +1,5 @@
-- [ ] dark / light theme toggle
-  - [ ] plug that into giscus
+- [ ] (dark / light theme toggle)
+- [ ] (font preferences toggle)
 - [ ] zod schemas to validate blog posts (to avoid bugs by missing inputs)
 - [ ] more blog entries
   - [ ] web3 thing

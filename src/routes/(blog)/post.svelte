@@ -59,6 +59,7 @@
 
 <section>
 	<Giscus
+		theme="preferred_color_scheme"
 		repo="SarcevicAntonio/SarcevicAntonio"
 		repoId="MDEwOlJlcG9zaXRvcnkxODkzMDAxNjM="
 		category="Comments"

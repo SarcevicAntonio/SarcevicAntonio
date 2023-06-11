@@ -46,6 +46,7 @@
 		"@fontsource/staatliches": "^5.0.2",
 		"@giscus/svelte": "^2.2.8",
 		"@polymer/paper-button": "^3.0.1",
+		"@yaireo/relative-time": "^1.0.3",
 		"date-fns": "^2.30.0",
 		"linkedom": "^0.14.26",
 		"prism-themes": "^1.9.0",

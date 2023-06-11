@@ -10,6 +10,7 @@ specifiers:
   '@sveltejs/kit': ^1.5.0
   '@typescript-eslint/eslint-plugin': ^5.45.0
   '@typescript-eslint/parser': ^5.45.0
+  '@yaireo/relative-time': ^1.0.3
   autoprefixer: ^10.4.14
   date-fns: ^2.30.0
   eslint: ^8.28.0
@@ -42,6 +43,7 @@ dependencies:
   '@fontsource/staatliches': 5.0.2
   '@giscus/svelte': 2.2.8_svelte@3.59.1
   '@polymer/paper-button': 3.0.1
+  '@yaireo/relative-time': 1.0.3
   date-fns: 2.30.0
   linkedom: 0.14.26
   prism-themes: 1.9.0
@@ -1164,6 +1166,10 @@ packages:
 
   /@webcomponents/shadycss/1.11.2:
     resolution: {integrity: sha512-vRq+GniJAYSBmTRnhCYPAPq6THYqovJ/gzGThWbgEZUQaBccndGTi1hdiUP15HzEco0I6t4RCtXyX0rsSmwgPw==}
+    dev: false
+
+  /@yaireo/relative-time/1.0.3:
+    resolution: {integrity: sha512-CJGxyWjb4SnkqubyfiPNQeg0YrJKnVu+11DOP65ltXFxDsjjnm3IByXS9O1Ny9AU9Oxqg0a7Gt26tzXtcijicg==}
     dev: false
 
   /acorn-jsx/5.3.2_acorn@8.8.2:

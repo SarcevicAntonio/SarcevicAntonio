@@ -1,5 +1,5 @@
 <script>
-	import Activity from './Activity.svelte'
+	import LastFM from './LastFM.svelte'
 	import Contact from './Contact.svelte'
 	import Content from './Content.svelte'
 	import Craft from './Craft.svelte'
@@ -36,7 +36,7 @@
 </section>
 
 <section>
-	<Activity lastfm={data.lastfm_data} />
+	<LastFM lastfm={data.lastfm_data} />
 </section>
 
 <style>

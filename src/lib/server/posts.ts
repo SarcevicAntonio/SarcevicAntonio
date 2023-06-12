@@ -1,17 +1,20 @@
 import { parseHTML } from 'linkedom'
+import { z } from 'zod'
 
 const BLOG_GROUP_NAME = '(blog)'
 const BLOG_FILE_NAME = '/+page.svx'
 
-export type BlogMetadata = {
-	title: string
-	summary: string
-	published: string
-	updated?: string
-	href: string
-	tags: string[]
-	html?: string
-}
+const BlogMetadata = z.object({
+	title: z.string(),
+	summary: z.string(),
+	published: z.string(),
+	updated: z.string().optional(),
+	href: z.string(),
+	tags: z.array(z.string()),
+	html: z.string().optional(),
+})
+
+export type BlogMetadata = z.infer<typeof BlogMetadata>
 
 export async function get_blog_posts(render = false) {
 	const blog_posts: BlogMetadata[] = []
@@ -26,11 +29,10 @@ export async function get_blog_posts(render = false) {
 			continue
 		}
 
-		const module = (await modules[path]()) as {
+		const { metadata, default: mdsvx_module } = (await modules[path]()) as {
 			metadata: BlogMetadata
 			default: { render: () => { html: string } }
 		}
-		const { metadata } = module
 
 		const href = path
 			.slice(group_name_index + BLOG_GROUP_NAME.length)
@@ -39,7 +41,7 @@ export async function get_blog_posts(render = false) {
 		if (!render) {
 			blog_posts.push({ ...metadata, href })
 		} else {
-			const rendered_html = module.default.render().html
+			const rendered_html = mdsvx_module.render().html
 			const linkedom = parseHTML(rendered_html)
 			const [article] = linkedom.document.getElementsByTagName('article')
 			article.getElementsByTagName('aside')[0].remove()
@@ -50,6 +52,17 @@ export async function get_blog_posts(render = false) {
 	}
 
 	blog_posts.sort((a, b) => new Date(b.published).valueOf() - new Date(a.published).valueOf())
+
+	for (const post of blog_posts) {
+		try {
+			BlogMetadata.parse(post)
+		} catch (e) {
+			console.error(
+				`ERROR: Blog Metadata Parse Error!\nLooks like the metadata for post "${post.title}" is malformed.`
+			)
+			throw e
+		}
+	}
 
 	return blog_posts
 }

@@ -1,5 +1,5 @@
 import domain from '$lib/domain'
-import { get_blog_posts, type BlogMetadata } from '$lib/posts'
+import { get_blog_posts, type BlogMetadata } from '$lib/server/posts'
 import type { RequestHandler } from './$types'
 
 export const prerender = true

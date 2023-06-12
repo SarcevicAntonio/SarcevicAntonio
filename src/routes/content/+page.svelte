@@ -24,7 +24,7 @@
 
 <section class="tags">
 	{#if filter_tag}
-		<p>posts with tag #{filter_tag}</p>
+		<p>listing posts with tag #{filter_tag}</p>
 		<a href="/content" class="arrow-link">
 			<MaterialSymbolsArrowBackRounded />
 			remove filter

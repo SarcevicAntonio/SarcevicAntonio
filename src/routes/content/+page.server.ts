@@ -1,4 +1,4 @@
-import { get_all_tags } from '$lib/posts.js'
+import { get_all_tags } from '$lib/server/posts'
 
 export async function load({ parent, url }) {
 	let { content } = await parent()

@@ -1,3 +1,5 @@
+- [ ] see if i can Reduce initial server response time
+- [ ] remove `hr` from `ul` in Footer.svelte
 - [ ] more blog entries
   - [ ] that stupid web3 thing
   - [ ] ... other university projects (?)
@@ -14,5 +16,8 @@
 - [ ] analytics (minimal hand crafted micro analytics)
 - [ ] craft logo and text synced color highlight
 - [ ] image optimization
+  - [ ] Serve images in next-gen formats
+  - [ ] Properly size images
+  - [ ] give images explicit width and height
 - [ ] multiple tag search
   - isn't it just a checkbox form?!

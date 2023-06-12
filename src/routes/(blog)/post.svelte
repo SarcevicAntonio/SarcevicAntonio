@@ -1,18 +1,18 @@
 <script>
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 	import Giscus from '@giscus/svelte'
-	import 'prism-themes/themes//prism-a11y-dark.css'
+	import 'prism-themes/themes/prism-a11y-dark.css'
 
 	export let title
 	export let tags
 	export let published
 	export let updated
+	export let summary
 </script>
 
 <svelte:head>
-	<title>
-		{title} — sarcevic.dev
-	</title>
+	<title>{title.trim()} — sarcevic.dev</title>
+	<meta name="description" content={summary.trim()} />
 </svelte:head>
 
 <section class="links">

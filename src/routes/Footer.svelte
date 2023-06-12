@@ -18,7 +18,7 @@
 					<MaterialSymbolsAccountTreeRounded aria-hidden="true" />
 				</a>
 			</li>
-			<hr />
+			<li class="break"><hr /></li>
 			{#each contact_links as { href, title, icon }}
 				<li>
 					<a {href} {title}>
@@ -113,5 +113,9 @@
 	ul.credits {
 		padding-inline-start: 1.5rem;
 		overflow: auto;
+	}
+
+	.break {
+		display: contents;
 	}
 </style>

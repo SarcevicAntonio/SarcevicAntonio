@@ -1,5 +1,4 @@
 - [ ] see if i can Reduce initial server response time
-- [ ] remove `hr` from `ul` in Footer.svelte
 - [ ] more blog entries
   - [ ] that stupid web3 thing
   - [ ] ... other university projects (?)

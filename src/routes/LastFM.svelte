@@ -1,6 +1,6 @@
 <script lang="ts">
 	import RelativeTime from '@yaireo/relative-time'
-
+	import MaterialSymbolsMusicNoteRounded from '~icons/material-symbols/music-note-rounded'
 	import type { LastFMData } from './lastfm/type'
 
 	export let lastfm: LastFMData
@@ -18,14 +18,11 @@
 		<li>
 			<a href={track.url}>
 				{track.artist['#text']} – {track.name}
-				{#if !track.date}
-					<span class="current">🎶</span>
-				{/if}
 				<small>
 					{#if track.date}
 						{relativeTime.from(new Date(+track.date.uts * 1000))}
 					{:else}
-						currently listening
+						currently listening <span class="current"><MaterialSymbolsMusicNoteRounded /></span>
 					{/if}
 				</small>
 			</a>
@@ -131,10 +128,22 @@
 	@keyframes bounce {
 		0%,
 		100% {
-			transform: translateY(0);
+			transform: translateY(0.3rem) rotate(10deg);
 		}
 		50% {
-			transform: translateY(-0.25rem);
+			transform: translateY(0.1rem) rotate(-10deg);
+		}
+	}
+
+	@media (prefers-reduced-motion) {
+		@keyframes bounce {
+			0%,
+			100% {
+				transform: rotate(5deg);
+			}
+			50% {
+				transform: rotate(-5deg);
+			}
 		}
 	}
 </style>

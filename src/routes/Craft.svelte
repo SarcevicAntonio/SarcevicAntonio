@@ -95,7 +95,7 @@
 		font-weight: 700;
 	}
 
-	a {
+	/* a {
 		font-size: var(--step-0);
 		color: var(--as-text-1);
 		text-decoration: none;
@@ -109,7 +109,7 @@
 			vertical-align: sub;
 			font-size: 1.2em;
 		}
-	}
+	} */
 
 	p {
 		margin: auto;

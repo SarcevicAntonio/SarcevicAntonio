@@ -34,12 +34,12 @@ CouchDB is for the most part pretty easy to work with, except when it comes to u
 
 <ul>
   <li>
-  <a class="pill" href="https://github.com/SarcevicAntonio/Booking-App" target="_blank" rel="noreferrer">
+  <a class="pill" href="https://github.com/SarcevicAntonio/Booking-App">
   Project Repo on GitHub
   </a>
   </li>
   <li>
-  <a class="pill" href="/attachments/VI___Dokumentation.pdf" target="_blank" rel="noreferrer">
+  <a class="pill" href="/attachments/VI___Dokumentation.pdf">
   Project Documentation (23 pages, written in german)
   </a>
   </li>

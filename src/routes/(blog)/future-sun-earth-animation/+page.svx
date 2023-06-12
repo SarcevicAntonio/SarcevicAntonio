@@ -12,7 +12,7 @@ tags:
 During my 5th semester of my Media and Communications Informatics Bachelor's degree I got to lead a team of 15 talented fellow students.
 The end result was an animation of the future development of the Sun and it's affects on the Earth, which can be seen here:
 
-<a href="https://www.youtube.com/watch?v=fLTLAEGBFCM" target="_blank" rel="noreferrer">
+<a href="https://www.youtube.com/watch?v=fLTLAEGBFCM">
   <img src="./ip17.gif" alt="Small gif showing the first scene with a link to the full animation.">
   🌍 Click here or on the image to see the full animation! ☀️
 </a>
@@ -274,7 +274,7 @@ Thanks for reading this blog entry. Be sure to check out the entire animation an
 
 ## Final Results
 
-<a href="https://www.youtube.com/watch?v=fLTLAEGBFCM" target="_blank" rel="noreferrer">
+<a href="https://www.youtube.com/watch?v=fLTLAEGBFCM">
   <img src="./ip17.gif" alt="Small gif showing the first scene with a link to the full animation.">
   🌍 Click here or on the image to see the full animation! ☀️
 </a>
@@ -283,8 +283,6 @@ Thanks for reading this blog entry. Be sure to check out the entire animation an
   <li>
     <a
       href="https://www.youtube.com/watch?v=fLTLAEGBFCM"
-      target="_blank"
-      rel="noreferrer"
     >
       Watch the Final Animation on YouTube!
     </a>
@@ -292,8 +290,6 @@ Thanks for reading this blog entry. Be sure to check out the entire animation an
   <li>
     <a
       href="https://drive.google.com/file/d/1UtDlqpbofqS9DVGsCI-wCC8Z0nVL93qp/view?usp=sharing"
-      target="_blank"
-      rel="noreferrer"
     >
       Project Overview Poster
     </a>
@@ -301,8 +297,6 @@ Thanks for reading this blog entry. Be sure to check out the entire animation an
   <li>
     <a
       href="https://drive.google.com/file/d/1oseXq7SSCHLi1o5h5Jd3G6Cztf0dfsnk/view?usp=sharing"
-      target="_blank"
-      rel="noreferrer"
     >
       Project Documentation (186 Pages)
     </a>

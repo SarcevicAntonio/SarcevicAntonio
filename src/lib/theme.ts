@@ -11,7 +11,7 @@ export function is_valid_theme(potential_theme: string | undefined): boolean {
 const query = '(prefers-color-scheme: dark)'
 
 export const os_theme_preference = readable<Theme>(
-	browser ? (window.matchMedia(query).matches ? 'dark' : 'light') : 'light',
+	browser ? (window.matchMedia(query).matches ? 'dark' : 'light') : undefined,
 	(set) => {
 		if (!browser) return
 		const media_query = window.matchMedia(query)

@@ -5,7 +5,6 @@
 
 	export let lastfm: LastFMData
 	const relativeTime = new RelativeTime()
-	console.log(lastfm)
 </script>
 
 <h2>Listening Activity</h2>

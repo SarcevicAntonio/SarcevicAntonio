@@ -67,10 +67,11 @@
 	<br />
 	Earned a Bachelor of Science degree in Media and Communications Informatics.
 </p>
-<a href="/assets/AntonioSarcevic_CV.pdf">
+
+<!-- <a href="/assets/AntonioSarcevic_CV.pdf">
 	<MaterialSymbolsDocs />
 	Full Resume
-</a>
+</a> -->
 
 <style>
 	h2 {

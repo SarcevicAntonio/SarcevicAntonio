@@ -109,4 +109,9 @@
 			font-size: 1.2em;
 		}
 	}
+
+	p {
+		margin: auto;
+		max-width: 50rem;
+	}
 </style>

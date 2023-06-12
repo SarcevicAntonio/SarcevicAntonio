@@ -18,7 +18,7 @@
 				</a>
 			</li>
 		</ul>
-		<h2 class="notice">Crafted with 💖 by Antonio Sarcevic in Münster during 2023.</h2>
+		<h2 class="notice">Crafted with 💖 by Antonio Sarcevic in Münster and Porto during spring and summer 2023.</h2>
 		<p>sarcevic.dev is powered by the following dependencies</p>
 		<ul class="credits">
 			{#each dependencies as dependency}

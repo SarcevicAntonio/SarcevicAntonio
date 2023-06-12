@@ -1,12 +1,17 @@
 - [ ] zod schemas to validate blog posts (to avoid bugs by missing inputs)
 - [ ] more blog entries
   - [ ] that stupid web3 thing
+  - [ ] ... other university projects (?)
+  - [ ] article on dotogether and kcalcalc
   - [ ] for youtube videos
-- [ ] /uses
+- [ ] /uses → https://github.com/wesbos/awesome-uses/
 - [ ] generated article and OG images
+  - plain satori or https://github.com/etherCorps/sveltekit-og
 - [ ] alt paths for blog entries
 - [ ] font size and family options for article
 - [ ] recent coding actions (github api)
+  - https://docs.github.com/en/rest/activity/events?apiVersion=2022-11-28#list-public-events-for-a-user
+  - https://docs.github.com/en/webhooks-and-events/events/github-event-types
 - [ ] analytics (minimal hand crafted micro analytics)
 - [ ] image optimization
 - [ ] multiple tag search

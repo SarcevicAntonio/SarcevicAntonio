@@ -1,4 +1,5 @@
 - [ ] see if i can Reduce initial server response time
+- [ ] progressively enhance theme toggle
 - [ ] more blog entries
   - [ ] that stupid web3 thing
   - [ ] ... other university projects (?)

@@ -16,11 +16,13 @@ specifiers:
   eslint: ^8.28.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-svelte: ^2.26.0
+  js-cookie: ^3.0.5
   license-report: ^6.4.0
   linkedom: ^0.14.26
   mdsvex: ^0.10.6
   postcss: ^8.4.23
   postcss-load-config: ^4.0.1
+  postcss-mixins: ^9.0.4
   postcss-preset-env: ^8.4.2
   prettier: ^2.8.0
   prettier-plugin-svelte: ^2.8.1
@@ -45,6 +47,7 @@ dependencies:
   '@polymer/paper-button': 3.0.1
   '@yaireo/relative-time': 1.0.3
   date-fns: 2.30.0
+  js-cookie: 3.0.5
   linkedom: 0.14.26
   prism-themes: 1.9.0
   rehype-autolink-headings: 6.1.1
@@ -65,6 +68,7 @@ devDependencies:
   mdsvex: 0.10.6_svelte@3.59.1
   postcss: 8.4.24
   postcss-load-config: 4.0.1_postcss@8.4.24
+  postcss-mixins: 9.0.4_postcss@8.4.24
   postcss-preset-env: 8.4.2_postcss@8.4.24
   prettier: 2.8.8
   prettier-plugin-svelte: 2.10.1_blbg2s7pis747igzn3ilcyh5ou
@@ -1438,6 +1442,11 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /camelcase-css/2.0.1:
+    resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
+    engines: {node: '>= 6'}
+    dev: true
+
   /caniuse-lite/1.0.30001492:
     resolution: {integrity: sha512-2efF8SAZwgAX1FJr87KWhvuJxnGJKOnctQa8xLOskAXNXq8oiuqgl6u1kk3fFpsp3GgvzlRjiK1sl63hNtFADw==}
     dev: true
@@ -2459,6 +2468,11 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /js-cookie/3.0.5:
+    resolution: {integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==}
+    engines: {node: '>=14'}
+    dev: false
+
   /js-yaml/4.1.0:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
     hasBin: true
@@ -3129,6 +3143,16 @@ packages:
       postcss: 8.4.24
     dev: true
 
+  /postcss-js/4.0.1_postcss@8.4.24:
+    resolution: {integrity: sha512-dDLF8pEO191hJMtlHFPRa8xsizHaM82MLfNkUHdUtVEV3tgTp5oj+8qbEqYM57SLfc74KSbw//4SeJma2LRVIw==}
+    engines: {node: ^12 || ^14 || >= 16}
+    peerDependencies:
+      postcss: ^8.4.21
+    dependencies:
+      camelcase-css: 2.0.1
+      postcss: 8.4.24
+    dev: true
+
   /postcss-lab-function/5.2.3_postcss@8.4.24:
     resolution: {integrity: sha512-fi32AYKzji5/rvgxo5zXHFvAYBw0u0OzELbeCNjEZVLUir18Oj+9RmNphtM8QdLUaUnrfx8zy8vVYLmFLkdmrQ==}
     engines: {node: ^14 || ^16 || >=18}
@@ -3184,6 +3208,19 @@ packages:
     dependencies:
       postcss: 8.4.24
       postcss-value-parser: 4.2.0
+    dev: true
+
+  /postcss-mixins/9.0.4_postcss@8.4.24:
+    resolution: {integrity: sha512-XVq5jwQJDRu5M1XGkdpgASqLk37OqkH4JCFDXl/Dn7janOJjCTEKL+36cnRVy7bMtoBzALfO7bV7nTIsFnUWLA==}
+    engines: {node: '>=14.0'}
+    peerDependencies:
+      postcss: ^8.2.14
+    dependencies:
+      fast-glob: 3.2.12
+      postcss: 8.4.24
+      postcss-js: 4.0.1_postcss@8.4.24
+      postcss-simple-vars: 7.0.1_postcss@8.4.24
+      sugarss: 4.0.1_postcss@8.4.24
     dev: true
 
   /postcss-nesting/11.2.2_postcss@8.4.24:
@@ -3342,6 +3379,15 @@ packages:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
+    dev: true
+
+  /postcss-simple-vars/7.0.1_postcss@8.4.24:
+    resolution: {integrity: sha512-5GLLXaS8qmzHMOjVxqkk1TZPf1jMqesiI7qLhnlyERalG0sMbHIbJqrcnrpmZdKCLglHnRHoEBB61RtGTsj++A==}
+    engines: {node: '>=14.0'}
+    peerDependencies:
+      postcss: ^8.2.1
+    dependencies:
+      postcss: 8.4.24
     dev: true
 
   /postcss-value-parser/4.2.0:
@@ -3743,6 +3789,15 @@ packages:
   /strip-json-comments/3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
+    dev: true
+
+  /sugarss/4.0.1_postcss@8.4.24:
+    resolution: {integrity: sha512-WCjS5NfuVJjkQzK10s8WOBY+hhDxxNt/N6ZaGwxFZ+wN3/lKKFSaaKUNecULcTTvE4urLcKaZFQD8vO0mOZujw==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.3.3
+    dependencies:
+      postcss: 8.4.24
     dev: true
 
   /supports-color/7.2.0:

@@ -3,36 +3,31 @@
 @import '@fontsource/staatliches';
 @import 'globals.css';
 
-:root {
+:root,
+html[data-theme='light'] {
 	--as-back-1: oklch(0.97 0 0);
 	--as-back-2: oklab(0.92 0 0);
-
 	--as-text-1: oklch(0.3 0 0);
 	--as-text-2: oklab(0.46 0 0);
-
 	--as-accent: oklab(0.92 -0.16 0.22);
-
-	color-scheme: light dark;
+	color-scheme: light;
 }
 
+@define-mixin theme-dark {
+	--as-back-1: oklch(0.3 0 0);
+	--as-back-2: oklab(0.46 0 0);
+	--as-text-1: oklch(0.97 0 0);
+	--as-text-2: oklab(0.92 0 0);
+	--as-accent: oklch(0.56 0.3 298.26);
+	color-scheme: dark;
+}
 @media (prefers-color-scheme: dark) {
 	:root {
-		--as-back-1: oklch(0.3 0 0);
-		--as-back-2: oklab(0.46 0 0);
-
-		--as-text-1: oklch(0.97 0 0);
-		--as-text-2: oklab(0.92 0 0);
-
-		--as-accent: oklch(0.56 0.3 298.26);
+		@mixin theme-dark;
 	}
-
-	a {
-		color: lightskyblue;
-	}
-
-	a:where(:visited) {
-		color: lightsteelblue;
-	}
+}
+html[data-theme='dark'] {
+	@mixin theme-dark;
 }
 
 /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,18,1.333,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */

@@ -1,7 +1,8 @@
 <script context="module">
+	import { contact_links } from '$lib/contact_links'
 	import dependencies from '$lib/dependency-report.json'
-	import MaterialSymbolsRssFeedRounded from '~icons/material-symbols/rss-feed-rounded'
 	import MaterialSymbolsAccountTreeRounded from '~icons/material-symbols/account-tree-rounded'
+	import MaterialSymbolsRssFeedRounded from '~icons/material-symbols/rss-feed-rounded'
 </script>
 
 <footer>
@@ -17,8 +18,18 @@
 					<MaterialSymbolsAccountTreeRounded aria-hidden="true" />
 				</a>
 			</li>
+			<hr />
+			{#each contact_links as { href, title, icon }}
+				<li>
+					<a {href} {title}>
+						<svelte:component this={icon} aria-hidden="true" />
+					</a>
+				</li>
+			{/each}
 		</ul>
-		<h2 class="notice">Crafted with 💖 by Antonio Sarcevic in Münster and Porto during spring and summer 2023.</h2>
+		<h2 class="notice">
+			Crafted with 💖 by Antonio Sarcevic in Münster and Porto during spring and summer 2023.
+		</h2>
 		<p>sarcevic.dev is powered by the following dependencies</p>
 		<ul class="credits">
 			{#each dependencies as dependency}
@@ -29,7 +40,7 @@
 					.replace('ssh://', 'https://')}
 
 				<li>
-					<a target="_blank" rel="noreferrer" href={link}>
+					<a href={link}>
 						{dependency.name}
 						@{dependency.installedVersion} ({dependency.licenseType})
 					</a>
@@ -54,6 +65,23 @@
 		max-width: 50rem;
 	}
 
+	h2 {
+		font-family: 'Space Mono', sans-serif;
+		font-size: var(--step-0);
+		margin-block-start: 0.5rem;
+		font-weight: 400;
+	}
+
+	a {
+		color: inherit;
+
+		text-decoration: none;
+		&:focus,
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
 	ul.links {
 		list-style: none;
 		display: flex;
@@ -65,35 +93,24 @@
 
 		& a {
 			color: var(--as-back-2);
+			& :global(svg) {
+				vertical-align: sub;
+			}
 		}
 
 		& a:hover,
 		a:focus {
 			color: var(--as-back-1);
 		}
-	}
 
-	h2 {
-		font-family: 'Space Mono', sans-serif;
-		font-size: var(--step-0);
-		margin-block-start: 0.5rem;
-		font-weight: 400;
-	}
-
-	a {
-		color: inherit;
+		& hr {
+			margin: 0.5em;
+			margin-block: 0.25em;
+		}
 	}
 
 	ul.credits {
 		padding-inline-start: 1.5rem;
 		overflow: auto;
-	}
-
-	a {
-		text-decoration: none;
-		&:focus,
-		&:hover {
-			text-decoration: underline;
-		}
 	}
 </style>

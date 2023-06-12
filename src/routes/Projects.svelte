@@ -23,7 +23,7 @@
 	{#each projects as { label, icon, link }}
 		<li>
 			<a href={link}>
-				<img src={icon} alt="" width="108px" height="108px" />
+				<img src={icon} alt="" width="512px" height="100%" />
 				{label}
 			</a>
 		</li>

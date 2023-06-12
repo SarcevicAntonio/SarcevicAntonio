@@ -4,24 +4,26 @@
 	import Reset from '~icons/material-symbols/settings-backup-restore-rounded'
 	import { page } from '$app/stores'
 	import { os_theme_preference } from './theme'
+
+	$: redirect = `?redirect=` + $page.url.pathname
 </script>
 
 <section>
 	{#if $page.data.theme}
-		<a href="/set-theme/os-preference" title="Use Operating System Theme Preference">
+		<a href="/set-theme/os-preference{redirect}" title="Use Operating System Theme Preference">
 			<Reset aria-hidden="true" />
 		</a>
 	{/if}
 	{#if $page.data.theme === 'light' || ($page.data.theme === undefined && $os_theme_preference === 'light')}
-		<a href="/set-theme/dark" title="Use Dark Theme">
+		<a href="/set-theme/dark{redirect}" title="Use Dark Theme">
 			<DarkMode aria-hidden="true" />
 		</a>
 	{:else}
-		<a href="/set-theme/light" title="Use Light Theme">
+		<a href="/set-theme/light{redirect}" title="Use Light Theme">
 			<LightMode aria-hidden="true" />
 		</a>
 		{#if $os_theme_preference === undefined}
-			<a href="/set-theme/dark" title="Use Dark Theme">
+			<a href="/set-theme/dark{redirect}" title="Use Dark Theme">
 				<DarkMode aria-hidden="true" />
 			</a>
 		{/if}

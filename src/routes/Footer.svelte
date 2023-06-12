@@ -58,6 +58,7 @@
 		font-size: var(--step--1);
 		margin-block-start: 5rem;
 		margin-inline: -1rem;
+		border-block-end: 1rem solid var(--as-accent);
 	}
 
 	.content {

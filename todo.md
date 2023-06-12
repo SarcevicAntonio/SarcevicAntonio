@@ -8,11 +8,12 @@
 - [ ] generated article and OG images
   - plain satori or https://github.com/etherCorps/sveltekit-og
 - [ ] alt paths for blog entries
-- [ ] font size and family options for article
+- [ ] font family options for articles (?)
 - [ ] recent coding actions (github api)
   - https://docs.github.com/en/rest/activity/events?apiVersion=2022-11-28#list-public-events-for-a-user
   - https://docs.github.com/en/webhooks-and-events/events/github-event-types
 - [ ] analytics (minimal hand crafted micro analytics)
+- [ ] craft logo and text synced color highlight
 - [ ] image optimization
 - [ ] multiple tag search
   - isn't it just a checkbox form?!

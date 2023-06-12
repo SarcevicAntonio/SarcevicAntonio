@@ -3,7 +3,7 @@
   - [ ] that stupid web3 thing
   - [ ] ... other university projects (?)
   - [ ] article on dotogether and kcalcalc
-  - [ ] for youtube videos
+  - [ ] for youtube videos: https://github.com/paulirish/lite-youtube-embed
 - [ ] /uses → https://github.com/wesbos/awesome-uses/
 - [ ] generated article and OG images
   - plain satori or https://github.com/etherCorps/sveltekit-og

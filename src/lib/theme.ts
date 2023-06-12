@@ -10,14 +10,15 @@ export function is_valid_theme(potential_theme: string | undefined): boolean {
 
 const query = '(prefers-color-scheme: dark)'
 
-export const os_theme_preference = readable(
-	browser ? window.matchMedia(query).matches : 'light',
+export const os_theme_preference = readable<Theme>(
+	browser ? (window.matchMedia(query).matches ? 'dark' : 'light') : 'light',
 	(set) => {
 		if (!browser) return
 		const media_query = window.matchMedia(query)
-		media_query.addEventListener('change', ({ matches }) => set(matches ? 'dark' : 'light'))
+		const update_store = ({ matches }: MediaQueryListEvent) => set(matches ? 'dark' : 'light')
+		media_query.addEventListener('change', update_store)
 		return () => {
-			media_query.removeEventListener('change', ({ matches }) => set(matches ? 'dark' : 'light'))
+			media_query.removeEventListener('change', update_store)
 		}
 	}
 )

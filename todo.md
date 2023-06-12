@@ -1,3 +1,4 @@
+- [ ] theme toggle via cookie 
 - [ ] zod schemas to validate blog posts (to avoid bugs by missing inputs)
 - [ ] more blog entries
   - [ ] that stupid web3 thing

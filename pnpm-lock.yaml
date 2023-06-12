@@ -16,7 +16,6 @@ specifiers:
   eslint: ^8.28.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-svelte: ^2.26.0
-  js-cookie: ^3.0.5
   license-report: ^6.4.0
   linkedom: ^0.14.26
   mdsvex: ^0.10.6
@@ -47,7 +46,6 @@ dependencies:
   '@polymer/paper-button': 3.0.1
   '@yaireo/relative-time': 1.0.3
   date-fns: 2.30.0
-  js-cookie: 3.0.5
   linkedom: 0.14.26
   prism-themes: 1.9.0
   rehype-autolink-headings: 6.1.1
@@ -2467,11 +2465,6 @@ packages:
     resolution: {integrity: sha512-u4sej9B1LPSxTGKB/HiuzvEQnXH0ECYkSVQU39koSwmFAxhlEAFl9RdTvLv4TOTQUgBS5O3O5fwUxk6byBZ+IQ==}
     engines: {node: '>=10'}
     dev: true
-
-  /js-cookie/3.0.5:
-    resolution: {integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==}
-    engines: {node: '>=14'}
-    dev: false
 
   /js-yaml/4.1.0:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { prefers_reduced_motion } from '$lib/reduced_motion'
-	import { onMount, tick } from 'svelte'
+	import { onMount } from 'svelte'
 	import { quintOut } from 'svelte/easing'
 	import { draw, fade } from 'svelte/transition'
 	import PajamasScrollDown from '~icons/pajamas/scroll-down'
@@ -8,7 +8,6 @@
 	let visible = false
 	onMount(async () => {
 		visible = true
-		await tick()
 	})
 
 	let scroll_y: number
@@ -56,6 +55,24 @@
 					/>
 				{/if}
 			</svg>
+			<noscript>
+				<svg
+					aria-hidden="true"
+					class="line"
+					width="100%"
+					height="100%"
+					viewBox="0 0 548 301"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M14 287C127.5 -104 564 311 532.5 14"
+						stroke="currentColor"
+						stroke-width="1rem"
+						stroke-linecap="round"
+					/>
+				</svg>
+			</noscript>
 		</div>
 	</section>
 	<a

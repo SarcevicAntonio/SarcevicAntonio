@@ -1,0 +1,101 @@
+*:focus {
+	outline-width: 1rem;
+	outline-offset: 0.5rem;
+}
+
+/* from scrollbar.app */
+
+*::-webkit-scrollbar {
+	width: 0.5em;
+	height: 0.5em;
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--as-back-2);
+}
+
+*::-webkit-scrollbar-thumb {
+	background: var(--as-text-2);
+	border-radius: 1rem;
+}
+
+html {
+	background-color: var(--as-back-1);
+	color: var(--as-text-1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Staatliches', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-weight: 400;
+	scroll-margin-block-start: 1em;
+}
+
+body::before {
+	content: ' ';
+	display: table;
+}
+
+body {
+	font-family: 'Space Mono', 'Courier New', Courier, monospace, sans-serif;
+	font-size: var(--step-0);
+	padding-inline: 1rem;
+}
+
+code,
+pre {
+	font-family: 'JetBrains Mono', 'Input Mono', 'Fira Code', 'Roboto Mono', Consolas, Monaco,
+		'Andale Mono', 'Ubuntu Mono', monospace !important;
+}
+
+.arrow-link {
+	color: inherit;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+
+	& svg {
+		vertical-align: sub;
+		position: relative;
+		inset-inline-start: 0rem;
+		transition: inset-inline-start 0.2s ease-in-out;
+	}
+
+	&:hover svg,
+	&:focus svg {
+		inset-inline-start: -0.5rem;
+	}
+	&.end {
+		&:hover svg,
+		&:focus svg {
+			inset-inline-start: 0.5rem;
+		}
+	}
+}
+
+.autolink-header {
+	color: var(--as-text-2);
+	font-size: 0.8em;
+	padding-inline-end: 0.2em;
+	margin-inline-start: -1ch;
+	vertical-align: baseline;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		color: var(--as-text-1);
+		text-decoration: underline;
+	}
+}
+
+@media (max-width: 1000px) {
+	.autolink-header {
+		margin-inline-start: unset;
+	}
+}

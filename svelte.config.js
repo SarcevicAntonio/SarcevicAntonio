@@ -1,44 +1,56 @@
-// svelte adapter
-import adapterAuto from '@sveltejs/adapter-auto';
-import adapterNode from '@sveltejs/adapter-node';
-import adapterStatic from '@sveltejs/adapter-static';
-// svelte preprocessor
-import { mdsvex } from 'mdsvex';
-import mdsvexConfig from './mdsvex.config.js';
-import preprocess from 'svelte-preprocess';
-const defineConfig = (config) => config;
-export default defineConfig({
-    extensions: ['.svelte', ...mdsvexConfig.extensions],
-    preprocess: [mdsvex(mdsvexConfig), preprocess()],
-    kit: {
-        adapter: Object.keys(process.env).some(key => ['VERCEL', 'CF_PAGES', 'NETLIFY'].includes(key))
-            ? adapterAuto()
-            : process.env.ADAPTER === 'node'
-                ? adapterNode({ out: 'build' })
-                : adapterStatic({
-                    pages: 'build',
-                    assets: 'build',
-                    fallback: undefined
-                }),
-        trailingSlash: !Object.keys(process.env).some(key => ['VERCEL', 'CF_PAGES', 'NETLIFY'].includes(key)) && process.env.ADAPTER !== 'node'
-            ? 'always'
-            : undefined,
-        prerender: {
-            handleMissingId: 'warn'
-        },
-        csp: { mode: 'auto' },
-        files: {
-            serviceWorker: 'src/sw'
-        },
-        serviceWorker: {
-            register: false
-        }
-    },
-    vitePlugin: {
-        experimental: {
-            inspector: {
-                holdMode: true
-            }
-        }
-    }
-});
+import preprocess from 'svelte-preprocess'
+import adapter from '@sveltejs/adapter-auto'
+import { vitePreprocess } from '@sveltejs/kit/vite'
+import { mdsvex } from 'mdsvex'
+import slug from 'rehype-slug'
+import autolink from 'rehype-autolink-headings'
+import { importAssets } from 'svelte-preprocess-import-assets'
+import toc from 'remark-toc'
+
+const mdsvex_config = {
+	layout: 'src/routes/(blog)/post.svelte',
+	remarkPlugins: [[toc, {
+		tight: true
+	}]],
+	rehypePlugins: [
+		slug,
+		[
+			autolink,
+			{
+				properties: {
+					class: 'autolink-header',
+				},
+				content: [
+					{
+						type: 'element',
+						tagName: 'span',
+						properties: {},
+						children: [{ type: 'text', value: '#' }],
+					},
+				],
+			},
+		],
+	],
+}
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	extensions: ['.svelte', '.svx'],
+	preprocess: [
+		vitePreprocess(),
+		mdsvex(mdsvex_config),
+		preprocess({
+			postcss: true,
+		}),
+		importAssets(),
+	],
+
+	kit: {
+		adapter: adapter(),
+	},
+	vitePlugin: {
+		inspector: true,
+	},
+}
+
+export default config

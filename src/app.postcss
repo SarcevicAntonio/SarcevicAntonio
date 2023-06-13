@@ -1,0 +1,51 @@
+@import '@fontsource/space-mono/400.css';
+@import '@fontsource/space-mono/700.css';
+@import '@fontsource/staatliches';
+@import 'globals.css';
+
+:root,
+html[data-theme='light'] {
+	--as-back-1: oklch(0.97 0 0);
+	--as-back-2: oklab(0.92 0 0);
+	--as-text-1: oklch(0.3 0 0);
+	--as-text-2: oklab(0.46 0 0);
+	--as-accent: oklab(0.92 -0.16 0.22);
+	color-scheme: light;
+}
+
+@define-mixin theme-dark {
+	--as-back-1: oklch(0.3 0 0);
+	--as-back-2: oklab(0.46 0 0);
+	--as-text-1: oklch(0.97 0 0);
+	--as-text-2: oklab(0.92 0 0);
+	--as-accent: oklch(0.56 0.3 298.26);
+	color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		@mixin theme-dark;
+	}
+}
+html[data-theme='dark'] {
+	@mixin theme-dark;
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,18,1.333,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+	--step--2: clamp(0.63rem, calc(0.72rem + -0.11vw), 0.69rem);
+	--step--1: clamp(0.83rem, calc(0.83rem + 0.02vw), 0.84rem);
+	--step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
+	--step-1: clamp(1.2rem, calc(1.1rem + 0.52vw), 1.5rem);
+	--step-2: clamp(1.44rem, calc(1.25rem + 0.97vw), 2rem);
+	--step-3: clamp(1.73rem, calc(1.4rem + 1.63vw), 2.66rem);
+	--step-4: clamp(2.07rem, calc(1.56rem + 2.57vw), 3.55rem);
+	--step-5: clamp(2.49rem, calc(1.71rem + 3.91vw), 4.74rem);
+	--step-6: clamp(2.99rem, calc(1.83rem + 5.78vw), 6.31rem);
+	--step-7: clamp(3.58rem, calc(1.9rem + 8.4vw), 8.41rem);
+}
+
+html,
+body {
+	margin: 0;
+}

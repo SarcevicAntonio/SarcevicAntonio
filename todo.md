@@ -1,0 +1,22 @@
+- [ ] see if i can Reduce initial server response time
+- [ ] more blog entries
+  - [ ] that stupid web3 thing
+  - [ ] ... other university projects (?)
+  - [ ] article on dotogether and kcalcalc
+  - [ ] for youtube videos: https://github.com/paulirish/lite-youtube-embed
+- [ ] /uses → https://github.com/wesbos/awesome-uses/
+- [ ] generated article and OG images
+  - plain satori or https://github.com/etherCorps/sveltekit-og
+- [ ] alt paths for blog entries
+- [ ] font family options for articles (?)
+- [ ] recent coding actions (github api)
+  - https://docs.github.com/en/rest/activity/events?apiVersion=2022-11-28#list-public-events-for-a-user
+  - https://docs.github.com/en/webhooks-and-events/events/github-event-types
+- [ ] analytics (minimal hand crafted micro analytics)
+- [ ] craft logo and text synced color highlight
+- [ ] image optimization
+  - [ ] Serve images in next-gen formats
+  - [ ] Properly size images
+  - [ ] give images explicit width and height
+- [ ] multiple tag search
+  - isn't it just a checkbox form?!

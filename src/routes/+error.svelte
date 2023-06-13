@@ -1,30 +1,45 @@
-<script lang="ts">
-  import { page } from '$app/stores'
-  import Head from '$lib/components/head.svelte'
-  import Footer from '$lib/components/footer.svelte'
+<script>
+	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
+	import { page } from '$app/stores'
 </script>
 
-<Head page={{ title: $page.status.toString() ?? '404', path: $page.url.pathname }} />
+<div class="error">
+	<section>
+		<h1>{$page.status}</h1>
 
-<div class="flex flex-col flex-nowrap justify-center xl:flex-row xl:flex-wrap">
-  <div class="flex-none w-full max-w-screen-md mx-auto xl:mx-0">
-    <article
-      itemscope
-      itemtype="https://schema.org/BlogPosting"
-      class="card bg-base-100 rounded-none md:rounded-box shadow-xl md:mb-8 z-10">
-      <main itemprop="articleBody" class="card-body prose urara-prose">
-        <h1 class="opacity-20 text-6xl md:text-[12rem] -mt-2 mb-0">
-          {$page.status ?? '404'}
-        </h1>
-        <h2 class="-mt-12 md:-mt-24">{$page.error?.message ?? 'Not found'}</h2>
-        <div class="card-actions">
-          <a href="/" class="btn btn-neutral no-underline shadow-xl hover:shadow-2xl mt-8">
-            <span class="i-heroicons-outline-home -ml-1 mr-2" />
-            Back to Home
-          </a>
-        </div>
-      </main>
-    </article>
-    <Footer sticky={true} class="flex-1 md:flex-initial" />
-  </div>
+		{#if $page.status === 404}
+			<p>
+				Looks like `{$page.url.pathname}` was not found...
+				<br />
+			</p>
+			<p>Sorry about that 🫤</p>
+			<p>
+				Maybe you can find what you were looking for under
+				<a href="/content" class="arrow-link">
+					<MaterialSymbolsArrowBackRounded aria-hidden="true" />/content</a
+				>.
+			</p>
+		{:else}
+			<p>{$page.error?.message}</p>
+		{/if}
+
+		<p>
+			<a href="/" class="arrow-link">
+				<MaterialSymbolsArrowBackRounded aria-hidden="true" />Or go to the main page /</a
+			>.
+		</p>
+	</section>
 </div>
+
+<style>
+	.error {
+		display: grid;
+		place-content: center;
+		position: relative;
+		min-height: 100svh;
+	}
+
+	section {
+		max-width: 25rem;
+	}
+</style>

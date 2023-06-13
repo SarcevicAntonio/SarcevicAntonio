@@ -1,6 +1,6 @@
 <script>
 	import { browser, dev } from '$app/environment'
-	import ThemeSwitch from '$lib/ThemeSwitch.svelte'
+	import ThemeSwitch from '$lib/theme/ThemeSwitch.svelte'
 	import { onMount } from 'svelte'
 	import '../app.postcss'
 	import Footer from './Footer.svelte'

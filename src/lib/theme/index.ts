@@ -1,5 +1,5 @@
 import { browser } from '$app/environment'
-import { readable } from 'svelte/store'
+import { readable, writable } from 'svelte/store'
 
 // credit to: https://github.com/ghostdevv/svelte-kit-theme-switcher-demo
 
@@ -24,3 +24,5 @@ export const os_theme_preference = readable<Theme>(
 		}
 	}
 )
+
+export const current_theme = writable<Theme>(undefined)

@@ -1,7 +1,8 @@
 <script>
-	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
+	import { current_theme } from '$lib/theme'
 	import Giscus from '@giscus/svelte'
 	import 'prism-themes/themes/prism-a11y-dark.css'
+	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 
 	export let title
 	export let tags
@@ -59,7 +60,11 @@
 
 <section>
 	<Giscus
-		theme="preferred_color_scheme"
+		theme={$current_theme === 'dark'
+			? 'dark'
+			: $current_theme === 'light'
+			? 'light'
+			: 'preferred_color_scheme'}
 		repo="SarcevicAntonio/SarcevicAntonio"
 		repoId="MDEwOlJlcG9zaXRvcnkxODkzMDAxNjM="
 		category="Comments"

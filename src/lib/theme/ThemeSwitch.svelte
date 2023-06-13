@@ -10,13 +10,14 @@
 	{#if $current_theme}
 		<ThemeLink theme="os-preference" />
 	{/if}
-	{#if $current_theme === 'light' || ($current_theme === undefined && $os_theme_preference === 'light')}
+
+	{#if $current_theme === 'light' || (!$current_theme && $os_theme_preference === 'light')}
 		<ThemeLink theme="dark" />
-	{:else}
+	{:else if $current_theme === 'dark' || (!$current_theme && $os_theme_preference === 'dark')}
 		<ThemeLink theme="light" />
-		{#if $os_theme_preference === undefined}
-			<ThemeLink theme="dark" />
-		{/if}
+	{:else}
+		<ThemeLink theme="dark" />
+		<ThemeLink theme="light" />
 	{/if}
 </section>
 

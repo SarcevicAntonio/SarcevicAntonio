@@ -1,5 +1,5 @@
 import preprocess from 'svelte-preprocess'
-import adapter from '@sveltejs/adapter-auto'
+import adapter from '@sveltejs/adapter-vercel'
 import { vitePreprocess } from '@sveltejs/kit/vite'
 import { mdsvex } from 'mdsvex'
 import slug from 'rehype-slug'
@@ -9,9 +9,14 @@ import toc from 'remark-toc'
 
 const mdsvex_config = {
 	layout: 'src/routes/(blog)/post.svelte',
-	remarkPlugins: [[toc, {
-		tight: true
-	}]],
+	remarkPlugins: [
+		[
+			toc,
+			{
+				tight: true,
+			},
+		],
+	],
 	rehypePlugins: [
 		slug,
 		[
@@ -46,7 +51,7 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({ runtime: 'edge' }),
 	},
 	vitePlugin: {
 		inspector: true,

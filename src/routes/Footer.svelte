@@ -86,6 +86,7 @@
 	ul.links {
 		list-style: none;
 		display: flex;
+		flex-wrap: wrap;
 		margin-block-start: 1rem;
 		margin-block-end: 0;
 		padding: 0;

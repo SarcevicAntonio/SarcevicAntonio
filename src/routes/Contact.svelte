@@ -2,7 +2,7 @@
 	import { contact_links } from '$lib/contact_links'
 </script>
 
-<h2>Connect</h2>
+<h2 id="connect">Connect</h2>
 <ul>
 	{#each contact_links as { href, title, icon }}
 		<li>
@@ -25,10 +25,11 @@
 		flex-wrap: wrap;
 		list-style: none;
 		padding: 0;
-		margin: 0;
+		margin: auto;
 		justify-content: center;
 		gap: 0.5em;
 		font-size: var(--step-4);
+		max-width: 7em;
 	}
 
 	a {

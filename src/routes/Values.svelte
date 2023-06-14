@@ -26,4 +26,8 @@
 	div :global(svg) {
 		font-size: var(--step-4);
 	}
+
+	p {
+		text-wrap: balance;
+	}
 </style>

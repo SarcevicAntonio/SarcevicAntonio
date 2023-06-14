@@ -114,5 +114,6 @@
 	p {
 		margin: auto;
 		max-width: 50rem;
+		text-wrap: balance;
 	}
 </style>

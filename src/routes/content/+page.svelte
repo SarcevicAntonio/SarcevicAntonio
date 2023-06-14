@@ -11,8 +11,10 @@
 <svelte:head>
 	{#if filter_tag}
 		<title>#{filter_tag} content — sarcevic.dev</title>
+		<meta name="description" content="my #{filter_tag} content on the internet" />
 	{:else}
 		<title>content — sarcevic.dev</title>
+		<meta name="description" content="my content on the internet" />
 	{/if}
 </svelte:head>
 

@@ -11,10 +11,7 @@
 
 <svelte:head>
 	<title>sarcevic.dev — my website</title>
-	<meta
-		name="description"
-		content="The hub of Antonio Sarcevic: learn about him and enjoy his content."
-	/>
+	<meta name="description" content="my corner of the internet" />
 </svelte:head>
 <Hero />
 

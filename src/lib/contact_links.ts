@@ -4,6 +4,7 @@ import Github from '~icons/simple-icons/github'
 import Linkedin from '~icons/simple-icons/linkedin'
 import Mastodon from '~icons/simple-icons/mastodon'
 import Twitter from '~icons/simple-icons/twitter'
+import Bluesky from './Bluesky.svelte'
 export const contact_links = [
 	{
 		title: 'Mail',
@@ -20,6 +21,7 @@ export const contact_links = [
 		icon: Mastodon,
 		href: 'https://mastodon.online/@sarcevic',
 	},
+	{ title: 'Bluesky', icon: Bluesky, href: 'https://bsky.app/profile/sarcevic.dev' },
 	{
 		title: 'Twitter',
 		icon: Twitter,

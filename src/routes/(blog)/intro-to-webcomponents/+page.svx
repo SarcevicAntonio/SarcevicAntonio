@@ -43,7 +43,7 @@ frameworks are gaining popularity, [which can be seen in the download numbers of
 According to the [Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey/2015#tech), JavaScript has been the most popular
 programming language since at least 2013. In addition, the web can cover more and more
 functionality of native smartphone apps. Push notifications, camera and microphone permissions,
-offline modes, and background synchronization are among the func-tions that used to be available
+offline modes, and background synchronization are among the functions that used to be available
 only to native smartphone apps, but can now be implemented with web technologies. The website
 [whatwebcando.today](https://whatwebcando.today/) provides a list of smartphone features, with an indication of whether they can
 be accessed via Web APIs.
@@ -133,7 +133,7 @@ Components are Custom Elements, Shadow DOM and HTML Templates.
 
 Custom Elements allow you to create and use new full-fledged DOM elements. With Shadow
 DOM, an encapsulated DOM tree can be used to create isolated components that are not externally
-influenceable or externally influenceable. HTML templates can be used to create markup fragments,
+influenceable. HTML templates can be used to create markup fragments,
 clone them, and fill them with content. In chapter 2, the individual specifications are examined in
 more detail.
 

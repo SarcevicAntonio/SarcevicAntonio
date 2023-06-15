@@ -62,11 +62,8 @@
 </p>
 <br />
 <div class="count">+{differenceInYears(new Date(), new Date(2019, 2, 1))} years</div>
-<p>
-	Worked as a web developer since 2019.
-	<br />
-	Earned a Bachelor of Science degree in Media and Communications Informatics.
-</p>
+<p>Worked as a web developer since 2019.</p>
+<p>Earned a Bachelor of Science degree in Media and Communications Informatics.</p>
 
 <!-- <a href="/assets/AntonioSarcevic_CV.pdf">
 	<MaterialSymbolsDocs />

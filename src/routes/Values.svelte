@@ -8,11 +8,11 @@
 
 <h2>Core Values</h2>
 <div>
-	<MdiYinYang />
-	<MdiHeadLightbulbOutline />
-	<MaterialSymbolsAndroidChat />
-	<MdiHandHeartOutline />
-	<MdiFlower />
+	<MdiYinYang aria-hidden="true" />
+	<MdiHeadLightbulbOutline aria-hidden="true" />
+	<MaterialSymbolsAndroidChat aria-hidden="true" />
+	<MdiHandHeartOutline aria-hidden="true" />
+	<MdiFlower aria-hidden="true" />
 </div>
 <p>Balance, Open Mindedness, Clear Communication, Honesty & Joy</p>
 

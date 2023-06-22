@@ -1,7 +1,7 @@
 import { browser } from '$app/environment'
 import { readable } from 'svelte/store'
 
-// credit to: https://geoffrich.net/posts/accessible-svelte-transitions/
+// credit to: https://geoffrich.net/posts/svelte-prefers-reduced-motion-store/
 
 const query = '(prefers-reduced-motion: reduce)'
 

@@ -4,9 +4,10 @@
 
 <h2 id="connect">Connect</h2>
 <ul>
-	{#each contact_links as { href, title, icon }}
+	{#each contact_links as { icon, ...rest }}
 		<li>
-			<a {href} {title}>
+			<!--svelte-ignore a11y-missing-attribute-->
+			<a {...rest}>
 				<svelte:component this={icon} aria-hidden="true" />
 			</a>
 		</li>

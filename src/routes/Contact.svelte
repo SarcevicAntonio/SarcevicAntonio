@@ -28,9 +28,9 @@
 		padding: 0;
 		margin: auto;
 		justify-content: center;
-		gap: 0.5em;
 		font-size: var(--step-4);
-		max-width: 7em;
+		gap: 1em;
+		max-width: 10em;
 	}
 
 	a {

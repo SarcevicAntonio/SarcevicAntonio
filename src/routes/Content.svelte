@@ -1,7 +1,7 @@
 <script lang="ts">
+	import type { BlogMetadata } from '$lib/server/posts'
 	import MaterialSymbolsArrowForwardRounded from '~icons/material-symbols/arrow-forward-rounded'
 	import MaterialSymbolsDocs from '~icons/material-symbols/docs'
-	import type { BlogMetadata } from './+layout'
 
 	export let content: BlogMetadata[]
 </script>

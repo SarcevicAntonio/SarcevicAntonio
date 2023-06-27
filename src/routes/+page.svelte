@@ -13,14 +13,19 @@
 	<title>sarcevic.dev — my website</title>
 	<meta name="description" content="my corner of the internet" />
 </svelte:head>
-<Hero />
 
-<section id="first">
-	<Values />
-</section>
+<Hero />
 
 <section>
 	<Content content={data.content} />
+</section>
+
+<section>
+	<Contact />
+</section>
+
+<section>
+	<Values />
 </section>
 
 <section>
@@ -29,10 +34,6 @@
 
 <section>
 	<Projects />
-</section>
-
-<section>
-	<Contact />
 </section>
 
 <section>

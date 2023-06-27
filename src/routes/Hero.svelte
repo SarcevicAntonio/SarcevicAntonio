@@ -76,7 +76,8 @@
 		</div>
 	</section>
 	<a
-		href="#first"
+		id="scroller"
+		href="#scroller"
 		class="scroll-indicator"
 		title="Scroll to see more"
 		style:--opacity={(scroll_y / (inner_height / 2)) * -1 + 1}

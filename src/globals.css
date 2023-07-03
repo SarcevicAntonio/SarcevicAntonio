@@ -1,3 +1,14 @@
+:root {
+	--as-notification-color: var(--as-text-2);
+
+	--as-notification--info-background: var(--as-back-2);
+	--as-notification--info-border-color: var(--as-text-2);
+
+	--as-notification--btn-background: var(--as-back-2);
+	--as-notification--btn-border: none;
+	--as-notification-padding: 0.5rem;
+}
+
 *:focus {
 	outline-width: 1rem;
 	outline-offset: 0.5rem;

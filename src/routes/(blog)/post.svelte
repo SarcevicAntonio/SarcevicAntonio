@@ -1,6 +1,8 @@
 <script>
+	import { afterNavigate } from '$app/navigation'
 	import { current_theme } from '$lib/theme'
 	import Giscus from '@giscus/svelte'
+	import { Notifications, notification } from 'as-comps'
 	import 'prism-themes/themes/prism-a11y-dark.css'
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 
@@ -9,6 +11,23 @@
 	export let published
 	export let updated
 	export let summary
+
+	afterNavigate(() => {
+		for (const node of document.querySelectorAll('pre > code')) {
+			const button = document.createElement('button')
+			button.textContent = '📋'
+			button.className = 'copy-button'
+			button.onclick = () => {
+				navigator.clipboard.writeText(node.textContent ?? '')
+				notification('copied content')
+			}
+
+			const wrapper = document.createElement('div')
+			wrapper.className = 'copy-button-wrapper'
+			wrapper.append(button)
+			node.parentNode?.prepend(wrapper)
+		}
+	})
 </script>
 
 <svelte:head>
@@ -84,6 +103,8 @@
 	</a>
 </section>
 
+<Notifications position="top" />
+
 <style>
 	article,
 	section {
@@ -141,6 +162,25 @@
 
 		& :global(pre) {
 			background-color: black;
+			position: relative;
+			overflow-y: visible;
+			& :global(.copy-button-wrapper) {
+				position: sticky;
+				top: 0;
+				left: 100%;
+				height: 0;
+				width: 0;
+				overflow: visible;
+				& :global(.copy-button) {
+					opacity: 0.6;
+					position: absolute;
+					top: 0;
+					right: 0;
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
 		}
 	}
 </style>

@@ -1,3 +1,4 @@
+- [ ] add "appeared on" page
 - [ ] see if i can Reduce initial server response time
 - [ ] more blog entries
   - [ ] that stupid web3 thing

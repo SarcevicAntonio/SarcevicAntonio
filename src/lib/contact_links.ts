@@ -24,11 +24,12 @@ export const contact_links: Array<{
 		icon: Github,
 		href: 'https://github.com/SarcevicAntonio',
 	},
-	{
-		title: 'Twitter',
-		icon: Twitter,
-		href: 'https://twitter.com/SarcevicAntonio',
-	},
+	// rip 🐦
+	// {
+	// 	title: 'Twitter',
+	// 	icon: Twitter,
+	// 	href: 'https://twitter.com/SarcevicAntonio',
+	// },
 
 	{
 		title: 'Discord',

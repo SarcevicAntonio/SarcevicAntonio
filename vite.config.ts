@@ -5,7 +5,9 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 export default defineConfig({
 	plugins: [
-		nodePolyfills(),
+		nodePolyfills({
+			exclude: ['process'],
+		}),
 		sveltekit(),
 		Icons({
 			compiler: 'svelte',

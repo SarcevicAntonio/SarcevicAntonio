@@ -1,0 +1,27 @@
+.arrow-link {
+	color: inherit;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+
+	& svg {
+		vertical-align: sub;
+		position: relative;
+		inset-inline-start: 0rem;
+		transition: inset-inline-start 0.2s ease-in-out;
+	}
+
+	&:hover svg,
+	&:focus svg {
+		inset-inline-start: -0.5rem;
+	}
+	&.end {
+		&:hover svg,
+		&:focus svg {
+			inset-inline-start: 0.5rem;
+		}
+	}
+}

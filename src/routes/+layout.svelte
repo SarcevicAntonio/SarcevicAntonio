@@ -13,11 +13,6 @@
 	})
 </script>
 
-<p hidden>
-	<!-- this for some god forsaken reason fixes this string of letters being turned into another without me asking for it somewhere  -->
-	process.env.NODE_ENV
-</p>
-
 <ThemeSwitch />
 
 <main>

@@ -220,7 +220,7 @@ const config = {
 	// ...
 	// 👇 Add these three lines inside your config object
 	define: {
-		'process.env.NODE_ENV': '"production"',
+		'process\u002eenv\u002eNODE_ENV': '"production"',
 	}
 }))
 ```

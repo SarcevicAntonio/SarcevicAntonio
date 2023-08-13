@@ -216,16 +216,13 @@ Because `workbox-precache` uses `NODE_ENV` to enable debug messages in developme
 `/vite.config.js`
 
 ```js
-// ...
 const config = {
 	// ...
 	// 👇 Add these three lines inside your config object
 	define: {
 		'process.env.NODE_ENV': '"production"',
 	}
-	// ...
 }))
-// ...
 ```
 
 We can open the "Service Workers" section of the "Application" tab inside dev tools to see how the browser registered the Service worker:

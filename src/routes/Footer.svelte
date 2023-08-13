@@ -73,6 +73,10 @@
 		font-weight: 400;
 	}
 
+	.notice {
+		margin-block-end: 5rem;
+	}
+
 	a {
 		color: inherit;
 
@@ -114,6 +118,7 @@
 	ul.credits {
 		padding-inline-start: 1.5rem;
 		overflow: auto;
+		margin-block-end: 5rem;
 	}
 
 	.break {

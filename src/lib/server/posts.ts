@@ -1,3 +1,5 @@
+import appearances from '$lib/appearances.yaml'
+import { by_published } from '$lib/date_helpers'
 import { parseHTML } from 'linkedom'
 import { z } from 'zod'
 
@@ -5,6 +7,7 @@ const BLOG_GROUP_NAME = '(blog)'
 const BLOG_FILE_NAME = '/+page.svx'
 
 const BlogMetadata = z.object({
+	type: z.string().default('blog_post'),
 	title: z.string(),
 	summary: z.string(),
 	published: z.string(),
@@ -12,6 +15,7 @@ const BlogMetadata = z.object({
 	href: z.string(),
 	tags: z.array(z.string()),
 	html: z.string().optional(),
+	lang: z.string().default('EN'),
 })
 
 export type BlogMetadata = z.infer<typeof BlogMetadata>
@@ -51,7 +55,7 @@ export async function get_blog_posts(render = false) {
 		}
 	}
 
-	blog_posts.sort((a, b) => new Date(b.published).valueOf() - new Date(a.published).valueOf())
+	blog_posts.sort(by_published)
 
 	for (const post of blog_posts) {
 		try {
@@ -64,6 +68,7 @@ export async function get_blog_posts(render = false) {
 		}
 	}
 
+	blog_posts.map((b) => (b.type = 'blog_post'))
 	return blog_posts
 }
 
@@ -75,4 +80,41 @@ export async function get_all_tags(posts: BlogMetadata[]) {
 		})
 	)
 	return [...all_tags]
+}
+
+const domain_pattern = /^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/\n]+)/
+
+const Appearance = z.object({
+	type: z.string().default('appearance'),
+	title: z.string(),
+	href: z.string(),
+	lang: z.string().default('EN'),
+	published: z.string(),
+	summary: z.string().optional(),
+	tags: z.array(z.string()),
+	domain: z.string().optional(),
+})
+
+export type Appearance = z.infer<typeof Appearance>
+export function get_all_appearances(): Appearance[] {
+	for (const appearance of appearances as Appearance[]) {
+		appearance.domain = (domain_pattern.exec(appearance.href) || [])[1]
+	}
+
+	appearances.sort(by_published)
+
+	for (const post of appearances as Appearance[]) {
+		try {
+			Appearance.parse(post)
+		} catch (e) {
+			console.error(
+				`ERROR: Appearance Parse Error!\nLooks like the metadata for appearance "${post.href}" is malformed.`
+			)
+			throw e
+		}
+	}
+
+	appearances.map((a: Appearance) => (a.type = 'appearance'))
+
+	return appearances as Appearance[]
 }

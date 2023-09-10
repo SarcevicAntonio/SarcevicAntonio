@@ -1,5 +1,6 @@
 <script>
 	import { afterNavigate } from '$app/navigation'
+	import { reformat_date_string } from '$lib/date_helpers'
 	import { current_theme } from '$lib/theme'
 	import Giscus from '@giscus/svelte'
 	import { Notifications, notification } from 'as-comps'
@@ -49,19 +50,11 @@
 	<h1>{title}</h1>
 	<aside>
 		<p>
-			published: {new Date(published).toLocaleDateString(undefined, {
-				year: 'numeric',
-				month: 'long',
-				day: 'numeric',
-			})}
+			published: {reformat_date_string(published)}
 		</p>
 		{#if updated}
 			<p>
-				last updated: {new Date(updated).toLocaleDateString(undefined, {
-					year: 'numeric',
-					month: 'long',
-					day: 'numeric',
-				})}
+				last updated: {reformat_date_string(updated)}
 			</p>
 		{/if}
 		<ul class="tags">

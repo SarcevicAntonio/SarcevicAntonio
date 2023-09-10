@@ -1,31 +1,46 @@
 <script lang="ts">
+	import { reformat_date_string } from '$lib/date_helpers'
 	import type { BlogMetadata } from '$lib/server/posts'
 	import MaterialSymbolsArrowForwardRounded from '~icons/material-symbols/arrow-forward-rounded'
 	import MaterialSymbolsDocs from '~icons/material-symbols/docs'
+	import MaterialSymbolsLink from '~icons/material-symbols/link'
+	import YouTube from '~icons/simple-icons/youtube'
 
 	export let content: BlogMetadata[]
 </script>
 
 <div class="header">
-	<h2>Content</h2>
+	<h2>Content and Appearances</h2>
 	<a href="/content" class="arrow-link end">
 		/content<MaterialSymbolsArrowForwardRounded />
 	</a>
 </div>
 
 <ul class="scroller">
-	{#each content as { title, summary, href, published }}
+	{#each content as { title, summary, href, published, lang, type }}
 		<li>
 			<a {href}>
-				<h3>{title}</h3>
-				<p>{summary}</p>
+				<h3>
+					{title}
+					{#if lang === 'DE'} 🇩🇪 {/if}
+				</h3>
+				{#if summary}
+					<p>{summary}</p>
+				{/if}
 				<p class="meta">
-					<MaterialSymbolsDocs />
-					{new Date(published).toLocaleDateString(undefined, {
-						year: 'numeric',
-						month: 'long',
-						day: 'numeric',
-					})}
+					{#if type === 'blog_post'}
+						<span class="screen-reader-only"> Blog Post </span>
+						<MaterialSymbolsDocs aria-hidden="true" />
+					{:else if type === 'appearance'}
+						{#if href.includes('youtube')}
+							<span class="screen-reader-only"> YouTube Link </span>
+							<YouTube aria-hidden="true" />
+						{:else}
+							<span class="screen-reader-only"> External Link </span>
+							<MaterialSymbolsLink aria-hidden="true" />
+						{/if}
+					{/if}
+					{reformat_date_string(published)}
 				</p>
 			</a>
 		</li>

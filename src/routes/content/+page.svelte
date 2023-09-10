@@ -1,7 +1,10 @@
 <script>
 	import { page } from '$app/stores'
+	import { reformat_date_string } from '$lib/date_helpers'
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 	import MaterialSymbolsDocs from '~icons/material-symbols/docs'
+	import MaterialSymbolsLink from '~icons/material-symbols/link'
+	import YouTube from '~icons/simple-icons/youtube'
 
 	export let data
 
@@ -22,7 +25,7 @@
 	<MaterialSymbolsArrowBackRounded aria-hidden="true" />/
 </a>
 
-<h1>Content</h1>
+<h1>Content and Appearances</h1>
 
 <section class="tags">
 	{#if filter_tag}
@@ -47,18 +50,30 @@
 
 <section class="posts">
 	<ul>
-		{#each data.content as { title, summary, href, published }}
+		{#each data.content as { title, summary, href, published, lang, type }}
 			<li>
 				<a {href}>
-					<h2>{title}</h2>
-					<p>{summary}</p>
+					<h2>
+						{title}
+						{#if lang === 'DE'} 🇩🇪 {/if}
+					</h2>
+					{#if summary}
+						<p>{summary}</p>
+					{/if}
 					<p class="meta">
-						<MaterialSymbolsDocs />
-						{new Date(published).toLocaleDateString(undefined, {
-							year: 'numeric',
-							month: 'long',
-							day: 'numeric',
-						})}
+						{#if type === 'blog_post'}
+							<span class="screen-reader-only"> Blog Post </span>
+							<MaterialSymbolsDocs aria-hidden="true" />
+						{:else if type === 'appearance'}
+							{#if href.includes('youtube')}
+								<span class="screen-reader-only"> YouTube Link </span>
+								<YouTube aria-hidden="true" />
+							{:else}
+								<span class="screen-reader-only"> External Link </span>
+								<MaterialSymbolsLink aria-hidden="true" />
+							{/if}
+						{/if}
+						{reformat_date_string(published)}
 					</p>
 				</a>
 			</li>
@@ -106,6 +121,7 @@
 		& ul {
 			max-width: 50rem;
 			margin-inline: auto;
+			margin-block: 2em;
 		}
 
 		& ul > li > a {

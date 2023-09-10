@@ -7,7 +7,6 @@ updated: 2023-06-13
 tags:
   - guide
   - svelte
-  - software
 ---
 
 <script>

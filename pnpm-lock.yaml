@@ -46,6 +46,9 @@ devDependencies:
   '@iconify/json':
     specifier: ^2.2.72
     version: 2.2.72
+  '@modyfi/vite-plugin-yaml':
+    specifier: ^1.0.4
+    version: 1.0.4(vite@4.3.9)
   '@sveltejs/adapter-vercel':
     specifier: ^3.0.1
     version: 3.0.1(@sveltejs/kit@1.20.0)
@@ -823,6 +826,19 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
+    dev: true
+
+  /@modyfi/vite-plugin-yaml@1.0.4(vite@4.3.9):
+    resolution: {integrity: sha512-qkT0KiR3AQQRfUvDzLv4+1rYAzXj+QmGhAbyUd0Ordf9xynK76i758lk5GiEfxuQxbvdqDaJ9oXkH/KacbSjQQ==}
+    peerDependencies:
+      vite: ^2.6.0 || ^3.0.0 || ^4.0.0
+    dependencies:
+      '@rollup/pluginutils': 5.0.2
+      js-yaml: 4.1.0
+      tosource: 2.0.0-alpha.3
+      vite: 4.3.9
+    transitivePeerDependencies:
+      - rollup
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -4270,6 +4286,11 @@ packages:
     engines: {node: '>=8.0'}
     dependencies:
       is-number: 7.0.0
+    dev: true
+
+  /tosource@2.0.0-alpha.3:
+    resolution: {integrity: sha512-KAB2lrSS48y91MzFPFuDg4hLbvDiyTjOVgaK7Erw+5AmZXNq4sFRVn8r6yxSLuNs15PaokrDRpS61ERY9uZOug==}
+    engines: {node: '>=10'}
     dev: true
 
   /totalist@3.0.1:

@@ -61,6 +61,7 @@
 						<p>{summary}</p>
 					{/if}
 					<p class="meta">
+						{reformat_date_string(published)}
 						{#if type === 'blog_post'}
 							<span class="screen-reader-only"> Blog Post </span>
 							<MaterialSymbolsDocs aria-hidden="true" />
@@ -73,7 +74,6 @@
 								<MaterialSymbolsLink aria-hidden="true" />
 							{/if}
 						{/if}
-						{reformat_date_string(published)}
 					</p>
 				</a>
 			</li>
@@ -134,6 +134,8 @@
 		& a > h2 {
 			font-size: var(--step-3);
 			margin-block: 0.5em;
+			text-align: center;
+			text-wrap: balance;
 		}
 
 		& a > *:first-child {
@@ -150,6 +152,10 @@
 			& > h2 {
 				text-decoration: underline;
 			}
+		}
+
+		.meta {
+			text-align: end;
 		}
 	}
 

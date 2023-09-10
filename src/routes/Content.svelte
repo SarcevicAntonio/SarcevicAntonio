@@ -28,6 +28,7 @@
 					<p>{summary}</p>
 				{/if}
 				<p class="meta">
+					{reformat_date_string(published)}
 					{#if type === 'blog_post'}
 						<span class="screen-reader-only"> Blog Post </span>
 						<MaterialSymbolsDocs aria-hidden="true" />
@@ -40,7 +41,6 @@
 							<MaterialSymbolsLink aria-hidden="true" />
 						{/if}
 					{/if}
-					{reformat_date_string(published)}
 				</p>
 			</a>
 		</li>
@@ -111,13 +111,13 @@
 
 	p {
 		margin-block: 0.75rem;
-		font-size: var(--step--1);
+		font-size: var(--step-0);
 	}
 
 	.meta {
-		font-size: var(--step-0);
 		margin-block-start: auto;
 		margin-block-end: 0;
+		text-align: end;
 	}
 
 	.header a :global(svg),

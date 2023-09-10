@@ -28,7 +28,11 @@
 			{/each}
 		</ul>
 		<h2 class="notice">
-			Crafted with 💖 by Antonio Sarcevic in Münster and Porto during spring and summer 2023.
+			Crafted with 💖 by Antonio Sarcevic in Münster and
+			<span class="help" title="while traveling to Porto, Berlin & Hitzacker (Elbe)">
+				on the go
+			</span>
+			during spring and summer 2023.
 		</h2>
 		<p><a href="/">sarcevic.dev</a> is powered by the following dependencies:</p>
 		<ul class="credits">
@@ -123,5 +127,11 @@
 
 	.break {
 		display: contents;
+	}
+
+	.help {
+		cursor: help;
+		text-decoration: underline;
+		text-decoration-style: dotted;
 	}
 </style>

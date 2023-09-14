@@ -1,3 +1,4 @@
+- [ ] RSS package instead of the hand rolled XML return
 - [ ] cleanup CSS
 - [ ] see if i can Reduce initial server response time
 - [ ] more blog entries

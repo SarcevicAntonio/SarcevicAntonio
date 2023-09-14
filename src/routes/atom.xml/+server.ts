@@ -9,7 +9,7 @@ export async function GET() {
 
 	return new Response(/*XML*/ get_feed(content, tags), {
 		headers: {
-			'content-type': 'application/atom+xml; charset=utf-8',
+			'content-type': 'application/xml',
 		},
 	})
 }

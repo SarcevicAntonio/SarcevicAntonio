@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource/roboto':
+    specifier: ^5.0.8
+    version: 5.0.8
   '@fontsource/space-mono':
     specifier: ^5.0.2
     version: 5.0.2
@@ -714,6 +717,10 @@ packages:
     resolution: {integrity: sha512-LxcyMGxwmTh2lY9FwHPGWOHmYFCZvbrFCBZL4FzSSsxsRPuhrYUg/49/0KDfW8tnIEaEHtfmn6+NPN+1DqaNmA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@fontsource/roboto@5.0.8:
+    resolution: {integrity: sha512-XxPltXs5R31D6UZeLIV1td3wTXU3jzd3f2DLsXI8tytMGBkIsGcc9sIyiupRtA8y73HAhuSCeweOoBqf6DbWCA==}
+    dev: false
 
   /@fontsource/space-mono@5.0.2:
     resolution: {integrity: sha512-99s6KftNQ2V5T1U/EA25+iGbn6YjnK4i/KFIOpFeD7AhHix/gV354upa+dpYYQX0xvQUqJj2o1Muo1t2YfaIUg==}

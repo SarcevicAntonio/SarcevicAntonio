@@ -45,6 +45,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/roboto": "^5.0.8",
 		"@fontsource/space-mono": "^5.0.2",
 		"@fontsource/staatliches": "^5.0.2",
 		"@giscus/svelte": "^2.3.0",

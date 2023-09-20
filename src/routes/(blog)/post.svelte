@@ -13,10 +13,11 @@
 	export let updated
 	export let summary
 
-	afterNavigate(() => {
+	afterNavigate(function add_copy_button_to_codeblocks() {
 		for (const node of document.querySelectorAll('pre > code')) {
 			const button = document.createElement('button')
-			button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 22q-.825 0-1.413-.588T3 20V7q0-.425.288-.713T4 6q.425 0 .713.288T5 7v13h10q.425 0 .713.288T16 21q0 .425-.288.713T15 22H5Zm4-4q-.825 0-1.413-.588T7 16V4q0-.825.588-1.413T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.588 1.413T18 18H9Zm0-2h9V4H9v12Zm0 0V4v12Z"/></svg>'
+			button.innerHTML =
+				'<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 22q-.825 0-1.413-.588T3 20V7q0-.425.288-.713T4 6q.425 0 .713.288T5 7v13h10q.425 0 .713.288T16 21q0 .425-.288.713T15 22H5Zm4-4q-.825 0-1.413-.588T7 16V4q0-.825.588-1.413T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.588 1.413T18 18H9Zm0-2h9V4H9v12Zm0 0V4v12Z"/></svg>'
 			button.className = 'copy-button'
 			button.onclick = () => {
 				navigator.clipboard.writeText(node.textContent ?? '')
@@ -48,25 +49,32 @@
 <!-- Remember if you edit markup here to change it in get_blog_posts html render cleanup -->
 <article>
 	<h1>{title}</h1>
-	<aside>
-		<p>
-			published: {reformat_date_string(published)}
-		</p>
-		{#if updated}
-			<p>
-				last updated: {reformat_date_string(updated)}
-			</p>
-		{/if}
-		<ul class="tags">
-			{#each tags as tag}
-				<li>
-					<a href="/content?tags={tag}">
-						#{tag}
-					</a>
-				</li>
-			{/each}
-		</ul>
-	</aside>
+	{#if published || updated || tags}
+		<!-- content here -->
+		<aside>
+			{#if published}
+				<p>
+					published: {reformat_date_string(published)}
+				</p>
+			{/if}
+			{#if updated}
+				<p>
+					last updated: {reformat_date_string(updated)}
+				</p>
+			{/if}
+			{#if tags}
+				<ul class="tags">
+					{#each tags as tag}
+						<li>
+							<a href="/content?tags={tag}">
+								#{tag}
+							</a>
+						</li>
+					{/each}
+				</ul>
+			{/if}
+		</aside>
+	{/if}
 	<slot />
 </article>
 
@@ -99,10 +107,12 @@
 <Notifications position="top" />
 
 <style>
+	@import '@fontsource/roboto';
 	article,
 	section {
 		margin: auto;
 		max-width: 50rem;
+		font-family: 'Roboto', sans-serif;
 	}
 
 	h1 {

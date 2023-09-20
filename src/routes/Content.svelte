@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { reformat_date_string } from '$lib/date_helpers'
-	import type { BlogMetadata } from '$lib/server/posts'
+	import type { Appearance, BlogMetadata } from '$lib/server/posts'
 	import MaterialSymbolsArrowForwardRounded from '~icons/material-symbols/arrow-forward-rounded'
 	import MaterialSymbolsDocs from '~icons/material-symbols/docs'
 	import MaterialSymbolsLink from '~icons/material-symbols/link'
 	import YouTube from '~icons/simple-icons/youtube'
 
-	export let content: BlogMetadata[]
+	export let content: (BlogMetadata | Appearance)[]
 </script>
 
 <div class="header">

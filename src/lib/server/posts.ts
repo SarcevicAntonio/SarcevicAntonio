@@ -72,7 +72,7 @@ export async function get_blog_posts(render = false) {
 	return blog_posts
 }
 
-export async function get_all_tags(posts: BlogMetadata[]) {
+export async function get_all_tags(posts: (BlogMetadata | Appearance)[]) {
 	const all_tags = new Set<string>()
 	posts.forEach(({ tags }) =>
 		tags.forEach((tag) => {

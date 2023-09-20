@@ -3,9 +3,7 @@ title: Antonio Sarcevic uses...
 summary: What I'm using
 ---
 
-## Computer
-
-### Coding Setup
+## Coding Setup
 
 I use **Visual Studio Code** as my code editor, terminal emulator, git ui and even rest client via the [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) extension. It's nice having everything in one place. I might end up learning vim one day and moving more to the terminal, but not yet.
 
@@ -16,8 +14,38 @@ Here are **3 random Extensions I could not live without**: [Code Spell Checker](
 
 To make the terminal less scary, I like to use [**Fig**](https://fig.io/), which brings Intellisense-style autocompletion to any terminal.
 
-## Other Software
+My laptop is a **MacBook Pro**, and at my desk I use a single **Dell S3222DGM** 32-inch 1440p display. My keyboard is a [**Keychron K8**](https://www.keychron.com/pages/keychron-k8-wireless-mechanical-keyboard) with RGB backlight, aluminium frame and hot-swappable Gateron Red switches and my mouse a [**Logitech MX Vertical**](https://www.logitech.com/de-de/products/mice/mx-vertical-ergonomic-mouse.910-005448.html). I sit on a [**Ergotopia NextBack**](https://www.ergotopia.de/ergonomie-shop/gesund-sitzen/ergonomischer-buerostuhl/nextback-mit-kopfstuetze).
 
-I'm using **Google Chrome** as my coding and main browser. I'm deeply entrenched in the Google ecosystem and every time I try to switch to a different Browser, be it Firefox, Opera, Brave or Arc, I've always gone back after a day or two.
+## Software
 
-To make macOS usable, I need [**AltTab**](https://alt-tab-macos.netlify.app/), [**Raycast**](https://www.raycast.com/) and [**LinearMouse**](https://linearmouse.app/de-DE/) installed. I'm using **Raycast** for launching apps, quickly searching the web, window management, clipboard history, keeping on track of my schedule, and thats just the build in stuff. Some useful extensions I want to list are are [Pomodoro](https://www.raycast.com/asubbotin/pomodoro) (which I abuse as a sit/stand timer), [HTTP Status Codes](https://www.raycast.com/Alex/http-status-codes), [Port Manager](https://www.raycast.com/lucaschultz/port-manager) and [Kill Process](https://www.raycast.com/rolandleth/kill-process). Integrations like [Spotify](https://www.raycast.com/mattisssa/spotify-player), [Bitwarden](https://www.raycast.com/jomifepe/bitwarden), [Authy](https://www.raycast.com/guga4ka/authy) and [Linear](https://www.raycast.com/linear/linear) are super helpful as well!
+I'm using **Google Chrome** as my coding and main browser. I try to switch to a different Browser, be it Firefox, Opera, Brave or Arc, I've always gone back after a day or two.
+
+That might be because I'm deeply entrenched in the Google ecosystem. **Calendar**, **Gmail** and **Keep** I use ever day, while **Photos**, **Drive**, **Docs** and **Sheets** are my go to apps for those use cases.
+
+I use [**Obsidian**](https://obsidian.md/) as a habit tracker, journal, and task list app. While I'm not 100% happy with the setup, it get's the job done pretty well. I also use it for writing on occasion.
+
+To make macOS usable, I need [**AltTab**](https://alt-tab-macos.netlify.app/) and [**LinearMouse**](https://linearmouse.app/de-DE/) installed.
+
+I'm using [**Raycast**](https://www.raycast.com/) for launching apps, quickly searching the web, window management, clipboard history, keeping on track of my schedule, calculations and converting units, and thats just the build in stuff. Integrations like [Spotify](https://www.raycast.com/mattisssa/spotify-player), [Bitwarden](https://www.raycast.com/jomifepe/bitwarden), [Authy](https://www.raycast.com/guga4ka/authy) and [Linear](https://www.raycast.com/linear/linear) are super helpful and some useful extensions I want to list are are [Pomodoro](https://www.raycast.com/asubbotin/pomodoro) (which I abuse as a sit/stand timer), [HTTP Status Codes](https://www.raycast.com/Alex/http-status-codes), [Port Manager](https://www.raycast.com/lucaschultz/port-manager) and [Kill Process](https://www.raycast.com/rolandleth/kill-process).
+
+## Phone
+
+Like I said I'm firmly in the grasp of Google and so I'm currently rocking a **Pixel 5**. It's screen has been repaired two times since I owned it and it's generally starting to show it's age, especially the battery, so I'm looking to upgrade soon. Maybe I should get a **Fairphone 5** already, but I feel thats too big of a phone. I'm looking to get a **Pixel 8** when it comes out, but I'm also eying the **ASUS Zenfone 10** for it's compact size.
+
+## Music
+
+I _love_ music. I primarily listen to music on **Spotify**, because convenience, but I do have a sizable collection of **CDs**, **vinyl** and **digitally bought MP3s**. To rip the CDs and manage MP3s I use use [**MusicBee**](https://www.getmusicbee.com/), which is the best iTunes 9 replacement ever, but sadly Windows only. [**Oto Music**](https://play.google.com/store/apps/details?id=com.piyush.music&hl=de&gl=US) is my MP3 player android app of choice for on the go offline music sessions. I spin my vinyl on a **Audio Technica AT-LP120-USB**. To track my listening habits I use [**last.fm**](https://www.last.fm/user/LinkPlay9), but the Spotify integration has been pretty rocky these past months...
+
+For listening I use a **Sennheiser Game One** headset at my desk. Otherwise, it's either my **Sony WH-1000XM3** over-ear headphones, or **Sony WF-1000XM3** earbuds. Great names Sony BTW, so easy to differentiate in bluetooth menus, yes yes very fun.
+
+## Gaming
+
+I have a [**custom gaming PC**](https://pcpartpicker.com/user/LinkPlay9/saved/ZDzZLk) that I _Ship of Theseus'd_ since 2011. It used to be my all around computer, but now it's hooked up only to my TV and auto-launches Steam into Big Picture Mode for the occasional gaming session. I also love to play on my **Steam Deck** and the occasional Nintendo exclusive on my **Switch**. I also have a PlayStation 2, Wii and Wii U hooked up for some retro gaming.
+
+## Fingerboarding
+
+I have multiple fingerboard setups, but my main one is a Yellowood 34cm with colored wood design, Chrome/Tiffany X5 Ytrucks and Ywheels Y4 DualGreen Asymmetric shape.
+
+## Backpack
+
+For trips or grocery shopping I like to use my [**8000Kicks Everyday Backpack in Beige and Green**](https://www.8000kicks.com/products/everyday-backpack-in-beige-and-green), but I also have a smaller **Green Golf Wang Backpack** for lighter packing needs.

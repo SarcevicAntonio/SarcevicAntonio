@@ -107,12 +107,13 @@
 <Notifications position="top" />
 
 <style>
-	@import '@fontsource/roboto';
+	@import '@fontsource/roboto/400.css';
+	@import '@fontsource/roboto/700.css';
+
 	article,
 	section {
 		margin: auto;
 		max-width: 50rem;
-		font-family: 'Roboto', sans-serif;
 	}
 
 	h1 {
@@ -155,6 +156,8 @@
 	}
 
 	article {
+		font-family: 'Roboto', sans-serif;
+
 		& :global(img) {
 			max-width: calc(100% + 2rem);
 			margin-inline: -1rem;

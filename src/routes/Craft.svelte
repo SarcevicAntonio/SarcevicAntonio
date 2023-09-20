@@ -17,7 +17,7 @@
 	import SimpleIconsVuedotjs from '~icons/simple-icons/vuedotjs'
 	import SimpleIconsNodedotjs from '~icons/simple-icons/nodedotjs'
 	import SimpleIconsPython from '~icons/simple-icons/python'
-	import SimpleIconsJava from '~icons/simple-icons/java'
+	import SimpleIconsJava from '~icons/cib/java'
 	import SimpleIconsCsharp from '~icons/simple-icons/csharp'
 	// import MaterialSymbolsDocs from '~icons/material-symbols/docs'
 	import { differenceInYears } from 'date-fns'

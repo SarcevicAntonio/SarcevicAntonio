@@ -3,24 +3,24 @@ title: Antonio Sarcevic uses...
 summary: What I'm using
 ---
 
-## Coding Setup
+## Coding
 
 I use **Visual Studio Code** as my code editor, terminal emulator, git ui and even rest client via the [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) extension. It's nice having everything in one place. I might end up learning vim one day and moving more to the terminal, but not yet.
 
 For added flair I'm using a fork of [Vitesse Theme](https://marketplace.visualstudio.com/items?itemName=antfu.theme-vitesse) called [**Sveltesse Theme**](https://marketplace.visualstudio.com/items?itemName=AntonioSarcevic.theme-sveltesse) with a more orange color palette.<br>
-Current **Font Stack** is `Iosevka Extended, JetBrains Mono, Input Mono, IBM Plex, Fira Code, Roboto Mono, Menlo, Monaco, 'Courier New', monospace"`
+My current Monospace Font is [**Iosevka Extended**](https://github.com/be5invis/Iosevka).
 
-Here are **3 random Extensions I could not live without**: [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker), [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) and [Svelte 3 Snippets](https://marketplace.visualstudio.com/items?itemName=fivethree.vscode-svelte-snippets).
+Here are 3 random Extensions I could not live without: [**Code Spell Checker**](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker), [**Git Graph**](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) and [**Svelte 3 Snippets**](https://marketplace.visualstudio.com/items?itemName=fivethree.vscode-svelte-snippets).
 
 To make the terminal less scary, I like to use [**Fig**](https://fig.io/), which brings Intellisense-style autocompletion to any terminal.
 
-My laptop is a **MacBook Pro**, and at my desk I use a single **Dell S3222DGM** 32-inch 1440p display. My keyboard is a [**Keychron K8**](https://www.keychron.com/pages/keychron-k8-wireless-mechanical-keyboard) with RGB backlight, aluminium frame and hot-swappable Gateron Red switches and my mouse a [**Logitech MX Vertical**](https://www.logitech.com/de-de/products/mice/mx-vertical-ergonomic-mouse.910-005448.html). I sit on a [**Ergotopia NextBack**](https://www.ergotopia.de/ergonomie-shop/gesund-sitzen/ergonomischer-buerostuhl/nextback-mit-kopfstuetze).
+My laptop is a **MacBook Pro**, and at my [**IKEA BEKANT**](https://www.ikea.com/de/de/p/bekant-schreibtisch-weiss-s19022808/) standing desk I use a single [**Dell S3222DGM**](https://www.dell.com/de-de/shop/geschwungener-dell-8128-cm-32-gaming-monitor-s3222dgm/apd/210-azzh/monitore-und-monitorzubeh%C3%B6r) 32-inch 1440p display. My keyboard is a [**Keychron K8**](https://www.keychron.com/pages/keychron-k8-wireless-mechanical-keyboard) with RGB backlight, aluminium frame and hot-swappable Gateron Red switches and my mouse a [**Logitech MX Vertical**](https://www.logitech.com/de-de/products/mice/mx-vertical-ergonomic-mouse.910-005448.html). I sit on a [**Ergotopia NextBack**](https://www.ergotopia.de/ergonomie-shop/gesund-sitzen/ergonomischer-buerostuhl/nextback-mit-kopfstuetze).
 
 ## Software
 
 I'm using **Google Chrome** as my coding and main browser. I try to switch to a different Browser, be it Firefox, Opera, Brave or Arc, I've always gone back after a day or two.
 
-That might be because I'm deeply entrenched in the Google ecosystem. **Calendar**, **Gmail** and **Keep** I use ever day, while **Photos**, **Drive**, **Docs** and **Sheets** are my go to apps for those use cases.
+That might be because I'm deeply entrenched in the **Google** ecosystem. **Calendar**, **Gmail** and **Keep** I use ever day, while **Photos**, **Drive**, **Docs** and **Sheets** are my go to apps for those use cases.
 
 I use [**Obsidian**](https://obsidian.md/) as a habit tracker, journal, and task list app. While I'm not 100% happy with the setup, it get's the job done pretty well. I also use it for writing on occasion.
 
@@ -30,19 +30,19 @@ I'm using [**Raycast**](https://www.raycast.com/) for launching apps, quickly se
 
 ## Phone
 
-Like I said I'm firmly in the grasp of Google and so I'm currently rocking a **Pixel 5**. It's screen has been repaired two times since I owned it and it's generally starting to show it's age, especially the battery, so I'm looking to upgrade soon. Maybe I should get a **Fairphone 5** already, but I feel thats too big of a phone. I'm looking to get a **Pixel 8** when it comes out, but I'm also eying the **ASUS Zenfone 10** for it's compact size.
+Like I said I'm firmly in the grasp of Google and so I'm currently rocking a black [**Pixel 5**](https://web.archive.org/web/20201001001543/https://store.google.com/product/pixel_5). It's screen has been repaired two times since I owned it and it's generally starting to show it's age, especially the battery, so I'm looking to upgrade soon. Since I'm so good at smashing my phones I should probably get a [**Fairphone 5**](https://shop.fairphone.com/de/fairphone-5) already, but I feel thats too big of a phone. I'm looking to get a **Pixel 8** when it comes out, but I'm also eying the [**ASUS Zenfone 10**](https://www.asus.com/de/mobile-handhelds/phones/zenfone/zenfone-10/) for it's compact size.
 
 ## Music
 
-I _love_ music. I primarily listen to music on **Spotify**, because convenience, but I do have a sizable collection of **CDs**, **vinyl** and **digitally bought MP3s**. To rip the CDs and manage MP3s I use use [**MusicBee**](https://www.getmusicbee.com/), which is the best iTunes 9 replacement ever, but sadly Windows only. [**Oto Music**](https://play.google.com/store/apps/details?id=com.piyush.music&hl=de&gl=US) is my MP3 player android app of choice for on the go offline music sessions. I spin my vinyl on a **Audio Technica AT-LP120-USB**. To track my listening habits I use [**last.fm**](https://www.last.fm/user/LinkPlay9), but the Spotify integration has been pretty rocky these past months...
+I _love_ music. I primarily listen to music on **Spotify**, because convenience, but I do have a sizable collection of **CDs**, **vinyl** and **digitally bought MP3s**. To rip the CDs and manage MP3s I use use [**MusicBee**](https://www.getmusicbee.com/), which is the best iTunes 9 replacement ever, but sadly Windows only. [**Oto Music**](https://play.google.com/store/apps/details?id=com.piyush.music&hl=de&gl=US) is my MP3 player android app of choice for on the go offline music sessions. I spin my vinyl on a [**Audio Technica AT-LP120-USB**](https://www.amazon.de/Audio-Technica-ATLP120-USB-AT-LP120-USBC-Plattenspieler/dp/B002S1CJ2Q). To track my listening habits I use [**last.fm**](https://www.last.fm/user/LinkPlay9), but the Spotify integration has been pretty rocky these past months...
 
-For listening I use a **Sennheiser Game One** headset at my desk. Otherwise, it's either my **Sony WH-1000XM3** over-ear headphones, or **Sony WF-1000XM3** earbuds. Great names Sony BTW, so easy to differentiate in bluetooth menus, yes yes very fun.
+For listening I use a [**Sennheiser Game One**](https://geizhals.de/epos-sennheiser-g4me-one-schwarz-1000236-a2336590.html) headset at my desk. Otherwise, it's either my [**Sony WH-1000XM3**](https://www.sony.de/electronics/kopfband-kopfhoerer/wh-1000xm3) over-ear headphones, or [**Sony WF-1000XM3**](https://www.sony.de/electronics/truly-wireless/wf-1000xm3) earbuds. Great names Sony BTW, so easy to differentiate in bluetooth menus, yes yes very fun.
 
-## Gaming
+## Video Games
 
-I have a [**custom gaming PC**](https://pcpartpicker.com/user/LinkPlay9/saved/ZDzZLk) that I _Ship of Theseus'd_ since 2011. It used to be my all around computer, but now it's hooked up only to my TV and auto-launches Steam into Big Picture Mode for the occasional gaming session. I also love to play on my **Steam Deck** and the occasional Nintendo exclusive on my **Switch**. I also have a PlayStation 2, Wii and Wii U hooked up for some retro gaming.
+I have a [**custom gaming PC**](https://pcpartpicker.com/user/LinkPlay9/saved/ZDzZLk) that I _Ship of Theseus'd_ since 2011. It used to be my all around computer, but now it's hooked up only to my TV and auto-launches Steam into Big Picture Mode for the occasional gaming session. I also love to play on my **Steam Deck** and the occasional Nintendo exclusive on my **Switch**. I also have a **PlayStation 2**, **Wii** and **Wii U** hooked up for some retro gaming.
 
-## Fingerboarding
+## Fingerboard
 
 I have multiple fingerboard setups, but my main one is a Yellowood 34cm with colored wood design, Chrome/Tiffany X5 Ytrucks and Ywheels Y4 DualGreen Asymmetric shape.
 

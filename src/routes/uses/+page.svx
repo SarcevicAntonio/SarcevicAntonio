@@ -1,0 +1,23 @@
+---
+title: Antonio Sarcevic uses...
+summary: What I'm using
+---
+
+## Computer
+
+### Coding Setup
+
+I use **Visual Studio Code** as my code editor, terminal emulator, git ui and even rest client via the [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) extension. It's nice having everything in one place. I might end up learning vim one day and moving more to the terminal, but not yet.
+
+For added flair I'm using a fork of [Vitesse Theme](https://marketplace.visualstudio.com/items?itemName=antfu.theme-vitesse) called [**Sveltesse Theme**](https://marketplace.visualstudio.com/items?itemName=AntonioSarcevic.theme-sveltesse) with a more orange color palette.<br>
+Current **Font Stack** is `Iosevka Extended, JetBrains Mono, Input Mono, IBM Plex, Fira Code, Roboto Mono, Menlo, Monaco, 'Courier New', monospace"`
+
+Here are **3 random Extensions I could not live without**: [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker), [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) and [Svelte 3 Snippets](https://marketplace.visualstudio.com/items?itemName=fivethree.vscode-svelte-snippets).
+
+To make the terminal less scary, I like to use [**Fig**](https://fig.io/), which brings Intellisense-style autocompletion to any terminal.
+
+## Other Software
+
+I'm using **Google Chrome** as my coding and main browser. I'm deeply entrenched in the Google ecosystem and every time I try to switch to a different Browser, be it Firefox, Opera, Brave or Arc, I've always gone back after a day or two.
+
+To make macOS usable, I need [**AltTab**](https://alt-tab-macos.netlify.app/), [**Raycast**](https://www.raycast.com/) and [**LinearMouse**](https://linearmouse.app/de-DE/) installed. I'm using **Raycast** for launching apps, quickly searching the web, window management, clipboard history, keeping on track of my schedule, and thats just the build in stuff. Some useful extensions I want to list are are [Pomodoro](https://www.raycast.com/asubbotin/pomodoro) (which I abuse as a sit/stand timer), [HTTP Status Codes](https://www.raycast.com/Alex/http-status-codes), [Port Manager](https://www.raycast.com/lucaschultz/port-manager) and [Kill Process](https://www.raycast.com/rolandleth/kill-process). Integrations like [Spotify](https://www.raycast.com/mattisssa/spotify-player), [Bitwarden](https://www.raycast.com/jomifepe/bitwarden), [Authy](https://www.raycast.com/guga4ka/authy) and [Linear](https://www.raycast.com/linear/linear) are super helpful as well!

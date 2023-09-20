@@ -3,6 +3,8 @@ title: Antonio Sarcevic uses...
 summary: What I'm using
 ---
 
+This is my [uses.tech](https://uses.tech/) page. Enjoy! 🌸
+
 ## Coding
 
 I use **Visual Studio Code** as my code editor, terminal emulator, git ui and even rest client via the [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) extension. It's nice having everything in one place. I might end up learning vim one day and moving more to the terminal, but not yet.

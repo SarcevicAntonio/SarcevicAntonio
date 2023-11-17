@@ -113,7 +113,7 @@
 	article,
 	section {
 		margin: auto;
-		max-width: 50rem;
+		max-width: var(--content-width);
 	}
 
 	h1 {

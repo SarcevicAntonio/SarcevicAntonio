@@ -29,7 +29,9 @@ const mdsvex_config = {
 					{
 						type: 'element',
 						tagName: 'span',
-						properties: {},
+						properties: {
+							title: 'link to this header',
+						},
 						children: [{ type: 'text', value: '#' }],
 					},
 				],

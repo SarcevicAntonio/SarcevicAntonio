@@ -9,6 +9,9 @@
 	--as-notification--btn-background: var(--as-back-2);
 	--as-notification--btn-border: none;
 	--as-notification-padding: 0.5rem;
+	--content-width: 60rem;
+
+	--display-font: 'Staatliches', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 *:focus {
@@ -43,7 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Staatliches', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-family: var(--display-font);
 	font-weight: 400;
 	scroll-margin-block-start: 1em;
 }
@@ -66,16 +69,14 @@ pre {
 }
 
 .autolink-header {
-	color: var(--as-text-2);
+	color: var(--as-text-3);
 	font-size: 0.8em;
 	padding-inline-end: 0.2em;
 	margin-inline-start: -1ch;
-	vertical-align: baseline;
-	text-decoration: none;
+	vertical-align: 0.2em;
 	&:hover,
 	&:focus {
 		color: var(--as-text-1);
-		text-decoration: underline;
 	}
 }
 

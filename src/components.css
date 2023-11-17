@@ -1,11 +1,5 @@
 .arrow-link {
 	color: inherit;
-	text-decoration: none;
-
-	&:hover,
-	&:focus {
-		text-decoration: underline;
-	}
 
 	& svg {
 		vertical-align: sub;

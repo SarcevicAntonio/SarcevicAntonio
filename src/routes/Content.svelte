@@ -5,6 +5,7 @@
 	import MaterialSymbolsDocs from '~icons/material-symbols/docs'
 	import MaterialSymbolsLink from '~icons/material-symbols/link'
 	import YouTube from '~icons/simple-icons/youtube'
+	import MaterialSymbolsOpenInNewRounded from '~icons/material-symbols/open-in-new-rounded'
 
 	export let content: (BlogMetadata | Appearance)[]
 </script>
@@ -22,7 +23,16 @@
 			<a {href}>
 				<h3>
 					{title}
-					{#if lang === 'DE'} 🇩🇪 {/if}
+					<span class="detail">
+						{#if lang === 'DE'}
+							<span class="screen-reader-only"> (Content In German Language) </span>
+							<span aria-hidden="true"> 🇩🇪 </span>
+						{/if}
+						{#if type === 'appearance'}
+							<span class="screen-reader-only"> External Link </span>
+							<MaterialSymbolsOpenInNewRounded aria-hidden="true" />
+						{/if}
+					</span>
 				</h3>
 				{#if summary}
 					<p>{summary}</p>
@@ -53,9 +63,13 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: baseline;
-		max-width: 75rem;
+		max-width: var(--content-width);
 		margin: auto;
 		margin-block-end: 0.25em;
+	}
+	.detail {
+		font-size: 0.4em;
+		vertical-align: 0.8em;
 	}
 
 	h2 {
@@ -97,11 +111,11 @@
 	}
 
 	li:first-child {
-		margin-inline-start: max(calc(50vw - 38rem), 1rem);
+		margin-inline-start: max(calc(50vw - 30rem), 1rem);
 	}
 
 	li:last-child {
-		margin-inline-end: max(calc(50vw - 38rem), 1rem);
+		margin-inline-end: max(calc(50vw - 30rem), 1rem);
 	}
 
 	h3 {
@@ -115,9 +129,10 @@
 	}
 
 	.meta {
+		display: flex;
+		justify-content: space-between;
 		margin-block-start: auto;
 		margin-block-end: 0;
-		text-align: end;
 	}
 
 	.header a :global(svg),

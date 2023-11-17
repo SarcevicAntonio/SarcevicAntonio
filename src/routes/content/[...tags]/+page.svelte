@@ -5,6 +5,7 @@
 	import MaterialSymbolsDocs from '~icons/material-symbols/docs'
 	import MaterialSymbolsLink from '~icons/material-symbols/link'
 	import YouTube from '~icons/simple-icons/youtube'
+	import MaterialSymbolsOpenInNewRounded from '~icons/material-symbols/open-in-new-rounded'
 
 	export let data
 
@@ -55,7 +56,16 @@
 				<a {href}>
 					<h2>
 						{title}
-						{#if lang === 'DE'} 🇩🇪 {/if}
+						<span class="detail">
+							{#if lang === 'DE'}
+								<span class="screen-reader-only"> (Content In German Language) </span>
+								<span aria-hidden="true"> 🇩🇪 </span>
+							{/if}
+							{#if type === 'appearance'}
+								<span class="screen-reader-only"> External Link </span>
+								<MaterialSymbolsOpenInNewRounded aria-hidden="true" />
+							{/if}
+						</span>
 					</h2>
 					{#if summary}
 						<p>{summary}</p>
@@ -96,6 +106,11 @@
 		list-style: none;
 	}
 
+	.detail {
+		font-size: 0.4em;
+		vertical-align: 0.8em;
+	}
+
 	.tags {
 		text-align: center;
 		& ul {
@@ -119,7 +134,7 @@
 
 	.posts {
 		& ul {
-			max-width: 50rem;
+			max-width: var(--content-width);
 			margin-inline: auto;
 			margin-block: 2em;
 		}

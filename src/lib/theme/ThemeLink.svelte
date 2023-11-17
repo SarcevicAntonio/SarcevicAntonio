@@ -33,22 +33,22 @@
 	}
 </script>
 
-<a href="{href}?redirect={$page.url.pathname}" {title} on:click|preventDefault={enhance}>
-	<svelte:component this={icon} aria-hidden="true" />
-</a>
+<li>
+	<a href="{href}?redirect={$page.url.pathname}" {title} on:click|preventDefault={enhance}>
+		<svelte:component this={icon} aria-hidden="true" />
+	</a>
+</li>
 
 <style>
 	a {
-		padding-inline: 0.15rem;
+		padding: 0.5em 1.5em;
+		display: block;
 		color: var(--as-text-2);
+		font-family: var(--display-font);
 
-		&:hover,
-		&:focus {
+		&:hover {
+			background: var(--as-back-2);
 			color: var(--as-text-1);
-		}
-
-		& :global(svg) {
-			vertical-align: sub;
 		}
 	}
 </style>

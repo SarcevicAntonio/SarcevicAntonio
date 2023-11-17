@@ -8,7 +8,7 @@
 
 	export let data
 
-	$: filter_tag = $page.url.searchParams.get('tags')
+	$: filter_tag = $page.params.tags
 </script>
 
 <svelte:head>
@@ -39,7 +39,7 @@
 		<ul>
 			{#each [...data.all_tags] as tag}
 				<li aria-current={filter_tag === tag}>
-					<a href="/content?tags={tag}">
+					<a href="/content/{tag}">
 						#{tag}
 					</a>
 				</li>

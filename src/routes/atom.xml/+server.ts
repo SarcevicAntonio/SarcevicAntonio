@@ -28,7 +28,7 @@ function get_feed(content: BlogMetadata[], all_tags: string[]): BodyInit | null 
         <name> <![CDATA[ Antonio Sarcevic ]]> </name>
     </author>
 ${all_tags
-	.map((tag) => /*XML*/ `    <category term="${tag}" scheme="${domain}/?tags=${encodeURI(tag)}"/>`)
+	.map((tag) => /*XML*/ `    <category term="${tag}" scheme="${domain}/content/${encodeURI(tag)}"/>`)
 	.join('\n')}
 ${content.map(
 	(post) => /*XML*/ `    <entry>
@@ -43,7 +43,7 @@ ${content.map(
         </content>
     ${post.tags
 			?.map(
-				(tag) => /*XML*/ `<category term="${tag}" scheme="${domain}/?tags=${encodeURI(tag)}" />`
+				(tag) => /*XML*/ `<category term="${tag}" scheme="${domain}/content/${encodeURI(tag)}" />`
 			)
 			.join('')}
     </entry>`

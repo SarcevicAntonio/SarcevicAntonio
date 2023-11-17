@@ -7,7 +7,8 @@ export async function load({ locals, fetch }) {
 	const apperances = await get_all_appearances()
 	return {
 		theme: locals.theme,
-		content: [...blog_posts, ...apperances].sort(by_published),
+		posts: blog_posts.sort(by_published),
+		apperances: apperances.sort(by_published),
 		lastfm_data,
 	}
 }

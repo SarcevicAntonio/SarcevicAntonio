@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { reformat_date_string } from '$lib/date_helpers'
 	import type { Appearance, BlogMetadata } from '$lib/server/posts'
-	import MaterialSymbolsArrowForwardRounded from '~icons/material-symbols/arrow-forward-rounded'
 	import MaterialSymbolsDocs from '~icons/material-symbols/docs'
 	import MaterialSymbolsLink from '~icons/material-symbols/link'
 	import YouTube from '~icons/simple-icons/youtube'
@@ -10,12 +9,7 @@
 	export let content: (BlogMetadata | Appearance)[]
 </script>
 
-<div class="header">
-	<h2>Content and Appearances</h2>
-	<a href="/content" class="arrow-link end">
-		/content<MaterialSymbolsArrowForwardRounded />
-	</a>
-</div>
+<div class="header"><slot /></div>
 
 <ul class="scroller">
 	{#each content as { title, summary, href, published, lang, type }}

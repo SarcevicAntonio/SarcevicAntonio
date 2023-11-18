@@ -41,7 +41,7 @@
 
 <style>
 	a {
-		padding: 0.5em 1.5em;
+		padding: 0.5em;
 		display: block;
 		color: var(--as-text-2);
 		font-family: var(--display-font);

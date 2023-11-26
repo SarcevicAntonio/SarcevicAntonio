@@ -21,7 +21,7 @@
 	$: is_index = $page.url.pathname === '/'
 </script>
 
-<header style:--opacity={is_index ? scroll_y / (inner_height / 3) - 2 : 1}>
+<header>
 	<div class="container">
 		<nav>
 			<ul>
@@ -64,15 +64,13 @@
 <style>
 	header {
 		position: sticky;
-		z-index: 1;
+		z-index: 3;
 		top: 0;
 		background-color: var(--as-back-1);
 		margin-inline: -1rem;
 		font-size: 1.5rem;
 		opacity: var(--opacity);
-
 	}
-
 
 	header:focus-within {
 		opacity: 1;
@@ -81,7 +79,6 @@
 		max-width: var(--content-width);
 		margin: auto;
 	}
-
 
 	nav ul {
 		list-style: none;

@@ -3,24 +3,28 @@
 @import '@fontsource/staatliches';
 @import 'globals.css';
 
+:root {
+	--hue: 122;
+	--as-accent: oklch(92% 0.27 var(--hue));
+}
+
 :root,
 html[data-theme='light'] {
-	--as-back-1: oklch(0.97 0 0);
-	--as-back-2: oklab(0.92 0 0);
-	--as-text-1: oklch(0.3 0 0);
-	--as-text-2: oklab(0.46 0 0);
-	--as-text-3: oklab(0.6 0 0);
-	--as-accent: oklab(0.92 -0.16 0.22);
+	--as-back-1: oklch(97% 0.05 var(--hue));
+	--as-back-2: oklch(92% 0.08 var(--hue));
+	--as-text-1: oklch(20% 0.22 var(--hue));
+	--as-text-2: oklch(40% 0.3 var(--hue));
+	--as-text-3: oklch(32% 0.41 var(--hue));
+	--as-accent: oklch(92% 0.27 var(--hue));
 	color-scheme: light;
 }
 
 @define-mixin theme-dark {
-	--as-back-1: oklch(0.3 0 0);
-	--as-back-2: oklab(0.46 0 0);
-	--as-text-1: oklch(0.97 0 0);
-	--as-text-2: oklab(0.92 0 0);
-	--as-text-3: oklab(0.8 0 0);
-	--as-accent: oklch(0.56 0.3 298.26);
+	--as-back-1: oklch(20% 0.22 var(--hue));
+	--as-back-2: oklch(40% 0.3 var(--hue));
+	--as-text-1: oklch(97% 0.05 var(--hue));
+	--as-text-2: oklch(92% 0.08 var(--hue));
+	--as-text-3: oklch(73% 0.08 var(--hue));
 	color-scheme: dark;
 }
 @media (prefers-color-scheme: dark) {

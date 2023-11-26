@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { prefers_reduced_motion } from '$lib/reduced_motion'
 	import { onMount } from 'svelte'
-	import { quintOut } from 'svelte/easing'
 	import { draw, fade } from 'svelte/transition'
 	import PajamasScrollDown from '~icons/pajamas/scroll-down'
 
@@ -28,51 +27,19 @@
 				alt="Antonio Sarcevic in a blue shirt, grey hoodie and green cap"
 			/>
 		</div>
-		<div class="text-container">
-			<div class="text">
-				<h1>
-					<span class="first-name">Antonio</span>
-					<span class="last-name">Sarcevic</span>
-				</h1>
-				<p class="tagline">excited by&nbsp;ui development</p>
+		<div class="text">
+			<h1>
+				<span class="first-name">Antonio</span>
+				<span class="last-name">Sarcevic</span>
+			</h1>
+			<p class="tagline">excited by&nbsp;ui development</p>
+			<div class="bars">
+				<div />
+				<div />
+				<div />
+				<div />
+				<div />
 			</div>
-			<svg
-				aria-hidden="true"
-				class="line"
-				width="100%"
-				height="100%"
-				viewBox="0 0 548 301"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				{#if visible}
-					<path
-						in:transition={{ duration: 2000, easing: quintOut }}
-						d="M14 287C127.5 -104 564 311 532.5 14"
-						stroke="currentColor"
-						stroke-width="1rem"
-						stroke-linecap="round"
-					/>
-				{/if}
-			</svg>
-			<noscript>
-				<svg
-					aria-hidden="true"
-					class="line"
-					width="100%"
-					height="100%"
-					viewBox="0 0 548 301"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						d="M14 287C127.5 -104 564 311 532.5 14"
-						stroke="currentColor"
-						stroke-width="1rem"
-						stroke-linecap="round"
-					/>
-				</svg>
-			</noscript>
 		</div>
 	</section>
 	<a
@@ -130,10 +97,6 @@
 		z-index: 2;
 	}
 
-	.text-container {
-		position: relative;
-	}
-
 	h1,
 	.tagline {
 		margin: 0;
@@ -158,21 +121,54 @@
 		margin-inline-start: 0.5em;
 	}
 
-	.line {
-		position: absolute;
-		inset-block-end: -25%;
-		inset-inline-start: -10%;
-		color: var(--as-accent);
-	}
-
 	@media (prefers-contrast: more) {
-		.line {
-			color: var(--as-back-2);
-		}
-
 		.scroll-indicator {
 			color: var(--as-text-1);
 			opacity: 1;
+		}
+	}
+
+	.bars {
+		display: flex;
+		width: min-content;
+		margin-inline-start: 0.5em;
+		margin-block-start: 0.25em;
+	}
+
+	.bars div {
+		height: 0.45em;
+		width: 1.75em;
+
+		&:nth-child(1) {
+			background-color: var(--as-accent);
+		}
+		&:nth-child(2) {
+			background-color: var(--as-back-2);
+		}
+		&:nth-child(3) {
+			background-color: var(--as-text-1);
+		}
+
+		&:nth-child(4) {
+			background-color: var(--as-text-2);
+		}
+		&:nth-child(5) {
+			background-color: var(--as-text-3);
+		}
+	}
+
+	.image:hover ~ .text .bars div {
+		&:nth-child(1),
+		&:nth-child(2) {
+			background-color: #d60270;
+		}
+		&:nth-child(3) {
+			background-color: #734f96;
+		}
+
+		&:nth-child(4),
+		&:nth-child(5) {
+			background-color: #0038a8;
 		}
 	}
 
@@ -194,9 +190,8 @@
 		h1 {
 			align-items: center;
 		}
-		.line {
-			inset: 0;
-			inset-block-start: -50%;
+		.bars {
+			margin-inline: auto;
 		}
 	}
 </style>

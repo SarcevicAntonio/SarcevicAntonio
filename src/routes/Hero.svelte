@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { prefers_reduced_motion } from '$lib/reduced_motion'
-	import { onMount } from 'svelte'
+	import { getContext, onMount } from 'svelte'
 	import { draw, fade } from 'svelte/transition'
 	import PajamasScrollDown from '~icons/pajamas/scroll-down'
 
@@ -11,14 +11,14 @@
 
 	let scroll_y: number
 	let inner_height: number
-
+	const { clicked } = getContext('pride')
 	$: transition = $prefers_reduced_motion ? fade : draw
 </script>
 
 <svelte:window bind:scrollY={scroll_y} bind:innerHeight={inner_height} />
 
 <div class="hero">
-	<section>
+	<section on:click={clicked.toggle} on:keypress class:clicked={$clicked}>
 		<div class="image">
 			<img
 				width="448px"
@@ -157,7 +157,11 @@
 		}
 	}
 
-	.image:hover ~ .text .bars div {
+	section.clicked img {
+		background-image: var(--pride-gradient);
+	}
+
+	section.clicked .text .bars div {
 		&:nth-child(1),
 		&:nth-child(2) {
 			background-color: #d60270;

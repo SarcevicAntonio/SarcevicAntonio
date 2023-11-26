@@ -2,12 +2,13 @@
 	import { browser, dev } from '$app/environment'
 	import { page } from '$app/stores'
 	import ThemeLink from '$lib/theme/ThemeLink.svelte'
-	import { onMount } from 'svelte'
+	import { onMount, setContext } from 'svelte'
 	import '../app.postcss'
 	import Footer from './Footer.svelte'
 	import Logo from './Logo.svelte'
 
 	import { current_theme, os_theme_preference } from '$lib/theme'
+	import { writable } from 'svelte/store'
 
 	$current_theme = $page.data.theme
 
@@ -19,6 +20,13 @@
 	})
 	let scroll_y, inner_height
 	$: is_index = $page.url.pathname === '/'
+
+	const clicked = writable(false)
+	clicked.toggle = () => ($clicked = !$clicked)
+
+	setContext('pride', {
+		clicked,
+	})
 </script>
 
 <header>
@@ -26,12 +34,19 @@
 		<nav>
 			<ul>
 				<li>
-					<a href="/"><Logo /></a>
+					<a
+						href="/"
+						on:click={() => {
+							if (scroll_y === 0) clicked.toggle()
+						}}
+					>
+						<Logo />
+					</a>
 				</li>
 				<li>
 					<a href="/content"> stuff </a>
 				</li>
-				<li>
+				<li class="hide-on-mobile">
 					<a href="https://www.youtube.com/@SarcevicAntonio"> youtube </a>
 				</li>
 
@@ -114,5 +129,11 @@
 
 	nav :global(svg) {
 		vertical-align: -0.3em;
+	}
+
+	@media only screen and (max-width: 520px) {
+		.hide-on-mobile {
+			display: none;
+		}
 	}
 </style>

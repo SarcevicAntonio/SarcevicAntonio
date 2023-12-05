@@ -1,14 +1,13 @@
-<script>
+<script lang="ts">
 	import { browser, dev } from '$app/environment'
 	import { page } from '$app/stores'
+	import { current_theme, os_theme_preference } from '$lib/theme'
 	import ThemeLink from '$lib/theme/ThemeLink.svelte'
 	import { onMount, setContext } from 'svelte'
+	import { writable, type Writable } from 'svelte/store'
 	import '../app.postcss'
 	import Footer from './Footer.svelte'
 	import Logo from './Logo.svelte'
-
-	import { current_theme, os_theme_preference } from '$lib/theme'
-	import { writable } from 'svelte/store'
 
 	$current_theme = $page.data.theme
 
@@ -18,10 +17,10 @@
 			navigator.serviceWorker.register('/sw.js')
 		}
 	})
-	let scroll_y, inner_height
+	let scroll_y: number
 	$: is_index = $page.url.pathname === '/'
 
-	const clicked = writable(false)
+	const clicked = writable(false) as Writable<boolean> & { toggle: () => void }
 	clicked.toggle = () => ($clicked = !$clicked)
 
 	setContext('pride', {
@@ -37,7 +36,7 @@
 					<a
 						href="/"
 						on:click={() => {
-							if (scroll_y === 0) clicked.toggle()
+							if (scroll_y === 0 && is_index) clicked.toggle()
 						}}
 					>
 						<Logo />
@@ -68,7 +67,7 @@
 	</div>
 </header>
 
-<svelte:window bind:scrollY={scroll_y} bind:innerHeight={inner_height} />
+<svelte:window bind:scrollY={scroll_y} />
 
 <main>
 	<slot />

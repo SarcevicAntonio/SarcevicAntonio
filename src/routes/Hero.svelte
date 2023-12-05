@@ -157,9 +157,9 @@
 		}
 	}
 
-	section.clicked img {
+	/* section.clicked img {
 		background-image: var(--pride-gradient);
-	}
+	} */
 
 	section.clicked .text .bars div {
 		&:nth-child(1),

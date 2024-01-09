@@ -1,6 +1,6 @@
 # [Antonio Sarcevic](https://www.sarcevic.dev/)
 
-Pronouns: He/Him
+Pronouns: he/they
 
 Loves to craft User Experiences in Svelte with semantic HTML, TypeScript and plain CSS.
 

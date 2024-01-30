@@ -3,7 +3,7 @@ title: Create an offline-first and installable PWA with SvelteKit and workbox-pr
 summary: |
   ✈️ How to create an offline-first and installable Progressive Web App using SvelteKit and Workbox precaching with just 34 lines of code.
 published: 2022-11-21
-updated: 2023-06-04
+updated: 2024-01-30
 tags:
   - guide
   - svelte
@@ -12,10 +12,6 @@ tags:
 <script>
   import Callout from "$lib/Callout.svelte"
 </script>
-
-## Table Of Contents
-
-## Intro
 
 <Callout title="Like video tutorials better?">
 
@@ -30,6 +26,8 @@ In this guide we will create an offline-first and installable Progressive Web Ap
 You need to have a SvelteKit compatible JavaScript runtime like Node.js (>= 16) installed on your system.
 
 </Callout>
+
+## Table Of Contents
 
 ## Create a new SvelteKit app (optional)
 

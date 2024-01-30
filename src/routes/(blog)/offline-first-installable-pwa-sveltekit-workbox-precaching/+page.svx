@@ -15,6 +15,13 @@ tags:
 
 ## Table Of Contents
 
+<Callout title="Learn More">
+
+This blog post is also available in [video format on my YouTube channel](https://youtu.be/Enl4OPQ2OAM)!
+
+</Callout>
+
+
 In this guide we will create an offline-first and installable Progressive Web App using [SvelteKit](https://kit.svelte.dev/) and [`workbox-precaching`](https://developer.chrome.com/docs/workbox/modules/workbox-precaching/).
 
 <Callout type="warning" title="Requirements">

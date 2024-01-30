@@ -15,12 +15,13 @@ tags:
 
 ## Table Of Contents
 
-<Callout title="Learn More">
+## Intro
+
+<Callout title="Like video tutorials better?">
 
 This blog post is also available in [video format on my YouTube channel](https://youtu.be/Enl4OPQ2OAM)!
 
 </Callout>
-
 
 In this guide we will create an offline-first and installable Progressive Web App using [SvelteKit](https://kit.svelte.dev/) and [`workbox-precaching`](https://developer.chrome.com/docs/workbox/modules/workbox-precaching/).
 
@@ -116,24 +117,24 @@ Learn more about Web App Manifest: [developer.mozilla.org - Web app manifests](h
 
 ```json
 {
-  "name": "My offline App!",
-  "short_name": "my-offline-app",
-  "start_url": "/",
-  "display": "standalone",
-  "theme_color": "#ffffff",
-  "background_color": "#000000",
-  "icons": [
-    {
-      "sizes": "192x192",
-      "src": "icon192.png",
-      "type": "image/png"
-    },
-    {
-      "sizes": "512x512",
-      "src": "icon512.png",
-      "type": "image/png"
-    }
-  ]
+	"name": "My offline App!",
+	"short_name": "my-offline-app",
+	"start_url": "/",
+	"display": "standalone",
+	"theme_color": "#ffffff",
+	"background_color": "#000000",
+	"icons": [
+		{
+			"sizes": "192x192",
+			"src": "icon192.png",
+			"type": "image/png"
+		},
+		{
+			"sizes": "512x512",
+			"src": "icon512.png",
+			"type": "image/png"
+		}
+	]
 }
 ```
 
@@ -150,11 +151,11 @@ We also need to modify the head of our web app's entry HTML file, so the browser
 ```html
 <!-- ... -->
 <head>
-  <!-- ... -->
-  <!-- 👇 Add these three lines inside your head tag -->
-  <link rel="manifest" href="%sveltekit.assets%/manifest.json" />
-  <title>My Offline App!</title>
-  <link rel="icon" href="%sveltekit.assets%/icon.svg" />
+	<!-- ... -->
+	<!-- 👇 Add these three lines inside your head tag -->
+	<link rel="manifest" href="%sveltekit.assets%/manifest.json" />
+	<title>My Offline App!</title>
+	<link rel="icon" href="%sveltekit.assets%/icon.svg" />
 </head>
 <!-- ... -->
 ```
@@ -201,13 +202,9 @@ SvelteKit provides an easy way to get a list of every client file we need to sav
 import { build, files, prerendered, version } from '$service-worker'
 import { cleanupOutdatedCaches, precacheAndRoute } from 'workbox-precaching'
 
-const precache_list = [
-  ...build,
-  ...files,
-  ...prerendered
-].map(s => ({
-  url: s,
-  revision: version
+const precache_list = [...build, ...files, ...prerendered].map((s) => ({
+	url: s,
+	revision: version,
 }))
 
 precacheAndRoute(precache_list)
@@ -245,7 +242,6 @@ Since our start URL is going to be the root page, we will prerender this route. 
 export const prerender = true
 ```
 
-
 ## Our final PWA
 
 <Callout type="warning" title="Attention">
@@ -260,7 +256,6 @@ The installed application will appear in a separate window so it can be used out
 
 ![Web Application running in a separate window](./installed-app.png)
 To test how the app behaves offline you can switch to "Offline" inside the dropdown at the top of the Network tab. After a reload the app still loads because we can still use our precached files - even without a network connection.
-
 
 ![Chrome Devtools showing the 'Network' tab displaying the words (Service Worker) in the Size column of our resources](./offline-capable.png)
 You can see in the Size column of the Network tab that these files are being served by our Service Worker.

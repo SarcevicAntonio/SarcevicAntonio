@@ -113,7 +113,7 @@
 	}
 
 	.first-name {
-		margin-inline-start: -0.5em;
+		margin-inline-start: -0.25em;
 	}
 
 	.tagline {

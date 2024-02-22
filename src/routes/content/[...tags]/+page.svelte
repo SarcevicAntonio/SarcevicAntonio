@@ -37,7 +37,7 @@
 		</a>
 	{:else}
 		<p>filter by tag:</p>
-		<ul>
+		<ul class="tags">
 			{#each [...data.all_tags] as tag}
 				<li aria-current={filter_tag === tag}>
 					<a href="/content/{tag}">
@@ -100,6 +100,11 @@
 	h1 {
 		text-align: center;
 		font-size: var(--step-5);
+	}
+
+	.tags {
+		margin: auto;
+		max-width: var(--content-width);
 	}
 
 	ul {

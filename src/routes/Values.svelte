@@ -20,7 +20,7 @@
 	h2 {
 		font-size: var(--step-5);
 		text-align: center;
-		margin-block-end: 0.25em;
+		margin-block-end: 0.5em;
 	}
 
 	div :global(svg) {

@@ -20,7 +20,7 @@
 <ul class="scroller">
 	{#each content as { title, summary, href, published, lang, type }}
 		<li>
-			<a {href}>
+			<a {href} class:appearance={type === 'appearance'}>
 				<h3>
 					{title}
 					<span class="detail">
@@ -37,6 +37,8 @@
 				{#if summary}
 					<p>{summary}</p>
 				{/if}
+				<hr />
+
 				<p class="meta">
 					{reformat_date_string(published)}
 					{#if type === 'blog_post'}
@@ -85,20 +87,21 @@
 		margin: 0;
 		margin-inline: -1rem;
 		padding: 0;
-		padding-block-end: 1rem;
+		padding-block-start: 2rem;
+		padding-block-end: 4rem;
 		list-style: none;
 		display: flex;
 		overflow: auto;
-		gap: 1rem;
+		gap: 2rem;
 	}
 
 	li > a {
 		display: flex;
 		flex-direction: column;
-		width: min(23rem, calc(100vw - 6rem));
-		border: 0.25rem solid var(--as-text-1);
-		padding: 0.75rem 1rem;
-		height: calc(100% - 2rem);
+		width: 30ch;
+		border: 0.25rem solid var(--as-text-3);
+		padding: 2rem 2.5rem;
+		height: calc(100% - 4rem);
 		border-radius: 1rem;
 		color: inherit;
 		text-decoration: none;
@@ -126,13 +129,20 @@
 	p {
 		margin-block: 0.75rem;
 		font-size: var(--step-0);
+		color: var(--as-text-2);
+	}
+
+	hr {
+		width: 100%;
+		margin-block-start: auto;
+		margin-block-end: 0;
+		border-color: var(--as-back-2);
+		border-style: solid;
 	}
 
 	.meta {
 		display: flex;
 		justify-content: space-between;
-		margin-block-start: auto;
-		margin-block-end: 0;
 	}
 
 	.header a :global(svg),

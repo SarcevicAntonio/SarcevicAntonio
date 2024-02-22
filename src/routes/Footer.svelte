@@ -115,6 +115,8 @@
 		& hr {
 			margin: 0.5em;
 			margin-block: 0.25em;
+			border-color: var(--as-back-2);
+			border-style: solid;
 		}
 	}
 

@@ -20,7 +20,7 @@
 <ul class="scroller">
 	{#each content as { title, summary, href, published, lang, type }}
 		<li>
-			<a {href} class:appearance={type === 'appearance'}>
+			<a {href} class="content-box">
 				<h3>
 					{title}
 					<span class="detail">
@@ -36,9 +36,8 @@
 				</h3>
 				{#if summary}
 					<p>{summary}</p>
+					<hr />
 				{/if}
-				<hr />
-
 				<p class="meta">
 					{reformat_date_string(published)}
 					{#if type === 'blog_post'}
@@ -96,21 +95,8 @@
 	}
 
 	li > a {
-		display: flex;
-		flex-direction: column;
 		width: 30ch;
-		border: 0.25rem solid var(--as-text-3);
-		padding: 2rem 2.5rem;
 		height: calc(100% - 4rem);
-		border-radius: 1rem;
-		color: inherit;
-		text-decoration: none;
-		text-align: start;
-
-		&:hover > h3,
-		&:focus > h3 {
-			text-decoration: underline;
-		}
 	}
 
 	li:first-child {
@@ -126,23 +112,8 @@
 		margin-block: 0;
 	}
 
-	p {
-		margin-block: 0.75rem;
-		font-size: var(--step-0);
-		color: var(--as-text-2);
-	}
-
 	hr {
-		width: 100%;
 		margin-block-start: auto;
-		margin-block-end: 0;
-		border-color: var(--as-back-2);
-		border-style: solid;
-	}
-
-	.meta {
-		display: flex;
-		justify-content: space-between;
 	}
 
 	.header a :global(svg),

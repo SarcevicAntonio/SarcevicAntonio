@@ -53,7 +53,7 @@
 	<ul>
 		{#each data.content as { title, summary, href, published, lang, type }}
 			<li>
-				<a {href}>
+				<a {href} class="content-box">
 					<h2>
 						{title}
 						<span class="detail">
@@ -69,6 +69,7 @@
 					</h2>
 					{#if summary}
 						<p>{summary}</p>
+						<hr />
 					{/if}
 					<p class="meta">
 						{reformat_date_string(published)}
@@ -139,13 +140,10 @@
 			margin-block: 2em;
 		}
 
-		& ul > li > a {
-			display: block;
-			border: 0.25rem solid var(--as-text-1);
-			padding: 1rem;
-			border-radius: 1rem;
+		& ul > li {
 			margin-block-end: 2rem;
 		}
+
 		& a > h2 {
 			font-size: var(--step-3);
 			margin-block: 0.5em;

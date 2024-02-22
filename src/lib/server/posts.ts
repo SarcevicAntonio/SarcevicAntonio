@@ -73,13 +73,16 @@ export async function get_blog_posts(render = false) {
 }
 
 export async function get_all_tags(posts: (BlogMetadata | Appearance)[]) {
-	const all_tags = new Set<string>()
+	const all_tags: Record<string, number> = {}
 	posts.forEach(({ tags }) =>
 		tags.forEach((tag) => {
-			all_tags.add(tag)
+			all_tags[tag] = all_tags[tag] + 1 || 1
 		})
 	)
-	return [...all_tags]
+	console.log(all_tags)
+	return Object.entries(all_tags)
+		.sort(([tagA, a], [tagB, b]) => b - a)
+		.map(([tag]) => tag)
 }
 
 const domain_pattern = /^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/\n]+)/

@@ -146,7 +146,7 @@
 
 		& a > h2 {
 			font-size: var(--step-3);
-			margin-block: 0.5em;
+			margin-block: 0.25em;
 			text-align: center;
 			text-wrap: balance;
 		}

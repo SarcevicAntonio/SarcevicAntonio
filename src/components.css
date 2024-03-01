@@ -49,9 +49,14 @@
 		margin-block-end: 0;
 	}
 
-	&:hover > h3,
-	&:focus > h3 {
-		text-decoration: underline;
+	&:hover,
+	&:focus {
+		> h3 {
+			text-decoration: underline;
+		}
+		& hr {
+			border-color: var(--as-text-3);
+		}
 	}
 }
 

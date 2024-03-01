@@ -83,12 +83,8 @@
 		background-color: var(--as-back-1);
 		margin-inline: -1rem;
 		font-size: 1.5rem;
-		opacity: var(--opacity);
 	}
 
-	header:focus-within {
-		opacity: 1;
-	}
 	nav {
 		max-width: var(--content-width);
 		margin: auto;

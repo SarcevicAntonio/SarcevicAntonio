@@ -33,7 +33,7 @@
 			<span aria-hidden="true"> 💖 </span>
 			by Antonio Sarcevic.
 		</h2>
-		<p><a href="/">sarcevic.dev</a> is powered by the following dependencies:</p>
+		<p><a href="/" class="self-link">sarcevic.dev</a> is powered by the following dependencies:</p>
 		<ul class="credits">
 			{#each dependencies as dependency}
 				{@const link = dependency.link
@@ -90,6 +90,10 @@
 		}
 	}
 
+	a.self-link:not(:hover) {
+		text-decoration: underline dotted;
+	}
+
 	ul.links {
 		list-style: none;
 		display: flex;
@@ -128,11 +132,5 @@
 
 	.break {
 		display: contents;
-	}
-
-	.help {
-		cursor: help;
-		text-decoration: underline;
-		text-decoration-style: dotted;
 	}
 </style>

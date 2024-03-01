@@ -24,7 +24,7 @@
 				width="448px"
 				height="448px"
 				src="./toni-transparent.png"
-				alt="Antonio Sarcevic in a blue shirt, grey hoodie and green cap"
+				alt="Antonio Sarcevic in a green shirt, smiling and looking upward and to the right off camera"
 			/>
 		</div>
 		<div class="text">

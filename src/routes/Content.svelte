@@ -68,6 +68,7 @@
 		margin: auto;
 		margin-block-end: 0.25em;
 	}
+
 	.detail {
 		font-size: 0.4em;
 		vertical-align: 0.8em;
@@ -87,7 +88,7 @@
 		margin-inline: -1rem;
 		padding: 0;
 		padding-block-start: 2rem;
-		padding-block-end: 4rem;
+		padding-block-end: 3rem;
 		list-style: none;
 		display: flex;
 		overflow: auto;

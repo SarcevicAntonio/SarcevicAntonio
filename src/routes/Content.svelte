@@ -11,7 +11,7 @@
 </script>
 
 <div class="header">
-	<h2>Content and Appearances</h2>
+	<h2>Entries</h2>
 	<a href="/content" class="arrow-link end">
 		/content<MaterialSymbolsArrowForwardRounded />
 	</a>
@@ -84,6 +84,7 @@
 	}
 
 	ul.scroller {
+		scroll-snap-type: x mandatory;
 		margin: 0;
 		margin-inline: -1rem;
 		padding: 0;
@@ -95,8 +96,12 @@
 		gap: 2rem;
 	}
 
+	li {
+		scroll-snap-align: center;
+	}
+
 	li > a {
-		width: 30ch;
+		width: clamp(20ch, calc(100vw - 6.5rem), 40ch);
 		height: calc(100% - 4rem);
 	}
 

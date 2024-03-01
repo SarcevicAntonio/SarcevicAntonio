@@ -43,7 +43,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="/content"> stuff </a>
+					<a href="/content"> entries </a>
 				</li>
 				<li class="hide-on-mobile">
 					<a href="https://www.youtube.com/@SarcevicAntonio"> youtube </a>

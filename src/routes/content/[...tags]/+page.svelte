@@ -26,7 +26,7 @@
 	<MaterialSymbolsArrowBackRounded aria-hidden="true" />/
 </a>
 
-<h1>Content and Appearances</h1>
+<h1>Entries</h1>
 
 <section class="tags">
 	{#if filter_tag}

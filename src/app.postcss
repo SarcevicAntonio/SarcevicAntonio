@@ -2,6 +2,7 @@
 @import '@fontsource/space-mono/700.css';
 @import '@fontsource/staatliches';
 @import 'globals.css';
+@import './components.css';
 
 :root {
 	--hue: 122;
@@ -68,7 +69,16 @@ html[data-theme='dark'] {
 	--step-7: clamp(3.58rem, calc(1.9rem + 8.4vw), 8.41rem);
 }
 
-html,
-body {
-	margin: 0;
+:root {
+	--as-notification-color: var(--as-text-2);
+
+	--as-notification--info-background: var(--as-back-2);
+	--as-notification--info-border-color: var(--as-text-2);
+
+	--as-notification--btn-background: var(--as-back-2);
+	--as-notification--btn-border: none;
+	--as-notification-padding: 0.5rem;
+	--content-width: 60rem;
+
+	--display-font: 'Staatliches', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }

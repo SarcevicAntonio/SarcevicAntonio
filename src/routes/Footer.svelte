@@ -82,16 +82,6 @@
 
 	a {
 		color: inherit;
-
-		text-decoration: none;
-		&:focus,
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-
-	a.self-link:not(:hover) {
-		text-decoration: underline dotted;
 	}
 
 	ul.links {
@@ -128,6 +118,9 @@
 		padding-inline-start: 1.5rem;
 		overflow: auto;
 		margin-block-end: 5rem;
+		& a:not(:hover) {
+			text-decoration: none;
+		}
 	}
 
 	.break {

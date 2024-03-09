@@ -30,7 +30,6 @@ export const contact_links: Array<{
 	// 	icon: Twitter,
 	// 	href: 'https://twitter.com/SarcevicAntonio',
 	// },
-
 	{
 		title: 'Discord',
 		icon: Discord,
@@ -42,8 +41,11 @@ export const contact_links: Array<{
 		href: 'https://mastodon.online/@sarcevic',
 		rel: 'me',
 	},
-	{ title: 'Bluesky', icon: Bluesky, href: 'https://bsky.app/profile/sarcevic.dev' },
-
+	{
+		title: 'Bluesky',
+		icon: Bluesky,
+		href: 'https://bsky.app/profile/sarcevic.dev',
+	},
 	{
 		title: 'Mail',
 		icon: Mail,

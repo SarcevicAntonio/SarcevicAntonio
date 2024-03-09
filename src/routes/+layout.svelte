@@ -43,7 +43,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="/content"> entries </a>
+					<a href="/content"> /content </a>
 				</li>
 				<li class="hide-on-mobile">
 					<a href="https://www.youtube.com/@SarcevicAntonio"> youtube </a>
@@ -107,12 +107,16 @@
 
 	nav a {
 		padding: 0.5em 1.5em;
+	}
+
+	nav :global(a) {
 		display: block;
 		color: var(--as-text-2);
 		font-family: var(--display-font);
 		text-decoration: none;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			background: var(--as-back-2);
 			color: var(--as-text-1);
 		}

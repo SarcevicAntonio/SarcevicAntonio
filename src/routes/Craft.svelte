@@ -92,22 +92,6 @@
 		font-weight: 700;
 	}
 
-	/* a {
-		font-size: var(--step-0);
-		color: var(--as-text-1);
-		text-decoration: none;
-		background-color: var(--as-back-1);
-		&:hover,
-		&:focus {
-			text-decoration: underline;
-		}
-
-		& :global(svg) {
-			vertical-align: sub;
-			font-size: 1.2em;
-		}
-	} */
-
 	p {
 		margin: auto;
 		max-width: var(--content-width);

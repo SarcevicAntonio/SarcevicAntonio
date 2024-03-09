@@ -101,15 +101,6 @@
 		margin-block-end: 0.25em;
 	}
 
-	a {
-		color: inherit;
-		text-decoration: none;
-		&:focus,
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-
 	.powered {
 		font-size: var(--step--1);
 	}

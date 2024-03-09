@@ -1,20 +1,20 @@
 .arrow-link {
 	color: inherit;
 
-	& svg {
+	& svg:first-of-type {
 		vertical-align: sub;
 		position: relative;
 		inset-inline-start: 0rem;
 		transition: inset-inline-start 0.2s ease-in-out;
 	}
 
-	&:hover svg,
-	&:focus svg {
+	&:hover svg:first-of-type,
+	&:focus svg:first-of-type {
 		inset-inline-start: -0.5rem;
 	}
 	&.end {
-		&:hover svg,
-		&:focus svg {
+		&:hover svg:first-of-type,
+		&:focus svg:first-of-type {
 			inset-inline-start: 0.5rem;
 		}
 	}
@@ -27,13 +27,14 @@
 	padding: 1.5rem 2rem;
 	border-radius: 1rem;
 	color: inherit;
-	text-decoration: none;
+	text-decoration: none !important;
 	text-align: start;
 
 	p {
 		margin-block: 0.75rem;
 		font-size: var(--step-0);
 		color: var(--as-text-2);
+		text-decoration: none;
 	}
 
 	hr {
@@ -67,4 +68,21 @@
 	width: 1px;
 	height: 1px;
 	overflow: hidden;
+}
+
+.autolink-header {
+	font-size: 0.8em;
+	padding-inline-end: 0.2em;
+	margin-inline-start: -1ch;
+	vertical-align: 0.2em;
+	&:hover,
+	&:focus {
+		color: var(--as-text-1);
+	}
+}
+
+@media (max-width: 1000px) {
+	.autolink-header {
+		margin-inline-start: unset;
+	}
 }

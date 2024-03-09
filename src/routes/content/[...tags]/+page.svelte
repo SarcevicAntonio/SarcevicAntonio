@@ -6,6 +6,7 @@
 	import MaterialSymbolsLink from '~icons/material-symbols/link'
 	import YouTube from '~icons/simple-icons/youtube'
 	import MaterialSymbolsOpenInNewRounded from '~icons/material-symbols/open-in-new-rounded'
+	import Logo from '../../Logo.svelte'
 
 	export let data
 
@@ -21,11 +22,6 @@
 		<meta name="description" content="my content on the internet" />
 	{/if}
 </svelte:head>
-
-<a href="/" class="arrow-link top-padding">
-	<MaterialSymbolsArrowBackRounded aria-hidden="true" />/
-</a>
-
 <h1>Entries</h1>
 
 <section class="tags">
@@ -93,7 +89,7 @@
 </section>
 
 <a href="/" class="arrow-link">
-	<MaterialSymbolsArrowBackRounded aria-hidden="true" />/
+	<MaterialSymbolsArrowBackRounded aria-hidden="true" /><Logo />
 </a>
 
 <style>
@@ -130,14 +126,6 @@
 		}
 	}
 
-	section a {
-		text-decoration: none;
-		&:hover,
-		&:focus {
-			text-decoration: underline;
-		}
-	}
-
 	.posts {
 		& ul {
 			max-width: var(--content-width);
@@ -164,13 +152,6 @@
 			margin-block-end: 0;
 		}
 
-		& a:hover,
-		& a:focus {
-			text-decoration: none;
-			& > h2 {
-				text-decoration: underline;
-			}
-		}
 
 		.meta {
 			text-align: end;
@@ -187,9 +168,5 @@
 	.arrow-link {
 		display: block;
 		text-align: center;
-	}
-
-	.top-padding {
-		margin-block: 2rem;
 	}
 </style>

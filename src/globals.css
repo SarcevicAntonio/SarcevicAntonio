@@ -1,22 +1,11 @@
-@import './components.css';
-
-:root {
-	--as-notification-color: var(--as-text-2);
-
-	--as-notification--info-background: var(--as-back-2);
-	--as-notification--info-border-color: var(--as-text-2);
-
-	--as-notification--btn-background: var(--as-back-2);
-	--as-notification--btn-border: none;
-	--as-notification-padding: 0.5rem;
-	--content-width: 60rem;
-
-	--display-font: 'Staatliches', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+html,
+body {
+	margin: 0;
 }
 
 *:focus {
 	outline-width: 1rem;
-	outline-offset: 0.5rem;
+	outline-offset: 0.25rem;
 }
 
 /* from scrollbar.app */
@@ -68,20 +57,12 @@ pre {
 		'Andale Mono', 'Ubuntu Mono', monospace !important;
 }
 
-.autolink-header {
+a {
+	text-decoration: underline dotted;
 	color: var(--as-text-3);
-	font-size: 0.8em;
-	padding-inline-end: 0.2em;
-	margin-inline-start: -1ch;
-	vertical-align: 0.2em;
 	&:hover,
 	&:focus {
+		text-decoration: underline;
 		color: var(--as-text-1);
-	}
-}
-
-@media (max-width: 1000px) {
-	.autolink-header {
-		margin-inline-start: unset;
 	}
 }

@@ -20,7 +20,7 @@
 	let scroll_y: number
 	$: is_index = $page.url.pathname === '/'
 
-	const clicked = writable(false) as Writable<boolean> & { toggle: () => void }
+	const clicked = writable(true) as Writable<boolean> & { toggle: () => void }
 	clicked.toggle = () => ($clicked = !$clicked)
 
 	setContext('pride', {

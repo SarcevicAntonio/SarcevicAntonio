@@ -17,6 +17,11 @@
 	</a>
 </div>
 
+<label>
+	<input type="checkbox" />
+	<MaterialSymbolsDocs aria-hidden="true" /> Only blogposts
+</label>
+
 <ul class="scroller">
 	{#each content as { title, summary, href, published, lang, type }}
 		<li>

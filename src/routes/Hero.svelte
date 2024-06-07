@@ -162,7 +162,23 @@
 	} */
 
 	section.clicked .text .bars div {
-		&:nth-child(1),
+		&:nth-child(1) {
+			background-color: red;
+		}
+		&:nth-child(2) {
+			background-color: orange;
+		}
+		&:nth-child(3) {
+			background-color: yellow;
+		}
+		&:nth-child(4) {
+			background-color: var(--as-accent);
+		}
+
+		&:nth-child(5){
+			background-color: indigo;
+		}
+		/* &:nth-child(1),
 		&:nth-child(2) {
 			background-color: #d60270;
 		}
@@ -173,7 +189,7 @@
 		&:nth-child(4),
 		&:nth-child(5) {
 			background-color: #0038a8;
-		}
+		} */
 	}
 
 	@media only screen and (max-width: 400px) {

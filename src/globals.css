@@ -66,3 +66,18 @@ a {
 		color: var(--as-text-1);
 	}
 }
+
+button {
+	font: inherit;
+	padding: 0.5rem 2rem;
+	border-radius: 100vw;
+	border: 0.25rem solid currentColor;
+	background-color: var(--as-back-2);
+	color: var(--as-text-2);
+	
+	&:hover,
+	&:focus {
+		background-color: var(--as-back-1);
+		color: var(--as-text-1);
+	}
+}

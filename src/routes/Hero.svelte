@@ -33,13 +33,13 @@
 				<span class="last-name">Sarcevic</span>
 			</h1>
 			<p class="tagline">excited by&nbsp;ui development</p>
-			<div class="bars">
+			<a href="/in-colour" class="bars" on:click|stopPropagation>
 				<div />
 				<div />
 				<div />
 				<div />
 				<div />
-			</div>
+			</a>
 		</div>
 	</section>
 	<a
@@ -79,6 +79,10 @@
 	section {
 		display: flex;
 		align-items: center;
+	}
+
+	a {
+		pointer-events: auto;
 	}
 
 	img {
@@ -175,7 +179,7 @@
 			background-color: var(--as-accent);
 		}
 
-		&:nth-child(5){
+		&:nth-child(5) {
 			background-color: indigo;
 		}
 		/* &:nth-child(1),

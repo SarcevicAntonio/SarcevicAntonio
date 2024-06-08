@@ -16,11 +16,11 @@
 		/content<MaterialSymbolsArrowForwardRounded />
 	</a>
 </div>
-
+<!-- 
 <label>
 	<input type="checkbox" />
 	<MaterialSymbolsDocs aria-hidden="true" /> Only blogposts
-</label>
+</label> -->
 
 <ul class="scroller">
 	{#each content as { title, summary, href, published, lang, type }}

@@ -111,7 +111,6 @@
 		flex-direction: column;
 		align-items: flex-start;
 		font-size: clamp(2rem, calc(1rem + 8vw), 8rem);
-		line-height: 1;
 		font-weight: 400;
 		color: var(--as-text-2);
 	}
@@ -161,9 +160,31 @@
 		}
 	}
 
-	/* section.clicked img {
-		background-image: var(--pride-gradient);
-	} */
+	img {
+		background-image: var(--in-colour);
+	}
+
+	.first-name,
+	.last-name,
+	.tagline {
+		background-color: var(--as-back-2);
+		padding: 1rex 4rex;
+		border-radius: 2rex;
+		line-height: 0.9;
+	}
+
+	.first-name {
+		border-end-end-radius: initial;
+	}
+
+	.last-name {
+		border-start-start-radius: initial;
+		border-end-end-radius: initial;
+	}
+
+	.tagline {
+		border-start-start-radius: initial;
+	}
 
 	section.clicked .text .bars div {
 		&:nth-child(1) {

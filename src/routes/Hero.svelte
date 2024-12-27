@@ -18,7 +18,8 @@
 <svelte:window bind:scrollY={scroll_y} bind:innerHeight={inner_height} />
 
 <div class="hero">
-	<section on:click={clicked.toggle} on:keypress class:clicked={$clicked}>
+	<!-- svelte-ignore a11y_click_events_have_key_events a11y_no_static_element_interactions -->
+	<section on:click={clicked.toggle} class:clicked={$clicked}>
 		<div class="image">
 			<img
 				width="448px"
@@ -33,12 +34,17 @@
 				<span class="last-name">Sarcevic</span>
 			</h1>
 			<p class="tagline">excited by&nbsp;ui development</p>
-			<a href="/in-colour" class="bars" on:click|stopPropagation>
-				<div />
-				<div />
-				<div />
-				<div />
-				<div />
+			<a
+				href="/in-colour"
+				class="bars"
+				on:click|stopPropagation
+				aria-label="visit in-colour easter egg"
+			>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
 			</a>
 		</div>
 	</section>

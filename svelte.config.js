@@ -1,11 +1,11 @@
-import preprocess from 'svelte-preprocess'
-import adapter from '@sveltejs/adapter-vercel'
-import { vitePreprocess } from '@sveltejs/kit/vite'
-import { mdsvex } from 'mdsvex'
-import slug from 'rehype-slug'
-import autolink from 'rehype-autolink-headings'
-import { importAssets } from 'svelte-preprocess-import-assets'
-import toc from 'remark-toc'
+import adapter from '@sveltejs/adapter-vercel';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { mdsvex } from 'mdsvex';
+import autolink from 'rehype-autolink-headings';
+import slug from 'rehype-slug';
+import toc from 'remark-toc';
+import preprocess from 'svelte-preprocess';
+import { importAssets } from 'svelte-preprocess-import-assets';
 
 const mdsvex_config = {
 	layout: 'src/routes/(blog)/post.svelte',

@@ -466,7 +466,7 @@ components, but here the whole framework is embedded to make the component work.
 
 Unlike React, Svelte does not use JSX, but its own syntax based on HTML. Template markup
 can simply be written directly into a `*.svelte` file as if it were a `*.html` file. Similarly, CSS rules can be
-written into a `<style> ... </style>` block and JavaScript logic into a `<script> ... </script>` block. To
+written into a `style` block and JavaScript logic into a `script` block. To
 create a variant of the MyButton in Svelte, you only need to copy the contents of the template from
 the example, since the Svelte syntax is based on HTML.
 

@@ -71,6 +71,8 @@
 
 <section>
 	<Giscus
+		id="comments"
+		term="SarcevicAntonio"
 		theme={$current_theme === 'dark'
 			? 'dark'
 			: $current_theme === 'light'

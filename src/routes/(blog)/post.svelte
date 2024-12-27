@@ -57,7 +57,7 @@
 				<ul class="tags">
 					{#each tags as tag}
 						<li>
-							<a href="/content/{tag}">
+							<a href="/entries/{tag}">
 								#{tag}
 							</a>
 						</li>
@@ -88,8 +88,8 @@
 </section>
 
 <section class="links">
-	<a href="/content" class="arrow-link">
-		<MaterialSymbolsArrowBackRounded aria-hidden="true" />/content
+	<a href="/entries" class="arrow-link">
+		<MaterialSymbolsArrowBackRounded aria-hidden="true" />/entries
 	</a>
 
 	<a href="/" class="arrow-link">

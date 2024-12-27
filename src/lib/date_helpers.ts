@@ -1,4 +1,4 @@
-import type { Appearance, BlogMetadata } from './server/posts'
+import type { Appearance, BlogMetadata } from './server/entries'
 
 export const reformat_date_string = (string: string) =>
 	new Date(string).toLocaleDateString(undefined, {

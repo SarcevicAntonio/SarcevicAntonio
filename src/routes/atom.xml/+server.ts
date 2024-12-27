@@ -1,5 +1,5 @@
 import domain from '$lib/domain'
-import { get_all_tags, get_blog_posts, type BlogMetadata } from '$lib/server/posts'
+import { get_all_tags, get_blog_posts, type BlogMetadata } from '$lib/server/entries'
 
 export const prerender = true
 

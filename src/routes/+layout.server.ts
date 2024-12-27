@@ -1,5 +1,5 @@
 import { by_published } from '$lib/date_helpers'
-import { get_all_appearances, get_blog_posts } from '$lib/server/posts'
+import { get_all_appearances, get_blog_posts } from '$lib/server/entries'
 
 export async function load({ locals, fetch }) {
 	const lastfm_data = await fetch('/lastfm').then((r) => r.json())

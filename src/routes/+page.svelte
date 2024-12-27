@@ -1,7 +1,7 @@
 <script>
 	import LastFM from './LastFM.svelte'
 	import Contact from './Contact.svelte'
-	import Content from './Content.svelte'
+	import Entries from './Entries.svelte'
 	import Craft from './Craft.svelte'
 	import Hero from './Hero.svelte'
 	import Projects from './Projects.svelte'
@@ -17,7 +17,7 @@
 <Hero />
 
 <section>
-	<Content content={data.content} />
+	<Entries content={data.content} />
 </section>
 
 <section>

@@ -87,8 +87,6 @@
 
 	hr {
 		width: 100%;
-		border-color: var(--as-back-2);
-		border-style: solid;
 	}
 	.blog-post hr {
 		border-color: var(--as-text-3);

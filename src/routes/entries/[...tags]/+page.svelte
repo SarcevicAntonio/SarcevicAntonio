@@ -6,38 +6,56 @@
 
 	let { data } = $props()
 
-	let filter_tag = $derived(page.params.tags)
+	let tag_filter = $derived(page.params.tags)
+	let type_filter = $derived(page.url.searchParams.get('type'))
 </script>
 
 <svelte:head>
-	{#if filter_tag}
-		<title>#{filter_tag} entries — sarcevic.dev</title>
-		<meta name="description" content="my #{filter_tag} entries on the internet" />
+	{#if tag_filter}
+		<title>#{tag_filter} entries — sarcevic.dev</title>
+		<meta name="description" content="my #{tag_filter} entries on the internet" />
 	{:else}
 		<title>entries — sarcevic.dev</title>
 		<meta name="description" content="my entries on the internet" />
 	{/if}
 </svelte:head>
+
 <h1>Entries</h1>
 
 <section class="tags">
-	{#if filter_tag}
-		<p>listing posts with tag #{filter_tag}</p>
-		<a href="/entries" class="arrow-link">
-			<MaterialSymbolsArrowBackRounded />
-			remove filter
-		</a>
+	{#if type_filter}
+		<p>showing only blog posts</p>
+	{:else if data.content.filter((e) => e.type == 'blog_post').length}
+		<p>
+			<a href="{page.url.href}?type=blog_post">filter for blog posts</a>
+		</p>
+	{/if}
+
+	<hr>
+
+	{#if tag_filter}
+		<p>showing entries with tag #{tag_filter}</p>
 	{:else}
+		{@const available_tags = [...data.all_tags].filter(
+			(tag) => data.content.filter((e) => e.tags.includes(tag)).length,
+		)}
 		<p>filter by tag:</p>
 		<ul class="tags">
-			{#each [...data.all_tags] as tag}
-				<li aria-current={filter_tag === tag}>
-					<a href="/entries/{tag}">
+			{#each available_tags as tag}
+				<li aria-current={tag_filter === tag}>
+					<a href="{page.url.href}/{tag}">
 						#{tag}
 					</a>
 				</li>
 			{/each}
 		</ul>
+	{/if}
+
+	{#if type_filter || tag_filter}
+		<a href="/entries" class="arrow-link">
+			<MaterialSymbolsArrowBackRounded />
+			remove filters
+		</a>
 	{/if}
 </section>
 
@@ -71,11 +89,6 @@
 		list-style: none;
 	}
 
-	.detail {
-		font-size: 0.4em;
-		vertical-align: 0.8em;
-	}
-
 	.tags {
 		text-align: center;
 		& ul {
@@ -105,11 +118,6 @@
 			margin-block: 0.25em;
 			text-align: center;
 			text-wrap: balance;
-		}
-
-
-		.meta {
-			text-align: end;
 		}
 	}
 

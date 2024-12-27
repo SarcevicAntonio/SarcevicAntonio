@@ -74,10 +74,15 @@ button {
 	border: 0.25rem solid currentColor;
 	background-color: var(--as-back-2);
 	color: var(--as-text-2);
-	
+
 	&:hover,
 	&:focus {
 		background-color: var(--as-back-1);
 		color: var(--as-text-1);
 	}
+}
+
+hr {
+	border-color: var(--as-back-2);
+	border-style: solid;
 }

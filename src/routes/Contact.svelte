@@ -30,7 +30,8 @@
 		justify-content: center;
 		font-size: var(--step-4);
 		gap: 1em;
-		max-width: 10em;
+		row-gap: 0.5em;
+		max-width: 6em;
 	}
 
 	a {

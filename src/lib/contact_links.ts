@@ -1,16 +1,15 @@
-import type { SvelteComponent } from 'svelte'
+import type { Component } from 'svelte'
 import Mail from '~icons/material-symbols/mail-rounded'
+import Bluesky from '~icons/simple-icons/bluesky'
 import Discord from '~icons/simple-icons/discord'
 import Github from '~icons/simple-icons/github'
 import Linkedin from '~icons/simple-icons/linkedin'
 import Mastodon from '~icons/simple-icons/mastodon'
-import Twitter from '~icons/simple-icons/twitter'
 import YouTube from '~icons/simple-icons/youtube'
-import Bluesky from './Bluesky.svelte'
 
 export const contact_links: Array<{
 	title: string
-	icon: typeof SvelteComponent
+	icon: Component
 	href: string
 	rel?: string
 }> = [
@@ -23,17 +22,6 @@ export const contact_links: Array<{
 		title: 'GitHub',
 		icon: Github,
 		href: 'https://github.com/SarcevicAntonio',
-	},
-	// rip 🐦
-	// {
-	// 	title: 'Twitter',
-	// 	icon: Twitter,
-	// 	href: 'https://twitter.com/SarcevicAntonio',
-	// },
-	{
-		title: 'Discord',
-		icon: Discord,
-		href: 'https://discord.com/users/87248833502781440',
 	},
 	{
 		title: 'Mastodon',

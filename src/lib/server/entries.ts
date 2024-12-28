@@ -1,6 +1,8 @@
 import appearances from '$lib/appearances.yaml'
 import { by_published } from '$lib/date_helpers'
 import { parseHTML } from 'linkedom'
+import type { Component } from 'svelte'
+import { render as svelteRender } from 'svelte/server'
 import { z } from 'zod'
 
 const BLOG_GROUP_NAME = '(blog)'
@@ -35,7 +37,7 @@ export async function get_blog_posts(render = false) {
 
 		const { metadata, default: mdsvx_module } = (await modules[path]()) as {
 			metadata: BlogMetadata
-			default: { render: () => { html: string } }
+			default: Component
 		}
 
 		const href = path
@@ -45,7 +47,7 @@ export async function get_blog_posts(render = false) {
 		if (!render) {
 			blog_posts.push({ ...metadata, href })
 		} else {
-			const rendered_html = mdsvx_module.render().html
+			const rendered_html = svelteRender(mdsvx_module).body
 			const linkedom = parseHTML(rendered_html)
 			const [article] = linkedom.document.getElementsByTagName('article')
 			article.getElementsByTagName('aside')[0].remove()
@@ -62,7 +64,7 @@ export async function get_blog_posts(render = false) {
 			BlogMetadata.parse(post)
 		} catch (e) {
 			console.error(
-				`ERROR: Blog Metadata Parse Error!\nLooks like the metadata for post "${post.title}" is malformed.`
+				`ERROR: Blog Metadata Parse Error!\nLooks like the metadata for post "${post.title}" is malformed.`,
 			)
 			throw e
 		}
@@ -77,7 +79,7 @@ export async function get_all_tags(posts: (BlogMetadata | Appearance)[]) {
 	posts.forEach(({ tags }) =>
 		tags.forEach((tag) => {
 			all_tags[tag] = all_tags[tag] + 1 || 1
-		})
+		}),
 	)
 
 	return Object.entries(all_tags)
@@ -111,7 +113,7 @@ export function get_all_appearances(): Appearance[] {
 			Appearance.parse(post)
 		} catch (e) {
 			console.error(
-				`ERROR: Appearance Parse Error!\nLooks like the metadata for appearance "${post.href}" is malformed.`
+				`ERROR: Appearance Parse Error!\nLooks like the metadata for appearance "${post.href}" is malformed.`,
 			)
 			throw e
 		}

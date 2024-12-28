@@ -28,10 +28,9 @@
 			{/each}
 		</ul>
 		<h2 class="notice">
-			Page and content was crafted with
+			Page and content was hand-crafted with
 			<span class="screen-reader-only"> Love </span>
-			<span aria-hidden="true"> 💖 </span>
-			by Antonio Sarcevic.
+			<span aria-hidden="true"> 💖 </span> by Antonio Sarcevic.
 		</h2>
 		<p><a href="/" class="self-link">sarcevic.dev</a> is powered by the following dependencies:</p>
 		<ul class="credits">

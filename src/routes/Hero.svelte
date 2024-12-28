@@ -126,7 +126,7 @@
 	}
 
 	.tagline {
-		color: var(--as-text-1);
+		color: var(--as-text-2);
 		margin-inline-start: 0.5em;
 	}
 

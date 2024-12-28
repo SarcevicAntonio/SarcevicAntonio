@@ -6,7 +6,7 @@ export async function load({ parent, params, url }) {
 	let { content } = await parent()
 	const all_tags = await get_all_tags(content)
 
-	const tag_filter = params.tags
+	const tag_filter = params.tag
 	if (tag_filter) {
 		content = content.filter((post) => post.tags.includes(tag_filter))
 	}

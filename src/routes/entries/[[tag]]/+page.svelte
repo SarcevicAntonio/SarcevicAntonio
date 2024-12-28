@@ -6,7 +6,7 @@
 
 	let { data } = $props()
 
-	let tag_filter = $derived(page.params.tags)
+	let tag_filter = $derived(page.params.tag)
 	let type_filter = $derived(page.url.searchParams.get('type'))
 </script>
 
@@ -25,13 +25,13 @@
 <section class="tags">
 	{#if type_filter}
 		<p>showing only blog posts</p>
+		<hr />
 	{:else if data.content.filter((e) => e.type == 'blog_post').length}
 		<p>
-			<a href="{page.url.href}?type=blog_post">filter for blog posts</a>
+			<a href="{page.url.pathname}?type=blog_post">filter for blog posts</a>
 		</p>
+		<hr />
 	{/if}
-
-	<hr />
 
 	{#if tag_filter}
 		<p>showing entries with tag #{tag_filter}</p>
@@ -43,7 +43,7 @@
 		<ul class="tags">
 			{#each available_tags as tag}
 				<li aria-current={tag_filter === tag}>
-					<a href="{page.url.href}/{tag}">
+					<a href="{page.url.pathname}/{tag}/{page.url.search}">
 						#{tag}
 					</a>
 				</li>
@@ -52,6 +52,7 @@
 	{/if}
 
 	{#if type_filter || tag_filter}
+		<hr />
 		<a href="/entries" class="arrow-link">
 			<MaterialSymbolsArrowBackRounded />
 			remove filters
@@ -106,11 +107,11 @@
 		& ul {
 			max-width: var(--content-width);
 			margin-inline: auto;
-			margin-block: 2em;
+			margin-block: 5em;
 		}
 
 		& ul > li {
-			margin-block-end: 2rem;
+			margin-block-end: 5rem;
 		}
 
 		& :global(a > h2) {

@@ -13,16 +13,23 @@
 		{#if entry.type === 'blog_post'}
 			<span class="screen-reader-only"> Blog Post </span>
 			<MaterialSymbolsDocs aria-hidden="true" />
+			<span>sarcevic.dev</span>
 		{:else if entry.type === 'appearance'}
 			{#if entry.href.includes('youtube')}
 				<span class="screen-reader-only"> YouTube Link </span>
 				<YouTube aria-hidden="true" />
 			{:else}
 				<span class="screen-reader-only"> External Link </span>
-				<MaterialSymbolsLink aria-hidden="true" />
+				<MaterialSymbolsLink aria-hidden="true" alignment-baseline="auto" />
 			{/if}
+			<span>
+				{new URL(entry.href).hostname
+					.split('.')
+					.splice(-2, 2)
+					.join('.')}<MaterialSymbolsOpenInNewRounded font-size="0.5em" aria-hidden="true" />
+			</span>
 		{/if}
-		<span>{reformat_date_string(entry.published)}</span>
+		<span class="date">{reformat_date_string(entry.published)}</span>
 	</p>
 	<hr />
 	<svelte:element this={`h${h_level}`} class="heading">
@@ -31,10 +38,6 @@
 			{#if entry.lang === 'DE'}
 				<span class="screen-reader-only"> (Content In German Language) </span>
 				<span aria-hidden="true"> 🇩🇪 </span>
-			{/if}
-			{#if entry.type === 'appearance'}
-				<span class="screen-reader-only"> External Link </span>
-				<MaterialSymbolsOpenInNewRounded font-size="0.5em" aria-hidden="true" />
 			{/if}
 		</span>
 	</svelte:element>
@@ -119,9 +122,12 @@
 
 	.meta {
 		display: flex;
-		justify-content: space-between;
-
-		margin-block-end: 0;
+		gap: 1rem;
+		align-items: center;
+		margin-block: 0;
+		.date {
+			margin-inline-start: auto;
+		}
 	}
 
 	.heading {

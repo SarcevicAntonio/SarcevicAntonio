@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/state'
 	import Entry from '$lib/Entry.svelte'
 	import type { Appearance, BlogMetadata } from '$lib/server/entries'
 	import MaterialSymbolsArrowForwardRounded from '~icons/material-symbols/arrow-forward-rounded'
@@ -12,6 +13,10 @@
 		/entries<MaterialSymbolsArrowForwardRounded />
 	</a>
 </div>
+
+<!-- <p class="filter">
+	<a href="{page.url.pathname}?type=blog_post" data-sveltekit-noscroll> filter for blog posts </a>
+</p> -->
 
 <ul class="scroller">
 	{#each content as entry}
@@ -73,5 +78,12 @@
 
 	.header a :global(svg) {
 		vertical-align: sub;
+	}
+
+	.filter {
+		font-size: var(--step--1);
+		max-width: var(--content-width);
+		text-align: start;
+		margin: auto;
 	}
 </style>

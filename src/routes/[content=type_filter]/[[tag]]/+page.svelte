@@ -7,7 +7,8 @@
 	let { data } = $props()
 
 	let tag_filter = $derived(page.params.tag)
-	let type_filter = $derived(page.url.searchParams.get('type'))
+	let type_filter = $derived(page.params.content === 'posts')
+	let blog_posts_count = $derived(data.content.filter((e) => e.type == 'blog_post').length)
 </script>
 
 <svelte:head>
@@ -26,9 +27,9 @@
 	{#if type_filter}
 		<p>showing only blog posts</p>
 		<hr />
-	{:else if data.content.filter((e) => e.type == 'blog_post').length}
+	{:else if blog_posts_count && blog_posts_count !== data.content.length}
 		<p>
-			<a href="{page.url.pathname}?type=blog_post">filter for blog posts</a>
+			<a href="/posts/{page.params.tag}">filter for blog posts</a>
 		</p>
 		<hr />
 	{/if}
@@ -43,7 +44,7 @@
 		<ul class="tags">
 			{#each available_tags as tag}
 				<li aria-current={tag_filter === tag}>
-					<a href="{page.url.pathname}/{tag}/{page.url.search}">
+					<a href="{page.params.content}/{tag}">
 						#{tag}
 					</a>
 				</li>

@@ -10,9 +10,9 @@ export async function load({ parent, params, url }) {
 	if (tag_filter) {
 		content = content.filter((post) => post.tags.includes(tag_filter))
 	}
-	const type_filter = url.searchParams.get('type')
-	if (type_filter) {
-		content = content.filter((post) => post.type === type_filter)
+
+	if (params.content === 'posts') {
+		content = content.filter((post) => post.type === 'blog_post')
 	}
 
 	return { all_tags, content }

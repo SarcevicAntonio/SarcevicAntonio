@@ -1,3 +1,48 @@
+- title: Why bi visibility matters
+  summary: >-
+    Talking about the biggest — but at the same time one of the more misunderstood —
+    subgroup of the queer community.
+  href: https://blog.datawrapper.de/why-bi-visibility-matters/
+  published: '2024-10-03'
+  tags:
+    - weekly chart
+    - datawrapper
+- title: The history of left-handedness
+  summary: >-
+    "The history of left-handedness" is a chart that is used in an infamous analogy for queer
+    oppression. I dive into the paper where the data originated from and learned about the 
+    difference between direct and indirect social pressure.
+  href: https://blog.datawrapper.de/history-of-left-handedness/
+  published: '2024-07-11'
+  tags:
+    - weekly chart
+    - datawrapper
+- title: Humanity deserves more humane drug policies
+  summary: >-
+    Germany recently decriminalized the possession of small quantities of cannabis for personal
+    consumption and I a look at the topic that first got me into politics: drug prohibition.
+  href: https://blog.datawrapper.de/humane-drug-policy/
+  published: '2024-04-18'
+  tags:
+    - weekly chart
+    - datawrapper
+- title: A recipe for Datawrapper
+  summary: >-
+    I analyzed the work git repository throughout the years to examine developments in technologies used.
+  href: https://blog.datawrapper.de/datawrapper-code-composition/
+  published: '2023-11-02'
+  tags:
+    - weekly chart
+    - datawrapper
+- title: Visualizing my musical journey
+  summary: >-
+    My first weekly chart and general entry on the Datawrapper blog where I scraped my last.fm data
+    and created a supersized tag timeline.
+  href: https://blog.datawrapper.de/musical-genre-timeline/
+  published: '2023-07-27'
+  tags:
+    - weekly chart
+    - datawrapper
 - title: >-
     Already Deprecated: Einführung in Web Components und Komponenten erstellen mit Svelte oder
     Stencil

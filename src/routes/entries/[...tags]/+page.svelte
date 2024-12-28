@@ -31,7 +31,7 @@
 		</p>
 	{/if}
 
-	<hr>
+	<hr />
 
 	{#if tag_filter}
 		<p>showing entries with tag #{tag_filter}</p>
@@ -63,7 +63,7 @@
 	<ul>
 		{#each data.content as entry}
 			<li>
-				<Entry {entry} h_level={2}></Entry>
+				<Entry {entry} h_level={2} show_tags></Entry>
 			</li>
 		{/each}
 	</ul>

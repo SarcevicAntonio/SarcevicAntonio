@@ -5,7 +5,7 @@
 	import MaterialSymbolsOpenInNewRounded from '~icons/material-symbols/open-in-new-rounded'
 	import YouTube from '~icons/simple-icons/youtube'
 
-	let { entry, h_level = 2 } = $props()
+	let { entry, h_level = 2, show_tags = false } = $props()
 </script>
 
 <a href={entry.href} class={['content-box', entry.type === 'blog_post' && 'blog-post']}>
@@ -41,9 +41,34 @@
 	{#if entry.summary}
 		<p>{entry.summary}</p>
 	{/if}
+	{#if show_tags}
+		<hr />
+		<ul class="tags">
+			{#each entry.tags as tag}
+				<li>
+					#{tag}
+				</li>
+			{/each}
+		</ul>
+	{/if}
 </a>
 
 <style>
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		list-style: none;
+		padding: 0;
+		gap: 2rem;
+		row-gap: 0.5rem;
+		font-size: var(--step--1);
+		color: var(--as-text-2);
+	}
+	.blog-post .tags {
+		color: var(--as-back-2);
+	}
+
 	.content-box {
 		display: flex;
 		flex-direction: column;

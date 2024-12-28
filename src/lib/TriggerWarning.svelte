@@ -1,24 +1,19 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
-
-	let dialog: HTMLDialogElement
-
-	onMount(() => dialog.showModal())
+	let dialog = $state<HTMLDialogElement>()
+	let closed = $state(false)
+	$effect(() => dialog?.showModal())
 </script>
 
-<dialog bind:this={dialog}>
-	<h2>Photosensitive Seizure Warning!</h2>
-	<p>
-		This page could trigger seizures for people with photosensitive epilepsy. Discretion is advised.
-	</p>
-	<button
-		on:click={() => {
-			dialog.remove()
-		}}
-	>
-		OK
-	</button>
-</dialog>
+{#if !closed}
+	<dialog bind:this={dialog}>
+		<h2>Photosensitive Seizure Warning!</h2>
+		<p>
+			This page could trigger seizures for people with photosensitive epilepsy. Discretion is
+			advised.
+		</p>
+		<button onclick={() => (closed = true)}> OK </button>
+	</dialog>
+{/if}
 
 <style>
 	dialog {

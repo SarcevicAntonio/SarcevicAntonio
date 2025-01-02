@@ -1,3 +1,12 @@
+- title: 'Building accessible sites with SvelteKit: seven practical tips'
+  summary: >-
+    Some tips to help spread awareness of and fix accessability issues, specifically focusing on
+    keyboard navigation.
+  href: https://blog.datawrapper.de/sveltekit-accessibility-tips/
+  published: '2024-11-25'
+  tags:
+    - a11y
+    - datawrapper
 - title: Why bi visibility matters
   summary: >-
     Talking about the biggest — but at the same time one of the more misunderstood —

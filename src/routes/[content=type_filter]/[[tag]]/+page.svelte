@@ -38,7 +38,7 @@
 		<p>showing entries with tag #{tag_filter}</p>
 	{:else}
 		{@const available_tags = [...data.all_tags].filter(
-			(tag) => data.content.filter((e) => e.tags.includes(tag)).length,
+			(tag) => data.content.filter((e) => e.tags.includes(tag)).length
 		)}
 		<p>filter by tag:</p>
 		<ul class="tags">

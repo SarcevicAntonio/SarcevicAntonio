@@ -27,34 +27,34 @@ button:active {
   Clicked <span id="count">0</span> times
 </button>`
 class MyCounter extends HTMLElement {
-  constructor() {
-    super()
-    this.attachShadow({ mode: 'open' })
-    this.shadowRoot.appendChild(counterTemplate.content.cloneNode(true))
-    this.handleClick = () => {
-      this.count++
-    }
-  }
-  connectedCallback() {
-    this.shadowRoot.getElementById('inc').addEventListener('click', this.handleClick)
-    if (!this.hasAttribute('count')) {
-      this.setAttribute('count', 0)
-    }
-  }
-  disconnectedCallback() {
-    this.shadowRoot.getElementById('inc').removeEventListener('click', this.handleClick)
-  }
-  static get observedAttributes() {
-    return ['count']
-  }
-  attributeChangedCallback(name, oldCount, newCount) {
-    this.shadowRoot.getElementById('count').innerHTML = newCount
-  }
-  get count() {
-    return this.getAttribute('count')
-  }
-  set count(newCount) {
-    this.setAttribute('count', newCount)
-  }
+	constructor() {
+		super()
+		this.attachShadow({ mode: 'open' })
+		this.shadowRoot.appendChild(counterTemplate.content.cloneNode(true))
+		this.handleClick = () => {
+			this.count++
+		}
+	}
+	connectedCallback() {
+		this.shadowRoot.getElementById('inc').addEventListener('click', this.handleClick)
+		if (!this.hasAttribute('count')) {
+			this.setAttribute('count', 0)
+		}
+	}
+	disconnectedCallback() {
+		this.shadowRoot.getElementById('inc').removeEventListener('click', this.handleClick)
+	}
+	static get observedAttributes() {
+		return ['count']
+	}
+	attributeChangedCallback(name, oldCount, newCount) {
+		this.shadowRoot.getElementById('count').innerHTML = newCount
+	}
+	get count() {
+		return this.getAttribute('count')
+	}
+	set count(newCount) {
+		this.setAttribute('count', newCount)
+	}
 }
 window.customElements.define('my-counter', MyCounter)

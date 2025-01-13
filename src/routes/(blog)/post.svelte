@@ -76,8 +76,8 @@
 		theme={$current_theme === 'dark'
 			? 'dark'
 			: $current_theme === 'light'
-			? 'light'
-			: 'preferred_color_scheme'}
+				? 'light'
+				: 'preferred_color_scheme'}
 		repo="SarcevicAntonio/SarcevicAntonio"
 		repoId="MDEwOlJlcG9zaXRvcnkxODkzMDAxNjM="
 		category="Comments"

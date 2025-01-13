@@ -58,7 +58,9 @@
 	img {
 		max-width: var(--step-7);
 		border-radius: 50%;
-		box-shadow: 0px 0.125rem 0.25rem rgba(0, 0, 0, 0.05), 0px 0.25rem 0.5rem rgba(0, 0, 0, 0.04);
+		box-shadow:
+			0px 0.125rem 0.25rem rgba(0, 0, 0, 0.05),
+			0px 0.25rem 0.5rem rgba(0, 0, 0, 0.04);
 		transition-property: box-shadow, border-radius, scale;
 		transition-duration: 0.2s;
 		transition-timing-function: ease-in-out;

@@ -64,7 +64,7 @@ export async function get_blog_posts(render = false) {
 			BlogMetadata.parse(post)
 		} catch (e) {
 			console.error(
-				`ERROR: Blog Metadata Parse Error!\nLooks like the metadata for post "${post.title}" is malformed.`,
+				`ERROR: Blog Metadata Parse Error!\nLooks like the metadata for post "${post.title}" is malformed.`
 			)
 			throw e
 		}
@@ -79,7 +79,7 @@ export async function get_all_tags(posts: (BlogMetadata | Appearance)[]) {
 	posts.forEach(({ tags }) =>
 		tags.forEach((tag) => {
 			all_tags[tag] = all_tags[tag] + 1 || 1
-		}),
+		})
 	)
 
 	return Object.entries(all_tags)
@@ -113,7 +113,7 @@ export function get_all_appearances(): Appearance[] {
 			Appearance.parse(post)
 		} catch (e) {
 			console.error(
-				`ERROR: Appearance Parse Error!\nLooks like the metadata for appearance "${post.href}" is malformed.`,
+				`ERROR: Appearance Parse Error!\nLooks like the metadata for appearance "${post.href}" is malformed.`
 			)
 			throw e
 		}

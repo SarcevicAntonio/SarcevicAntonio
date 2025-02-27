@@ -8,6 +8,6 @@ export async function load({ locals, fetch }) {
 	return {
 		theme: locals.theme,
 		content: [...blog_posts, ...apperances].sort(by_published),
-		lastfm_data,
+		lastfm_data: lastfm_data.error ? undefined : lastfm_data,
 	}
 }

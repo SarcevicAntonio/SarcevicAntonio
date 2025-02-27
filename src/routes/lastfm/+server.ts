@@ -1,5 +1,4 @@
 import { LASTFM_API_KEY } from '$env/static/private'
-
 import { json } from '@sveltejs/kit'
 import type { LastFMData } from './type.js'
 

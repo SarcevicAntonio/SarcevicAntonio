@@ -36,9 +36,11 @@
 	<Projects />
 </section>
 
-<section>
-	<LastFM lastfm={data.lastfm_data} />
-</section>
+{#if data.lastfm_data}
+	<section>
+		<LastFM lastfm={data.lastfm_data} />
+	</section>
+{/if}
 
 <style>
 	section {

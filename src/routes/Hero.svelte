@@ -33,7 +33,7 @@
 				<span class="first-name">Antonio</span>
 				<span class="last-name">Sarcevic</span>
 			</h1>
-			<p class="tagline">excited by&nbsp;ui development</p>
+			<p class="tagline">excited by ui&nbsp;development</p>
 			<a
 				href="/in-colour"
 				class="bars"
@@ -82,6 +82,13 @@
 		}
 	}
 
+	@media (prefers-contrast: more) {
+		.scroll-indicator {
+			color: var(--as-text-1);
+			opacity: 1;
+		}
+	}
+
 	section {
 		display: flex;
 		align-items: center;
@@ -99,9 +106,13 @@
 		width: 100%;
 	}
 
+	section.clicked img {
+		background-image: var(--in-colour);
+	}
+
 	.text {
 		pointer-events: none;
-		margin-inline-start: -2rem;
+		margin-inline-start: 2rem;
 		position: relative;
 		font-size: clamp(1rem, calc(1rem + 2vw), 6rem);
 		z-index: 2;
@@ -130,13 +141,6 @@
 		margin-inline-start: 0.5em;
 	}
 
-	@media (prefers-contrast: more) {
-		.scroll-indicator {
-			color: var(--as-text-1);
-			opacity: 1;
-		}
-	}
-
 	.bars {
 		display: flex;
 		width: min-content;
@@ -157,7 +161,6 @@
 		&:nth-child(3) {
 			background-color: var(--as-text-1);
 		}
-
 		&:nth-child(4) {
 			background-color: var(--as-text-2);
 		}
@@ -166,14 +169,27 @@
 		}
 	}
 
-	img {
-		background-image: var(--in-colour);
+	section.clicked .bars div {
+		&:nth-child(1) {
+			background-color: oklch(0.65 0.3 29.33);
+		}
+		&:nth-child(2) {
+			background-color: oklch(0.81 0.2 70.58);
+		}
+		&:nth-child(3) {
+			background-color: oklch(92% 0.27 100);
+		}
+		&:nth-child(4) {
+			background-color: var(--as-accent);
+		}
+		&:nth-child(5) {
+			background-color: oklch(0.59 0.32 308.3);
+		}
 	}
 
 	.first-name,
 	.last-name,
 	.tagline {
-		background-color: var(--as-back-2);
 		padding: 1rex 4rex;
 		border-radius: 2rex;
 		line-height: 0.9;
@@ -192,38 +208,7 @@
 		border-start-start-radius: initial;
 	}
 
-	section.clicked .text .bars div {
-		&:nth-child(1) {
-			background-color: red;
-		}
-		&:nth-child(2) {
-			background-color: orange;
-		}
-		&:nth-child(3) {
-			background-color: yellow;
-		}
-		&:nth-child(4) {
-			background-color: var(--as-accent);
-		}
-
-		&:nth-child(5) {
-			background-color: indigo;
-		}
-		/* &:nth-child(1),
-		&:nth-child(2) {
-			background-color: #d60270;
-		}
-		&:nth-child(3) {
-			background-color: #734f96;
-		}
-
-		&:nth-child(4),
-		&:nth-child(5) {
-			background-color: #0038a8;
-		} */
-	}
-
-	@media only screen and (max-width: 400px) {
+	@media only screen and (max-width: 500px) {
 		section {
 			flex-direction: column;
 		}
@@ -238,9 +223,15 @@
 			text-align: center;
 		}
 
+		img {
+			max-width: 250px;
+			margin-bottom: 2rem;
+		}
+
 		h1 {
 			align-items: center;
 		}
+
 		.bars {
 			margin-inline: auto;
 		}

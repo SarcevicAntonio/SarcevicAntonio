@@ -187,27 +187,6 @@
 		}
 	}
 
-	.first-name,
-	.last-name,
-	.tagline {
-		padding: 1rex 4rex;
-		border-radius: 2rex;
-		line-height: 0.9;
-	}
-
-	.first-name {
-		border-end-end-radius: initial;
-	}
-
-	.last-name {
-		border-start-start-radius: initial;
-		border-end-end-radius: initial;
-	}
-
-	.tagline {
-		border-start-start-radius: initial;
-	}
-
 	@media only screen and (max-width: 500px) {
 		section {
 			flex-direction: column;
@@ -224,11 +203,11 @@
 		}
 
 		img {
-			max-width: 250px;
-			margin-bottom: 2rem;
+			max-width: 15rem;
 		}
 
 		h1 {
+			margin-top: 2rem;
 			align-items: center;
 		}
 

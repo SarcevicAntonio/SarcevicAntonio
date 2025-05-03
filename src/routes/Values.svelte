@@ -1,16 +1,14 @@
 <script>
-	import MdiYinYang from '~icons/mdi/yin-yang'
 	import MdiHeadLightbulbOutline from '~icons/mdi/head-lightbulb-outline'
-	import MaterialSymbolsAndroidChat from '~icons/material-symbols/android-chat'
 	import MdiHandHeartOutline from '~icons/mdi/hand-heart-outline'
 	import MdiFlower from '~icons/mdi/flower'
+	import MaterialSymbolsStopCircleRounded from '~icons/material-symbols/stop-circle-rounded'
 
 	const values = {
-		Balance: MdiYinYang,
-		Honesty: MdiHandHeartOutline,
+		Humility: MdiHandHeartOutline,
+		Curiosity: MdiHeadLightbulbOutline,
+		Integrity: MaterialSymbolsStopCircleRounded,
 		Joy: MdiFlower,
-		'Open<br>Mindedness': MdiHeadLightbulbOutline,
-		'Clear<br>Communication': MaterialSymbolsAndroidChat,
 	}
 </script>
 

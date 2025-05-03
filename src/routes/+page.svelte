@@ -17,15 +17,15 @@
 <Hero />
 
 <section>
+	<Values />
+</section>
+
+<section>
 	<Entries content={data.content} />
 </section>
 
 <section>
 	<Contact />
-</section>
-
-<section>
-	<Values />
 </section>
 
 <section>

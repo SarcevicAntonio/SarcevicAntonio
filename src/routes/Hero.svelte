@@ -1,27 +1,25 @@
 <script lang="ts">
-	import { prefers_reduced_motion } from '$lib/reduced_motion'
-	import { getContext, onMount } from 'svelte'
-	import { draw, fade } from 'svelte/transition'
+	import { page } from '$app/state'
+	import { getContext } from 'svelte'
+	import type { Writable } from 'svelte/store'
 	import PajamasScrollDown from '~icons/pajamas/scroll-down'
 
-	let visible = false
-	onMount(async () => {
-		visible = true
-	})
-
-	let scroll_y: number
-	let inner_height: number
-	const { clicked } = getContext('pride')
-	$: transition = $prefers_reduced_motion ? fade : draw
+	let scroll_y = $state<number>(0)
+	let inner_height = $state<number>(0)
+	const { clicked } = getContext('pride') as {
+		clicked: Writable<boolean> & { toggle: () => void }
+	}
 </script>
 
 <svelte:window bind:scrollY={scroll_y} bind:innerHeight={inner_height} />
 
 <div class="hero">
-	<!-- svelte-ignore a11y_click_events_have_key_events a11y_no_static_element_interactions -->
-	<section on:click={clicked.toggle} class:clicked={$clicked}>
+	<!-- svelte-ignore a11y_click_events_have_key_events -->
+	<!-- svelte-ignore a11y_no_static_element_interactions -->
+	<section class="person" onclick={clicked.toggle} class:clicked={$clicked}>
 		<div class="image">
 			<img
+				class="profile-picture"
 				width="448px"
 				height="448px"
 				src="./toni-transparent.png"
@@ -34,19 +32,20 @@
 				<span class="last-name">Sarcevic</span>
 			</h1>
 			<p class="tagline">excited by ui&nbsp;development</p>
-			<a
-				href="/in-colour"
-				class="bars"
-				on:click|stopPropagation
-				aria-label="visit in-colour easter egg"
-			>
+			<div class="bars">
 				<div></div>
 				<div></div>
 				<div></div>
 				<div></div>
 				<div></div>
-			</a>
+			</div>
 		</div>
+	</section>
+
+	<section class="badges">
+		{#each page.data.badges as badge}
+			<img src="/badges/{badge}.png" alt={badge} />
+		{/each}
 	</section>
 	<a
 		id="scroller"
@@ -89,7 +88,7 @@
 		}
 	}
 
-	section {
+	section.person {
 		display: flex;
 		align-items: center;
 	}
@@ -98,7 +97,7 @@
 		pointer-events: auto;
 	}
 
-	img {
+	.profile-picture {
 		border-radius: 100%;
 		background-color: var(--as-back-2);
 		max-width: 28rem;
@@ -106,7 +105,7 @@
 		width: 100%;
 	}
 
-	section.clicked img {
+	section.person.clicked .profile-picture {
 		background-image: var(--in-colour);
 	}
 
@@ -169,7 +168,7 @@
 		}
 	}
 
-	section.clicked .bars div {
+	section.person.clicked .bars div {
 		&:nth-child(1) {
 			background-color: oklch(0.65 0.3 29.33);
 		}
@@ -188,7 +187,7 @@
 	}
 
 	@media only screen and (max-width: 500px) {
-		section {
+		section.person {
 			flex-direction: column;
 		}
 
@@ -214,5 +213,14 @@
 		.bars {
 			margin-inline: auto;
 		}
+	}
+
+	section.badges {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		gap: 0.75rem;
+		margin: auto;
+		margin-top: 2rem;
 	}
 </style>

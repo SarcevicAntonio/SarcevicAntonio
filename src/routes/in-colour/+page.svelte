@@ -14,7 +14,7 @@
 <TriggerWarning />
 
 <section>
-	<div style:--deg="{$turn}turn" />
+	<div style:--deg="{$turn}turn"></div>
 </section>
 
 <style>

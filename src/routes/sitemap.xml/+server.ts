@@ -6,7 +6,7 @@ export const prerender = true
 export const GET: RequestHandler = async ({ url }) => {
 	const content = await get_blog_posts(true)
 
-	return new Response(get_sitemap(content, url.hostname), {
+	return new Response(get_sitemap(content, url.origin), {
 		headers: {
 			'content-type': 'application/xml; charset=utf-8',
 		},

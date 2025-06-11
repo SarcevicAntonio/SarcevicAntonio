@@ -14,10 +14,6 @@
 	</a>
 </div>
 
-<!-- <p class="filter">
-	<a href="{page.url.pathname}?type=blog_post" data-sveltekit-noscroll> filter for blog posts </a>
-</p> -->
-
 <ul class="scroller">
 	{#each content as entry}
 		<li>
@@ -78,12 +74,5 @@
 
 	.header a :global(svg) {
 		vertical-align: sub;
-	}
-
-	.filter {
-		font-size: var(--step--1);
-		max-width: var(--content-width);
-		text-align: start;
-		margin: auto;
 	}
 </style>

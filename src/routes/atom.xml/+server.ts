@@ -6,7 +6,7 @@ export async function GET({ url }) {
 	const content = await get_blog_posts(true)
 	const tags = await get_all_tags(content)
 
-	return new Response(/*XML*/ get_feed(content, tags, url.hostname), {
+	return new Response(/*XML*/ get_feed(content, tags, url.origin), {
 		headers: {
 			'content-type': 'application/xml',
 		},
@@ -38,7 +38,7 @@ ${all_tags
 ${content.map(
 	(post) => /*XML*/ `    <entry>
         <title type="html"><![CDATA[${post.title}]]></title>
-        <link href="${domain}/${post.href}" />
+        <link href="${domain}${post.href}" />
         <id>${domain}/${post.href}</id>
         <published>${new Date(post.published).toJSON()}</published>
         <updated>${new Date(post.updated ?? post.published).toJSON()}</updated>

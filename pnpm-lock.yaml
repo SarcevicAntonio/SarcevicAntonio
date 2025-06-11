@@ -11,9 +11,9 @@ importers:
 
   .:
     dependencies:
-      '@fontsource/roboto':
-        specifier: ^5.1.1
-        version: 5.1.1
+      '@fontsource/atkinson-hyperlegible':
+        specifier: ^5.2.6
+        version: 5.2.6
       '@fontsource/space-mono':
         specifier: ^5.1.2
         version: 5.1.2
@@ -593,8 +593,8 @@ packages:
     resolution: {integrity: sha512-zSkKow6H5Kdm0ZUQUB2kV5JIXqoG0+uH5YADhaEHswm664N9Db8dXSi0nMJpacpMf+MyyglF1vnZohpEg5yUtg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fontsource/roboto@5.1.1':
-    resolution: {integrity: sha512-XwVVXtERDQIM7HPUIbyDe0FP4SRovpjF7zMI8M7pbqFp3ahLJsJTd18h+E6pkar6UbV3btbwkKjYARr5M+SQow==}
+  '@fontsource/atkinson-hyperlegible@5.2.6':
+    resolution: {integrity: sha512-Kfh6/UlHhotKuv4Oi9PXQIsmzwbtJIR442sSJnEHsO7TDZaDczK8cY0AlTNOB0XMDZj1j35nAlgbi2HZCdNg/Q==}
 
   '@fontsource/space-mono@5.1.2':
     resolution: {integrity: sha512-4EtHA1IZQ8hI7Gyc0hP3gPEZUfet4oqUg722J8WD8TalHwxvsy5sNQw0i08TDMu5gZjkLOtp5wPVScx+l9iSiw==}
@@ -3304,7 +3304,7 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
-  '@fontsource/roboto@5.1.1': {}
+  '@fontsource/atkinson-hyperlegible@5.2.6': {}
 
   '@fontsource/space-mono@5.1.2': {}
 

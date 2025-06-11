@@ -64,12 +64,8 @@
 			max-width: 28rem;
 		}
 
-		h1,
-		.tagline {
-			margin: 0;
-		}
-
 		h1 {
+			margin: 0;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;

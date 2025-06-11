@@ -1,8 +1,9 @@
 <script>
 	import { afterNavigate } from '$app/navigation'
-	import { page } from '$app/state'
 	import { reformat_date_string } from '$lib/date_helpers'
 	import { current_theme } from '$lib/theme'
+	import '@fontsource/atkinson-hyperlegible/400.css'
+	import '@fontsource/atkinson-hyperlegible/700.css'
 	import Giscus from '@giscus/svelte'
 	import { Notifications, notification } from 'as-comps'
 	import 'prism-themes/themes/prism-a11y-dark.css'
@@ -30,7 +31,7 @@
 </script>
 
 <svelte:head>
-	<title>{title.trim()} — {page.data.page_name}</title>
+	<title>{title.trim()} — sarcevic.dev</title>
 	<meta name="description" content={summary.trim()} />
 </svelte:head>
 
@@ -97,9 +98,6 @@
 <Notifications position="bottom" />
 
 <style>
-	@import '@fontsource/roboto/400.css';
-	@import '@fontsource/roboto/700.css';
-
 	article,
 	section {
 		margin: auto;
@@ -137,7 +135,7 @@
 	}
 
 	article {
-		font-family: 'Roboto', sans-serif;
+		font-family: 'Atkinson Hyperlegible', sans-serif;
 
 		& :global(ul) {
 			display: flex;

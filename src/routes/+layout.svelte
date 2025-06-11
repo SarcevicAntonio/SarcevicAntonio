@@ -3,8 +3,7 @@
 	import { page } from '$app/state'
 	import { current_theme, os_theme_preference } from '$lib/theme'
 	import ThemeLink from '$lib/theme/ThemeLink.svelte'
-	import { onMount, setContext } from 'svelte'
-	import { writable, type Writable } from 'svelte/store'
+	import { onMount } from 'svelte'
 	import '../app.postcss'
 	import Footer from './Footer.svelte'
 	import Logo from './Logo.svelte'
@@ -24,14 +23,6 @@
 		}
 	})
 	let scroll_y: number = $state(0)
-	let is_index = $derived(page.url.pathname === '/')
-
-	const clicked = writable(page.data.style === 'link') as Writable<boolean> & { toggle: () => void }
-	clicked.toggle = () => ($clicked = !$clicked)
-
-	setContext('pride', {
-		clicked,
-	})
 </script>
 
 <header>
@@ -39,16 +30,11 @@
 		<nav>
 			<ul>
 				<li>
-					<a
-						href="/"
-						onclick={() => {
-							if (scroll_y === 0 && is_index) clicked.toggle()
-						}}
-					>
+					<a href="/">
 						<Logo />
 					</a>
 				</li>
-				<li>
+				<li class="hide-on-mobile">
 					<a href="/entries"> entries </a>
 				</li>
 				<li class="hide-on-mobile">

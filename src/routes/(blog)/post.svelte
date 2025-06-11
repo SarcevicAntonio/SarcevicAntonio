@@ -1,5 +1,6 @@
 <script>
 	import { afterNavigate } from '$app/navigation'
+	import { page } from '$app/state'
 	import { reformat_date_string } from '$lib/date_helpers'
 	import { current_theme } from '$lib/theme'
 	import Giscus from '@giscus/svelte'
@@ -7,11 +8,7 @@
 	import 'prism-themes/themes/prism-a11y-dark.css'
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 
-	export let title
-	export let tags
-	export let published
-	export let updated
-	export let summary
+	let { title, tags, published, updated, summary, children } = $props()
 
 	afterNavigate(function add_copy_button_to_codeblocks() {
 		for (const node of document.querySelectorAll('pre > code')) {
@@ -33,7 +30,7 @@
 </script>
 
 <svelte:head>
-	<title>{title.trim()} — sarcevic.dev</title>
+	<title>{title.trim()} — {page.data.page_name}</title>
 	<meta name="description" content={summary.trim()} />
 </svelte:head>
 
@@ -66,7 +63,7 @@
 			{/if}
 		</aside>
 	{/if}
-	<slot />
+	{@render children?.()}
 </article>
 
 <section>

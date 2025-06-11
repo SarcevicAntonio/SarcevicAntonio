@@ -1,4 +1,5 @@
-<script context="module">
+<script module>
+	import { page } from '$app/state'
 	import { contact_links } from '$lib/contact_links'
 	import dependencies from '$lib/dependency-report.json'
 	import MaterialSymbolsAccountTreeRounded from '~icons/material-symbols/account-tree-rounded'
@@ -19,10 +20,10 @@
 				</a>
 			</li>
 			<li class="break"><hr /></li>
-			{#each contact_links as { href, title, icon }}
+			{#each contact_links as { href, title, Icon }}
 				<li>
 					<a {href} {title}>
-						<svelte:component this={icon} aria-hidden="true" />
+						<Icon aria-hidden="true" />
 					</a>
 				</li>
 			{/each}
@@ -32,7 +33,9 @@
 			<span class="screen-reader-only"> Love </span>
 			<span aria-hidden="true"> 💖 </span> by Antonio Sarcevic.
 		</h2>
-		<p><a href="/" class="self-link">sarcevic.dev</a> is powered by the following dependencies:</p>
+		<p>
+			<a href="/">{page.data.page_name}</a> is powered by the following dependencies:
+		</p>
 		<ul class="credits">
 			{#each dependencies as dependency}
 				{@const link = dependency.link

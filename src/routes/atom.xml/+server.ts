@@ -1,20 +1,23 @@
-import domain from '$lib/domain'
 import { get_all_tags, get_blog_posts, type BlogMetadata } from '$lib/server/entries'
 
 export const prerender = true
 
-export async function GET() {
+export async function GET({ url }) {
 	const content = await get_blog_posts(true)
 	const tags = await get_all_tags(content)
 
-	return new Response(/*XML*/ get_feed(content, tags), {
+	return new Response(/*XML*/ get_feed(content, tags, url.hostname), {
 		headers: {
 			'content-type': 'application/xml',
 		},
 	})
 }
 // credit to: https://github.com/importantimport/urara
-function get_feed(content: BlogMetadata[], all_tags: string[]): BodyInit | null | undefined {
+function get_feed(
+	content: BlogMetadata[],
+	all_tags: string[],
+	domain: string
+): BodyInit | null | undefined {
 	return /*XML*/ `
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>${domain}/</id>

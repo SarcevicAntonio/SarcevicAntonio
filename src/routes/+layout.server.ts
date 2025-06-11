@@ -12,6 +12,8 @@ export async function load({ locals, fetch }) {
 	return {
 		badges,
 		theme: locals.theme,
+		style: locals.style,
+		page_name: locals.style === 'link' ? 'linkplay.space' : 'sarcevic.dev',
 		content: [...blog_posts, ...apperances].sort(by_published),
 		lastfm_data: lastfm_data.error ? undefined : lastfm_data,
 	}

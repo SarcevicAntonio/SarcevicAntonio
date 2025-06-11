@@ -6,11 +6,13 @@
 	import Hero from './Hero.svelte'
 	import Projects from './Projects.svelte'
 	import Values from './Values.svelte'
-	export let data
+	import { page } from '$app/state'
+
+	let { data } = $props()
 </script>
 
 <svelte:head>
-	<title>sarcevic.dev — my website</title>
+	<title>{page.data.page_name} — my website</title>
 	<meta name="description" content="my corner of the internet" />
 </svelte:head>
 

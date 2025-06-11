@@ -4,11 +4,11 @@
 
 <h2 id="connect">Connect</h2>
 <ul>
-	{#each contact_links as { icon, ...rest }}
+	{#each contact_links as { Icon, ...rest }}
 		<li>
-			<!--svelte-ignore a11y-missing-attribute-->
+			<!--svelte-ignore a11y_missing_attribute-->
 			<a {...rest}>
-				<svelte:component this={icon} aria-hidden="true" />
+				<Icon aria-hidden="true" />
 			</a>
 		</li>
 	{/each}

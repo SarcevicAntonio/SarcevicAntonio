@@ -2,12 +2,16 @@
 	import { page } from '$app/state'
 	import { getContext } from 'svelte'
 	import type { Writable } from 'svelte/store'
-	import PajamasScrollDown from '~icons/pajamas/scroll-down'
 
 	let scroll_y = $state<number>(0)
 	let inner_height = $state<number>(0)
 	const { clicked } = getContext('pride') as {
 		clicked: Writable<boolean> & { toggle: () => void }
+	}
+
+	const imageAltByStyle = {
+		toni: 'Antonio Sarcevic in a green shirt, smiling and looking upward and to the right off camera',
+		link: 'Links Animal Crossing villager character in a pastel blue baseball cap and pastel blue shirt with pink horizontal stripes, smiling into the camera while greeting.',
 	}
 </script>
 
@@ -20,10 +24,10 @@
 		<div class="image">
 			<img
 				class="profile-picture"
-				width="448px"
-				height="448px"
-				src="./toni-transparent.png"
-				alt="Antonio Sarcevic in a green shirt, smiling and looking upward and to the right off camera"
+				width="224px"
+				height="224px"
+				src="./{page.data.style}-transparent.png"
+				alt={imageAltByStyle[page.data.style]}
 			/>
 		</div>
 		<div class="text">
@@ -47,15 +51,6 @@
 			<img src="/badges/{badge}.png" alt={badge} />
 		{/each}
 	</section>
-	<a
-		id="scroller"
-		href="#scroller"
-		class="scroll-indicator"
-		title="Scroll to see more"
-		style:--opacity={(scroll_y / (inner_height / 2)) * -1 + 1}
-	>
-		<PajamasScrollDown aria-hidden="true" />
-	</a>
 </div>
 
 <style>
@@ -66,43 +61,15 @@
 		position: relative;
 	}
 
-	.scroll-indicator {
-		position: absolute;
-		bottom: 1rem;
-		left: 50%;
-		translate: -50%;
-		font-size: clamp(1rem, calc(1rem + 2vw), 6rem);
-		color: var(--as-text-2);
-		opacity: var(--opacity);
-
-		&:hover,
-		&:focus {
-			color: var(--as-text-1);
-		}
-	}
-
-	@media (prefers-contrast: more) {
-		.scroll-indicator {
-			color: var(--as-text-1);
-			opacity: 1;
-		}
-	}
-
 	section.person {
 		display: flex;
 		align-items: center;
-	}
-
-	a {
-		pointer-events: auto;
 	}
 
 	.profile-picture {
 		border-radius: 100%;
 		background-color: var(--as-back-2);
 		max-width: 28rem;
-		height: 100%;
-		width: 100%;
 	}
 
 	section.person.clicked .profile-picture {
@@ -129,10 +96,11 @@
 		font-size: clamp(2rem, calc(1rem + 8vw), 8rem);
 		font-weight: 400;
 		color: var(--as-text-2);
+		margin-inline-start: 2em;
 	}
 
 	.first-name {
-		margin-inline-start: -0.25em;
+		margin-inline-start: -1.5em;
 	}
 
 	.tagline {
@@ -208,6 +176,7 @@
 		h1 {
 			margin-top: 2rem;
 			align-items: center;
+			margin-inline-start: auto;
 		}
 
 		.bars {

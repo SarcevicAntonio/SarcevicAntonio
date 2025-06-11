@@ -13,10 +13,10 @@
 
 <svelte:head>
 	{#if tag_filter}
-		<title>#{tag_filter} entries — sarcevic.dev</title>
+		<title>#{tag_filter} entries — {page.data.page_name}</title>
 		<meta name="description" content="my #{tag_filter} entries on the internet" />
 	{:else}
-		<title>entries — sarcevic.dev</title>
+		<title>entries — {page.data.page_name}</title>
 		<meta name="description" content="my entries on the internet" />
 	{/if}
 </svelte:head>

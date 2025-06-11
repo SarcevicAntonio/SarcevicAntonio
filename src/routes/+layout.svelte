@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser, dev } from '$app/environment'
-	import { page } from '$app/stores'
+	import { page } from '$app/state'
 	import { current_theme, os_theme_preference } from '$lib/theme'
 	import ThemeLink from '$lib/theme/ThemeLink.svelte'
 	import { onMount, setContext } from 'svelte'
@@ -9,7 +9,13 @@
 	import Footer from './Footer.svelte'
 	import Logo from './Logo.svelte'
 
-	$current_theme = $page.data.theme
+	interface Props {
+		children?: import('svelte').Snippet
+	}
+
+	let { children }: Props = $props()
+
+	$current_theme = page.data.theme
 
 	onMount(() => {
 		if (!dev && browser && 'serviceWorker' in navigator) {
@@ -17,10 +23,10 @@
 			navigator.serviceWorker.register('/sw.js')
 		}
 	})
-	let scroll_y: number
-	$: is_index = $page.url.pathname === '/'
+	let scroll_y: number = $state(0)
+	let is_index = $derived(page.url.pathname === '/')
 
-	const clicked = writable(false) as Writable<boolean> & { toggle: () => void }
+	const clicked = writable(page.data.style === 'link') as Writable<boolean> & { toggle: () => void }
 	clicked.toggle = () => ($clicked = !$clicked)
 
 	setContext('pride', {
@@ -35,7 +41,7 @@
 				<li>
 					<a
 						href="/"
-						on:click={() => {
+						onclick={() => {
 							if (scroll_y === 0 && is_index) clicked.toggle()
 						}}
 					>
@@ -49,7 +55,7 @@
 					<a href="https://www.youtube.com/@SarcevicAntonio"> youtube </a>
 				</li>
 
-				<span class="spacer" />
+				<span class="spacer"></span>
 
 				{#if $current_theme}
 					<ThemeLink theme="os-preference" />
@@ -70,7 +76,7 @@
 <svelte:window bind:scrollY={scroll_y} />
 
 <main>
-	<slot />
+	{@render children?.()}
 </main>
 
 <Footer />

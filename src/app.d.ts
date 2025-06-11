@@ -11,8 +11,13 @@ declare global {
 		// interface Error {}
 		interface Locals {
 			theme: Theme
+			style: 'toni' | 'link'
 		}
-		// interface PageData {}
+		interface PageData {
+			theme: Theme
+			style: 'toni' | 'link'
+			page_name: string
+		}
 		// interface Platform {}
 	}
 }

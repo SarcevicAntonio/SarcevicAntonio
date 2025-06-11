@@ -1,11 +1,11 @@
-# [Antonio Sarcevic](https://www.sarcevic.dev/)
+# Toni / Link
 
-Pronouns: he/they
+Pronouns: \*/? (any or none)
 
-Loves to craft User Experiences in Svelte with semantic HTML, TypeScript and plain CSS.
+Bi soft boy living in Münster.
+Loves to craft solid web experiences.
+🌻 flowers, ✌️ balance & 💖💜💙 love
 
-Working as a Web Developer from Münster since 2019.
+🏳️‍🌈🏳️‍⚧️🇵🇸🇺🇦
 
-[Read more on sarcevic.dev!](https://www.sarcevic.dev/)
-
-<!-- ![A selection of different user experiences I designed and implemented showcased in device mockups](https://i.imgur.com/JfIKTti.png)→
+[Read more on sarcevic.dev](https://www.sarcevic.dev/) or [linkplay.space](https://www.linkplay.space)!

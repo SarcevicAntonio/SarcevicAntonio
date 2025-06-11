@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/state'
 	import { reformat_date_string } from '$lib/date_helpers'
 	import MaterialSymbolsDocs from '~icons/material-symbols/docs'
 	import MaterialSymbolsLink from '~icons/material-symbols/link'
@@ -13,7 +14,7 @@
 		{#if entry.type === 'blog_post'}
 			<span class="screen-reader-only"> Blog Post </span>
 			<MaterialSymbolsDocs aria-hidden="true" />
-			<span>sarcevic.dev</span>
+			<span>{page.data.page_name}</span>
 		{:else if entry.type === 'appearance'}
 			{#if entry.href.includes('youtube')}
 				<span class="screen-reader-only"> YouTube Link </span>

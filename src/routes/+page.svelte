@@ -18,9 +18,9 @@
 
 <Hero />
 
-<section>
+<!-- <section>
 	<Values />
-</section>
+</section> -->
 
 <section>
 	<Entries content={data.content} />

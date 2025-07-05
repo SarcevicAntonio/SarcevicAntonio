@@ -39,11 +39,11 @@
 		</div>
 	</section>
 
-	<section class="badges">
+	<!-- <section class="badges">
 		{#each page.data.badges as badge}
 			<img width="88" height="31" src="/badges/{badge}.png" alt={badge} title={badge} />
 		{/each}
-	</section>
+	</section> -->
 </div>
 
 <style>

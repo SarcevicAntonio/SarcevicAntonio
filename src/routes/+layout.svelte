@@ -37,9 +37,9 @@
 				<li class="hide-on-mobile">
 					<a href="/entries"> entries </a>
 				</li>
-				<li class="hide-on-mobile">
+				<!-- <li class="hide-on-mobile">
 					<a href="https://www.youtube.com/@SarcevicAntonio"> youtube </a>
-				</li>
+				</li> -->
 
 				<span class="spacer"></span>
 
@@ -69,7 +69,7 @@
 
 <style>
 	header {
-		position: sticky;
+		/* position: sticky; */
 		z-index: 3;
 		top: 0;
 		background-color: var(--as-back-1);

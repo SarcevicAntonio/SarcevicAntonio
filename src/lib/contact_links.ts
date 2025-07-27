@@ -28,19 +28,19 @@ export const contact_links: Array<{
 	// 	Icon: Bluesky,
 	// 	href: 'https://bsky.app/profile/sarcevic.dev',
 	// },
-	{
-		title: 'GitHub',
-		Icon: Github,
-		href: 'https://github.com/SarcevicAntonio',
-	},
+	// {
+	// 	title: 'GitHub',
+	// 	Icon: Github,
+	// 	href: 'https://github.com/SarcevicAntonio',
+	// },
 	{
 		title: 'Mail',
 		Icon: Mail,
 		href: 'mailto:sarcevicantonio@gmail.com',
 	},
-	{
-		title: 'LinkedIn',
-		Icon: Linkedin,
-		href: 'https://www.linkedin.com/in/sarcevic/',
-	},
+	// {
+	// 	title: 'LinkedIn',
+	// 	Icon: Linkedin,
+	// 	href: 'https://www.linkedin.com/in/sarcevic/',
+	// },
 ]

@@ -37,7 +37,7 @@
 	Love to craft User Experiences with semantic HTML, modern CSS, TypeScript, SvelteKit and Figma.
 </p>
 <br />
-<div>
+<!-- <div>
 	<SimpleIconsAngular aria-hidden="true" />
 	<SimpleIconsFirebase aria-hidden="true" />
 	<SimpleIconsDocker aria-hidden="true" />
@@ -59,9 +59,9 @@
 <p>
 	Have experience with Angular, Firebase, Docker, GitHub Actions, GitlabCI, Cypress, Playwright, Web
 	Components, Ruby on Rails, Vue, NodeJS, Python, Java and C#.
-</p>
+</p> -->
 <br />
-<div class="count">+{differenceInYears(new Date(), new Date(2019, 2, 1))} years</div>
+<!-- <div class="count">+{differenceInYears(new Date(), new Date(2019, 2, 1))} years</div> -->
 <p>Worked as a web developer since 2019.</p>
 <p>Earned a Bachelor of Science degree in Media and Communications Informatics.</p>
 

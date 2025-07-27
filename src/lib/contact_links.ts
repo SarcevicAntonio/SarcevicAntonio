@@ -12,26 +12,26 @@ export const contact_links: Array<{
 	href: string
 	rel?: string
 }> = [
+	// {
+	// 	title: 'YouTube',
+	// 	Icon: YouTube,
+	// 	href: 'https://www.youtube.com/@SarcevicAntonio',
+	// },
 	{
-		title: 'YouTube',
-		Icon: YouTube,
-		href: 'https://www.youtube.com/@SarcevicAntonio',
+		title: 'Mastodon',
+		Icon: Mastodon,
+		href: 'https://biplus.social/@linkplay',
+		rel: 'me',
 	},
+	// {
+	// 	title: 'Bluesky',
+	// 	Icon: Bluesky,
+	// 	href: 'https://bsky.app/profile/sarcevic.dev',
+	// },
 	{
 		title: 'GitHub',
 		Icon: Github,
 		href: 'https://github.com/SarcevicAntonio',
-	},
-	{
-		title: 'Mastodon',
-		Icon: Mastodon,
-		href: 'https://mastodon.online/@sarcevic',
-		rel: 'me',
-	},
-	{
-		title: 'Bluesky',
-		Icon: Bluesky,
-		href: 'https://bsky.app/profile/sarcevic.dev',
 	},
 	{
 		title: 'Mail',

@@ -29,7 +29,13 @@
 			</h1>
 		</div>
 
-		<p class="tagline">Loves to craft solid web experiences.</p>
+		<p class="tagline">
+			{#if pride}
+				wants to believe in healing.
+			{:else}
+				Loves to craft solid web experiences.
+			{/if}
+		</p>
 		<div class="bars">
 			<div></div>
 			<div></div>

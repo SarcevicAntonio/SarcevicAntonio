@@ -12,23 +12,21 @@
 
 <h3>Recent Tracks</h3>
 
-<ol>
+<ol class="recent">
 	{#each lastfm.recenttracks.track as track}
 		<li>
-			<a href={track.url}>
-				{track.artist['#text']} – {track.name}
-				<small>
-					{#if track.date}
-						{relativeTime.from(new Date(+track.date.uts * 1000))}
-					{:else}
-						currently listening <span class="current"><MaterialSymbolsMusicNoteRounded /></span>
-					{/if}
-				</small>
-			</a>
+			{track.artist['#text']} – {track.name}
+			<small>
+				{#if track.date}
+					{relativeTime.from(new Date(+track.date.uts * 1000))}
+				{:else}
+					currently listening <span class="current"><MaterialSymbolsMusicNoteRounded /></span>
+				{/if}
+			</small>
 		</li>
 	{/each}
 </ol>
-
+<!-- 
 <h3>Top Artists: Last 12 Months</h3>
 
 <ol>
@@ -42,22 +40,22 @@
 			</a>
 		</li>
 	{/each}
-</ol>
+</ol> -->
 
 <h3>Top Albums: Last 3 Months</h3>
-<ol>
+<ol class="albums">
 	{#each lastfm.topalbums.album as album}
 		<li>
-			<a href={album.url}>
-				{album.artist.name} – {album.name}
-				<small>
-					{album.playcount} track plays
-				</small>
-			</a>
+			<img src="/proxy?url={album.image[3]['#text']}" width="300" height="300" alt="" /> <br />
+			{album.artist.name} – {album.name}
+			<small>
+				{album.playcount} track plays
+			</small>
 		</li>
 	{/each}
 </ol>
 
+<!-- 
 <h3>Top Tracks: Last 30 Days</h3>
 <ol>
 	{#each lastfm.toptracks.track as track}
@@ -74,7 +72,7 @@
 			</a>
 		</li>
 	{/each}
-</ol>
+</ol> -->
 
 <style>
 	h2 {
@@ -83,8 +81,7 @@
 	}
 
 	h3 {
-		margin-block-start: 1.5em;
-		margin-block-end: 0.5em;
+		margin-block: 1.5em;
 	}
 
 	ol {
@@ -98,7 +95,11 @@
 	}
 
 	li {
-		margin-block-end: 0.25em;
+		margin-block-end: 1em;
+	}
+
+	.albums li {
+		margin-block-end: 3em;
 	}
 
 	.powered {
@@ -113,6 +114,11 @@
 	.current {
 		display: inline-block;
 		animation: bounce 2s ease-in-out infinite;
+	}
+
+	img {
+		border-radius: 1rem;
+		margin-block-end: 1rem;
 	}
 
 	@keyframes bounce {

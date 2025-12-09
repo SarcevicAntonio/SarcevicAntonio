@@ -17,7 +17,7 @@
 		"@iconify/json": "^2.2.291",
 		"@modyfi/vite-plugin-yaml": "^1.1.0",
 		"@sveltejs/adapter-vercel": "^5.5.2",
-		"@sveltejs/kit": "^2.15.1",
+		"@sveltejs/kit": "^2.20.6",
 		"@typescript-eslint/eslint-plugin": "^8.19.0",
 		"@typescript-eslint/parser": "^8.19.0",
 		"as-comps": "^0.0.27",

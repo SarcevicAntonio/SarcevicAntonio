@@ -1,9 +1,19 @@
+- title: 'Transgender remembrance, intersectionality, and celebrating trans* art'
+  summary: >-
+    Learn with me about the interlocking systems of oppression that lead to violence, and celebrate trans* life through art by trans* artists
+  href: https://www.datawrapper.de/blog/transgender-remembrance-day
+  published: '2025-11-27'
+  tags:
+    - weekly chart
+    - datawrapper
+    - queer
 - title: 'Every-where I went to concerts'
   summary: >-
     Come along with me on a journey down memory lane, where I reminisce about past concerts I went to.
   href: https://www.datawrapper.de/blog/everywhere-concerts-map
   published: '2025-08-14'
   tags:
+    - weekly chart
     - datawrapper
 - title: 'Mapping a Super Bowl halftime show'
   summary: >-
@@ -11,6 +21,7 @@
   href: https://www.datawrapper.de/blog/kendrick-lamar-halftime-show
   published: '2025-02-27'
   tags:
+    - weekly chart
     - datawrapper
 - title: 'Building accessible sites with SvelteKit: seven practical tips'
   summary: >-
@@ -31,6 +42,7 @@
   tags:
     - weekly chart
     - datawrapper
+    - queer
 - title: The history of left-handedness
   summary: >-
     "The history of left-handedness" is a chart that is used in an infamous analogy for queer
@@ -41,6 +53,7 @@
   tags:
     - weekly chart
     - datawrapper
+    - queer
 - title: Humanity deserves more humane drug policies
   summary: >-
     Germany recently decriminalized the possession of small quantities of cannabis for personal

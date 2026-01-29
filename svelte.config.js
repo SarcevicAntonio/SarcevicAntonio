@@ -1,14 +1,16 @@
 import adapter from '@sveltejs/adapter-vercel'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import { mdsvex } from 'mdsvex'
+import path from 'path'
 import autolink from 'rehype-autolink-headings'
 import slug from 'rehype-slug'
 import toc from 'remark-toc'
 import { sveltePreprocess } from 'svelte-preprocess'
 import { importAssets } from 'svelte-preprocess-import-assets'
+import { fileURLToPath } from 'url'
 
 const mdsvex_config = {
-	layout: 'src/routes/(blog)/post.svelte',
+	layout: fileURLToPath(path.join(import.meta.url, '../src/routes/(blog)/post.svelte')),
 	remarkPlugins: [[toc, { tight: true }]],
 	rehypePlugins: [
 		slug,
@@ -40,7 +42,7 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter({ runtime: 'edge' }),
+		adapter: adapter(),
 	},
 	vitePlugin: {
 		inspector: true,

@@ -1,5 +1,3 @@
-import type { Appearance, BlogMetadata } from './server/entries'
-
 export const reformat_date_string = (string: string) =>
 	new Date(string).toLocaleDateString(undefined, {
 		year: 'numeric',
@@ -7,5 +5,5 @@ export const reformat_date_string = (string: string) =>
 		day: 'numeric',
 	})
 
-export const by_published = (a: BlogMetadata | Appearance, b: BlogMetadata | Appearance) =>
+export const by_published = (a: { published: string }, b: { published: string }) =>
 	new Date(b.published).valueOf() - new Date(a.published).valueOf()

@@ -1,4 +1,4 @@
-import appearances from '$lib/appearances.yaml'
+import { appearances } from '$lib/appearances'
 import { by_published } from '$lib/date_helpers'
 import { parseHTML } from 'linkedom'
 import type { Component } from 'svelte'
@@ -100,7 +100,9 @@ const Appearance = z.object({
 	domain: z.string().optional(),
 })
 
+export type AppearanceSource = z.input<typeof Appearance>
 export type Appearance = z.infer<typeof Appearance>
+
 export function get_all_appearances(): Appearance[] {
 	for (const appearance of appearances as Appearance[]) {
 		appearance.domain = (domain_pattern.exec(appearance.href) || [])[1]
@@ -119,7 +121,10 @@ export function get_all_appearances(): Appearance[] {
 		}
 	}
 
-	appearances.map((a: Appearance) => (a.type = 'appearance'))
+	appearances.map((a) => {
+		a.type = 'appearance'
+		return a
+	})
 
 	return appearances as Appearance[]
 }

@@ -1,0 +1,144 @@
+import type { AppearanceSource } from './server/entries'
+
+export const appearances: AppearanceSource[] = [
+	{
+		title: 'Transgender remembrance, intersectionality, and celebrating trans* art',
+		summary:
+			'Learn with me about the interlocking systems of oppression that lead to violence, and celebrate trans* life through art by trans* artists',
+		href: 'https://www.datawrapper.de/blog/transgender-remembrance-day',
+		published: '2025-11-27',
+		tags: ['weekly chart', 'datawrapper', 'queer'],
+	},
+	{
+		title: 'Every-where I went to concerts',
+		summary:
+			'Come along with me on a journey down memory lane, where I reminisce about past concerts I went to.',
+		href: 'https://www.datawrapper.de/blog/everywhere-concerts-map',
+		published: '2025-08-14',
+		tags: ['weekly chart', 'datawrapper'],
+	},
+	{
+		title: 'Mapping a Super Bowl halftime show',
+		summary:
+			"Challenging myself by creating a top down map of Kendrick Lamar's Super Bowl Halftime Show inside Datawrapper.",
+		href: 'https://www.datawrapper.de/blog/kendrick-lamar-halftime-show',
+		published: '2025-02-27',
+		tags: ['weekly chart', 'datawrapper'],
+	},
+	{
+		title: 'Building accessible sites with SvelteKit: seven practical tips',
+		summary:
+			'Some tips to help spread awareness of and fix accessability issues, specifically focusing on keyboard navigation.',
+		href: 'https://blog.datawrapper.de/sveltekit-accessibility-tips/',
+		published: '2024-11-25',
+		tags: ['svelte', 'a11y', 'datawrapper'],
+	},
+	{
+		title: 'Why bi visibility matters',
+		summary:
+			'Talking about the biggest — but at the same time one of the more misunderstood — subgroup of the queer community.',
+		href: 'https://blog.datawrapper.de/why-bi-visibility-matters/',
+		published: '2024-10-03',
+		tags: ['weekly chart', 'datawrapper', 'queer'],
+	},
+	{
+		title: 'The history of left-handedness',
+		summary:
+			'"The history of left-handedness" is a chart that is used in an infamous analogy for queer oppression. I dive into the paper where the data originated from and learned about the  difference between direct and indirect social pressure.',
+		href: 'https://blog.datawrapper.de/history-of-left-handedness/',
+		published: '2024-07-11',
+		tags: ['weekly chart', 'datawrapper', 'queer'],
+	},
+	{
+		title: 'Humanity deserves more humane drug policies',
+		summary:
+			'Germany recently decriminalized the possession of small quantities of cannabis for personal consumption and I a look at the topic that first got me into politics: drug prohibition.',
+		href: 'https://blog.datawrapper.de/humane-drug-policy/',
+		published: '2024-04-18',
+		tags: ['weekly chart', 'datawrapper'],
+	},
+	{
+		title: 'A recipe for Datawrapper',
+		summary:
+			'I analyzed the work git repository throughout the years to examine developments in technologies used.',
+		href: 'https://blog.datawrapper.de/datawrapper-code-composition/',
+		published: '2023-11-02',
+		tags: ['weekly chart', 'datawrapper'],
+	},
+	{
+		title: 'Visualizing my musical journey',
+		summary:
+			'My first weekly chart and general entry on the Datawrapper blog where I scraped my last.fm data and created a supersized tag timeline.',
+		href: 'https://blog.datawrapper.de/musical-genre-timeline/',
+		published: '2023-07-27',
+		tags: ['weekly chart', 'datawrapper'],
+	},
+	{
+		title:
+			'Already Deprecated: Einführung in Web Components und Komponenten erstellen mit Svelte oder Stencil',
+		summary:
+			'🎙️ I got invited to the "Already Deprecated" Podcast to talk about Web Components, and creating them with Svelte. This episode is in German.',
+		href: 'https://www.youtube.com/watch?v=g6l2qtmY6wM',
+		lang: 'DE',
+		published: '2021-03-03',
+		tags: ['svelte', 'web components', 'podcast'],
+	},
+	{
+		title:
+			'CodingCatDev: SvelteLab a supercharged REPL for Svelte with Antonio Sarcevic & Paolo Ricciuti',
+		summary:
+			'🎙️ Paolo and I got invited to the "CodingCatDev" Podcast to talk to Brittney and Alex about SvelteLab!',
+		href: 'https://www.youtube.com/watch?v=S1iakhstHlc',
+		published: '2023-06-21',
+		tags: ['svelte', 'sveltelab', 'podcast', 'video'],
+	},
+	{
+		title:
+			'Svelte Society - London May 2023: Hacking SvelteLab: behind the supercharged REPL for Svelte',
+		summary:
+			'🎙️ Paolo and I got invited to "Svelte Society London" conference to talk about creating SvelteLab!',
+		href: 'https://www.youtube.com/watch?v=VkVyP1TgH64&t=3220s',
+		published: '2023-05-16',
+		tags: ['svelte', 'sveltelab', 'conference', 'video'],
+	},
+	{
+		title: 'Svelte Radio: SvelteLab - a Svelte REPL for SvelteKit with Antonio and Paolo',
+		href: 'https://www.svelteradio.com/episodes/sveltelab-a-svelte-repl-for-sveltekit-with-antonio-and-paolo',
+		summary:
+			'🎙️ A Dream Came True! Paolo and I got invited to the one and only "Svelte Radio" Podcast to talk to Kev, Brittney and Antony about creating SvelteLab!',
+		published: '2023-06-22',
+		tags: ['svelte', 'sveltelab', 'podcast'],
+	},
+	{
+		title: 'Svelte makes Drag And Drop API easy!',
+		summary:
+			'📼 This video shows how to create a minimal draggable and dropzone Svelte Action using the browser native Drag and Drop API. It only takes about 80 lines of code for the Svelte Actions.',
+		href: 'https://www.youtube.com/watch?v=lTDKhj83tec',
+		published: '2023-05-15',
+		tags: ['svelte', 'video', 'guide'],
+	},
+	{
+		title: 'Simple native-like App in SvelteKit!',
+		summary:
+			'📼 This guide shows how to create a simple installable and offline-first web application using SvelteKit and workbox-precaching. It only takes less than ten lines of code for the Service Worker!',
+		href: 'https://www.youtube.com/watch?v=Enl4OPQ2OAM',
+		published: '2023-05-29',
+		tags: ['svelte', 'video', 'guide'],
+	},
+	{
+		title: '{🧪} SvelteLab Launch Teaser',
+		summary:
+			'📼 When we launched SvelteLab, we wanted a small teaser video to get everyone hyped in as short as time as possible. I used Motion and Final Cut Pro to create the teaser!',
+		href: 'https://www.youtube.com/watch?v=jwC6sZq7u-o',
+		published: '2023-04-10',
+		tags: ['sveltelab', 'video', 'animation'],
+	},
+	{
+		title: 'Creating a Web App with Imba - The friendly full-stack language',
+		summary:
+			'🔴 I created a little Web App with Imba in a live stream and cut it up for your enjoyment!',
+		href: 'https://www.youtube.com/watch?v=DRr73IJJMH4',
+		published: '2022-08-02',
+		tags: ['imba', 'livestream'],
+	},
+]

@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-vercel'
+import adapter from '@sveltejs/adapter-auto'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import { mdsvex } from 'mdsvex'
 import path from 'path'
@@ -40,7 +40,6 @@ const config = {
 		sveltePreprocess({ postcss: true }),
 		importAssets(),
 	],
-
 	kit: {
 		adapter: adapter(),
 	},

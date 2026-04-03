@@ -38,7 +38,7 @@
 		margin: auto;
 		align-items: center;
 		justify-content: space-around;
- 		:global(svg) {
+		:global(svg) {
 			font-size: var(--step-5);
 		}
 	}

@@ -53,8 +53,9 @@ body {
 
 code,
 pre {
-	font-family: 'JetBrains Mono', 'Input Mono', 'Fira Code', 'Roboto Mono', Consolas, Monaco,
-		'Andale Mono', 'Ubuntu Mono', monospace !important;
+	font-family:
+		'JetBrains Mono', 'Input Mono', 'Fira Code', 'Roboto Mono', Consolas, Monaco, 'Andale Mono',
+		'Ubuntu Mono', monospace !important;
 }
 
 a {

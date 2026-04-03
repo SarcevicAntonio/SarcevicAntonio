@@ -1,67 +1,40 @@
-import { defineConfig, globalIgnores } from 'eslint/config'
-import typescriptEslint from '@typescript-eslint/eslint-plugin'
-import globals from 'globals'
-import tsParser from '@typescript-eslint/parser'
-import parser from 'svelte-eslint-parser'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { includeIgnoreFile } from '@eslint/compat'
 import js from '@eslint/js'
-import { FlatCompat } from '@eslint/eslintrc'
+import prettier from 'eslint-config-prettier'
+import svelte from 'eslint-plugin-svelte'
+import { defineConfig } from 'eslint/config'
+import globals from 'globals'
+import path from 'node:path'
+import ts from 'typescript-eslint'
+import svelteConfig from './svelte.config.js'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-const compat = new FlatCompat({
-	baseDirectory: __dirname,
-	recommendedConfig: js.configs.recommended,
-	allConfig: js.configs.all,
-})
+const gitignorePath = path.resolve(import.meta.dirname, '.gitignore')
 
-export default defineConfig([
-	globalIgnores([
-		'**/.DS_Store',
-		'**/node_modules',
-		'build',
-		'.svelte-kit',
-		'package',
-		'**/.env',
-		'**/.env.*',
-		'!**/.env.example',
-		'**/pnpm-lock.yaml',
-		'**/package-lock.json',
-		'**/yarn.lock',
-	]),
+export default defineConfig(
+	includeIgnoreFile(gitignorePath),
+	js.configs.recommended,
+	ts.configs.recommended,
+	svelte.configs.recommended,
+	prettier,
+	svelte.configs.prettier,
 	{
-		extends: compat.extends(
-			'eslint:recommended',
-			'plugin:@typescript-eslint/recommended',
-			'plugin:svelte/recommended',
-			'prettier'
-		),
-		plugins: {
-			'@typescript-eslint': typescriptEslint,
-		},
+		languageOptions: { globals: { ...globals.browser, ...globals.node } },
+		rules: { 'no-undef': 'off' }, // better typescript-eslint compat
+	},
+	{
+		files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
 		languageOptions: {
-			globals: {
-				...globals.browser,
-				...globals.node,
-			},
-			parser: tsParser,
-			ecmaVersion: 2020,
-			sourceType: 'module',
 			parserOptions: {
+				projectService: true,
 				extraFileExtensions: ['.svelte'],
+				parser: ts.parser,
+				svelteConfig,
 			},
 		},
 	},
 	{
-		files: ['**/*.svelte'],
-		languageOptions: {
-			parser: parser,
-			ecmaVersion: 5,
-			sourceType: 'script',
-			parserOptions: {
-				parser: '@typescript-eslint/parser',
-			},
-		},
-	},
-])
+		// Override or add rule settings here, such as:
+		// 'svelte/button-has-type': 'error'
+		rules: {},
+	}
+)

@@ -19,7 +19,7 @@
 		"@iconify/json": "^2.2.458",
 		"@sveltejs/adapter-auto": "^7.0.1",
 		"@sveltejs/kit": "^2.55.0",
-		"@sveltejs/vite-plugin-svelte": "^5.1.1",
+		"@sveltejs/vite-plugin-svelte": "^7.0.0",
 		"autoprefixer": "^10.4.27",
 		"eslint": "^10.1.0",
 		"eslint-config-prettier": "^10.1.8",
@@ -41,7 +41,7 @@
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.58.0",
 		"unplugin-icons": "^23.0.1",
-		"vite": "^7.3.1"
+		"vite": "^8.0.3"
 	},
 	"type": "module",
 	"dependencies": {

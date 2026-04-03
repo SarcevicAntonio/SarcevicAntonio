@@ -161,7 +161,7 @@ document:
 
 ```html
 <script type="module">
-  import '@polymer/paper-button/paper-button.js'
+	import '@polymer/paper-button/paper-button.js'
 </script>
 ```
 
@@ -253,10 +253,10 @@ like this:
 
 ```js
 class MyButton extends HTMLElement {
-  constructor() {
-    super()
-    this.innerHTML = `<button>my-button</button>`
-  }
+	constructor() {
+		super()
+		this.innerHTML = `<button>my-button</button>`
+	}
 }
 ```
 
@@ -284,7 +284,7 @@ The now newly defined my-button custom element is a so-called "autonomous custom
 
 ```js
 window.customElements.define('plastic-button', PlasticButton, {
-  extends: 'button'
+	extends: 'button',
 })
 ```
 
@@ -344,11 +344,11 @@ affecting the rest of the document. For example, you could create the following 
 
 ```html
 <style>
-  button {
-    color: #5c8012;
-    background-color: white;
-    /* ... more styles... */
-  }
+	button {
+		color: #5c8012;
+		background-color: white;
+		/* ... more styles... */
+	}
 </style>
 ```
 
@@ -624,61 +624,60 @@ injection are very helpful.
 const counterTemplate = document.createElement('template')
 counterTemplate.innerHTML = `
 <style>
-button {
-  display: inline-block;
-  color: #5c8012;
-  font-size: 18px;
-  font-weight: 500;
-  font-family: "Futura";
-  background-color: white;
-  border: 1px solid grey;
-  border-radius: 4px;
-  padding: 8px;
-  margin: 8px;
-  transition: box-shadow .4s ease;
-  user-select: none;
-}
-button:hover {
-  box-shadow: 0 4px 32px 0 rgba(0,0,0,.161);
-}
-button:active {
-  background-color: grey;
-  color: #9ed137;
-}
+	button {
+		display: inline-block;
+		color: #5c8012;
+		font-size: 18px;
+		font-weight: 500;
+		font-family: 'Futura';
+		background-color: white;
+		border: 1px solid grey;
+		border-radius: 4px;
+		padding: 8px;
+		margin: 8px;
+		transition: box-shadow 0.4s ease;
+		user-select: none;
+	}
+	button:hover {
+		box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.161);
+	}
+	button:active {
+		background-color: grey;
+		color: #9ed137;
+	}
 </style>
-<button id="inc">
-  Clicked <span id="count">0</span> times
-</button>`
+<button id="inc">Clicked <span id="count">0</span> times</button>
+`
 class MyCounter extends HTMLElement {
-  constructor() {
-    super()
-    this.attachShadow({ mode: 'open' })
-    this.shadowRoot.appendChild(counterTemplate.content.cloneNode(true))
-    this.handleClick = () => {
-      this.count++
-    }
-  }
-  connectedCallback() {
-    this.shadowRoot.getElementById('inc').addEventListener('click', this.handleClick)
-    if (!this.hasAttribute('count')) {
-      this.setAttribute('count', 0)
-    }
-  }
-  disconnectedCallback() {
-    this.shadowRoot.getElementById('inc').removeEventListener('click', this.handleClick)
-  }
-  static get observedAttributes() {
-    return ['count']
-  }
-  attributeChangedCallback(name, oldCount, newCount) {
-    this.shadowRoot.getElementById('count').innerHTML = newCount
-  }
-  get count() {
-    return this.getAttribute('count')
-  }
-  set count(newCount) {
-    this.setAttribute('count', newCount)
-  }
+	constructor() {
+		super()
+		this.attachShadow({ mode: 'open' })
+		this.shadowRoot.appendChild(counterTemplate.content.cloneNode(true))
+		this.handleClick = () => {
+			this.count++
+		}
+	}
+	connectedCallback() {
+		this.shadowRoot.getElementById('inc').addEventListener('click', this.handleClick)
+		if (!this.hasAttribute('count')) {
+			this.setAttribute('count', 0)
+		}
+	}
+	disconnectedCallback() {
+		this.shadowRoot.getElementById('inc').removeEventListener('click', this.handleClick)
+	}
+	static get observedAttributes() {
+		return ['count']
+	}
+	attributeChangedCallback(name, oldCount, newCount) {
+		this.shadowRoot.getElementById('count').innerHTML = newCount
+	}
+	get count() {
+		return this.getAttribute('count')
+	}
+	set count(newCount) {
+		this.setAttribute('count', newCount)
+	}
 }
 window.customElements.define('my-counter', MyCounter)
 ```
@@ -688,64 +687,61 @@ window.customElements.define('my-counter', MyCounter)
 ```html
 <svelte:options tag="my-svelte-counter" />
 <script>
-  export let count = 0
-  function inc() {
-    count++
-  }
+	export let count = 0
+	function inc() {
+		count++
+	}
 </script>
 <button on:click="{inc}">Clicked {count} times</button>
 <style>
-  button {
-    display: inline-block;
-    color: #5c8012;
-    font-size: 18px;
-    font-weight: 500;
-    font-family: 'Futura';
-    background-color: white;
-    border: 1px solid grey;
-    border-radius: 4px;
-    padding: 8px;
-    margin: 8px;
-    transition: box-shadow 0.4s ease;
-    user-select: none;
-  }
-  button:hover {
-    box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.161);
-  }
-  button:active {
-    background-color: grey;
-    color: #9ed137;
-  }
+	button {
+		display: inline-block;
+		color: #5c8012;
+		font-size: 18px;
+		font-weight: 500;
+		font-family: 'Futura';
+		background-color: white;
+		border: 1px solid grey;
+		border-radius: 4px;
+		padding: 8px;
+		margin: 8px;
+		transition: box-shadow 0.4s ease;
+		user-select: none;
+	}
+	button:hover {
+		box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.161);
+	}
+	button:active {
+		background-color: grey;
+		color: #9ed137;
+	}
 </style>
 ```
 
 <style>
+	paper-button {
+		background-color: white;
+	}
 
-  paper-button {
-    background-color: white;
-  }
+	.example {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		border-bottom: 1px solid var(--as-back-2);
+		color: black;
+		padding-bottom: 0.5em;
+		margin-bottom: 0.5em;
+		background-color: hsl(var(--b3));
+		background-image: radial-gradient(hsl(var(--b1)) 20%, transparent 0%);
+		background-position: 50% 50%;
+		background-size: 8px 8px;
+	}
 
-  .example {
-    @apply shadow-inner;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 0.5rem;
-    background: white;
-    color: black;
-    padding: 1em;
-    width: 100%;
-    background-color: hsl(var(--b3));
-    background-image: radial-gradient(hsl(var(--b1)) 20%, transparent 0%);
-    background-position: 50% 50%;
-    background-size: 8px 8px;
-  }
+	.example button {
+		all: revert;
+	}
 
-  .example button {
-    all: revert;
-  }
-
-  .mark-buttons-red button {
-    border: 1px solid red;
-  }
+	.mark-buttons-red button {
+		border: 1px solid red;
+	}
 </style>

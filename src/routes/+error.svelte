@@ -1,15 +1,15 @@
 <script>
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
-	import { page } from '$app/stores'
+	import { page } from '$app/state'
 </script>
 
 <div class="error">
 	<section>
-		<h1>{$page.status}</h1>
+		<h1>{page.status}</h1>
 
-		{#if $page.status === 404}
+		{#if page.status === 404}
 			<p>
-				Looks like `{$page.url.pathname}` was not found...
+				Looks like `{page.url.pathname}` was not found...
 				<br />
 			</p>
 			<p>Sorry about that 🫤</p>
@@ -20,7 +20,7 @@
 				>.
 			</p>
 		{:else}
-			<p>{$page.error?.message}</p>
+			<p>{page.error?.message}</p>
 		{/if}
 
 		<p>

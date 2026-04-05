@@ -1,25 +1,35 @@
 <script lang="ts">
+	import { preventDefault } from 'svelte/legacy'
+
 	import { page } from '$app/stores'
 	import Dark from '~icons/material-symbols/dark-mode-outline-rounded'
 	import Light from '~icons/material-symbols/light-mode-outline'
 	import Reset from '~icons/material-symbols/settings-backup-restore-rounded'
 	import { current_theme } from '.'
 
-	export let theme: 'os-preference' | 'light' | 'dark'
+	interface Props {
+		theme: 'os-preference' | 'light' | 'dark'
+	}
 
-	$: title = {
-		'os-preference': 'Use Operating System Theme Preference',
-		dark: 'Use Dark Theme',
-		light: 'Use Light Theme',
-	}[theme]
+	let { theme }: Props = $props()
 
-	$: icon = {
-		'os-preference': Reset,
-		dark: Dark,
-		light: Light,
-	}[theme]
+	let title = $derived(
+		{
+			'os-preference': 'Use Operating System Theme Preference',
+			dark: 'Use Dark Theme',
+			light: 'Use Light Theme',
+		}[theme]
+	)
 
-	$: href = '/set-theme/' + theme
+	let Icon = $derived(
+		{
+			'os-preference': Reset,
+			dark: Dark,
+			light: Light,
+		}[theme]
+	)
+
+	let href = $derived('/set-theme/' + theme)
 
 	async function enhance() {
 		await fetch(href)
@@ -34,8 +44,8 @@
 </script>
 
 <li>
-	<a href="{href}?redirect={$page.url.pathname}" {title} on:click|preventDefault={enhance}>
-		<svelte:component this={icon} aria-hidden="true" />
+	<a href="{href}?redirect={$page.url.pathname}" {title} onclick={preventDefault(enhance)}>
+		<Icon aria-hidden="true" />
 	</a>
 </li>
 

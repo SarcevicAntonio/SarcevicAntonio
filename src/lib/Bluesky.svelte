@@ -1,4 +1,9 @@
-<svg viewBox="0 0 42 42" width="1.2em" height="1.2em" {...$$restProps}>
+<script lang="ts">
+	import type { SVGAttributes } from 'svelte/elements'
+	let { ...rest }: SVGAttributes<SVGSVGElement> = $props()
+</script>
+
+<svg viewBox="0 0 42 42" width="1.2em" height="1.2em" {...rest}>
 	<path
 		fill="currentColor"
 		fill-rule="evenodd"

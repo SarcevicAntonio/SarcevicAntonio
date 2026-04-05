@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { page } from '$app/state'
 	import Entry from '$lib/Entry.svelte'
 	import type { Appearance, BlogMetadata } from '$lib/server/entries'
 	import MaterialSymbolsArrowForwardRounded from '~icons/material-symbols/arrow-forward-rounded'
 
-	export let content: (BlogMetadata | Appearance)[]
+	let { content }: { content: (BlogMetadata | Appearance)[] } = $props()
 </script>
 
 <div class="header">
@@ -15,7 +14,7 @@
 </div>
 
 <ul class="scroller">
-	{#each content as entry}
+	{#each content as entry (entry.href)}
 		<li>
 			<Entry {entry} h_level={3}></Entry>
 		</li>

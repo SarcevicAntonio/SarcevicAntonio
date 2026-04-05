@@ -1,5 +1,6 @@
 <script lang="ts">
-	import type { ComponentType } from 'svelte'
+	import type { Component, Snippet } from 'svelte'
+	import type { SvelteHTMLElements } from 'svelte/elements'
 	import Info from '~icons/material-symbols/info-outline-rounded'
 	import Warning from '~icons/material-symbols/warning-outline-rounded'
 
@@ -12,17 +13,25 @@
 		return string ? string.charAt(0).toUpperCase() + string.slice(1) : ''
 	}
 
-	export let type: 'info' | 'warning' = 'info'
-	export let icon: ComponentType = icons[type]
-	export let title = capitalize(type)
+	let {
+		type = 'info',
+		icon: Icon = icons[type],
+		title = capitalize(type),
+		children,
+	}: {
+		type?: 'info' | 'warning'
+		icon?: Component<SvelteHTMLElements['svg']>
+		title?: string
+		children?: Snippet
+	} = $props()
 </script>
 
 <section class={type}>
 	<p class="title">
-		<svelte:component this={icon} />
+		<Icon />
 		{title}
 	</p>
-	<slot />
+	{@render children?.()}
 </section>
 
 <style>

@@ -9,7 +9,7 @@
 	)
 </script>
 
-<svelte:body on:mousemove={handleMouseMove} />
+<svelte:body onmousemove={handleMouseMove} />
 
 <TriggerWarning />
 

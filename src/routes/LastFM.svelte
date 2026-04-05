@@ -3,7 +3,7 @@
 	import MaterialSymbolsMusicNoteRounded from '~icons/material-symbols/music-note-rounded'
 	import type { LastFMData } from './lastfm/type'
 
-	export let lastfm: LastFMData
+	let { lastfm }: { lastfm: LastFMData } = $props()
 	const relativeTime = new RelativeTime()
 </script>
 
@@ -44,7 +44,7 @@
 
 <h3>Top Albums: Last 3 Months</h3>
 <ol class="albums">
-	{#each lastfm.topalbums.album as album}
+	{#each lastfm.topalbums.album as album (album.name)}
 		<li>
 			<img src="/proxy?url={album.image[3]['#text']}" width="300" height="300" alt="" /> <br />
 			{album.artist.name} – {album.name}

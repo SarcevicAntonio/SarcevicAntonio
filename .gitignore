@@ -11,3 +11,4 @@ vite.config.ts.timestamp-*
 src/lib/dependency-report.json
 .unlighthouse/
 .vercel
+test-results/.last-run.json

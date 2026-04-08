@@ -37,15 +37,14 @@
 			<a href="/">{page.data.page_name}</a> is powered by the following dependencies:
 		</p>
 		<ul class="credits">
-			{#each dependencies as dependency}
-				{@const link = dependency.link
+			{#each dependencies as dependency (dependency.name)}
+				{@const href = dependency.link
 					.replace('git://', 'https://')
 					.replace('git+', '')
 					.replace('.git', '')
 					.replace('ssh://', 'https://')}
-
 				<li>
-					<a href={link}>
+					<a {href}>
 						{dependency.name}
 						@{dependency.installedVersion} ({dependency.licenseType})
 					</a>

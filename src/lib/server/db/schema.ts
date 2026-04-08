@@ -1,9 +1,9 @@
-import { integer, sqliteTable, text } from 'drizzle-orm/sqlite-core';
+import { integer, sqliteTable, text } from 'drizzle-orm/sqlite-core'
 
 export const task = sqliteTable('task', {
-	id: text('id')
-		.primaryKey()
-		.$defaultFn(() => crypto.randomUUID()),
-	title: text('title').notNull(),
-	priority: integer('priority').notNull().default(1)
-});
+	id: text('id').primaryKey().$defaultFn(crypto.randomUUID),
+	label: text('label').notNull(),
+	description: text('description').notNull(),
+	days: integer('days').notNull().default(7),
+	done_at: text('done_at'),
+})

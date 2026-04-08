@@ -1,6 +1,6 @@
 import { LASTFM_API_KEY } from '$env/static/private'
 import { json } from '@sveltejs/kit'
-import type { LastFMData } from './type.js'
+import type { LastFMData } from '../../lib/lastfm-types.js'
 
 const last_fm_api_url = `https://ws.audioscrobbler.com/2.0/?user=LinkPlay9&api_key=${LASTFM_API_KEY}&format=json`
 

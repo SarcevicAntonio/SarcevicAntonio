@@ -1,7 +1,7 @@
 <script lang="ts">
 	import RelativeTime from '@yaireo/relative-time'
 	import MaterialSymbolsMusicNoteRounded from '~icons/material-symbols/music-note-rounded'
-	import type { LastFMData } from './lastfm/type'
+	import type { LastFMData } from '../lastfm-types'
 
 	let { lastfm }: { lastfm: LastFMData } = $props()
 	const relativeTime = new RelativeTime()

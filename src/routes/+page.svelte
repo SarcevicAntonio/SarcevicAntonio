@@ -1,12 +1,11 @@
 <script>
-	import LastFM from './LastFM.svelte'
-	import Contact from './Contact.svelte'
-	import Entries from './Entries.svelte'
-	import Craft from './Craft.svelte'
-	import Hero from './Hero.svelte'
-	import Projects from './Projects.svelte'
-	import Values from './Values.svelte'
 	import { page } from '$app/state'
+	import Contact from '$lib/homepage/Contact.svelte'
+	import Craft from '$lib/homepage/Craft.svelte'
+	import Entries from '$lib/homepage/Entries.svelte'
+	import Hero from '$lib/homepage/Hero.svelte'
+	import LastFM from '$lib/homepage/LastFM.svelte'
+	import Projects from './Projects.svelte'
 
 	let { data } = $props()
 </script>

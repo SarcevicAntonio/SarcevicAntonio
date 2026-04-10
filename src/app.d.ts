@@ -3,6 +3,7 @@
 /// <reference types="@modyfi/vite-plugin-yaml/modules" />
 
 import type { Theme } from '$lib/theme'
+import type { Session, User } from 'better-auth'
 
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
@@ -12,6 +13,8 @@ declare global {
 		interface Locals {
 			theme: Theme
 			style: 'toni' | 'link'
+			session: Session | undefined
+			user: User | undefined
 		}
 		interface PageData {
 			theme: Theme

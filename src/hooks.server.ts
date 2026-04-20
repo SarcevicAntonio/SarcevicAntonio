@@ -1,9 +1,7 @@
 import { building, dev } from '$app/environment'
-import { auth } from '$lib/server/auth'
 import { is_valid_theme, type Theme } from '$lib/theme'
 import { type Handle } from '@sveltejs/kit'
 import { sequence } from '@sveltejs/kit/hooks'
-import { svelteKitHandler } from 'better-auth/svelte-kit'
 
 const handleWWW: Handle = async ({ event, resolve }) => {
 	const res = resolve(event)
@@ -12,15 +10,6 @@ const handleWWW: Handle = async ({ event, resolve }) => {
 	const wwwUrl = new URL(event.url)
 	wwwUrl.hostname = 'www.' + wwwUrl.hostname
 	return new Response(undefined, { status: 308, headers: { location: String(wwwUrl) } })
-}
-
-const handleAuth: Handle = async ({ event, resolve }) => {
-	const session = await auth.api.getSession({ headers: event.request.headers })
-	if (session) {
-		event.locals.session = session.session
-		event.locals.user = session.user
-	}
-	return svelteKitHandler({ event, resolve, auth, building })
 }
 
 const handleThemeAndStyle: Handle = async ({ event, resolve }) => {
@@ -36,4 +25,4 @@ const handleThemeAndStyle: Handle = async ({ event, resolve }) => {
 	})
 }
 
-export const handle = sequence(handleWWW, handleAuth, handleThemeAndStyle)
+export const handle = sequence(handleWWW, handleThemeAndStyle)

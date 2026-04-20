@@ -7,7 +7,7 @@ import { svelteKitHandler } from 'better-auth/svelte-kit'
 
 const handleWWW: Handle = async ({ event, resolve }) => {
 	const res = resolve(event)
-	if (dev) return res
+	if (dev || building) return res
 	if (event.url.hostname.startsWith('www.')) return res
 	const wwwUrl = new URL(event.url)
 	wwwUrl.hostname = 'www.' + wwwUrl.hostname

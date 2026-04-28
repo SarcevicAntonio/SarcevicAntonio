@@ -1,0 +1,188 @@
+{
+	// # Filetype Specific
+	"[nix]": {
+		"editor.defaultFormatter": "jnoortheen.nix-ide",
+	},
+	"workbench.editorAssociations": {
+		"*.svg": "default",
+		"git-rebase-todo": "default",
+	},
+
+	// cSpell
+	"cSpell.language": "en,de-DE",
+	"cSpell.userWords": [
+		"basemap",
+		"datawrapper",
+		"mapbox",
+		"matomo",
+		"oxlint",
+		"powerpoint",
+		"recents",
+		"webtoprint",
+	],
+
+	// Debug
+	"debug.console.fontSize": 16,
+
+	// # Diff Editor
+	"diffEditor.experimental.showMoves": true,
+	"diffEditor.ignoreTrimWhitespace": false,
+
+	// # Editor
+	"editor.acceptSuggestionOnCommitCharacter": false,
+	"editor.cursorBlinking": "phase",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.dragAndDrop": false,
+	"editor.fontFamily": "Iosevka Extended, JetBrains Mono, Input Mono, IBM Plex, Fira Code, Roboto Mono, Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontLigatures": true,
+	"editor.fontSize": 16,
+	"editor.guides.bracketPairs": "active",
+	"editor.guides.bracketPairsHorizontal": false,
+	"editor.guides.indentation": false,
+	"editor.lineHeight": 1.75,
+	"editor.linkedEditing": true,
+	"editor.renderWhitespace": "all",
+	"editor.rulers": [80, 100],
+	"editor.smoothScrolling": true,
+	"editor.stickyTabStops": true,
+	"editor.tabSize": 3,
+	"editor.autoIndent": "none",
+	"editor.accessibilitySupport": "off",
+
+	// # Explorer
+	"explorer.confirmDelete": false,
+	"explorer.fileNesting.enabled": false,
+	"explorer.fileNesting.expand": false,
+	"explorer.fileNesting.patterns": {
+		"package.json": "package-lock.json,.oxlintrc.json, yarn.lock, pnpm-lock.yaml,.env,.env.sample,.eslintignore,.eslintrc.cjs,.eslintrc.js,.git-blame-ignore-revs,.gitattributes,.gitmodules,.gitignore,.npmrc,.prettierignore,.prettierrc,CODE_OF_CONDUCT.md,LICENSE,playwright.config.ts,svelte.config.js,tsconfig.json,vercel.json,vite.config.js,vite.config.ts,postcss.config.cjs,vitest.workspace.ts,.browserslistrc,.dockerignore,.editorconfig,pnpm-workspace.yaml,.nvmrc,eslint.config.mjs",
+		"datawrapper.env": ".bash_aliases,.ripgreprc,.sentryignore,apps.json,apps.prod.json,apps.staging.json,Caddyfile,CHANGELOG.md,config.js,config.prod.js,config.staging.js,config.local.js,datawrapper.local.env,docker-compose-nginx.yml,docker-compose.yml,help.Makefile,Makefile",
+		"*.ts": "$(capture).test.ts",
+	},
+	"explorer.openEditors.visible": 4,
+	"explorer.sortOrder": "filesFirst",
+
+	// Extensions
+	"extensions.ignoreRecommendations": true,
+
+	// # Files
+	"files.associations": {
+		"*.postcss": "css",
+		"*.svx": "markdown",
+	},
+	"files.autoSave": "afterDelay",
+
+	// # Git
+	"git.enableSmartCommit": true,
+
+	// # GitHub Pull Requests
+	"githubPullRequests.commentExpandState": "collapseAll",
+	"githubPullRequests.createOnPublishBranch": "never",
+	"githubPullRequests.pullBranch": "never",
+
+	// Markdown
+	"markdown.preview.fontSize": 16,
+
+	// # Material Icon Theme
+	"material-icon-theme.activeIconPack": "angular_ngrx",
+	"material-icon-theme.hidesExplorerArrows": true,
+	"material-icon-theme.folders.theme": "classic",
+	"material-icon-theme.folders.color": "#350",
+	"material-icon-theme.files.color": "#350",
+
+	// Source Control Management
+	"scm.repositories.selectionMode": "single",
+	"scm.repositories.explorer": true,
+	"scm.inputFontSize": 16,
+
+	// # Svelte
+	"svelte.enable-ts-plugin": true,
+
+	// # Terminal
+	"terminal.integrated.fontFamily": "Iosevka Extended, JetBrains Mono, Input Mono, IBM Plex, Fira Code, Roboto Mono, Menlo, Monaco, 'Courier New', monospace",
+	"terminal.integrated.fontSize": 16,
+	"terminal.integrated.smoothScrolling": true,
+	"terminal.integrated.initialHint": false,
+	"terminal.integrated.ignoreBracketedPasteMode": true,
+	// shows the current running command in terminal tabs (requires shellIntegration)
+	"terminal.integrated.tabs.title": "${shellPromptInput}",
+	// for me this still required manual instalation: https://code.visualstudio.com/docs/terminal/shell-integration#_manual-installation
+	"terminal.integrated.shellIntegration.enabled": true,
+
+	// # TypeScript
+	"js/ts.updateImportsOnFileMove.enabled": "always",
+	"js/ts.experimental.useTsgo": true,
+
+	// # Window (layout)
+	"window.autoDetectColorScheme": true,
+	"window.confirmBeforeClose": "keyboardOnly",
+	"workbench.activityBar.location": "top",
+	"workbench.editor.scrollToSwitchTabs": true,
+	"workbench.list.smoothScrolling": true,
+	"workbench.sideBar.location": "right",
+	"workbench.startupEditor": "none",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.tree.stickyScrollMaxItemCount": 3,
+	"workbench.tree.renderIndentGuides": "always",
+	"workbench.tree.indent": 12,
+
+	// custom tab label patterns
+	// updated 2025-12-07
+	"workbench.editor.labelFormat": "default",
+	"workbench.editor.customLabels.enabled": true,
+	"workbench.editor.customLabels.patterns": {
+		"**/src/**/*.css": "${filename}",
+		"**/src/**/utils/**/*.{js,ts}": "${filename} ⚙️",
+		"**/src/**/*.d.ts": "${filename} <T>",
+		"**/src/**/*.{js,ts}": "${filename}",
+		/** SVELTE */
+		"**/src/**/*.svelte": "${filename}",
+		"**/src/stores/**/*.{js,ts}": "${filename} (Store)",
+		/** SVELTEKIT */
+		// -- Home route needs special treatment
+		"**/src/routes/+page.svelte": "Home (Page)",
+		"**/src/routes/+page.{mdsvex,mdx}": "Home (MDX)",
+		"**/src/routes/+layout.svelte": "Layout (Root)",
+		// -- capture Home in grouped layouts
+		"**/src/routes/(**)/+page.svelte": "Home (Page)",
+		"**/src/routes/(**)/+page.{mdsvex,mdx}": "Home (MDX)",
+		// -- rest: require at least 1 dir with /*/**/, otherwise glob beats Home
+		"**/src/routes/*/**/+page.svelte": "${dirname} (Page)",
+		"**/src/routes/*/**/+page.{mdsvex,mdx}": "${dirname} (MDX)",
+		"**/src/routes/**/[[]*[]]/+page.svelte": "${dirname} (Route)",
+		// Layouts
+		"**/src/routes/*/**/+layout.svelte": "${dirname} (Layout)",
+		"**/src/routes/**/+layout.{js,ts}": "${dirname} (LayoutLoad)",
+		"**/src/routes/**/+layout.server.{js,ts}": "${dirname} (LayoutServerLoad)",
+		// Rest
+		"**/src/routes/**/+error.svelte": "${dirname} (Error Page)",
+		"**/src/routes/**/+page.{js,ts}": "${dirname} (Load)",
+		"**/src/routes/**/+page.server.{js,ts}": "${dirname} (ServerLoad)",
+		"**/src/routes/**/+server.{js,ts}": "${dirname} (Endpoint)",
+		"**/src/routes/**/*.remote.{js,ts}": "${filename} (Remote)",
+		"**/src/lib/server/*.{js,ts}": "${filename} (🔒)",
+		"**/src/hooks.{js,ts}": "Hooks",
+		"**/src/hooks.client.{js,ts}": "Hooks (Client)",
+		"**/src/hooks.server.{js,ts}": "Hooks (Server)",
+		/** ASTRO */
+		"**/src/layouts/**/*.astro": "${filename} (Layout)",
+		"**/src/**/*.astro": "${filename}",
+		"**/src/pages/index.astro": "Home (Page)",
+		"**/src/pages/**/[[]...slug[]].astro": "${dirname} (Slug)",
+		"**/src/pages/*/**/*.astro": "${dirname}/${filename} (Page)",
+		"**/src/content/**/*.md": "${dirname}/${filename}",
+		/** STORYBOOK */
+		"**/src/stories/**/*.*": "${filename} (Story)",
+	},
+	"githubPullRequests.fileListLayout": "tree",
+	"githubPullRequests.hideViewedFiles": false,
+	"workbench.preferredDarkColorTheme": "Vitesse Dark",
+
+	// disable AI trash
+	"chat.agent.enabled": false,
+	"chat.disableAIFeatures": true,
+
+	// temp settings
+	"diffEditor.renderSideBySide": true,
+	"editor.minimap.enabled": false,
+}

@@ -1,0 +1,82 @@
+[
+	{
+		"key": "cmd+0",
+		"command": "workbench.action.zoomReset",
+	},
+	{
+		"key": "cmd+1",
+		"command": "workbench.action.openEditorAtIndex1",
+	},
+	{
+		"key": "cmd+2",
+		"command": "workbench.action.openEditorAtIndex2",
+	},
+	{
+		"key": "cmd+3",
+		"command": "workbench.action.openEditorAtIndex3",
+	},
+	{
+		"key": "cmd+4",
+		"command": "workbench.action.openEditorAtIndex4",
+	},
+	{
+		"key": "cmd+5",
+		"command": "workbench.action.openEditorAtIndex5",
+	},
+	{
+		"key": "cmd+6",
+		"command": "workbench.action.openEditorAtIndex6",
+	},
+	{
+		"key": "cmd+7",
+		"command": "workbench.action.openEditorAtIndex7",
+	},
+	{
+		"key": "cmd+8",
+		"command": "workbench.action.openEditorAtIndex8",
+	},
+	{
+		"key": "cmd+9",
+		"command": "workbench.action.openEditorAtIndex9",
+	},
+	{
+		"key": "cmd+shift+7",
+		"command": "editor.action.commentLine",
+	},
+	{
+		"key": "alt+0",
+		"command": "workbench.action.terminal.new",
+	},
+	{
+		"key": "alt+[Minus]",
+		"command": "workbench.action.terminal.focus",
+	},
+	{
+		"key": "ctrl+cmd+[Equal]",
+		"command": "workbench.action.terminal.focusNext",
+		"when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus",
+	},
+	{
+		"key": "ctrl+alt+cmd+9",
+		"command": "-workbench.action.terminal.focusNext",
+		"when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus",
+	},
+	{
+		"key": "alt+[Equal]",
+		"command": "workbench.action.terminal.split",
+		"when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile",
+	},
+	{
+		"key": "ctrl+shift+alt+cmd+7",
+		"command": "-workbench.action.terminal.split",
+		"when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile",
+	},
+	{
+		"command": "incrementor.incrementByOne",
+		"key": "cmd+ctrl+up",
+	},
+	{
+		"command": "incrementor.decrementByOne",
+		"key": "cmd+ctrl+down",
+	},
+]

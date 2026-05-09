@@ -106,7 +106,7 @@ in
     firefox
     wget
     nodejs
-    gh
+    # gh
     nodePackages.pnpm
     vscodium
     flyctl

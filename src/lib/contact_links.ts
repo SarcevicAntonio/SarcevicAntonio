@@ -1,10 +1,10 @@
 import type { Component } from 'svelte'
 import Mail from '~icons/material-symbols/mail-rounded'
-import Bluesky from '~icons/simple-icons/bluesky'
-import Github from '~icons/simple-icons/github'
-import Linkedin from '~icons/simple-icons/linkedin'
+// import Bluesky from '~icons/simple-icons/bluesky'
+import Codeberg from '~icons/simple-icons/codeberg'
+// import Linkedin from '~icons/simple-icons/linkedin'
 import Mastodon from '~icons/simple-icons/mastodon'
-import YouTube from '~icons/simple-icons/youtube'
+// import YouTube from '~icons/simple-icons/youtube'
 
 export const contact_links: Array<{
 	title: string
@@ -28,11 +28,11 @@ export const contact_links: Array<{
 	// 	Icon: Bluesky,
 	// 	href: 'https://bsky.app/profile/sarcevic.dev',
 	// },
-	// {
-	// 	title: 'GitHub',
-	// 	Icon: Github,
-	// 	href: 'https://github.com/SarcevicAntonio',
-	// },
+	{
+		title: 'GitHub',
+		Icon: Codeberg,
+		href: 'https://github.com/SarcevicAntonio',
+	},
 	{
 		title: 'Mail',
 		Icon: Mail,

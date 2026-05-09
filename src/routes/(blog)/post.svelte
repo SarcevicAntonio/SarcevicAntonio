@@ -4,7 +4,6 @@
 	import { current_theme } from '$lib/theme'
 	import '@fontsource/atkinson-hyperlegible/400.css'
 	import '@fontsource/atkinson-hyperlegible/700.css'
-	import Giscus from '@giscus/svelte'
 	import 'prism-themes/themes/prism-a11y-dark.css'
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 
@@ -64,24 +63,6 @@
 	{/if}
 	{@render children?.()}
 </article>
-
-<section>
-	<Giscus
-		id="comments"
-		term="SarcevicAntonio"
-		theme={$current_theme === 'dark'
-			? 'dark'
-			: $current_theme === 'light'
-				? 'light'
-				: 'preferred_color_scheme'}
-		repo="SarcevicAntonio/SarcevicAntonio"
-		repoId="MDEwOlJlcG9zaXRvcnkxODkzMDAxNjM="
-		category="Comments"
-		categoryId="DIC_kwDOC0h9w84CSwfL"
-		reactionsEnabled="1"
-		inputPosition="top"
-	/>
-</section>
 
 <section class="links">
 	<a href="/entries" class="arrow-link">

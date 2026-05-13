@@ -29,9 +29,9 @@ export const contact_links: Array<{
 	// 	href: 'https://bsky.app/profile/sarcevic.dev',
 	// },
 	{
-		title: 'GitHub',
+		title: 'Codeberg',
 		Icon: Codeberg,
-		href: 'https://github.com/SarcevicAntonio',
+		href: 'https://codeberg.org/linkplay-space',
 	},
 	{
 		title: 'Mail',

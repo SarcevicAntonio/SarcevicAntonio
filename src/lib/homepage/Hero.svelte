@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state'
+	import avatar from './avatar-transparent.png'
 </script>
 
 <section class="hero">
@@ -8,7 +9,7 @@
 			class="profile-picture"
 			width="224px"
 			height="224px"
-			src="./avatar-transparent.png"
+			src={avatar}
 			alt="Antonio Sarcevic in a green shirt, smiling and looking upward and to the right off camera"
 		/>
 		<h1>heyo, i'm toni!</h1>

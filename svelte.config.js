@@ -5,7 +5,6 @@ import path from 'path'
 import autolink from 'rehype-autolink-headings'
 import slug from 'rehype-slug'
 import toc from 'remark-toc'
-import { sveltePreprocess } from 'svelte-preprocess'
 import { importAssets } from 'svelte-preprocess-import-assets'
 import { fileURLToPath } from 'url'
 
@@ -34,12 +33,7 @@ const mdsvex_config = {
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', '.svx'],
-	preprocess: [
-		vitePreprocess(),
-		mdsvex(mdsvex_config),
-		sveltePreprocess({ postcss: true }),
-		importAssets(),
-	],
+	preprocess: [vitePreprocess(), mdsvex(mdsvex_config), importAssets()],
 	kit: {
 		adapter: adapter(),
 	},

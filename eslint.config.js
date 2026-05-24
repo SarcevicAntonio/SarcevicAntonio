@@ -36,6 +36,7 @@ export default defineConfig(
 		// Override or add rule settings here, such as:
 		// 'svelte/button-has-type': 'error'
 		rules: {
+			'no-console': ['error', { allow: ['warn', 'error'] }],
 			'svelte/no-navigation-without-resolve': 'warn',
 			'@typescript-eslint/no-unused-vars': ['error', { destructuredArrayIgnorePattern: '^_' }],
 			'@typescript-eslint/naming-convention': [

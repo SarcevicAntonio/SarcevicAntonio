@@ -29,9 +29,9 @@
 			{/each}
 		</ul>
 		<h2 class="notice">
-			Page and content was hand-crafted with
+			page and content was hand-crafted with
 			<span class="screen-reader-only"> Love </span>
-			<span aria-hidden="true"> 💖 </span> by Antonio Sarcevic.
+			<span aria-hidden="true"> 💖 </span> by toni.
 		</h2>
 		<p>
 			<a href="/">{page.data.page_name}</a> is powered by the following dependencies:

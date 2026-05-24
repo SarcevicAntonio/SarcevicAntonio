@@ -30,7 +30,7 @@
 	.flex {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 5rem;
+		gap: 3rem;
 		max-width: 32rem;
 		margin: auto;
 		align-items: center;

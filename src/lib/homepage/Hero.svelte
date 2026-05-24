@@ -11,10 +11,7 @@
 			src="./avatar-transparent.png"
 			alt="Antonio Sarcevic in a green shirt, smiling and looking upward and to the right off camera"
 		/>
-		<h1>
-			<span class="first-name">Antonio</span>
-			<span class="last-name">Sarcevic</span>
-		</h1>
+		<h1>heyo, i'm toni!</h1>
 	</div>
 
 	<p class="tagline">
@@ -61,11 +58,8 @@
 			font-size: clamp(2rem, calc(1rem + 12vw), 8rem);
 			font-weight: 400;
 			color: var(--as-text-2);
-			margin-inline-start: 1em;
+			margin-inline-start: 0.25em;
 			line-height: 1;
-		}
-		.first-name {
-			margin-inline-start: -0.75em;
 		}
 	}
 

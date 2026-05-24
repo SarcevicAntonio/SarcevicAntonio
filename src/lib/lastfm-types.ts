@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 // generate with https://transform.tools/json-to-typescript
 
 export interface LastFMData {
@@ -7,12 +8,12 @@ export interface LastFMData {
 	topartists: Topartists
 }
 
-export interface Toptracks {
+interface Toptracks {
 	track: Track[]
 	'@attr': Attr2
 }
 
-export interface Track {
+interface Track {
 	streamable: Streamable
 	mbid: string
 	name: string
@@ -24,27 +25,27 @@ export interface Track {
 	playcount: string
 }
 
-export interface Streamable {
+interface Streamable {
 	fulltrack: string
 	'#text': string
 }
 
-export interface Image {
+interface Image {
 	size: string
 	'#text': string
 }
 
-export interface Artist {
+interface Artist {
 	url: string
 	name: string
 	mbid: string
 }
 
-export interface Attr {
+interface Attr {
 	rank: string
 }
 
-export interface Attr2 {
+interface Attr2 {
 	perPage: string
 	totalPages: string
 	page: string
@@ -52,12 +53,12 @@ export interface Attr2 {
 	user: string
 }
 
-export interface Topalbums {
+interface Topalbums {
 	album: Album[]
 	'@attr': Attr4
 }
 
-export interface Album {
+interface Album {
 	artist: Artist2
 	image: Image2[]
 	mbid: string
@@ -67,22 +68,22 @@ export interface Album {
 	name: string
 }
 
-export interface Artist2 {
+interface Artist2 {
 	url: string
 	name: string
 	mbid: string
 }
 
-export interface Image2 {
+interface Image2 {
 	size: string
 	'#text': string
 }
 
-export interface Attr3 {
+interface Attr3 {
 	rank: string
 }
 
-export interface Attr4 {
+interface Attr4 {
 	user: string
 	totalPages: string
 	page: string
@@ -90,12 +91,12 @@ export interface Attr4 {
 	total: string
 }
 
-export interface Recenttracks {
+interface Recenttracks {
 	track: Track2[]
 	'@attr': Attr6
 }
 
-export interface Track2 {
+interface Track2 {
 	artist: Artist3
 	streamable: string
 	image: Image3[]
@@ -107,31 +108,31 @@ export interface Track2 {
 	date?: Date
 }
 
-export interface Artist3 {
+interface Artist3 {
 	mbid: string
 	'#text': string
 }
 
-export interface Image3 {
+interface Image3 {
 	size: string
 	'#text': string
 }
 
-export interface Album2 {
+interface Album2 {
 	mbid: string
 	'#text': string
 }
 
-export interface Attr5 {
+interface Attr5 {
 	nowplaying: string
 }
 
-export interface Date {
+interface Date {
 	uts: string
 	'#text': string
 }
 
-export interface Attr6 {
+interface Attr6 {
 	user: string
 	totalPages: string
 	page: string
@@ -139,12 +140,12 @@ export interface Attr6 {
 	total: string
 }
 
-export interface Topartists {
+interface Topartists {
 	artist: Artist4[]
 	'@attr': Attr8
 }
 
-export interface Artist4 {
+interface Artist4 {
 	streamable: string
 	image: Image4[]
 	mbid: string
@@ -154,16 +155,16 @@ export interface Artist4 {
 	name: string
 }
 
-export interface Image4 {
+interface Image4 {
 	size: string
 	'#text': string
 }
 
-export interface Attr7 {
+interface Attr7 {
 	rank: string
 }
 
-export interface Attr8 {
+interface Attr8 {
 	user: string
 	totalPages: string
 	page: string

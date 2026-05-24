@@ -4,12 +4,12 @@
 	import { spring } from 'svelte/motion'
 
 	const turn = spring(0)
-	const handleMouseMove = throttle(
+	const handle_mouse_move = throttle(
 		(e: MouseEvent) => ($turn = e.y / window.innerHeight - e.x / window.innerWidth)
 	)
 </script>
 
-<svelte:body onmousemove={handleMouseMove} />
+<svelte:body onmousemove={handle_mouse_move} />
 
 <TriggerWarning />
 

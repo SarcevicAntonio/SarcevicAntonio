@@ -4,7 +4,7 @@
 
 <h2 id="connect">Connect</h2>
 <ul>
-	{#each contact_links as { Icon, ...rest } (rest.href)}
+	{#each contact_links as { icon: Icon, ...rest } (rest.href)}
 		<li>
 			<a {...rest}>
 				<Icon aria-hidden="true" />

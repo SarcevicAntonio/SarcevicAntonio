@@ -1,5 +1,5 @@
-const counterTemplate = document.createElement('template')
-counterTemplate.innerHTML = `
+const template = document.createElement('template')
+template.innerHTML = `
 <style>
 button {
   display: inline-block;
@@ -30,7 +30,7 @@ class MyCounter extends HTMLElement {
 	constructor() {
 		super()
 		this.attachShadow({ mode: 'open' })
-		this.shadowRoot.appendChild(counterTemplate.content.cloneNode(true))
+		this.shadowRoot.appendChild(template.content.cloneNode(true))
 		this.handleClick = () => {
 			this.count++
 		}
@@ -47,14 +47,14 @@ class MyCounter extends HTMLElement {
 	static get observedAttributes() {
 		return ['count']
 	}
-	attributeChangedCallback(name, oldCount, newCount) {
-		this.shadowRoot.getElementById('count').innerHTML = newCount
+	attributeChangedCallback(name, old_count, new_count) {
+		this.shadowRoot.getElementById('count').innerHTML = new_count
 	}
 	get count() {
 		return this.getAttribute('count')
 	}
-	set count(newCount) {
-		this.setAttribute('count', newCount)
+	set count(new_count) {
+		this.setAttribute('count', new_count)
 	}
 }
 window.customElements.define('my-counter', MyCounter)

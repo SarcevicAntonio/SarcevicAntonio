@@ -6,12 +6,12 @@ import { defineConfig } from 'eslint/config'
 import globals from 'globals'
 import path from 'node:path'
 import ts from 'typescript-eslint'
-import svelteConfig from './svelte.config.js'
+import svelte_config from './svelte.config.js'
 
-const gitignorePath = path.resolve(import.meta.dirname, '.gitignore')
+const gitignore_path = path.resolve(import.meta.dirname, '.gitignore')
 
 export default defineConfig(
-	includeIgnoreFile(gitignorePath),
+	includeIgnoreFile(gitignore_path),
 	js.configs.recommended,
 	ts.configs.recommended,
 	svelte.configs.recommended,
@@ -28,7 +28,7 @@ export default defineConfig(
 				projectService: true,
 				extraFileExtensions: ['.svelte'],
 				parser: ts.parser,
-				svelteConfig,
+				svelteConfig: svelte_config,
 			},
 		},
 	},
@@ -38,6 +38,25 @@ export default defineConfig(
 		rules: {
 			'svelte/no-navigation-without-resolve': 'warn',
 			'@typescript-eslint/no-unused-vars': ['error', { destructuredArrayIgnorePattern: '^_' }],
+			'@typescript-eslint/naming-convention': [
+				'error',
+				{ selector: 'default', format: ['snake_case'] },
+				{ selector: 'typeLike', format: ['PascalCase'] },
+				{ selector: 'parameter', modifiers: ['unused'], format: null },
+				// config objects
+				{ selector: 'objectLiteralProperty', format: ['snake_case', 'camelCase'] },
+				{ selector: 'objectLiteralMethod', format: ['snake_case', 'camelCase'] },
+				{ selector: 'objectLiteralProperty', modifiers: ['requiresQuotes'], format: null },
+				// extending native class
+				{ selector: 'classMethod', format: ['snake_case', 'camelCase'] },
+				{ selector: 'classProperty', format: ['snake_case', 'camelCase'] },
+				{ selector: 'classicAccessor', format: ['snake_case', 'camelCase'] },
+				// svelte and kit
+				{ selector: 'import', format: ['snake_case', 'PascalCase'] },
+				{ selector: 'variable', format: ['snake_case', 'UPPER_CASE', 'PascalCase'] },
+				{ selector: 'variable', modifiers: ['exported'], format: ['snake_case', 'UPPER_CASE'] },
+				{ selector: 'function', modifiers: ['exported'], format: ['snake_case', 'UPPER_CASE'] },
+			],
 		},
 	}
 )

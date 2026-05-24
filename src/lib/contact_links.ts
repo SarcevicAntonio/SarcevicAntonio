@@ -4,19 +4,19 @@ import Mastodon from '~icons/simple-icons/mastodon'
 
 export const contact_links: Array<{
 	title: string
-	Icon: Component
+	icon: Component
 	href: string
 	rel?: string
 }> = [
 	{
 		title: 'Mastodon',
-		Icon: Mastodon,
+		icon: Mastodon,
 		href: 'https://biplus.social/@linkplay',
 		rel: 'me',
 	},
 	{
 		title: 'Codeberg',
-		Icon: Codeberg,
+		icon: Codeberg,
 		href: 'https://codeberg.org/linkplay-space',
 	},
 ]

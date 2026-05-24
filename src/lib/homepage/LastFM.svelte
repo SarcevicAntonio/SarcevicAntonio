@@ -4,7 +4,7 @@
 	import type { LastFMData } from '../lastfm-types'
 
 	let { lastfm }: { lastfm: LastFMData } = $props()
-	const relativeTime = new RelativeTime()
+	const relative_time = new RelativeTime()
 </script>
 
 <h2>Listening Activity</h2>
@@ -18,7 +18,7 @@
 			{track.artist['#text']} – {track.name}
 			<small>
 				{#if track.date}
-					{relativeTime.from(new Date(+track.date.uts * 1000))}
+					{relative_time.from(new Date(+track.date.uts * 1000))}
 				{:else}
 					currently listening <span class="current"><MaterialSymbolsMusicNoteRounded /></span>
 				{/if}

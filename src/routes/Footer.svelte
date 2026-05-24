@@ -20,7 +20,7 @@
 				</a>
 			</li>
 			<li class="break"><hr /></li>
-			{#each contact_links as { Icon, ...rest } (rest.href)}
+			{#each contact_links as { icon: Icon, ...rest } (rest.href)}
 				<li>
 					<a {...rest}>
 						<Icon aria-hidden="true" />

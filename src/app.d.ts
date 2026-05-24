@@ -12,13 +12,11 @@ declare global {
 		// interface Error {}
 		interface Locals {
 			theme: Theme
-			style: 'toni' | 'link'
 			session: Session | undefined
 			user: User | undefined
 		}
 		interface PageData {
 			theme: Theme
-			style: 'toni' | 'link'
 			page_name: string
 		}
 		// interface Platform {}

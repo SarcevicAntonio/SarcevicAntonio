@@ -69,6 +69,7 @@
 	"files.associations": {
 		"*.postcss": "css",
 		"*.svx": "markdown",
+		"*.svg": "html",
 	},
 	"files.autoSave": "afterDelay",
 

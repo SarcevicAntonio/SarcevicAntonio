@@ -5,7 +5,7 @@
 	import Entries from '$lib/homepage/Entries.svelte'
 	import Hero from '$lib/homepage/Hero.svelte'
 	import LastFM from '$lib/homepage/LastFM.svelte'
-	import Projects from './Projects.svelte'
+	import Values from './Values.svelte'
 
 	let { data } = $props()
 </script>
@@ -17,31 +17,17 @@
 
 <Hero />
 
-<!-- <section>
-	<Values />
-</section> -->
+<section><Values /></section>
 
-<section>
-	<Entries content={data.content} />
-</section>
+<section><Entries content={data.content} /></section>
 
-<section>
-	<Contact />
-</section>
+<section><Contact /></section>
 
-<section>
-	<Craft />
-</section>
+<section><Craft /></section>
 
-<section>
-	<Projects />
-</section>
+<!-- <section><Projects /></section> -->
 
-{#if data.lastfm_data}
-	<section>
-		<LastFM lastfm={data.lastfm_data} />
-	</section>
-{/if}
+{#if data.lastfm_data}<section><LastFM lastfm={data.lastfm_data} /></section>{/if}
 
 <style>
 	section {

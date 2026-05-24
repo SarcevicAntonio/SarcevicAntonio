@@ -17,12 +17,12 @@
 	<SimpleIconsSvelte aria-hidden="true" />
 	<SimpleIconsFigma aria-hidden="true" />
 </div>
-<p>
-	Love to craft User Experiences with semantic HTML, modern CSS, TypeScript, SvelteKit and Figma.
-</p>
+<p>love to craft user experiences with semantic HTML, modern CSS, TypeScript and SvelteKit.</p>
 <br />
-<p>Worked as a web developer since 2019.</p>
-<p>Earned a Bachelor of Science degree in Media and Communications Informatics.</p>
+<p>worked as a web developer since 2019.</p>
+<p>earned a bachelor of science degree in media and communications informatics.</p>
+<br />
+<p>always excellence over hustle.</p>
 
 <style>
 	h2 {

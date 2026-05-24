@@ -1,56 +1,39 @@
 <script lang="ts">
 	import { page } from '$app/state'
-
-	let scroll_y = $state<number>(0)
-	let inner_height = $state<number>(0)
-	let pride = $derived(page.data.style === 'link')
-
-	const imageAltByStyle = {
-		toni: 'Antonio Sarcevic in a green shirt, smiling and looking upward and to the right off camera',
-		link: 'Links Animal Crossing villager character in a pastel blue baseball cap and pastel blue shirt with pink horizontal stripes, smiling into the camera while greeting.',
-	}
 </script>
 
-<svelte:window bind:scrollY={scroll_y} bind:innerHeight={inner_height} />
+<section class="hero">
+	<div class="id">
+		<img
+			class="profile-picture"
+			width="224px"
+			height="224px"
+			src="./avatar-transparent.png"
+			alt="Antonio Sarcevic in a green shirt, smiling and looking upward and to the right off camera"
+		/>
+		<h1>
+			<span class="first-name">Antonio</span>
+			<span class="last-name">Sarcevic</span>
+		</h1>
+	</div>
 
-<div class="hero">
-	<section class:pride>
-		<div class="id">
-			<img
-				class="profile-picture"
-				width="224px"
-				height="224px"
-				src="./{page.data.style}-transparent.png"
-				alt={imageAltByStyle[page.data.style]}
-			/>
-			<h1>
-				<span class="first-name">Antonio</span>
-				<span class="last-name">Sarcevic</span>
-			</h1>
-		</div>
-
-		<p class="tagline">
-			{#if pride}
-				wants to believe in healing.
-			{:else}
-				Loves to craft solid web experiences.
-			{/if}
-		</p>
-		<div class="bars">
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-	</section>
-
-	<section class="badges">
-		{#each page.data.badges as badge}
-			<img width="88" height="31" src="/badges/{badge}.png" alt={badge} title={badge} />
+	<p class="tagline">
+		queer person living in münster.<br />loves to craft solid web experiences.
+	</p>
+	<div class="bars">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="badges">
+		{#each page.data.badges as badge (badge)}
+			{@const title = badge.split(/\.[^.]*$/).at(0)}
+			<img width="88" height="31" src="/badges/{badge}" alt={title} {title} />
 		{/each}
-	</section>
-</div>
+	</div>
+</section>
 
 <style>
 	.hero {
@@ -138,28 +121,8 @@
 		}
 	}
 
-	.pride {
-		.profile-picture {
-			background-image: var(--in-colour);
-		}
-
-		.bars div {
-			&:nth-child(1) {
-				background-color: oklch(0.65 0.3 29.33);
-			}
-			&:nth-child(2) {
-				background-color: oklch(0.81 0.2 70.58);
-			}
-			&:nth-child(3) {
-				background-color: oklch(92% 0.27 100);
-			}
-			&:nth-child(4) {
-				background-color: var(--as-accent);
-			}
-			&:nth-child(5) {
-				background-color: oklch(0.59 0.32 308.3);
-			}
-		}
+	.profile-picture {
+		background-image: var(--in-colour);
 	}
 
 	@media only screen and (max-width: 600px) {

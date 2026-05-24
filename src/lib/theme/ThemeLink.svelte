@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { preventDefault } from 'svelte/legacy'
-
 	import { page } from '$app/stores'
 	import Dark from '~icons/material-symbols/dark-mode-outline-rounded'
 	import Light from '~icons/material-symbols/light-mode-outline'
@@ -31,7 +29,8 @@
 
 	let href = $derived('/set-theme/' + theme)
 
-	async function enhance() {
+	async function enhance(e: MouseEvent) {
+		e.preventDefault()
 		await fetch(href)
 		if (theme === 'os-preference') {
 			$current_theme = undefined
@@ -44,7 +43,7 @@
 </script>
 
 <li>
-	<a href="{href}?redirect={$page.url.pathname}" {title} onclick={preventDefault(enhance)}>
+	<a href="{href}?redirect={$page.url.pathname}" {title} onclick={enhance}>
 		<Icon aria-hidden="true" />
 	</a>
 </li>

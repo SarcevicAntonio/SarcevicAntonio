@@ -22,7 +22,6 @@
 			navigator.serviceWorker.register('/sw.js')
 		}
 	})
-	let scroll_y: number = $state(0)
 </script>
 
 <header>
@@ -58,8 +57,6 @@
 		</nav>
 	</div>
 </header>
-
-<svelte:window bind:scrollY={scroll_y} />
 
 <main>
 	{@render children?.()}

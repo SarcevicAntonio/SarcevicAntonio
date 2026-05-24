@@ -20,7 +20,7 @@
 
 <h2>Projects</h2>
 <ul>
-	{#each projects as { label, icon, link }}
+	{#each projects as { label, icon, link } (label)}
 		<li>
 			<a href={link}>
 				<img src={icon} alt="" width="512px" height="100%" />

@@ -20,9 +20,9 @@
 				</a>
 			</li>
 			<li class="break"><hr /></li>
-			{#each contact_links as { href, title, Icon }}
+			{#each contact_links as { Icon, ...rest } (rest.href)}
 				<li>
-					<a {href} {title}>
+					<a {...rest}>
 						<Icon aria-hidden="true" />
 					</a>
 				</li>

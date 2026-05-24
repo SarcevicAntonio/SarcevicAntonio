@@ -1,27 +1,24 @@
 <script>
-	import MdiHeadLightbulbOutline from '~icons/mdi/head-lightbulb-outline'
-	import MdiHandHeartOutline from '~icons/mdi/hand-heart-outline'
-	import MdiFlower from '~icons/mdi/flower'
-	import MaterialSymbolsStopCircleRounded from '~icons/material-symbols/stop-circle-rounded'
+	import gratitude from '~icons/mdi/flower'
+	import honesty from '~icons/mdi/hand-heart-outline'
+	import balance from '~icons/mdi/yin-yang'
 
-	const values = {
-		Humility: MdiHandHeartOutline,
-		Curiosity: MdiHeadLightbulbOutline,
-		Integrity: MaterialSymbolsStopCircleRounded,
-		Joy: MdiFlower,
-	}
+	const values = { gratitude, balance, honesty }
 </script>
 
-<h2>Core Values</h2>
+<section>
+	<h2>Core Values</h2>
 
-<div class="flex">
-	{#each Object.entries(values) as [value, Icon]}
-		<div>
-			<Icon aria-hidden="true" font-size=" var(--step-4);" />
-			<p>{@html value}</p>
-		</div>
-	{/each}
-</div>
+	<div class="flex">
+		{#each Object.entries(values) as [value, Icon] (value)}
+			<div>
+				<Icon aria-hidden="true" font-size=" var(--step-4);" />
+				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+				<p>{@html value}</p>
+			</div>
+		{/each}
+	</div>
+</section>
 
 <style>
 	h2 {

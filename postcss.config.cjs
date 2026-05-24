@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 const config = {
 	plugins: [require('postcss-mixins'), require('autoprefixer'), require('postcss-preset-env')],
 }

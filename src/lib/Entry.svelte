@@ -48,7 +48,7 @@
 	{#if show_tags}
 		<hr />
 		<ul class="tags">
-			{#each entry.tags as tag}
+			{#each entry.tags as tag (tag)}
 				<li>
 					#{tag}
 				</li>

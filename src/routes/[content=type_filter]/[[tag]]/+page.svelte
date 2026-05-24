@@ -42,7 +42,7 @@
 		)}
 		<p>filter by tag:</p>
 		<ul class="tags">
-			{#each available_tags as tag}
+			{#each available_tags as tag (tag)}
 				<li aria-current={tag_filter === tag}>
 					<a href="{page.params.content}/{tag}">
 						#{tag}
@@ -63,7 +63,7 @@
 
 <section class="posts">
 	<ul>
-		{#each data.content as entry}
+		{#each data.content as entry (entry.href)}
 			<li>
 				<Entry {entry} h_level={2} show_tags></Entry>
 			</li>

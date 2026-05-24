@@ -83,7 +83,7 @@ export async function get_all_tags(posts: (BlogMetadata | Appearance)[]) {
 	)
 
 	return Object.entries(all_tags)
-		.sort(([tagA, a], [tagB, b]) => b - a)
+		.sort(([_tagA, a], [_tagB, b]) => b - a)
 		.map(([tag]) => tag)
 }
 

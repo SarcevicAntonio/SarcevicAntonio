@@ -2,7 +2,7 @@ import { get_all_tags } from '$lib/server/entries'
 
 export const prerender = true
 
-export async function load({ parent, params, url }) {
+export async function load({ parent, params }) {
 	let { content } = await parent()
 	const all_tags = await get_all_tags(content)
 

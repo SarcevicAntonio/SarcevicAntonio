@@ -1,7 +1,6 @@
 <script>
 	import { afterNavigate } from '$app/navigation'
 	import { reformat_date_string } from '$lib/date_helpers'
-	import { current_theme } from '$lib/theme'
 	import '@fontsource/atkinson-hyperlegible/400.css'
 	import '@fontsource/atkinson-hyperlegible/700.css'
 	import 'prism-themes/themes/prism-a11y-dark.css'
@@ -50,7 +49,7 @@
 			{/if}
 			{#if tags}
 				<ul class="tags">
-					{#each tags as tag}
+					{#each tags as tag (tag)}
 						<li>
 							<a href="/entries/{tag}">
 								#{tag}

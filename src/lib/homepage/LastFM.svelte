@@ -13,7 +13,7 @@
 <h3>Recent Tracks</h3>
 
 <ol class="recent">
-	{#each lastfm.recenttracks.track as track}
+	{#each lastfm.recenttracks.track as track (track)}
 		<li>
 			{track.artist['#text']} – {track.name}
 			<small>

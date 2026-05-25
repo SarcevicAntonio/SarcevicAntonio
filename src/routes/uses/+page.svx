@@ -1,7 +1,20 @@
 ---
 title: Antonio Sarcevic uses...
 summary: What I'm using
+published: 2023-09-20
+updated: 2026-05-25
 ---
+
+<script>
+  import Callout from "$lib/Callout.svelte"
+	import { date_string } from '$lib/date_helpers'
+</script>
+
+<Callout>
+  <p>
+    this is wildly out of date, and still reflects the state of initial publish ({date_string('2023-09-20')})
+  </p>
+</Callout>
 
 This is my [uses.tech](https://uses.tech/) page. Enjoy! 🌸
 

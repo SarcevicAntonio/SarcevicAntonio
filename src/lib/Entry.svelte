@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/state'
-	import { reformat_date_string } from '$lib/date_helpers'
+	import { date_string } from '$lib/date_helpers'
 	import MaterialSymbolsDocs from '~icons/material-symbols/docs'
 	import MaterialSymbolsLink from '~icons/material-symbols/link'
 	import MaterialSymbolsOpenInNewRounded from '~icons/material-symbols/open-in-new-rounded'
@@ -30,7 +30,7 @@
 					.join('.')}<MaterialSymbolsOpenInNewRounded font-size="0.5em" aria-hidden="true" />
 			</span>
 		{/if}
-		<span class="date">{reformat_date_string(entry.published)}</span>
+		<span class="date">{date_string(entry.published)}</span>
 	</p>
 	<hr />
 	<svelte:element this={`h${h_level}`} class="heading">

@@ -1,4 +1,4 @@
-export const reformat_date_string = (string: string) =>
+export const date_string = (string: string) =>
 	new Date(string).toLocaleDateString(undefined, {
 		year: 'numeric',
 		month: 'long',

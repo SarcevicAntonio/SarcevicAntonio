@@ -1,6 +1,6 @@
 <script>
 	import { afterNavigate } from '$app/navigation'
-	import { reformat_date_string } from '$lib/date_helpers'
+	import { date_string } from '$lib/date_helpers'
 	import '@fontsource/atkinson-hyperlegible/400.css'
 	import '@fontsource/atkinson-hyperlegible/700.css'
 	import 'prism-themes/themes/prism-a11y-dark.css'
@@ -39,12 +39,12 @@
 		<aside>
 			{#if published}
 				<p>
-					published: {reformat_date_string(published)}
+					published: {date_string(published)}
 				</p>
 			{/if}
 			{#if updated}
 				<p>
-					last updated: {reformat_date_string(updated)}
+					last updated: {date_string(updated)}
 				</p>
 			{/if}
 			{#if tags}

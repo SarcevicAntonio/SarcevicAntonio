@@ -44,7 +44,7 @@
 	ul.scroller {
 		scroll-snap-type: x mandatory;
 		margin: 0;
-		margin-inline: -1rem;
+		margin-inline: calc(var(--body-padding) * -1);
 		padding: 0;
 		padding-block-start: 2rem;
 		padding-block-end: 3rem;

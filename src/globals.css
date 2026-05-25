@@ -53,7 +53,8 @@ body::before {
 body {
 	font-family: 'Space Mono', 'Courier New', Courier, monospace, sans-serif;
 	font-size: var(--step-0);
-	padding-inline: 1rem;
+	--body-padding: 2rem;
+	padding-inline: var(--body-padding);
 }
 
 code,
@@ -64,7 +65,7 @@ pre {
 }
 
 a {
-	text-decoration: underline dotted;
+	text-decoration: underline;
 	color: var(--as-text-3);
 	&:hover,
 	&:focus {

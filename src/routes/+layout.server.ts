@@ -1,8 +1,7 @@
 import { by_published } from '$lib/date_helpers'
 import { get_all_appearances, get_blog_posts } from '$lib/server/entries'
 
-export async function load({ locals, fetch }) {
-	const lastfm_data = await fetch('/lastfm').then((r) => r.json())
+export async function load({ locals, url }) {
 	const blog_posts = await get_blog_posts()
 	const apperances = await get_all_appearances()
 
@@ -11,9 +10,7 @@ export async function load({ locals, fetch }) {
 	return {
 		badges,
 		theme: locals.theme,
-		style: locals.style,
-		page_name: locals.style === 'link' ? 'linkplay.space' : 'sarcevic.dev',
+		page_name: url.host,
 		content: [...blog_posts, ...apperances].sort(by_published),
-		lastfm_data: lastfm_data.error ? undefined : lastfm_data,
 	}
 }

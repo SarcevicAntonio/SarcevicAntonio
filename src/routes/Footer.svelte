@@ -33,6 +33,7 @@
 			<span class="screen-reader-only"> Love </span>
 			<span aria-hidden="true"> 💖 </span> by toni.
 		</h2>
+		<hr />
 		<p>
 			<a href="/">{page.data.page_name}</a> is powered by the following dependencies:
 		</p>
@@ -58,11 +59,12 @@
 	footer {
 		color: var(--as-back-1);
 		background-color: var(--as-text-1);
-		padding: 1rem;
+		padding: var(--body-padding);
+		padding-block-end: 0;
 		font-size: var(--step--1);
 		margin-block-start: 5rem;
-		margin-inline: -1rem;
-		border-block-end: 1rem solid var(--as-accent);
+		margin-inline: calc(var(--body-padding) * -1);
+		border-block-end: var(--body-padding) solid var(--as-accent);
 	}
 
 	.content {
@@ -77,20 +79,19 @@
 		font-weight: 400;
 	}
 
-	.notice {
-		margin-block-end: 5rem;
-	}
-
 	a {
 		color: inherit;
+	}
+
+	hr {
+		margin-block: 2rem;
+		border-style: dashed;
 	}
 
 	ul.links {
 		list-style: none;
 		display: flex;
 		flex-wrap: wrap;
-		margin-block-start: 5rem;
-		margin-block-end: 0;
 		padding: 0;
 		gap: 1rem;
 		font-size: var(--step-1);
@@ -118,7 +119,7 @@
 	ul.credits {
 		padding-inline-start: 1.5rem;
 		overflow: auto;
-		margin-block-end: 5rem;
+		margin-block-end: 2rem;
 		& a:not(:hover) {
 			text-decoration: none;
 		}

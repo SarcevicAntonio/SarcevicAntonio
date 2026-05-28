@@ -24,13 +24,13 @@
 	h2 {
 		font-size: var(--step-5);
 		text-align: center;
-		margin-block-end: 0.5em;
 	}
 
 	.flex {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 3rem;
+		column-gap: 3rem;
+		row-gap: 1rem;
 		max-width: 32rem;
 		margin: auto;
 		align-items: center;

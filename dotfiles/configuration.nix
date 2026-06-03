@@ -12,10 +12,19 @@ let
   };
 in
 {
+  imports = [ ./hardware-configuration.nix ];
   # Nix
   nix.settings.experimental-features = [ "nix-command" ];
   nixpkgs.config.allowUnfree = true;
-  imports = [ ./hardware-configuration.nix ];
+  nix.optimise = {
+    automatic = true;
+    dates = [ "23:00" ];
+  };
+  nix.gc = {
+    options = "--delete-older-than 30d";
+    automatic = true;
+    dates = [ "22:30" ];
+  };
 
   # Nix OS
   system.autoUpgrade.enable = true;
@@ -24,11 +33,17 @@ in
   # https://search.nixos.org/options?channel=25.11&show=system.stateVersion&query=system.stateVersion
   system.stateVersion = "22.11"; # first install on ex-tides
 
-  # Bootloader
+  # Boot
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.timeout = 2;
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.configurationLimit = 3;
+  boot.kernelParams = [ "nvidia.NVreg_TemporaryFilePath=/var/tmp" ];
+  boot.kernelModules = [
+    "k10temp"
+    "nct6775"
+  ];
 
   # OS Basics
   networking.hostName = "nixos";
@@ -65,7 +80,6 @@ in
     powerManagement.enable = true;
     nvidiaSettings = false;
   };
-  boot.kernelParams = [ "nvidia.NVreg_TemporaryFilePath=/var/tmp" ];
 
   # Desktop Environment
   ## Gnome
@@ -79,7 +93,8 @@ in
     gnome-connections
     simple-scan
     gnome-tour
-  # yelp
+    gnome-console
+    # yelp
   ];
   ### fix gnomes nautlis file browser media metadata display: https://github.com/NixOS/nixpkgs/issues/53631#issuecomment-3704189416
   environment.sessionVariables.GST_PLUGIN_SYSTEM_PATH_1_0 =
@@ -99,31 +114,30 @@ in
   };
   environment.systemPackages = with pkgs; [
     gnome-shell-extensions
-    gnomeExtensions.appindicator # steam and discord force tray icons ;(
-    gnomeExtensions.clipboard-indicator
+    gnomeExtensions.caffeine
+    gnomeExtensions.appindicator # steam forces tray icons ;(
+    # also copyous is very nice, but not in nixpkgs yet
     nixfmt
     vivaldi
     firefox
     wget
     nodejs
-    # gh
-    nodePackages.pnpm
+    pnpm
     vscodium
     flyctl
-    # discord
-    vesktop
+    vesktop # discord client
     signal-desktop
     obsidian
     micro
     jellyfin
     jellyfin-web
     jellyfin-ffmpeg
-    heroic
+    # heroic
     lutris
     wineWowPackages.staging
     unstable.r2modman
     rpcs3
-    atlauncher # minecraft launcher
+    atlauncher # minecraft client
     obs-studio
     libreoffice
     hunspell
@@ -134,39 +148,36 @@ in
     resources
     gradia
     rclone
-	pwvucontrol
-	qbz
-	cartridges
-	eartag
-	tuba
-	ptyxis
+    pwvucontrol
+    qbz
+    cartridges
+    eartag
+    tuba
+    # beets # CVE-2026-42052
+    keepassxc
+    ghostty
   ];
   programs.zoxide.enable = true;
   services.lact.enable = true;
   hardware.xone.enable = true;
   programs.git.enable = true;
   services.jotta-cli.enable = true;
-  virtualisation.waydroid = {
-    enable = true;
-    package = pkgs.waydroid-nftables;
-  };
   services.jellyfin = {
     enable = true;
     openFirewall = true;
     user = "sarcevic";
   };
-  services.mullvad-vpn = {
-    enable = true;
-    package = pkgs.mullvad-vpn; # also provide GUI tool
-  };
+  # services.mullvad-vpn = {
+  #   enable = true;
+  #   package = pkgs.mullvad-vpn; # also provide GUI tool
+  # };
   programs.gamemode.enable = true;
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
-    gamescopeSession.enable = true;
   };
-  
+
   # User Config
   users.users.sarcevic = {
     isNormalUser = true;

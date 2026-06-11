@@ -1,10 +1,18 @@
 import type { AppearanceSource } from './server/entries'
 
 export const appearances: AppearanceSource[] = [
+  	{
+		title: '“Verify you’re an adult to access this content”',
+		summary:
+			'Highlighting the complex and, in my opinion, under-discussed topic of age verification laws that are being rolled out around the world right now.',
+		href: 'https://www.datawrapper.de/blog/digital-age-verification',
+		published: '2026-05-07',
+		tags: ['weekly chart', 'datawrapper'],
+	},
 	{
 		title: 'Transgender remembrance, intersectionality, and celebrating trans* art',
 		summary:
-			'Learn with me about the interlocking systems of oppression that lead to violence, and celebrate trans* life through art by trans* artists',
+			'Learn with me about the interlocking systems of oppression that lead to violence, and celebrate trans* life through art by trans* artists.',
 		href: 'https://www.datawrapper.de/blog/transgender-remembrance-day',
 		published: '2025-11-27',
 		tags: ['weekly chart', 'datawrapper', 'queer'],

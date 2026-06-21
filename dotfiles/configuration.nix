@@ -49,7 +49,6 @@ in
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
   services.printing.enable = true;
-  time.hardwareClockInLocalTime = true; # syncs clock with Windows
   services.xserver.enable = true;
   services.xserver.excludePackages = with pkgs; [ xterm ];
   ## Localization
@@ -87,14 +86,14 @@ in
   services.displayManager.gdm.enable = true;
   services.gvfs.enable = true;
   environment.gnome.excludePackages = with pkgs; [
-    epiphany
-    gnome-music
-    gnome-system-monitor
-    gnome-connections
-    simple-scan
-    gnome-tour
-    gnome-console
-    # yelp
+    epiphany # replaced by vivaldi
+    gnome-music # replaced by nocturne + jellyfin
+    gnome-system-monitor # replaced by resources
+    gnome-console # replaced by ghostty
+    gnome-connections # unneeded atm
+    simple-scan # unneeded atm
+    gnome-tour # unneeded
+    # yelp # unneeded most of the time, but its nice to be able to access
   ];
   ### fix gnomes nautlis file browser media metadata display: https://github.com/NixOS/nixpkgs/issues/53631#issuecomment-3704189416
   environment.sessionVariables.GST_PLUGIN_SYSTEM_PATH_1_0 =
@@ -116,26 +115,22 @@ in
     gnome-shell-extensions
     gnomeExtensions.caffeine
     gnomeExtensions.appindicator # steam forces tray icons ;(
-    # also copyous is very nice, but not in nixpkgs yet
+    gnomeExtensions.copyous
     nixfmt
     vivaldi
     firefox
-    wget
     nodejs
     pnpm
     vscodium
     flyctl
-    vesktop # discord client
+    vesktop # discord client w/o forced tray icons
     signal-desktop
     obsidian
     micro
     jellyfin
     jellyfin-web
     jellyfin-ffmpeg
-    # heroic
     lutris
-    wineWowPackages.staging
-    unstable.r2modman
     rpcs3
     atlauncher # minecraft client
     obs-studio
@@ -143,19 +138,21 @@ in
     hunspell
     hunspellDicts.de_DE
     hunspellDicts.en_US
-    handbrake
-    eyedropper # "pastel" is nice too though
+    bella # "pastel" is nice too though
     resources
     gradia
     rclone
     pwvucontrol
     qbz
-    cartridges
     eartag
     tuba
-    # beets # CVE-2026-42052
-    keepassxc
+    nocturne
+    cartridges
     ghostty
+    # beets # CVE-2026-42052
+    # installed via flatpack:
+    # Flatseal
+    # Laser
   ];
   programs.zoxide.enable = true;
   services.lact.enable = true;
@@ -187,8 +184,8 @@ in
       "wheel"
     ];
   };
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "sarcevic";
+  # services.displayManager.autoLogin.enable = true;
+  # services.displayManager.autoLogin.user = "sarcevic";
 
   # Environment
   environment.sessionVariables.NIXOS_OZONE_WL = "1"; # force Ozone Wayland in Chromium/Electron

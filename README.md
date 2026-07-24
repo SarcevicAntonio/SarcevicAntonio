@@ -1,13 +1,13 @@
-this repo is being worked on from [codeberg.org/linkplay-space/linkplay.space](https://codeberg.org/linkplay-space/linkplay.space).
+this repo is being worked on from [codeberg.org/linkplay-space/linkplay.space](https://codeberg.org/linkplay-space/linkplay.space)
 
-# Toni / Link
+---
 
-Pronouns: \*/? (any or none)
+# heyo, i'm toni!
 
-Bi soft boy living in Münster.
-Loves to craft solid web experiences.
-🌻 flowers, ✌️ balance & 💖💜💙 love
+pronouns as regex: ^.*$
 
-🏳️‍🌈🏳️‍⚧️🇵🇸🇺🇦
+genderqueer bi person living in münster.<br>
+loves to craft solid web experiences.<br>
+🌻 gratitude, ☯️ balance & 💖💜💙 honesty
 
-[Read more on sarcevic.dev](https://www.sarcevic.dev/) or [linkplay.space](https://www.linkplay.space)!
+visit [linkplay.space](https://www.linkplay.space) for more

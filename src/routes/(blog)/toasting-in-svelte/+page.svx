@@ -13,10 +13,14 @@ tags:
   import Callout from "$lib/Callout.svelte";
 </script>
 
+<Callout><p>this post is still using legacy Svelte 3/4 syntax</p></Callout>
+
 This article explains how to create a reusable toast library package for Svelte using SvelteKit.
 We will cover what a toast is, use Svelte Components and a Store to create one ourselves, and cover how SvelteKit can help us package the parts as an npm library.
 
 If you only care about the code, have [this REPL](https://svelte.dev/repl/ff8317744f4b4c3e8972a313a044e882?version=3.44.1).
+
+## Table Of Contents
 
 <Callout type="warning" title="Requirements">
 

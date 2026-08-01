@@ -15,7 +15,7 @@ const BlogMetadata = z.object({
 	published: z.string(),
 	updated: z.string().optional(),
 	href: z.string(),
-	tags: z.array(z.string()),
+	tags: z.array(z.string()).optional(),
 	html: z.string().optional(),
 	lang: z.string().default('EN'),
 })
@@ -77,7 +77,7 @@ export async function get_blog_posts(render = false) {
 export async function get_all_tags(posts: (BlogMetadata | Appearance)[]) {
 	const all_tags: Record<string, number> = {}
 	posts.forEach(({ tags }) =>
-		tags.forEach((tag) => {
+		tags?.forEach((tag) => {
 			all_tags[tag] = all_tags[tag] + 1 || 1
 		})
 	)

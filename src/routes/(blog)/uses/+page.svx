@@ -1,0 +1,45 @@
+---
+title: Antonio Sarcevic uses...
+summary: What I'm using
+published: 2023-09-20
+updated: 2026-08-01
+---
+
+<script>
+  import Callout from "$lib/Callout.svelte"
+	import { date_string } from '$lib/date_helpers'
+</script>
+
+this is my **[uses.tech](https://uses.tech/)** page, detailing my developer setup, gear, software and configs.
+
+## Table Of Contents
+
+## software
+
+i'm using **[Vivaldi](https://vivaldi.com)** as my only browser, desktop and phone. to make macOS usable, i need **[DockDoor](https://dockdoor.net)** and **[LinearMouse](https://linearmouse.app/de-DE/)** installed. and on my gaming setup i use runs **[NixOS](https://nixos.org)**. this is my [configuration.nix](https://codeberg.org/linkplay-space/linkplay.space/src/branch/main/dotfiles/configuration.nix).
+
+i've managed to move most of my stuff off of Google services by now. for search i use **[DuckDuckGo](https://duckduckgo.com)**, for mail and calendar i use **[Mailbox.org](https://mailbox.org)**. Keep i've replaced with physical notebooks and **Signal** "Note to Self" chat (though i'm looking to code my own replacement someday). for photo and other file cloud storage i use **[Jotta](https://jottacloud.com)** (though i'm also not 100% happy there). for office apps like Docs and Sheets i still don't have a go-to replacement, though Jotta and Mailbox both offer similar apps.
+
+### development
+
+i still reluctantly use **[VSCodium](https://github.com/VSCodium/vscodium)** as my code editor, terminal emulator, git ui. it's nice having everything in one place, it's not super bespoke in usage, and has a simple to install extension for everything. for added flair i'm using the **[Vitesse Theme](https://open-vsx.org/extension/antfu/theme-vitesse)**. my current monospace font is **[Iosevka Extended](https://github.com/be5invis/Iosevka)**. 3 extensions i could not live without: **[CSS Variable Autocomplete](https://open-vsx.org/extension/vunguyentuan/vscode-css-variables)**, **[Git Stash](https://open-vsx.org/extension/arturock/gitstash)** and **[Svelte 3 Snippets](https://marketplace.visualstudio.com/items?itemName=fivethree.vscode-svelte-snippets)**.
+
+### music
+
+i _love_ music. i primarily listen to music on **[Qobuz](https://www.qobuz.com/de-de/discover)**, because convenience, but I do have a sizable collection of **CDs**, **vinyl** and **digitally bought MP3s**. to rip the CDs and manage MP3s i used to use [**MusicBee**](https://getmusicbee.com), which is the best iTunes 9 replacement ever, but sadly Windows only. i now use **[Laser](https://codeberg.org/andreasknoben/Laser)** on Linux for ripping. **[Poweramp](https://powerampapp.com)** is my MP3 player android app of choice for on the go offline music sessions. to track my listening habits I use [**last.fm**](https://www.last.fm/user/LinkPlay9), but the Qobuz integration is pretty rocky...
+
+## hardware
+
+at my **IKEA BEKANT** standing desk i use a single **Dell S3222DGM** 32-inch 1440p display. my keyboard is a **[Keychron K8](https://www.keychron.com/products/keychron-k8-tenkeyless-wireless-mechanical-keyboard?variant=39515069677657)** with aluminium frame and hot-swappable Gateron Red switches. for mouse i switch between a **Logitech MX Vertical** and a black **Magic Trackpad**, though i mostly use the trackpad. i sit on a **[Ergotopia NextBack](https://www.ergotopia.de/ergonomie-shop/gesund-sitzen/ergonomischer-buerostuhl/nextback-mit-kopfstuetze?toggle=d2c)**. for audio i use a **DROP Drop + Sennheiser PC38X** headset. i spin my vinyl on a **Audio Technica AT-LP120-USB**.
+
+### gaming
+
+for gaming i have a [custom build](https://pcpartpicker.com/user/LinkPlay9/saved/ZDzZLk) gaming PC (**Ryzen 7 5800X, RTX 5070 Ti, 32GB DDR4-3600**) that i'm _Ship of Theseus'ing_ since 2011. i mostly game with a **Xbox Wireless Controller** on my **Sony BRAVIA KD-50X80L** and use **Logitech K400 Plus** for the inevitable GUIs that appear when pc gaming... for fps games i roll my pc to the desk, and use a a **Logitech G403 Wireless**. for the occasional Nintendo exclusive i have a **Switch 2**. i also have a **PlayStation 2** with a **[RetroTINK-5X Pro](https://www.retrotink.com/shop/retrotink-5x-pro)** hooked up for some nostalgia.
+
+### on the go
+
+my laptop, that i share with my girlfriend, is a 14" **MacBook Pro** with the M1 Pro and 16 GB RAM. i'm still rocking a hazel **Pixel 8** as my phone. it's motherboard cracked once, but i got it repaired. on the go i use my **Sony WH-1000XM3** over-ear headphones, or **Sony WF-1000XM5** earbuds for audio. i also like to play on my **Steam Deck** when not at home.
+
+### fingerboard
+
+i have multiple fingerboard setups, but my main one is a 33,5mm **[December](https://december.ar)** deck with the "Personal Hell" graphic, 33mm **[Joycult](https://www.joycult.com) x Independent** trucks and blue classic **[Blistered](https://www.blisteredfb.com)** wheels.

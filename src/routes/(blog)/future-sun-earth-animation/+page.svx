@@ -19,6 +19,9 @@ The end result was an animation of the future development of the Sun and it's af
 
 In this post you can read a few chapters from the project documentation, that can be found in full (186 Pages) as an attachment at the bottom of this page. It details the whole research and animation process, broken down for each scene.
 
+## Table Of Contents
+
+
 ## 1 Introduction
 
 The given task was to create an animation showing the future development of the sun and the earth.

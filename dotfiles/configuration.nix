@@ -13,20 +13,18 @@ let
 in
 {
   imports = [ ./hardware-configuration.nix ];
-  # Nix
+  # Nix/NixOS
   nix.settings.experimental-features = [ "nix-command" ];
   nixpkgs.config.allowUnfree = true;
-  nix.optimise = {
-    automatic = true;
-    dates = [ "23:00" ];
-  };
   nix.gc = {
     options = "--delete-older-than 30d";
     automatic = true;
-    dates = [ "22:30" ];
+    dates = [ "04:30" ];
   };
-
-  # Nix OS
+  nix.optimise = {
+    automatic = true;
+    dates = [ "05:00" ];
+  };
   system.autoUpgrade.enable = true;
   # determines stateful settings like file locations and database versions
   # READ BEFORE CHANGING:
@@ -44,10 +42,15 @@ in
     "k10temp"
     "nct6775"
   ];
+  # boot.plymouth.enable = true;
 
   # OS Basics
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
+  # networking.firewall.allowedTCPPorts = [
+  #   5173
+  #   11434
+  # ];
   services.printing.enable = true;
   services.xserver.enable = true;
   services.xserver.excludePackages = with pkgs; [ xterm ];
@@ -81,29 +84,37 @@ in
   };
 
   # Desktop Environment
+  ## Plasma
+  services.desktopManager.plasma6.enable = true;
+  services.displayManager.plasma-login-manager.enable = true;
+
+  ## Cosmic
+  # services.displayManager.cosmic-greeter.enable = true;
+  # services.desktopManager.cosmic.enable = true;
+
   ## Gnome
-  services.desktopManager.gnome.enable = true;
-  services.displayManager.gdm.enable = true;
-  services.gvfs.enable = true;
-  environment.gnome.excludePackages = with pkgs; [
-    epiphany # replaced by vivaldi
-    gnome-music # replaced by nocturne + jellyfin
-    gnome-system-monitor # replaced by resources
-    gnome-console # replaced by ghostty
-    gnome-connections # unneeded atm
-    simple-scan # unneeded atm
-    gnome-tour # unneeded
-    # yelp # unneeded most of the time, but its nice to be able to access
-  ];
-  ### fix gnomes nautlis file browser media metadata display: https://github.com/NixOS/nixpkgs/issues/53631#issuecomment-3704189416
-  environment.sessionVariables.GST_PLUGIN_SYSTEM_PATH_1_0 =
-    lib.makeSearchPathOutput "lib" "lib/gstreamer-1.0"
-      [
-        pkgs.gst_all_1.gst-plugins-good
-        pkgs.gst_all_1.gst-plugins-bad
-        pkgs.gst_all_1.gst-plugins-ugly
-        pkgs.gst_all_1.gst-libav
-      ];
+  # services.desktopManager.gnome.enable = true;
+  # services.displayManager.gdm.enable = true;
+  # services.gvfs.enable = true;
+  # environment.gnome.excludePackages = with pkgs; [
+  #   epiphany # replaced by vivaldi
+  #   gnome-music # replaced by nocturne + jellyfin
+  #   gnome-system-monitor # replaced by resources
+  #   gnome-console # replaced by ghostty
+  #   gnome-connections # unneeded atm
+  #   simple-scan # unneeded atm
+  #   gnome-tour # unneeded
+  #   # yelp # unneeded most of the time, but its nice to be able to access
+  # ];
+  # ### fix gnomes nautlis file browser media metadata display: https://github.com/NixOS/nixpkgs/issues/53631#issuecomment-3704189416
+  # environment.sessionVariables.GST_PLUGIN_SYSTEM_PATH_1_0 =
+  #   lib.makeSearchPathOutput "lib" "lib/gstreamer-1.0"
+  #     [
+  #       pkgs.gst_all_1.gst-plugins-good
+  #       pkgs.gst_all_1.gst-plugins-bad
+  #       pkgs.gst_all_1.gst-plugins-ugly
+  #       pkgs.gst_all_1.gst-libav
+  #     ];
 
   # Software
   services.flatpak.enable = true;
@@ -123,7 +134,8 @@ in
     pnpm
     vscodium
     flyctl
-    vesktop # discord client w/o forced tray icons
+    # vesktop # discord client w/o forced tray icons
+    discord
     signal-desktop
     obsidian
     micro
@@ -147,34 +159,35 @@ in
     eartag
     tuba
     nocturne
-    cartridges
     ghostty
     # beets # CVE-2026-42052
     # installed via flatpack:
     # Flatseal
     # Laser
+    # (pkgs.ollama.override {
+    #  acceleration = "cuda";
+    # })
   ];
   programs.zoxide.enable = true;
-  services.lact.enable = true;
-  hardware.xone.enable = true;
   programs.git.enable = true;
-  services.jotta-cli.enable = true;
-  services.jellyfin = {
-    enable = true;
-    openFirewall = true;
-    user = "sarcevic";
-  };
-  # services.mullvad-vpn = {
-  #   enable = true;
-  #   package = pkgs.mullvad-vpn; # also provide GUI tool
-  # };
   programs.gamemode.enable = true;
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
   };
-
+  programs.nautilus-open-any-terminal = {
+    enable = true;
+    terminal = "ghostty";
+  };
+  hardware.xone.enable = true;
+  services.lact.enable = true;
+  services.jotta-cli.enable = true;
+  services.jellyfin = {
+    enable = true;
+    openFirewall = true;
+    user = "sarcevic";
+  };
   # User Config
   users.users.sarcevic = {
     isNormalUser = true;
@@ -184,8 +197,23 @@ in
       "wheel"
     ];
   };
-  # services.displayManager.autoLogin.enable = true;
-  # services.displayManager.autoLogin.user = "sarcevic";
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "sarcevic";
+
+  # boot.initrd.systemd.enable = true;
+  # systemd.services.display-manager.serviceConfig.KeyringMode = "inherit";
+  # security.pam.services.plasmalogin-autologin.rules.auth = {
+  #   systemd_loadkey = {
+  #     order = 0;
+  #     control = "optional";
+  #     modulePath = "${pkgs.systemd}/lib/security/pam_systemd_loadkey.so";
+  #   };
+  #   plasmalogin = {
+  #     order = 1;
+  #     control = "include";
+  #     modulePath = "plasmalogin";
+  #   };
+  # };
 
   # Environment
   environment.sessionVariables.NIXOS_OZONE_WL = "1"; # force Ozone Wayland in Chromium/Electron

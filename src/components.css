@@ -1,4 +1,6 @@
 .arrow-link {
+	display: flex;
+	align-items: center;
 	color: inherit;
 
 	& svg:first-of-type {

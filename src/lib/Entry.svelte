@@ -45,7 +45,7 @@
 	{#if entry.summary}
 		<p>{entry.summary}</p>
 	{/if}
-	{#if show_tags}
+	{#if show_tags && entry.tags?.length}
 		<hr />
 		<ul class="tags">
 			{#each entry.tags as tag (tag)}

@@ -5,6 +5,7 @@
 	import '@fontsource/atkinson-hyperlegible/700.css'
 	import 'prism-themes/themes/prism-a11y-dark.css'
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
+	import Logo from '../Logo.svelte'
 
 	let { title, tags, published, updated, summary, children } = $props()
 
@@ -68,8 +69,8 @@
 		<MaterialSymbolsArrowBackRounded aria-hidden="true" />/entries
 	</a>
 
-	<a href="/" class="arrow-link">
-		<MaterialSymbolsArrowBackRounded aria-hidden="true" />/
+	<a href="/" class="arrow-link" title="homepage">
+		<MaterialSymbolsArrowBackRounded aria-hidden="true" /><Logo />
 	</a>
 </section>
 
@@ -93,12 +94,10 @@
 	}
 
 	.links {
-		margin-block: 2rem;
-		& > * {
-			display: block;
-			text-align: center;
-			margin-block: 1rem;
-		}
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
 	}
 
 	ul.tags {

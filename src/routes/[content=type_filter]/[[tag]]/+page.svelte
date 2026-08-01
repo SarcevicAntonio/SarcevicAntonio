@@ -71,7 +71,7 @@
 	</ul>
 </section>
 
-<a href="/" class="arrow-link">
+<a href="/" class="arrow-link" title="homepage">
 	<MaterialSymbolsArrowBackRounded aria-hidden="true" /><Logo />
 </a>
 
@@ -128,10 +128,5 @@
 		& :global(svg) {
 			vertical-align: sub;
 		}
-	}
-
-	.arrow-link {
-		display: block;
-		text-align: center;
 	}
 </style>

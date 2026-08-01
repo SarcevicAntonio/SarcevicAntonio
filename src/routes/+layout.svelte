@@ -29,7 +29,7 @@
 		<nav>
 			<ul>
 				<li>
-					<a href="/">
+					<a href="/" title="homepage">
 						<Logo />
 					</a>
 				</li>

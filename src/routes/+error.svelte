@@ -42,4 +42,8 @@
 	section {
 		max-width: 25rem;
 	}
+
+	.arrow-link {
+		display: inline;
+	}
 </style>

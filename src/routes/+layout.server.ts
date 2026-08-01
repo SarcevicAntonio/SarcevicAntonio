@@ -1,4 +1,4 @@
-import { by_published } from '$lib/date_helpers'
+import { by_most_up_to_date } from '$lib/date_helpers'
 import { get_all_appearances, get_blog_posts } from '$lib/server/entries'
 
 export async function load({ locals, url }) {
@@ -11,6 +11,6 @@ export async function load({ locals, url }) {
 		badges,
 		theme: locals.theme,
 		page_name: url.host.replace('www.', ''),
-		content: [...blog_posts, ...apperances].sort(by_published),
+		content: [...blog_posts, ...apperances].sort(by_most_up_to_date),
 	}
 }

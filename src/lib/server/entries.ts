@@ -1,5 +1,5 @@
 import { appearances } from '$lib/appearances'
-import { by_published } from '$lib/date_helpers'
+import { by_most_up_to_date } from '$lib/date_helpers'
 import { parseHTML } from 'linkedom'
 import type { Component } from 'svelte'
 import { render as svelteRender } from 'svelte/server'
@@ -57,7 +57,7 @@ export async function get_blog_posts(render = false) {
 		}
 	}
 
-	blog_posts.sort(by_published)
+	blog_posts.sort(by_most_up_to_date)
 
 	for (const post of blog_posts) {
 		try {
@@ -95,6 +95,7 @@ const Appearance = z.object({
 	href: z.string(),
 	lang: z.string().default('EN'),
 	published: z.string(),
+	updated: z.string().optional(),
 	summary: z.string().optional(),
 	tags: z.array(z.string()),
 	domain: z.string().optional(),
@@ -108,7 +109,7 @@ export function get_all_appearances(): Appearance[] {
 		appearance.domain = (domain_pattern.exec(appearance.href) || [])[1]
 	}
 
-	appearances.sort(by_published)
+	appearances.sort(by_most_up_to_date)
 
 	for (const post of appearances as Appearance[]) {
 		try {

@@ -16,7 +16,7 @@
 			button.innerHTML = copy_icon
 			button.title = 'Copy contents'
 			button.onclick = () => {
-				navigator.clipboard.writeText(node.textContent ?? '')
+				navigator.clipboard.writeText(node.textContent || '')
 			}
 			const wrapper = document.createElement('div')
 			wrapper.className = 'copy-button-wrapper'

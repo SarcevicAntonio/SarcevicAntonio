@@ -25,7 +25,7 @@ function get_sitemap(content: BlogMetadata[], domain: string): string {
 				(post) => `
         <url>
             <loc>${domain + post.href}</loc>
-            <lastmod>${new Date(post.updated ?? post.published).toISOString()}</lastmod>
+            <lastmod>${new Date(post.updated || post.published).toISOString()}</lastmod>
             <priority>0.5</priority>
         </url>`
 			)

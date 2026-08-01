@@ -41,7 +41,7 @@ ${content.map(
         <link href="${domain}${post.href}" />
         <id>${domain}/${post.href}</id>
         <published>${new Date(post.published).toJSON()}</published>
-        <updated>${new Date(post.updated ?? post.published).toJSON()}</updated>
+        <updated>${new Date(post.updated || post.published).toJSON()}</updated>
         ${post.summary ? /*XML*/ `<summary type="html"><![CDATA[${post.summary}]]></summary>` : ''}
         <content type="html">
             <![CDATA[${post.html}]]>

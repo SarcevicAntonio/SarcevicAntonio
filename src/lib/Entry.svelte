@@ -30,7 +30,7 @@
 					.join('.')}<MaterialSymbolsOpenInNewRounded font-size="0.5em" aria-hidden="true" />
 			</span>
 		{/if}
-		<span class="date">{date_string(entry.published)}</span>
+		<span class="date">{date_string(entry.updated || entry.published)}</span>
 	</p>
 	<hr />
 	<svelte:element this={`h${h_level}`} class="heading">

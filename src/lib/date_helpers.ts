@@ -5,5 +5,7 @@ export const date_string = (string: string) =>
 		day: 'numeric',
 	})
 
-export const by_published = (a: { published: string }, b: { published: string }) =>
-	new Date(b.published).valueOf() - new Date(a.published).valueOf()
+export const by_most_up_to_date = (
+	a: { updated?: string; published: string },
+	b: { updated?: string; published: string }
+) => new Date(b.updated || b.published).valueOf() - new Date(a.updated || a.published).valueOf()

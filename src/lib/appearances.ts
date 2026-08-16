@@ -1,7 +1,15 @@
 import type { AppearanceSource } from './server/entries'
 
 export const appearances: AppearanceSource[] = [
-  	{
+	{
+		title: 'What makes a country successful?',
+		summary:
+			'Taking a look at how we measure wealth, efficiency, and success, and what difference the lens through which we look at these can make.',
+		href: 'https://www.datawrapper.de/blog/happy-planet-index',
+		published: '2026-08-13',
+		tags: ['weekly chart', 'datawrapper'],
+	},
+	{
 		title: '“Verify you’re an adult to access this content”',
 		summary:
 			'Highlighting the complex and, in my opinion, under-discussed topic of age verification laws that are being rolled out around the world right now.',

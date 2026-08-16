@@ -8,7 +8,7 @@ export async function load({ parent, params }) {
 
 	const tag_filter = params.tag
 	if (tag_filter) {
-		content = content.filter((post) => post.tags.includes(tag_filter))
+		content = content.filter((post) => post.tags?.includes(tag_filter))
 	}
 
 	if (params.content === 'posts') {

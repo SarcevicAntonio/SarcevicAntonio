@@ -3,6 +3,7 @@
 	import Craft from '$lib/homepage/Craft.svelte'
 	import Entries from '$lib/homepage/Entries.svelte'
 	import Hero from '$lib/homepage/Hero.svelte'
+	import Projects from './Projects.svelte'
 	import Values from './Values.svelte'
 
 	let { data } = $props()
@@ -23,7 +24,7 @@
 
 <!-- <section><Contact /></section> -->
 
-<!-- <section><Projects /></section> -->
+<section><Projects /></section>
 
 <style>
 	section {

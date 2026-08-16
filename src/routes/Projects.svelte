@@ -1,34 +1,58 @@
-<script>
+<script lang="ts">
+	type Project = {
+		label: string
+		icon: string
+		link: string
+	}
+
 	const projects = [
 		{
-			label: 'doTogether',
-			icon: 'https://do-together.vercel.app/icon-maskable.png',
-			link: 'https://github.com/SarcevicAntonio/doTogether',
+			label: 'maintainum',
+			icon: 'https://codeberg.org/linkplay-space/maintainum/raw/branch/main/static/icon-maskable.png',
+			link: 'https://codeberg.org/linkplay-space/maintainum#readme',
+		},
+		{
+			label: 'bipan.ms',
+			icon: 'https://bipan.ms/favicon.png',
+			link: 'https://bipan.ms',
 		},
 		{
 			label: 'SvelteLab',
 			icon: 'https://sveltelab.dev/icon-maskable.png',
 			link: 'https://github.com/sveltelab/sveltelab',
 		},
+	] satisfies Project[]
+	const archived_projects = [
+		{
+			label: 'doTogether',
+			icon: 'https://codeberg.org/linkplay-space/doTogether/raw/branch/master/static/icon-maskable.png',
+			link: 'https://codeberg.org/linkplay-space/doTogether#readme',
+		},
 		{
 			label: 'kcalCalc',
-			icon: 'https://kcal-calc.vercel.app/icon-maskable.png',
-			link: 'https://github.com/SarcevicAntonio/kcalCalc',
+			icon: 'https://codeberg.org/linkplay-space/kcalCalc/raw/branch/master/static/icon-maskable.png',
+			link: 'https://codeberg.org/linkplay-space/kcalCalc#readme',
 		},
-	]
+	] satisfies Project[]
 </script>
 
+{#snippet project_icons(projects: Project[])}
+	<ul>
+		{#each projects as { label, icon, link } (label)}
+			<li>
+				<a href={link}>
+					<img src={icon} alt="" width="512px" height="100%" />
+					{label}
+				</a>
+			</li>
+		{/each}
+	</ul>
+{/snippet}
+
 <h2>Projects</h2>
-<ul>
-	{#each projects as { label, icon, link } (label)}
-		<li>
-			<a href={link}>
-				<img src={icon} alt="" width="512px" height="100%" />
-				{label}
-			</a>
-		</li>
-	{/each}
-</ul>
+{@render project_icons(projects)}
+<h3>Archived</h3>
+{@render project_icons(archived_projects)}
 
 <style>
 	h2 {
@@ -48,6 +72,15 @@
 		margin-inline: auto;
 	}
 
+	h3 {
+		font-size: var(--step-3);
+		margin-block-start: 3rem;
+		margin-block-end: 2rem;
+	}
+
+	h3 + ul {
+		filter: grayscale(1);
+	}
 	a {
 		display: flex;
 		flex-direction: column;
@@ -56,6 +89,7 @@
 	}
 
 	img {
+		background-color: var(--as-back-2);
 		max-width: var(--step-7);
 		border-radius: 50%;
 		box-shadow:

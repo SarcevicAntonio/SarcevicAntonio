@@ -79,7 +79,7 @@
 	}
 
 	h3 + ul {
-		filter: grayscale(1);
+		filter: grayscale(90%) contrast(80%);
 	}
 	a {
 		display: flex;

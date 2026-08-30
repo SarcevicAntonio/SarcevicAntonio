@@ -15,15 +15,10 @@
 </svelte:head>
 
 <Hero />
-
-<section><Craft /></section>
-
 <section><Values /></section>
-
+<section><Craft /></section>
 <section><Entries content={data.content} /></section>
-
 <!-- <section><Contact /></section> -->
-
 <section><Projects /></section>
 
 <style>

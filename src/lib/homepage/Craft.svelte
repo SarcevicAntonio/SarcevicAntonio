@@ -16,8 +16,8 @@
 	<SimpleIconsSvelte aria-hidden="true" />
 </div>
 <p>love to craft user experiences with semantic HTML, modern CSS, TypeScript and SvelteKit.</p>
-<p>worked as a web developer since 2019.</p>
-<p>earned a bachelor of science degree in media and communications informatics.</p>
+<p>working as a web developer since 2019.</p>
+<p>earned a bachelor of science degree in media and communication computer science in 2020.</p>
 <p>always excellence over hustle.</p>
 
 <style>

@@ -4,12 +4,14 @@ atom8n.thor-client-atom8n
 chanzhaoyu.svelte-5-snippets
 dbaeumer.vscode-eslint
 esbenp.prettier-vscode
+fallow-rs.fallow-vscode
 foxundermoon.shell-format
 github.vscode-pull-request-github
 iliazeus.vscode-ansi
 jnoortheen.nix-ide
 npmx-dev.vscode-npmx
 oxc.oxc-vscode
+ozjsey.object-sort-alphabetical
 pkief.material-icon-theme
 ritwickdey.liveserver
 streetsidesoftware.code-spell-checker
@@ -18,4 +20,3 @@ svelte.svelte-vscode
 tyriar.sort-lines
 vunguyentuan.vscode-css-variables
 waderyan.gitblame
-webpro.vscode-knip

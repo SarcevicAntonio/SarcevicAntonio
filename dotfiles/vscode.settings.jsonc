@@ -22,9 +22,9 @@
     "webtoprint",
   ],
   "cSpell.enabledNotifications": {
-    "Maximum Word Length Exceeded": false,
     "Average Word Length too Long": false,
     "Lines too Long": false,
+    "Maximum Word Length Exceeded": false,
   },
 
   // Debug
@@ -63,16 +63,16 @@
   "explorer.fileNesting.enabled": false,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "package.json": "package-lock.json,.oxlintrc.json, yarn.lock, pnpm-lock.yaml,.env,.env.sample,.eslintignore,.eslintrc.cjs,.eslintrc.js,.git-blame-ignore-revs,.gitattributes,.gitmodules,.gitignore,.npmrc,.prettierignore,.prettierrc,CODE_OF_CONDUCT.md,LICENSE,playwright.config.ts,svelte.config.js,tsconfig.json,vercel.json,vite.config.js,vite.config.ts,postcss.config.cjs,vitest.workspace.ts,.browserslistrc,.dockerignore,.editorconfig,pnpm-workspace.yaml,.nvmrc,eslint.config.mjs",
-    "datawrapper.env": ".bash_aliases,.ripgreprc,.sentryignore,apps.json,apps.prod.json,apps.staging.json,Caddyfile,CHANGELOG.md,config.js,config.prod.js,config.staging.js,config.local.js,datawrapper.local.env,docker-compose-nginx.yml,docker-compose.yml,help.Makefile,Makefile",
     "*.ts": "$(capture).test.ts",
+    "datawrapper.env": ".bash_aliases,.ripgreprc,.sentryignore,apps.json,apps.prod.json,apps.staging.json,Caddyfile,CHANGELOG.md,config.js,config.prod.js,config.staging.js,config.local.js,datawrapper.local.env,docker-compose-nginx.yml,docker-compose.yml,help.Makefile,Makefile",
+    "package.json": "package-lock.json,.oxlintrc.json, yarn.lock, pnpm-lock.yaml,.env,.env.sample,.eslintignore,.eslintrc.cjs,.eslintrc.js,.git-blame-ignore-revs,.gitattributes,.gitmodules,.gitignore,.npmrc,.prettierignore,.prettierrc,CODE_OF_CONDUCT.md,LICENSE,playwright.config.ts,svelte.config.js,tsconfig.json,vercel.json,vite.config.js,vite.config.ts,postcss.config.cjs,vitest.workspace.ts,.browserslistrc,.dockerignore,.editorconfig,pnpm-workspace.yaml,.nvmrc,eslint.config.mjs",
   },
   "explorer.openEditors.visible": 4,
   "explorer.sortOrder": "filesFirst",
 
   // Extensions
   "extensions.ignoreRecommendations": true,
-  "extensions.autoUpdate": false,
+  "extensions.autoUpdate": "off",
 
   // # Files
   "files.associations": {
@@ -141,59 +141,58 @@
   "workbench.list.smoothScrolling": true,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
-  "workbench.iconTheme": "material-icon-theme",
   "workbench.tree.stickyScrollMaxItemCount": 3,
   "workbench.tree.renderIndentGuides": "always",
   "workbench.tree.indent": 12,
 
   // custom tab label patterns
   // updated 2025-12-07
-  "workbench.editor.labelFormat": "default",
-  "workbench.editor.customLabels.enabled": true,
-  "workbench.editor.customLabels.patterns": {
-    "**/src/**/*.css": "${filename}",
-    "**/src/**/utils/**/*.{js,ts}": "${filename} ⚙️",
-    "**/src/**/*.d.ts": "${filename} <T>",
-    "**/src/**/*.{js,ts}": "${filename}",
-    /** SVELTE */
-    "**/src/**/*.svelte": "${filename}",
-    "**/src/stores/**/*.{js,ts}": "${filename} (Store)",
-    /** SVELTEKIT */
-    // -- Home route needs special treatment
-    "**/src/routes/+page.svelte": "Home (Page)",
-    "**/src/routes/+page.{mdsvex,mdx}": "Home (MDX)",
-    "**/src/routes/+layout.svelte": "Layout (Root)",
-    // -- capture Home in grouped layouts
-    "**/src/routes/(**)/+page.svelte": "Home (Page)",
-    "**/src/routes/(**)/+page.{mdsvex,mdx}": "Home (MDX)",
-    // -- rest: require at least 1 dir with /*/**/, otherwise glob beats Home
-    "**/src/routes/*/**/+page.svelte": "${dirname} (Page)",
-    "**/src/routes/*/**/+page.{mdsvex,mdx}": "${dirname} (MDX)",
-    "**/src/routes/**/[[]*[]]/+page.svelte": "${dirname} (Route)",
-    // Layouts
-    "**/src/routes/*/**/+layout.svelte": "${dirname} (Layout)",
-    "**/src/routes/**/+layout.{js,ts}": "${dirname} (LayoutLoad)",
-    "**/src/routes/**/+layout.server.{js,ts}": "${dirname} (LayoutServerLoad)",
-    // Rest
-    "**/src/routes/**/+error.svelte": "${dirname} (Error Page)",
-    "**/src/routes/**/+page.{js,ts}": "${dirname} (Load)",
-    "**/src/routes/**/+page.server.{js,ts}": "${dirname} (ServerLoad)",
-    "**/src/routes/**/+server.{js,ts}": "${dirname} (Endpoint)",
-    "**/src/routes/**/*.remote.{js,ts}": "${filename} (Remote)",
-    "**/src/lib/server/*.{js,ts}": "${filename} (🔒)",
-    "**/src/hooks.{js,ts}": "Hooks",
-    "**/src/hooks.client.{js,ts}": "Hooks (Client)",
-    "**/src/hooks.server.{js,ts}": "Hooks (Server)",
-    /** ASTRO */
-    "**/src/layouts/**/*.astro": "${filename} (Layout)",
-    "**/src/**/*.astro": "${filename}",
-    "**/src/pages/index.astro": "Home (Page)",
-    "**/src/pages/**/[[]...slug[]].astro": "${dirname} (Slug)",
-    "**/src/pages/*/**/*.astro": "${dirname}/${filename} (Page)",
-    "**/src/content/**/*.md": "${dirname}/${filename}",
-    /** STORYBOOK */
-    "**/src/stories/**/*.*": "${filename} (Story)",
-  },
+  // "workbench.editor.labelFormat": "default",
+  "workbench.editor.customLabels.enabled": false,
+  // "workbench.editor.customLabels.patterns": {
+  //   "**/src/**/*.css": "${filename}",
+  //   "**/src/**/utils/**/*.{js,ts}": "${filename} ⚙️",
+  //   "**/src/**/*.d.ts": "${filename} <T>",
+  //   "**/src/**/*.{js,ts}": "${filename}",
+  //   /** SVELTE */
+  //   "**/src/**/*.svelte": "${filename}",
+  //   "**/src/stores/**/*.{js,ts}": "${filename} (Store)",
+  //   /** SVELTEKIT */
+  //   // -- Home route needs special treatment
+  //   "**/src/routes/+page.svelte": "Home (Page)",
+  //   "**/src/routes/+page.{mdsvex,mdx}": "Home (MDX)",
+  //   "**/src/routes/+layout.svelte": "Layout (Root)",
+  //   // -- capture Home in grouped layouts
+  //   "**/src/routes/(**)/+page.svelte": "Home (Page)",
+  //   "**/src/routes/(**)/+page.{mdsvex,mdx}": "Home (MDX)",
+  //   // -- rest: require at least 1 dir with /*/**/, otherwise glob beats Home
+  //   "**/src/routes/*/**/+page.svelte": "${dirname} (Page)",
+  //   "**/src/routes/*/**/+page.{mdsvex,mdx}": "${dirname} (MDX)",
+  //   "**/src/routes/**/[[]*[]]/+page.svelte": "${dirname} (Route)",
+  //   // Layouts
+  //   "**/src/routes/*/**/+layout.svelte": "${dirname} (Layout)",
+  //   "**/src/routes/**/+layout.{js,ts}": "${dirname} (LayoutLoad)",
+  //   "**/src/routes/**/+layout.server.{js,ts}": "${dirname} (LayoutServerLoad)",
+  //   // Rest
+  //   "**/src/routes/**/+error.svelte": "${dirname} (Error Page)",
+  //   "**/src/routes/**/+page.{js,ts}": "${dirname} (Load)",
+  //   "**/src/routes/**/+page.server.{js,ts}": "${dirname} (ServerLoad)",
+  //   "**/src/routes/**/+server.{js,ts}": "${dirname} (Endpoint)",
+  //   "**/src/routes/**/*.remote.{js,ts}": "${filename} (Remote)",
+  //   "**/src/lib/server/*.{js,ts}": "${filename} (🔒)",
+  //   "**/src/hooks.{js,ts}": "Hooks",
+  //   "**/src/hooks.client.{js,ts}": "Hooks (Client)",
+  //   "**/src/hooks.server.{js,ts}": "Hooks (Server)",
+  //   /** ASTRO */
+  //   "**/src/layouts/**/*.astro": "${filename} (Layout)",
+  //   "**/src/**/*.astro": "${filename}",
+  //   "**/src/pages/index.astro": "Home (Page)",
+  //   "**/src/pages/**/[[]...slug[]].astro": "${dirname} (Slug)",
+  //   "**/src/pages/*/**/*.astro": "${dirname}/${filename} (Page)",
+  //   "**/src/content/**/*.md": "${dirname}/${filename}",
+  //   /** STORYBOOK */
+  //   "**/src/stories/**/*.*": "${filename} (Story)",
+  // },
   "githubPullRequests.fileListLayout": "tree",
   "githubPullRequests.hideViewedFiles": false,
   "workbench.preferredDarkColorTheme": "Vitesse Dark",
@@ -205,4 +204,8 @@
   // temp settings
   "diffEditor.renderSideBySide": true,
   "editor.minimap.enabled": false,
+  "fallow.security.enabled": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
 }

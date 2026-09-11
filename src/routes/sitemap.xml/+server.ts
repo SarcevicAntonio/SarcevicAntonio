@@ -1,4 +1,4 @@
-import { get_blog_posts, type BlogMetadata } from '$lib/server/entries'
+import { get_blog_posts, type BlogMetadata } from '#lib/server/entries.js'
 import type { RequestHandler } from './$types'
 
 export const prerender = true

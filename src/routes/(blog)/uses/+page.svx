@@ -6,8 +6,8 @@ updated: 2026-08-01
 ---
 
 <script>
-  import Callout from "$lib/Callout.svelte"
-	import { date_string } from '$lib/date_helpers'
+  import Callout from "#lib/Callout.svelte"
+	import { date_string } from '#lib/date_helpers.js'
 </script>
 
 this is my **[uses.tech](https://uses.tech/)** page, detailing my developer setup, gear, software and configs.

@@ -1,5 +1,5 @@
-import { by_most_up_to_date } from '$lib/date_helpers'
-import { get_all_appearances, get_blog_posts } from '$lib/server/entries'
+import { by_most_up_to_date } from '#lib/date_helpers.js'
+import { get_all_appearances, get_blog_posts } from '#lib/server/entries.js'
 
 export async function load({ locals, url }) {
 	const blog_posts = await get_blog_posts()

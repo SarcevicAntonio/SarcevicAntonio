@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/state'
-	import Entry from '$lib/Entry.svelte'
+	import Entry from '#lib/Entry.svelte'
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 	import Logo from '../../Logo.svelte'
 

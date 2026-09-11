@@ -1,9 +1,9 @@
-import { browser } from '$app/environment'
+import { browser } from '$app/env'
 import { readable, writable } from 'svelte/store'
 
 // credit to: https://github.com/ghostdevv/svelte-kit-theme-switcher-demo
-
 export const themes = ['light', 'dark', undefined] as const
+
 export type Theme = (typeof themes)[number]
 
 export function is_valid_theme(potential_theme: string | undefined): boolean {

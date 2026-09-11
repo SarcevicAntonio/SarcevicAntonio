@@ -10,7 +10,7 @@ tags:
 ---
 
 <script>
-  import Callout from "$lib/Callout.svelte"
+  import Callout from "#lib/Callout.svelte"
 </script>
 
 <Callout title="Like video tutorials better?">

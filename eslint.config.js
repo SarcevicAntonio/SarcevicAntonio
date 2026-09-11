@@ -6,7 +6,9 @@ import { defineConfig } from 'eslint/config'
 import globals from 'globals'
 import path from 'node:path'
 import ts from 'typescript-eslint'
-import svelte_config from './svelte.config.js'
+import { loadConfig } from '@sveltejs/load-config'
+
+const svelteConfig = (await loadConfig('./', { traverse: false }))?.config
 
 const gitignore_path = path.resolve(import.meta.dirname, '.gitignore')
 

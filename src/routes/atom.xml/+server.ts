@@ -1,4 +1,4 @@
-import { get_all_tags, get_blog_posts, type BlogMetadata } from '$lib/server/entries'
+import { get_all_tags, get_blog_posts, type BlogMetadata } from '#lib/server/entries.js'
 
 export const prerender = true
 

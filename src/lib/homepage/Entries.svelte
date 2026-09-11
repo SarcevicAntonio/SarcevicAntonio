@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Entry from '$lib/Entry.svelte'
-	import type { Appearance, BlogMetadata } from '$lib/server/entries'
+	import Entry from '#lib/Entry.svelte'
+	import type { Appearance, BlogMetadata } from '#lib/server/entries.js'
 	import MaterialSymbolsArrowForwardRounded from '~icons/material-symbols/arrow-forward-rounded'
 
 	let { content }: { content: (BlogMetadata | Appearance)[] } = $props()

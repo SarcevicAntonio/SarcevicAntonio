@@ -10,7 +10,7 @@ tags:
 ---
 
 <script>
-  import Callout from "$lib/Callout.svelte";
+  import Callout from "#lib/Callout.svelte";
 </script>
 
 <Callout><p>this post is still using legacy Svelte 3/4 syntax</p></Callout>
@@ -295,7 +295,7 @@ export { addToast } from './toastStore'
 
 We are pretty much done with the library. Let's first give it a spin to check if everything works like we want to.
 
-Open up `src/routes/+page.svelte` and replace it's contents with the an example usage of our package. Notice here that we import from `$lib` to import files from our `src/lib` folder.
+Open up `src/routes/+page.svelte` and replace it's contents with the an example usage of our package. Notice here that we import from `#lib` to import files from our `src/lib` folder.
 
 ```html
 <!-- src/routes/+page.svelte -->

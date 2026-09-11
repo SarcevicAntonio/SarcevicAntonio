@@ -1,4 +1,4 @@
-import { is_valid_theme } from '$lib/theme'
+import { is_valid_theme } from '#lib/theme/index.js'
 import { redirect } from '@sveltejs/kit'
 
 export function GET({ params, cookies, url }) {

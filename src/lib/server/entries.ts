@@ -1,5 +1,5 @@
-import { appearances } from '$lib/appearances'
-import { by_most_up_to_date } from '$lib/date_helpers'
+import { appearances } from '#lib/appearances.js'
+import { by_most_up_to_date } from '#lib/date_helpers.js'
 import { parseHTML } from 'linkedom'
 import type { Component } from 'svelte'
 import { render as svelteRender } from 'svelte/server'

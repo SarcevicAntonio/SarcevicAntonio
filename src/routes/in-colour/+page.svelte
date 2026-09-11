@@ -1,5 +1,5 @@
 <script lang="ts">
-	import TriggerWarning from '$lib/TriggerWarning.svelte'
+	import TriggerWarning from '#lib/TriggerWarning.svelte'
 	import throttle from 'raf-throttle'
 	import { spring } from 'svelte/motion'
 

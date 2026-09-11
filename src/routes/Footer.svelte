@@ -1,7 +1,7 @@
 <script module>
 	import { page } from '$app/state'
-	import { contact_links } from '$lib/contact_links'
-	import dependencies from '$lib/dependency-report.json'
+	import { contact_links } from '#lib/contact_links.js'
+	import dependencies from '#lib/dependency-report.json'
 	import MaterialSymbolsAccountTreeRounded from '~icons/material-symbols/account-tree-rounded'
 	import MaterialSymbolsRssFeedRounded from '~icons/material-symbols/rss-feed-rounded'
 </script>

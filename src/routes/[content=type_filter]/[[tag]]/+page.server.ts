@@ -1,4 +1,4 @@
-import { get_all_tags } from '$lib/server/entries'
+import { get_all_tags } from '#lib/server/entries.js'
 
 export const prerender = true
 

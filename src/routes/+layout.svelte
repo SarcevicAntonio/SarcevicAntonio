@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { browser, dev } from '$app/environment'
+	import { browser, dev } from '$app/env'
 	import { page } from '$app/state'
-	import { current_theme, os_theme_preference } from '$lib/theme'
-	import ThemeLink from '$lib/theme/ThemeLink.svelte'
+	import { current_theme, os_theme_preference } from '#lib/theme/index.js'
+	import ThemeLink from '#lib/theme/ThemeLink.svelte'
 	import { onMount } from 'svelte'
 	import '../app.postcss'
 	import Footer from './Footer.svelte'

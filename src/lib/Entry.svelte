@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/state'
-	import { date_string } from '$lib/date_helpers'
+	import { date_string } from '#lib/date_helpers.js'
 	import MaterialSymbolsDocs from '~icons/material-symbols/docs'
 	import MaterialSymbolsLink from '~icons/material-symbols/link'
 	import MaterialSymbolsOpenInNewRounded from '~icons/material-symbols/open-in-new-rounded'

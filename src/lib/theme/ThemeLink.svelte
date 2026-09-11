@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores'
+	import { page } from '$app/state'
 	import Dark from '~icons/material-symbols/dark-mode-outline-rounded'
 	import Light from '~icons/material-symbols/light-mode-outline'
 	import Reset from '~icons/material-symbols/settings-backup-restore-rounded'
@@ -19,14 +19,7 @@
 		}[theme]
 	)
 
-	let Icon = $derived(
-		{
-			'os-preference': Reset,
-			dark: Dark,
-			light: Light,
-		}[theme]
-	)
-
+	let Icon = $derived({ 'os-preference': Reset, dark: Dark, light: Light }[theme])
 	let href = $derived('/set-theme/' + theme)
 
 	async function enhance(e: MouseEvent) {
@@ -43,9 +36,9 @@
 </script>
 
 <li>
-	<a href="{href}?redirect={$page.url.pathname}" {title} onclick={enhance}>
-		<Icon aria-hidden="true" />
-	</a>
+	<a href="{href}?redirect={page.url.pathname}" {title} onclick={enhance}
+		><Icon aria-hidden="true" /></a
+	>
 </li>
 
 <style>

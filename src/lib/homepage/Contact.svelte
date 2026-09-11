@@ -1,5 +1,5 @@
 <script>
-	import { contact_links } from '$lib/contact_links'
+	import { contact_links } from '#lib/contact_links.js'
 </script>
 
 <h2 id="connect">Connect</h2>

@@ -2,7 +2,7 @@
 /// <reference types="unplugin-icons/types/svelte" />
 /// <reference types="@modyfi/vite-plugin-yaml/modules" />
 
-import type { Theme } from '$lib/theme'
+import type { Theme } from '#lib/theme/index.js'
 import type { Session, User } from 'better-auth'
 
 // See https://kit.svelte.dev/docs/types#app

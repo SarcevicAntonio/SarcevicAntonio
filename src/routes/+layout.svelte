@@ -76,13 +76,13 @@
 		z-index: 3;
 		top: 0;
 		background-color: var(--as-back-1);
-		margin-inline: -1rem;
 		font-size: 1.5rem;
+		max-width: var(--content-width);
+		margin: auto;
 	}
 
 	nav {
-		max-width: var(--content-width);
-		margin: auto;
+		margin-inline: calc(var(--body-padding) * -1);
 	}
 
 	nav ul {
@@ -92,16 +92,13 @@
 		margin: 0;
 	}
 
-	nav li:first-child a {
-		margin-inline-start: -0.5em;
-	}
-
-	nav li:last-child a {
-		margin-inline-end: -0.5em;
-	}
-
 	nav a {
 		padding: 0.5em 1.5em;
+	}
+	@media only screen and (max-width: 520px) {
+		nav a {
+			padding: 0.5em;
+		}
 	}
 
 	nav :global(a) {
@@ -123,11 +120,5 @@
 
 	nav :global(svg) {
 		vertical-align: -0.3em;
-	}
-
-	@media only screen and (max-width: 520px) {
-		.hide-on-mobile {
-			display: none;
-		}
 	}
 </style>

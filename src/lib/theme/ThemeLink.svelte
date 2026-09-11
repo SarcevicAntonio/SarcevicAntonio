@@ -2,7 +2,7 @@
 	import { page } from '$app/state'
 	import Dark from '~icons/material-symbols/dark-mode-outline-rounded'
 	import Light from '~icons/material-symbols/light-mode-outline'
-	import Reset from '~icons/material-symbols/settings-backup-restore-rounded'
+	import Reset from './ResetThemeSetting.svelte'
 	import { current_theme } from '.'
 
 	interface Props {
@@ -43,10 +43,10 @@
 
 <style>
 	a {
-		padding: 0.5em;
+		padding-block: 0.5em;
+		padding-inline: 0.25em;
 		display: block;
 		color: var(--as-text-2);
-		font-family: var(--display-font);
 
 		&:hover {
 			background: var(--as-back-2);

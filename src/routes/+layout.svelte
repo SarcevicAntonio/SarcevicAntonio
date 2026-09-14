@@ -21,13 +21,6 @@
 	let { children }: Props = $props()
 
 	$current_theme = page.data.theme
-
-	onMount(() => {
-		if (!dev && browser && 'serviceWorker' in navigator) {
-			// register self destroying service worker
-			navigator.serviceWorker.register('/sw.js')
-		}
-	})
 </script>
 
 <header>

@@ -20,9 +20,6 @@ importers:
       '@polymer/paper-button':
         specifier: ^3.0.1
         version: 3.0.1
-      '@yaireo/relative-time':
-        specifier: ^1.1.0
-        version: 1.1.0
       linkedom:
         specifier: ^0.18.12
         version: 0.18.12
@@ -1101,9 +1098,6 @@ packages:
 
   '@webcomponents/shadycss@1.11.2':
     resolution: {integrity: sha512-vRq+GniJAYSBmTRnhCYPAPq6THYqovJ/gzGThWbgEZUQaBccndGTi1hdiUP15HzEco0I6t4RCtXyX0rsSmwgPw==}
-
-  '@yaireo/relative-time@1.1.0':
-    resolution: {integrity: sha512-3XXsDpeKARlMUlGw7pBn+2cihakH0UQMr0m7hD/aZnQEJ+4Ele8IR/FzKlGzM9R+mfU7cbpyzL1PLGPTOBBiUg==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -3435,8 +3429,6 @@ snapshots:
       tinyrainbow: 3.1.0
 
   '@webcomponents/shadycss@1.11.2': {}
-
-  '@yaireo/relative-time@1.1.0': {}
 
   acorn-jsx@5.3.2(acorn@8.16.0):
     dependencies:

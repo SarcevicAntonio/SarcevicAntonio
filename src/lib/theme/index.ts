@@ -2,7 +2,7 @@ import { browser } from '$app/env'
 import { readable, writable } from 'svelte/store'
 
 // credit to: https://github.com/ghostdevv/svelte-kit-theme-switcher-demo
-export const themes = ['light', 'dark', undefined] as const
+const themes = ['light', 'dark', undefined] as const
 
 export type Theme = (typeof themes)[number]
 

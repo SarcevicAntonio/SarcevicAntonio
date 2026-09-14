@@ -1,6 +1,7 @@
 import type { Component } from 'svelte'
 import Codeberg from '~icons/simple-icons/codeberg'
 import Mastodon from '~icons/simple-icons/mastodon'
+import Bluesky from '~icons/simple-icons/bluesky'
 
 export const contact_links: Array<{
 	title: string
@@ -13,6 +14,11 @@ export const contact_links: Array<{
 		icon: Mastodon,
 		href: 'https://biplus.social/@linkplay',
 		rel: 'me',
+	},
+	{
+		title: 'Bluesky',
+		icon: Bluesky,
+		href: 'https://bsky.app/profile/sarcevic.dev',
 	},
 	{
 		title: 'Codeberg',

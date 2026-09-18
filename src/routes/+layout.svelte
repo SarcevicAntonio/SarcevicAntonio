@@ -1,15 +1,13 @@
 <script lang="ts">
 	import { current_theme, os_theme_preference } from '#lib/theme/index.js'
 	import ThemeLink from '#lib/theme/ThemeLink.svelte'
-	import { browser, dev } from '$app/env'
 	import { page } from '$app/state'
 	import '@fontsource/space-mono/400.css'
 	import '@fontsource/space-mono/700.css'
 	import '@fontsource/staatliches'
-	import { onMount } from 'svelte'
-	import '../app.postcss'
 	import '../components.css'
 	import '../globals.css'
+	import '../variables.css'
 
 	import Footer from './Footer.svelte'
 	import Logo from './Logo.svelte'
@@ -35,9 +33,6 @@
 				<li class="hide-on-mobile">
 					<a href="/entries"> entries </a>
 				</li>
-				<!-- <li class="hide-on-mobile">
-					<a href="https://www.youtube.com/@SarcevicAntonio"> youtube </a>
-				</li> -->
 
 				<span class="spacer"></span>
 

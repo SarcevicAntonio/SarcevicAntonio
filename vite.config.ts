@@ -1,4 +1,5 @@
 import adapter from '@sveltejs/adapter-netlify'
+import { sveltekit } from '@sveltejs/kit/vite'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import { mdsvex, MdsvexOptions } from 'mdsvex'
 import path from 'path'
@@ -6,11 +7,9 @@ import autolink from 'rehype-autolink-headings'
 import slug from 'rehype-slug'
 import toc from 'remark-toc'
 import { importAssets } from 'svelte-preprocess-import-assets'
-import { fileURLToPath } from 'url'
-import { sveltekit } from '@sveltejs/kit/vite'
-import { playwright } from '@vitest/browser-playwright'
 import Icons from 'unplugin-icons/vite'
-import { defineConfig } from 'vitest/config'
+import { fileURLToPath } from 'url'
+import { defineConfig } from 'vite'
 
 const mdsvex_config = {
 	layout: fileURLToPath(path.join(import.meta.url, '../src/routes/(blog)/post.svelte')),
@@ -32,7 +31,7 @@ const mdsvex_config = {
 			},
 		],
 	],
-} satisfies MdsvexOptions;
+} satisfies MdsvexOptions
 
 export default defineConfig({
 	plugins: [
@@ -43,31 +42,4 @@ export default defineConfig({
 		}),
 		Icons({ compiler: 'svelte' }),
 	],
-	test: {
-		expect: { requireAssertions: true },
-		projects: [
-			{
-				extends: './vite.config.ts',
-				test: {
-					name: 'client',
-					browser: {
-						enabled: true,
-						provider: playwright(),
-						instances: [{ browser: 'chromium', headless: true }],
-					},
-					include: ['src/**/*.svelte.{test,spec}.{js,ts}'],
-					exclude: ['src/lib/server/**'],
-				},
-			},
-			{
-				extends: './vite.config.ts',
-				test: {
-					name: 'server',
-					environment: 'node',
-					include: ['src/**/*.{test,spec}.{js,ts}'],
-					exclude: ['src/**/*.svelte.{test,spec}.{js,ts}'],
-				},
-			},
-		],
-	},
 })

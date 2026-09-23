@@ -1,9 +1,10 @@
 <script>
-	import { afterNavigate } from '$app/navigation'
 	import { date_string } from '#lib/date_helpers.js'
+	import { current_theme } from '#lib/theme/index.js'
+	import { afterNavigate } from '$app/navigation'
 	import '@fontsource/atkinson-hyperlegible/400.css'
 	import '@fontsource/atkinson-hyperlegible/700.css'
-	import 'prism-themes/themes/prism-a11y-dark.css'
+	import '@twinkleplop/theme-solarized'
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 	import Logo from '../Logo.svelte'
 
@@ -35,7 +36,7 @@
 </svelte:head>
 
 <!-- Remember if you edit markup here to change it in get_blog_posts html render cleanup -->
-<article>
+<article class={{ dark: $current_theme === 'dark' }}>
 	<h1>{title}</h1>
 	{#if published || updated || tags}
 		<!-- content here -->
@@ -128,7 +129,6 @@
 		display: block;
 		max-width: 100%;
 		margin: auto;
-		margin-inline: 0.5rem;
 		border-radius: 0.3em;
 	}
 
@@ -137,10 +137,12 @@
 	}
 
 	article :global(pre) {
-		background-color: black;
+		background-color: var(--twp-background);
 		position: relative;
 		overflow-y: visible;
-		margin-inline: 0.5rem;
+		border-radius: 0.3em;
+		margin-inline: 0.5em;
+		padding: 1em;
 	}
 
 	:global(.copy-button-wrapper) {
@@ -154,7 +156,7 @@
 
 	:global(.copy-button-wrapper button) {
 		padding: 0;
-		color: var(--as-back-2);
+		color: var(--as-text-2);
 		line-height: 1;
 		background: none;
 		border: none;
@@ -167,7 +169,7 @@
 			opacity: 1;
 		}
 		&:active {
-			color: var(--as-accent);
+			color: var(--as-text-1);
 		}
 	}
 </style>

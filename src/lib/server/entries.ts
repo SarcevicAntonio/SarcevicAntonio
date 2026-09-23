@@ -3,24 +3,24 @@ import { by_most_up_to_date } from '#lib/date_helpers.js'
 import { parseHTML } from 'linkedom'
 import type { Component } from 'svelte'
 import { render as svelteRender } from 'svelte/server'
-import { z } from 'zod'
+import * as v from 'valibot'
 
 const BLOG_GROUP_NAME = '(blog)'
 const BLOG_FILE_NAME = '/+page.svx'
 
-const BlogMetadata = z.object({
-	type: z.string().default('blog_post'),
-	title: z.string(),
-	summary: z.string(),
-	published: z.string(),
-	updated: z.string().optional(),
-	href: z.string(),
-	tags: z.array(z.string()).optional(),
-	html: z.string().optional(),
-	lang: z.string().default('EN'),
+const BlogMetadata = v.object({
+	type: v.optional(v.string(), 'blog_post'),
+	title: v.string(),
+	summary: v.string(),
+	published: v.string(),
+	updated: v.optional(v.string()),
+	href: v.string(),
+	tags: v.optional(v.array(v.string())),
+	html: v.optional(v.string()),
+	lang: v.optional(v.string(), 'EN'),
 })
 
-export type BlogMetadata = z.infer<typeof BlogMetadata>
+export type BlogMetadata = v.InferOutput<typeof BlogMetadata>
 
 export async function get_blog_posts(render = false) {
 	const blog_posts: BlogMetadata[] = []
@@ -61,7 +61,7 @@ export async function get_blog_posts(render = false) {
 
 	for (const post of blog_posts) {
 		try {
-			BlogMetadata.parse(post)
+			v.parse(BlogMetadata, post)
 		} catch (e) {
 			console.error(
 				`ERROR: Blog Metadata Parse Error!\nLooks like the metadata for post "${post.title}" is malformed.`
@@ -89,20 +89,20 @@ export async function get_all_tags(posts: (BlogMetadata | Appearance)[]) {
 
 const domain_pattern = /^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/\n]+)/
 
-const Appearance = z.object({
-	type: z.string().default('appearance'),
-	title: z.string(),
-	href: z.string(),
-	lang: z.string().default('EN'),
-	published: z.string(),
-	updated: z.string().optional(),
-	summary: z.string().optional(),
-	tags: z.array(z.string()),
-	domain: z.string().optional(),
+const Appearance = v.object({
+	type: v.optional(v.string(), 'appearance'),
+	title: v.string(),
+	href: v.string(),
+	lang: v.optional(v.string(), 'EN'),
+	published: v.string(),
+	updated: v.optional(v.string()),
+	summary: v.optional(v.string()),
+	tags: v.array(v.string()),
+	domain: v.optional(v.string()),
 })
 
-export type AppearanceSource = z.input<typeof Appearance>
-export type Appearance = z.infer<typeof Appearance>
+export type AppearanceSource = v.InferInput<typeof Appearance>
+export type Appearance = v.InferOutput<typeof Appearance>
 
 export function get_all_appearances(): Appearance[] {
 	for (const appearance of appearances as Appearance[]) {
@@ -113,7 +113,7 @@ export function get_all_appearances(): Appearance[] {
 
 	for (const post of appearances as Appearance[]) {
 		try {
-			Appearance.parse(post)
+			v.parse(Appearance, post)
 		} catch (e) {
 			console.error(
 				`ERROR: Appearance Parse Error!\nLooks like the metadata for appearance "${post.href}" is malformed.`

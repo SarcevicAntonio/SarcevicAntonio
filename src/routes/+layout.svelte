@@ -5,9 +5,7 @@
 	import '@fontsource/space-mono/400.css'
 	import '@fontsource/space-mono/700.css'
 	import '@fontsource/staatliches'
-	import '../components.css'
-	import '../globals.css'
-	import '../variables.css'
+	import '../app.css'
 
 	import Footer from './Footer.svelte'
 	import Logo from './Logo.svelte'

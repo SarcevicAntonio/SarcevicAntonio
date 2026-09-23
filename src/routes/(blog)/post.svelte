@@ -4,6 +4,7 @@
 	import { afterNavigate } from '$app/navigation'
 	import '@fontsource/atkinson-hyperlegible/400.css'
 	import '@fontsource/atkinson-hyperlegible/700.css'
+	import '@fontsource-variable/jetbrains-mono'
 	import '@twinkleplop/theme-github'
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 	import Logo from '../Logo.svelte'

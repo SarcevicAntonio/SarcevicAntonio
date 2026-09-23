@@ -47,6 +47,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource-variable/jetbrains-mono": "^5.3.0",
 		"@fontsource/atkinson-hyperlegible": "^5.3.0",
 		"@fontsource/space-mono": "^5.3.0",
 		"@fontsource/staatliches": "^5.3.0",

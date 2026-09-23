@@ -60,8 +60,8 @@ body {
 code,
 pre {
 	font-family:
-		'Iosevka Extended', 'JetBrains Mono', 'Input Mono', 'IBM Plex', 'Fira Code', 'Roboto Mono',
-		'Menlo', 'Monaco', 'Courier New', monospace;
+		'Iosevka Extended', 'JetBrains Mono Variable', 'Input Mono', 'IBM Plex', 'Fira Code',
+		'Roboto Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
 }
 
 a {

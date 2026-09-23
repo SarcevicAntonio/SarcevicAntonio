@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/jetbrains-mono':
+        specifier: ^5.3.0
+        version: 5.3.0
       '@fontsource/atkinson-hyperlegible':
         specifier: ^5.3.0
         version: 5.3.0
@@ -60,9 +63,6 @@ importers:
       '@sveltejs/vite-plugin-svelte':
         specifier: ^7.3.1
         version: 7.3.1(svelte@5.57.1(@typescript-eslint/types@8.70.1))(vite@8.3.0(@types/node@25.9.8)(esbuild@0.27.7)(sugarss@5.0.1(postcss@8.5.28))(tsx@4.21.0)(yaml@2.8.3))
-      '@twinkleplop/bash':
-        specifier: ^0.1.4
-        version: 0.1.4
       '@twinkleplop/html':
         specifier: ^0.1.4
         version: 0.1.4
@@ -348,6 +348,9 @@ packages:
     resolution: {integrity: sha512-IkO+/KEUvwbVpiURZg+P7zF74z5Jxe0UgJxVni+RtoHQ6IZieXaO02kmadomap/q+l6bc/jdPGGqTjhuZnuz1Q==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
+  '@fontsource-variable/jetbrains-mono@5.3.0':
+    resolution: {integrity: sha512-F32xpS2NsGYoQi2ADSkKTgpJj7ozajsGgDJ8woTnqjmIB+dxDIqImjl4pXZVEExu8UFZ2ndhmX18EBS/hdz3Lw==}
+
   '@fontsource/atkinson-hyperlegible@5.3.0':
     resolution: {integrity: sha512-Sp8Ve8+rQmENY2Lv02VH7sLpntzTTvnncnJMTbRE7DX6TLxGraN4ykZfzaUWIoCFmaomwkvNiqmlPkrKBuDoSA==}
 
@@ -606,9 +609,6 @@ packages:
     peerDependencies:
       svelte: ^5.46.4
       vite: ^8.0.0-beta.7 || ^8.0.0
-
-  '@twinkleplop/bash@0.1.4':
-    resolution: {integrity: sha512-gozmWms6ROXJhy5Z7hMtC/HePHV6zchkxMVKYJLgZgk/V3bfU+HnCdzoETp9e5NjTqWXszjH1VnGDXc68BH12w==}
 
   '@twinkleplop/core@0.1.2':
     resolution: {integrity: sha512-Yw/Ib+ayXxds2ldFwet7fU80VWTx+Vt23cPx6iJVyEXNGac7ckhivWK3XgY8eFtJ6lAOEh7bVLTgQXE+zzYovQ==}
@@ -1992,6 +1992,8 @@ snapshots:
       '@eslint/core': 1.2.1
       levn: 0.4.1
 
+  '@fontsource-variable/jetbrains-mono@5.3.0': {}
+
   '@fontsource/atkinson-hyperlegible@5.3.0': {}
 
   '@fontsource/space-mono@5.3.0': {}
@@ -2219,10 +2221,6 @@ snapshots:
       svelte: 5.57.1(@typescript-eslint/types@8.70.1)
       vite: 8.3.0(@types/node@25.9.8)(esbuild@0.27.7)(sugarss@5.0.1(postcss@8.5.28))(tsx@4.21.0)(yaml@2.8.3)
       vitefu: 1.1.3(vite@8.3.0(@types/node@25.9.8)(esbuild@0.27.7)(sugarss@5.0.1(postcss@8.5.28))(tsx@4.21.0)(yaml@2.8.3))
-
-  '@twinkleplop/bash@0.1.4':
-    dependencies:
-      '@twinkleplop/core': 0.2.1
 
   '@twinkleplop/core@0.1.2': {}
 

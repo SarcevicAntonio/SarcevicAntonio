@@ -1,5 +1,5 @@
 import { browser } from '$app/env'
-import { readable, writable } from 'svelte/store'
+import { derived, readable, writable } from 'svelte/store'
 
 // credit to: https://github.com/ghostdevv/svelte-kit-theme-switcher-demo
 const themes = ['light', 'dark', undefined] as const
@@ -25,4 +25,7 @@ export const os_theme_preference = readable<Theme>(
 	}
 )
 
-export const current_theme = writable<Theme>(undefined)
+export const preferred_theme = writable<Theme>(undefined)
+export const current_theme = derived([preferred_theme, os_theme_preference], ([$preferred, $os]) =>
+	$preferred ? $preferred : $os
+)

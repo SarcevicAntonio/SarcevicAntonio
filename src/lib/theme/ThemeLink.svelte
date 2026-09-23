@@ -3,7 +3,7 @@
 	import Dark from '~icons/material-symbols/dark-mode-outline-rounded'
 	import Light from '~icons/material-symbols/light-mode-outline'
 	import Reset from './ResetThemeSetting.svelte'
-	import { current_theme } from '.'
+	import { preferred_theme } from '.'
 
 	interface Props {
 		theme: 'os-preference' | 'light' | 'dark'
@@ -26,10 +26,10 @@
 		e.preventDefault()
 		await fetch(href)
 		if (theme === 'os-preference') {
-			$current_theme = undefined
+			$preferred_theme = undefined
 			delete document.documentElement.dataset.theme
 		} else {
-			$current_theme = theme
+			$preferred_theme = theme
 			document.documentElement.dataset.theme = theme
 		}
 	}

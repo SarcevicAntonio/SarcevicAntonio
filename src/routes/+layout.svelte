@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { current_theme, os_theme_preference } from '#lib/theme/index.js'
+	import { preferred_theme, os_theme_preference } from '#lib/theme/index.js'
 	import ThemeLink from '#lib/theme/ThemeLink.svelte'
 	import { page } from '$app/state'
 	import '@fontsource/space-mono/400.css'
@@ -16,7 +16,7 @@
 
 	let { children }: Props = $props()
 
-	$current_theme = page.data.theme
+	$preferred_theme = page.data.theme
 </script>
 
 <header>
@@ -34,12 +34,12 @@
 
 				<span class="spacer"></span>
 
-				{#if $current_theme}
+				{#if $preferred_theme}
 					<ThemeLink theme="os-preference" />
 				{/if}
-				{#if $current_theme === 'light' || (!$current_theme && $os_theme_preference === 'light')}
+				{#if $preferred_theme === 'light' || (!$preferred_theme && $os_theme_preference === 'light')}
 					<ThemeLink theme="dark" />
-				{:else if $current_theme === 'dark' || (!$current_theme && $os_theme_preference === 'dark')}
+				{:else if $preferred_theme === 'dark' || (!$preferred_theme && $os_theme_preference === 'dark')}
 					<ThemeLink theme="light" />
 				{:else}
 					<ThemeLink theme="dark" />

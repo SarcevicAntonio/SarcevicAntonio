@@ -138,8 +138,9 @@
 
 	article :global(pre) {
 		background-color: var(--twp-background);
+		color: var(--twp-output);
 		position: relative;
-		overflow-y: visible;
+		overflow-y: auto;
 		border-radius: 0.3em;
 		margin-inline: 0.5em;
 		padding: 1em;

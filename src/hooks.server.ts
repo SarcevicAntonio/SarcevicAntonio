@@ -1,5 +1,5 @@
-import { building, dev } from '$app/env'
 import { is_valid_theme, type Theme } from '#lib/theme/index.js'
+import { building, dev } from '$app/env'
 import { sequence, type Handle } from '@sveltejs/kit/hooks'
 
 const handle_www: Handle = async ({ event, resolve }) => {
@@ -18,10 +18,11 @@ const handle_www: Handle = async ({ event, resolve }) => {
 const handle_theme: Handle = async ({ event, resolve }) => {
 	const cookie_theme = event.cookies.get('theme')
 	event.locals.theme = is_valid_theme(cookie_theme) ? (cookie_theme as Theme) : undefined
+	event.locals.page_name = event.url.host.replace('www.', '')
 	return await resolve(event, {
 		transformPageChunk({ html }) {
 			if (event.locals.theme) html = html.replace('%page.theme%', event.locals.theme)
-
+			html = html.replace('%page.name%', event.locals.page_name)
 			return html
 		},
 	})

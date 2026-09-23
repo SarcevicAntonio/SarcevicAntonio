@@ -10,7 +10,7 @@ export async function load({ locals, url }) {
 	return {
 		badges,
 		theme: locals.theme,
-		page_name: url.host.replace('www.', ''),
+		page_name: locals.page_name,
 		content: [...blog_posts, ...apperances].sort(by_most_up_to_date),
 	}
 }

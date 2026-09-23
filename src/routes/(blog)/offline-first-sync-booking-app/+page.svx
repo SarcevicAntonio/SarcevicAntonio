@@ -1,7 +1,7 @@
 ---
 title: Offline First Sync Booking App
 summary: |
-  🚢 During my 1th semester of my Informatics Masters's degree, we got tasked to create Pirate Bay Tours, an offline-first booking app for internal use by a cruise line.
+  During my 1th semester of my Informatics Masters's degree, we got tasked to create Pirate Bay Tours, an offline-first booking app for internal use by a cruise line.
 published: 2021-03-29
 updated: 2022-03-02
 tags:

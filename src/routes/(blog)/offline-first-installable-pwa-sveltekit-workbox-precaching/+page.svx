@@ -1,7 +1,7 @@
 ---
 title: Create an offline-first and installable PWA with SvelteKit and workbox-precaching
 summary: |
-  ✈️ How to create an offline-first and installable Progressive Web App using SvelteKit and Workbox precaching with just 34 lines of code.
+  How to create an offline-first and installable Progressive Web App using SvelteKit and Workbox precaching with just 34 lines of code.
 published: 2022-11-21
 updated: 2024-01-30
 tags:

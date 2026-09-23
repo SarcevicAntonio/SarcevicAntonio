@@ -1,9 +1,8 @@
 import type { AppearanceSource } from './server/entries'
 
 export const appearances: AppearanceSource[] = [
-  	{
-		title:
-			'Interview: Bi+ Vorurteile und Stereotype',
+	{
+		title: 'Interview: Bi+ Vorurteile und Stereotype',
 		summary:
 			'IWWIT / Deutsche Aidshilfe interviewed me about biphobia and - erasure as part of their BICONIC action. This interview is in German.',
 		href: 'https://www.iwwit.de/gayzine/bi-vorurteilen-und-stereotypen/',

@@ -1,7 +1,7 @@
 ---
 title: Create a toast notification package with SvelteKit
 summary: |
-  📦 How to create a notification store and component as a library for Svelte and packaging it up for npm with SvelteKit!
+  How to create a notification store and component as a library for Svelte and packaging it up for npm with SvelteKit!
 published: 2021-10-14
 updated: 2023-06-13
 tags:

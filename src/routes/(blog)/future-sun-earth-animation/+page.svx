@@ -1,7 +1,7 @@
 ---
 title: Future of Sun and Earth – A Scientific Animation
 summary: |
-  🌍 During my 5th semester of my Media and Communications Informatics Bachelor's degree, I got to lead a team of 15 talented fellow students.
+  During my 5th semester of my Media and Communications Informatics Bachelor's degree, I got to lead a team of 15 talented fellow students.
 published: 2021-03-28
 updated: 2022-03-02
 tags:
@@ -14,13 +14,12 @@ The end result was an animation of the future development of the Sun and it's af
 
 <a href="https://www.youtube.com/watch?v=fLTLAEGBFCM">
   <img src="./ip17.gif" alt="Small gif showing the first scene with a link to the full animation.">
-  🌍 Click here or on the image to see the full animation! ☀️
+  Click here or on the image to see the full animation!
 </a>
 
 In this post you can read a few chapters from the project documentation, that can be found in full (186 Pages) as an attachment at the bottom of this page. It details the whole research and animation process, broken down for each scene.
 
 ## Table Of Contents
-
 
 ## 1 Introduction
 
@@ -279,7 +278,7 @@ Thanks for reading this blog entry. Be sure to check out the entire animation an
 
 <a href="https://www.youtube.com/watch?v=fLTLAEGBFCM">
   <img src="./ip17.gif" alt="Small gif showing the first scene with a link to the full animation.">
-  🌍 Click here or on the image to see the full animation! ☀️
+  Click here or on the image to see the full animation!
 </a>
 
 <ul>

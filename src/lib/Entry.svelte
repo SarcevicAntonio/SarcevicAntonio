@@ -80,7 +80,7 @@
 		padding: 1.5rem 2rem;
 		border-radius: 1rem;
 		color: inherit;
-		text-decoration: none !important;
+		text-decoration: none;
 		text-align: start;
 
 		&.blog-post {

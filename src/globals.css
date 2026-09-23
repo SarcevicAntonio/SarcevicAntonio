@@ -60,8 +60,8 @@ body {
 code,
 pre {
 	font-family:
-		'JetBrains Mono', 'Input Mono', 'Fira Code', 'Roboto Mono', Consolas, Monaco, 'Andale Mono',
-		'Ubuntu Mono', monospace !important;
+		'Iosevka Extended', 'JetBrains Mono', 'Input Mono', 'IBM Plex', 'Fira Code', 'Roboto Mono',
+		'Menlo', 'Monaco', 'Courier New', monospace;
 }
 
 a {

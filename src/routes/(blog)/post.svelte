@@ -4,7 +4,7 @@
 	import { afterNavigate } from '$app/navigation'
 	import '@fontsource/atkinson-hyperlegible/400.css'
 	import '@fontsource/atkinson-hyperlegible/700.css'
-	import '@twinkleplop/theme-solarized'
+	import '@twinkleplop/theme-github'
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 	import Logo from '../Logo.svelte'
 
@@ -138,7 +138,7 @@
 
 	article :global(pre) {
 		background-color: var(--twp-background);
-		color: var(--twp-output);
+		color: var(--twp-punctuation);
 		position: relative;
 		overflow-y: auto;
 		border-radius: 0.3em;

@@ -152,7 +152,7 @@ button has its own appearance and animations according to the Material Design sp
 To use the paper-button, it can be installed via the npm package manager. To do this, execute
 the following command in a CLI with access to npm:
 
-```bash
+```
 npm install --save @polymer/paper-button
 ```
 

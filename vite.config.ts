@@ -1,7 +1,6 @@
 import adapter from '@sveltejs/adapter-netlify'
 import { sveltekit } from '@sveltejs/kit/vite'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
-import { language as bash } from '@twinkleplop/bash'
 import { language as html } from '@twinkleplop/html'
 import { language as javascript } from '@twinkleplop/javascript'
 import { language as json } from '@twinkleplop/json'
@@ -17,7 +16,6 @@ import { fileURLToPath } from 'url'
 import { defineConfig } from 'vite'
 
 const languages: Record<string, (input: string) => string> = {
-	bash: bash(),
 	html: html(),
 	svelte: svelte(),
 	json: json(),

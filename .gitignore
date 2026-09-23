@@ -13,3 +13,4 @@ src/lib/dependency-report.json
 .vercel
 test-results/.last-run.json
 db.local
+.netlify/

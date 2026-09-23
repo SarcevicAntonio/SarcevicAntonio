@@ -103,7 +103,7 @@ export const appearances: AppearanceSource[] = [
 		title:
 			'Already Deprecated: Einführung in Web Components und Komponenten erstellen mit Svelte oder Stencil',
 		summary:
-			'🎙️ I got invited to the "Already Deprecated" Podcast to talk about Web Components, and creating them with Svelte. This episode is in German.',
+			'I got invited to the "Already Deprecated" Podcast to talk about Web Components, and creating them with Svelte. This episode is in German.',
 		href: 'https://www.youtube.com/watch?v=g6l2qtmY6wM',
 		lang: 'DE',
 		published: '2021-03-03',
@@ -113,7 +113,7 @@ export const appearances: AppearanceSource[] = [
 		title:
 			'CodingCatDev: SvelteLab a supercharged REPL for Svelte with Antonio Sarcevic & Paolo Ricciuti',
 		summary:
-			'🎙️ Paolo and I got invited to the "CodingCatDev" Podcast to talk to Brittney and Alex about SvelteLab!',
+			'Paolo and I got invited to the "CodingCatDev" Podcast to talk to Brittney and Alex about SvelteLab!',
 		href: 'https://www.youtube.com/watch?v=S1iakhstHlc',
 		published: '2023-06-21',
 		tags: ['svelte', 'sveltelab', 'podcast', 'video'],
@@ -122,7 +122,7 @@ export const appearances: AppearanceSource[] = [
 		title:
 			'Svelte Society - London May 2023: Hacking SvelteLab: behind the supercharged REPL for Svelte',
 		summary:
-			'🎙️ Paolo and I got invited to "Svelte Society London" conference to talk about creating SvelteLab!',
+			'Paolo and I got invited to "Svelte Society London" conference to talk about creating SvelteLab!',
 		href: 'https://www.youtube.com/watch?v=VkVyP1TgH64&t=3220s',
 		published: '2023-05-16',
 		tags: ['svelte', 'sveltelab', 'conference', 'video'],
@@ -131,14 +131,14 @@ export const appearances: AppearanceSource[] = [
 		title: 'Svelte Radio: SvelteLab - a Svelte REPL for SvelteKit with Antonio and Paolo',
 		href: 'https://www.svelteradio.com/episodes/sveltelab-a-svelte-repl-for-sveltekit-with-antonio-and-paolo',
 		summary:
-			'🎙️ A Dream Came True! Paolo and I got invited to the one and only "Svelte Radio" Podcast to talk to Kev, Brittney and Antony about creating SvelteLab!',
+			'A Dream Came True! Paolo and I got invited to the one and only "Svelte Radio" Podcast to talk to Kev, Brittney and Antony about creating SvelteLab!',
 		published: '2023-06-22',
 		tags: ['svelte', 'sveltelab', 'podcast'],
 	},
 	{
 		title: 'Svelte makes Drag And Drop API easy!',
 		summary:
-			'📼 This video shows how to create a minimal draggable and dropzone Svelte Action using the browser native Drag and Drop API. It only takes about 80 lines of code for the Svelte Actions.',
+			'This video shows how to create a minimal draggable and dropzone Svelte Action using the browser native Drag and Drop API. It only takes about 80 lines of code for the Svelte Actions.',
 		href: 'https://www.youtube.com/watch?v=lTDKhj83tec',
 		published: '2023-05-15',
 		tags: ['svelte', 'video', 'guide'],
@@ -146,7 +146,7 @@ export const appearances: AppearanceSource[] = [
 	{
 		title: 'Simple native-like App in SvelteKit!',
 		summary:
-			'📼 This guide shows how to create a simple installable and offline-first web application using SvelteKit and workbox-precaching. It only takes less than ten lines of code for the Service Worker!',
+			'This guide shows how to create a simple installable and offline-first web application using SvelteKit and workbox-precaching. It only takes less than ten lines of code for the Service Worker!',
 		href: 'https://www.youtube.com/watch?v=Enl4OPQ2OAM',
 		published: '2023-05-29',
 		tags: ['svelte', 'video', 'guide'],
@@ -154,7 +154,7 @@ export const appearances: AppearanceSource[] = [
 	{
 		title: '{🧪} SvelteLab Launch Teaser',
 		summary:
-			'📼 When we launched SvelteLab, we wanted a small teaser video to get everyone hyped in as short as time as possible. I used Motion and Final Cut Pro to create the teaser!',
+			'When we launched SvelteLab, we wanted a small teaser video to get everyone hyped in as short as time as possible. I used Motion and Final Cut Pro to create the teaser!',
 		href: 'https://www.youtube.com/watch?v=jwC6sZq7u-o',
 		published: '2023-04-10',
 		tags: ['sveltelab', 'video', 'animation'],
@@ -162,7 +162,7 @@ export const appearances: AppearanceSource[] = [
 	{
 		title: 'Creating a Web App with Imba - The friendly full-stack language',
 		summary:
-			'🔴 I created a little Web App with Imba in a live stream and cut it up for your enjoyment!',
+			'I created a little Web App with Imba in a live stream and cut it up for your enjoyment!',
 		href: 'https://www.youtube.com/watch?v=DRr73IJJMH4',
 		published: '2022-08-02',
 		tags: ['imba', 'livestream'],

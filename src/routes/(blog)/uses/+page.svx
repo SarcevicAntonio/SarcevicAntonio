@@ -6,7 +6,6 @@ updated: 2026-08-01
 ---
 
 <script>
-  import Callout from "#lib/Callout.svelte"
 	import { date_string } from '#lib/date_helpers.js'
 </script>
 

@@ -9,7 +9,7 @@
 <div class="header">
 	<h2>Entries</h2>
 	<a href="/entries" class="arrow-link end">
-		/entries<MaterialSymbolsArrowForwardRounded />
+		all entries<MaterialSymbolsArrowForwardRounded />
 	</a>
 </div>
 

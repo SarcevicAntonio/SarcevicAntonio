@@ -1,9 +1,7 @@
 import { defineParams } from '@sveltejs/kit/params'
 
-function matchType_filter(value) {
-	return ['entries', 'posts'].includes(value)
-}
-
 export const params = defineParams({
-	type_filter: (param) => (matchType_filter(param) ? param : undefined),
+	type_filter: (param) => {
+		if (['entries', 'posts'].includes(param)) return param
+	},
 })

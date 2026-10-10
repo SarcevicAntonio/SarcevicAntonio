@@ -1,16 +1,6 @@
-import { by_most_up_to_date } from '#lib/date_helpers.js'
-import { get_all_appearances, get_blog_posts } from '#lib/server/entries.js'
-
-export async function load({ locals, url }) {
-	const blog_posts = await get_blog_posts()
-	const apperances = await get_all_appearances()
-
-	const badges = Object.keys(import.meta.glob(`/static/badges/**`)).map((b) => b.split('/').at(-1))
-
+export async function load({ locals }) {
 	return {
-		badges,
 		theme: locals.theme,
 		page_name: locals.page_name,
-		content: [...blog_posts, ...apperances].sort(by_most_up_to_date),
 	}
 }

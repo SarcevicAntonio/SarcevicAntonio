@@ -35,11 +35,9 @@
 	}
 </script>
 
-<li>
-	<a href="{href}?redirect={page.url.pathname}" {title} onclick={enhance}
-		><Icon aria-hidden="true" /></a
-	>
-</li>
+<a href="{href}?redirect={page.url.pathname}" {title} onclick={enhance}
+	><Icon aria-hidden="true" /></a
+>
 
 <style>
 	a {

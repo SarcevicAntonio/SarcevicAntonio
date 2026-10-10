@@ -22,30 +22,24 @@
 <header>
 	<div class="container">
 		<nav>
-			<ul>
-				<li>
-					<a href="/" title="homepage">
-						<Logo />
-					</a>
-				</li>
-				<li class="hide-on-mobile">
-					<a href="/entries"> entries </a>
-				</li>
+			<a href="/" title="homepage">
+				<Logo />
+			</a>
+			<a href="/entries" class="hide-on-mobile"> entries </a>
 
-				<span class="spacer"></span>
+			<span class="spacer"></span>
 
-				{#if $preferred_theme}
-					<ThemeLink theme="os-preference" />
-				{/if}
-				{#if $preferred_theme === 'light' || (!$preferred_theme && $os_theme_preference === 'light')}
-					<ThemeLink theme="dark" />
-				{:else if $preferred_theme === 'dark' || (!$preferred_theme && $os_theme_preference === 'dark')}
-					<ThemeLink theme="light" />
-				{:else}
-					<ThemeLink theme="dark" />
-					<ThemeLink theme="light" />
-				{/if}
-			</ul>
+			{#if $preferred_theme}
+				<ThemeLink theme="os-preference" />
+			{/if}
+			{#if $preferred_theme === 'light' || (!$preferred_theme && $os_theme_preference === 'light')}
+				<ThemeLink theme="dark" />
+			{:else if $preferred_theme === 'dark' || (!$preferred_theme && $os_theme_preference === 'dark')}
+				<ThemeLink theme="light" />
+			{:else}
+				<ThemeLink theme="dark" />
+				<ThemeLink theme="light" />
+			{/if}
 		</nav>
 	</div>
 </header>
@@ -69,13 +63,7 @@
 
 	nav {
 		margin-inline: calc(var(--body-padding) * -1);
-	}
-
-	nav ul {
-		list-style: none;
 		display: flex;
-		padding: 0;
-		margin: 0;
 	}
 
 	nav a {

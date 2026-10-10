@@ -1,11 +1,35 @@
 <script lang="ts">
 	import { page } from '$app/state'
-	import avatar_light from './avatar-light.webp'
+	import { tick } from 'svelte'
 	import avatar_dark from './avatar-dark.webp'
+	import avatar_light from './avatar-light.webp'
+
+	let toni = $state({ ref: null as null | HTMLSpanElement, right: '', top: '' })
+	function position_pronouns() {
+		const rect = toni.ref?.getBoundingClientRect()
+		toni.right = rect?.right + 'px'
+		toni.top = rect?.top + 'px'
+	}
+	$effect(() => {
+		if (pronouns.ref) pronouns.ref.style.position = 'absolute'
+		tick().then(position_pronouns)
+	})
+
+	const pronouns = $state({
+		ref: null as null | HTMLSpanElement,
+		displays: ['*/?', '.*'],
+		current_index: 0,
+		cycle: () => (pronouns.current_index = (pronouns.current_index + 1) % pronouns.displays.length),
+		get current() {
+			return pronouns.displays[pronouns.current_index]
+		},
+	})
 </script>
 
+<svelte:window onresize={position_pronouns} />
+
 <section class="hero">
-	<div class="id">
+	<div class="id" style:--toni-right={toni.right} style:--toni-top={toni.top}>
 		<div
 			role="img"
 			aria-label="cartoon drawing of toni with a big smile and a fuzzy beard"
@@ -13,7 +37,16 @@
 			style:--dark="url('{avatar_dark}')"
 			style:--light="url('{avatar_light}')"
 		></div>
-		<h1>heyo, i'm toni!</h1>
+		<h1>HEYO, I'M <span bind:this={toni.ref}>TONI!</span></h1>
+		<button
+			bind:this={pronouns.ref}
+			tabindex="-1"
+			class="pronouns"
+			title="pronouns: any or none"
+			onclick={() => pronouns.cycle()}
+		>
+			{pronouns.current}
+		</button>
 	</div>
 
 	<p class="tagline">
@@ -39,12 +72,12 @@
 		min-height: 88svh;
 		display: grid;
 		place-content: center;
-		position: relative;
 	}
 
 	.id {
 		display: flex;
 		align-items: center;
+		gap: var(--step-2);
 
 		.profile-picture {
 			border-radius: 100%;
@@ -60,15 +93,21 @@
 
 		h1 {
 			margin: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			font-size: clamp(2rem, calc(1rem + 12vw), 8rem);
+			font-size: var(--step-7);
 			font-weight: 400;
 			color: var(--as-text-2);
-			margin-inline-start: 0.25em;
 			line-height: 1;
 			text-wrap: balance;
+		}
+
+		.pronouns {
+			cursor: help;
+			padding-inline: 0.25em;
+			padding-block: 0.2em;
+			align-self: flex-start;
+			transform: rotate(10deg);
+			left: calc(var(--toni-right) - var(--step-1));
+			top: calc(var(--toni-top) - var(--step--1));
 		}
 	}
 
@@ -83,7 +122,6 @@
 	.bars {
 		display: flex;
 		width: min-content;
-		position: relative;
 		overflow: hidden;
 		margin-block-start: 1.5rem;
 		margin-inline: auto;
@@ -116,7 +154,7 @@
 		justify-content: space-evenly;
 		gap: 0.75rem;
 		margin: auto;
-		margin-top: 2rem;
+		margin-block-start: 2rem;
 		max-width: 360px;
 		& img {
 			cursor: help;
@@ -127,13 +165,14 @@
 	@media only screen and (max-width: 600px) {
 		.id {
 			flex-direction: column;
+			gap: 1rem;
 			.profile-picture {
-				max-width: 80dvw;
-				max-height: 80dvw;
+				max-width: 60dvw;
+				max-height: 60dvw;
 			}
 
 			h1 {
-				margin-top: 1rem;
+				text-align: center;
 			}
 		}
 	}

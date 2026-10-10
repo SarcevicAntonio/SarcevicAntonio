@@ -1,17 +1,18 @@
 <script lang="ts">
 	import { page } from '$app/state'
-	import avatar from './avatar-transparent.png'
+	import avatar_light from './avatar-light.webp'
+	import avatar_dark from './avatar-dark.webp'
 </script>
 
 <section class="hero">
 	<div class="id">
-		<img
+		<div
+			role="img"
+			aria-label="cartoon drawing of toni with a big smile and a fuzzy beard"
 			class="profile-picture"
-			width="224px"
-			height="224px"
-			src={avatar}
-			alt="Antonio Sarcevic in a green shirt, smiling and looking upward and to the right off camera"
-		/>
+			style:--dark="url('{avatar_dark}')"
+			style:--light="url('{avatar_light}')"
+		></div>
 		<h1>heyo, i'm toni!</h1>
 	</div>
 
@@ -48,7 +49,13 @@
 		.profile-picture {
 			border-radius: 100%;
 			background-color: var(--as-back-2);
-			max-width: 28rem;
+			width: 100%;
+			height: 100%;
+			aspect-ratio: 1/1;
+			max-width: 14rem;
+			max-height: 14rem;
+			background-image: light-dark(var(--light), var(--dark));
+			background-size: cover;
 		}
 
 		h1 {
@@ -61,6 +68,7 @@
 			color: var(--as-text-2);
 			margin-inline-start: 0.25em;
 			line-height: 1;
+			text-wrap: balance;
 		}
 	}
 
@@ -114,10 +122,6 @@
 			cursor: help;
 			image-rendering: pixelated;
 		}
-	}
-
-	.profile-picture {
-		background-image: var(--in-colour);
 	}
 
 	@media only screen and (max-width: 600px) {

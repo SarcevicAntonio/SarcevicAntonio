@@ -83,7 +83,7 @@ button {
 	color: var(--as-text-2);
 
 	&:hover,
-	&:focus {
+	&:focus-visible {
 		background-color: var(--as-back-1);
 		color: var(--as-text-1);
 	}

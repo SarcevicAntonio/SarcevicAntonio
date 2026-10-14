@@ -39,6 +39,7 @@ in
   boot.loader.systemd-boot.configurationLimit = 3;
   boot.kernelParams = [ "nvidia.NVreg_TemporaryFilePath=/var/tmp" ];
   boot.kernelModules = [
+    "sg"
     "k10temp"
     "nct6775"
   ];
@@ -47,10 +48,10 @@ in
   # OS Basics
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
-  # networking.firewall.allowedTCPPorts = [
-  #   5173
-  #   11434
-  # ];
+  networking.firewall.allowedTCPPorts = [
+    5173
+    11434
+  ];
   services.printing.enable = true;
   services.xserver.enable = true;
   services.xserver.excludePackages = with pkgs; [ xterm ];
@@ -85,36 +86,36 @@ in
 
   # Desktop Environment
   ## Plasma
-  services.desktopManager.plasma6.enable = true;
-  services.displayManager.plasma-login-manager.enable = true;
+  # services.desktopManager.plasma6.enable = true;
+  # services.displayManager.plasma-login-manager.enable = true;
 
   ## Cosmic
   # services.displayManager.cosmic-greeter.enable = true;
   # services.desktopManager.cosmic.enable = true;
 
   ## Gnome
-  # services.desktopManager.gnome.enable = true;
-  # services.displayManager.gdm.enable = true;
-  # services.gvfs.enable = true;
-  # environment.gnome.excludePackages = with pkgs; [
-  #   epiphany # replaced by vivaldi
-  #   gnome-music # replaced by nocturne + jellyfin
-  #   gnome-system-monitor # replaced by resources
-  #   gnome-console # replaced by ghostty
-  #   gnome-connections # unneeded atm
-  #   simple-scan # unneeded atm
-  #   gnome-tour # unneeded
-  #   # yelp # unneeded most of the time, but its nice to be able to access
-  # ];
+  services.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.gvfs.enable = true;
+  environment.gnome.excludePackages = with pkgs; [
+    epiphany # replaced by vivaldi
+    gnome-music # replaced by nocturne + jellyfin
+    gnome-system-monitor # replaced by resources
+    gnome-console # replaced by ghostty
+    gnome-connections # unneeded atm
+    simple-scan # unneeded atm
+    gnome-tour # unneeded
+    # yelp # unneeded most of the time, but its nice to be able to access
+  ];
   # ### fix gnomes nautlis file browser media metadata display: https://github.com/NixOS/nixpkgs/issues/53631#issuecomment-3704189416
-  # environment.sessionVariables.GST_PLUGIN_SYSTEM_PATH_1_0 =
-  #   lib.makeSearchPathOutput "lib" "lib/gstreamer-1.0"
-  #     [
-  #       pkgs.gst_all_1.gst-plugins-good
-  #       pkgs.gst_all_1.gst-plugins-bad
-  #       pkgs.gst_all_1.gst-plugins-ugly
-  #       pkgs.gst_all_1.gst-libav
-  #     ];
+  environment.sessionVariables.GST_PLUGIN_SYSTEM_PATH_1_0 =
+    lib.makeSearchPathOutput "lib" "lib/gstreamer-1.0"
+      [
+        pkgs.gst_all_1.gst-plugins-good
+        pkgs.gst_all_1.gst-plugins-bad
+        pkgs.gst_all_1.gst-plugins-ugly
+        pkgs.gst_all_1.gst-libav
+      ];
 
   # Software
   services.flatpak.enable = true;
@@ -123,6 +124,7 @@ in
     binfmt = true;
   };
   environment.systemPackages = with pkgs; [
+    gnome-tweaks
     gnome-shell-extensions
     gnomeExtensions.caffeine
     gnomeExtensions.appindicator # steam forces tray icons ;(
@@ -134,14 +136,20 @@ in
     pnpm
     vscodium
     flyctl
+    quota
     # vesktop # discord client w/o forced tray icons
     discord
+    telegram-desktop
     signal-desktop
     obsidian
     micro
     jellyfin
     jellyfin-web
     jellyfin-ffmpeg
+    handbrake
+    makemkv
+    libdvdcss
+    vlc
     lutris
     rpcs3
     atlauncher # minecraft client
@@ -160,13 +168,16 @@ in
     tuba
     nocturne
     ghostty
+    ivpn-ui
+    qbittorrent
+    opencode
+    (pkgs.ollama.override {
+      acceleration = "cuda";
+    })
     # beets # CVE-2026-42052
     # installed via flatpack:
     # Flatseal
     # Laser
-    # (pkgs.ollama.override {
-    #  acceleration = "cuda";
-    # })
   ];
   programs.zoxide.enable = true;
   programs.git.enable = true;
@@ -188,6 +199,7 @@ in
     openFirewall = true;
     user = "sarcevic";
   };
+  services.ivpn.enable = true;
   # User Config
   users.users.sarcevic = {
     isNormalUser = true;

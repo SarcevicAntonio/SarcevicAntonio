@@ -14,47 +14,51 @@ in
 {
   imports = [ ./hardware-configuration.nix ];
   # Nix/NixOS
-  nix.settings.experimental-features = [ "nix-command" ];
-  nixpkgs.config.allowUnfree = true;
-  nix.gc = {
-    options = "--delete-older-than 30d";
-    automatic = true;
-    dates = [ "04:30" ];
-  };
-  nix.optimise = {
-    automatic = true;
-    dates = [ "05:00" ];
-  };
-  system.autoUpgrade.enable = true;
   # determines stateful settings like file locations and database versions
   # READ BEFORE CHANGING:
   # https://search.nixos.org/options?channel=25.11&show=system.stateVersion&query=system.stateVersion
   system.stateVersion = "22.11"; # first install on ex-tides
+  nix.settings = {
+    experimental-features = [ "nix-command" ];
+    substituters = [ "https://cache.nixos-cuda.org" ];
+    trusted-public-keys = [ "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=" ];
+  };
+  nixpkgs.config.allowUnfree = true;
+  system.autoUpgrade = {
+    enable = true;
+    dates = "04:40";
+    persistent = false;
+  };
+  nix.gc = {
+    automatic = true;
+    dates = "05:00";
+  };
+  nix.optimise = {
+    automatic = true;
+    dates = "05:15";
+  };
 
   # Boot
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.timeout = 2;
+  boot.loader.timeout = 1;
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.configurationLimit = 3;
-  boot.kernelParams = [ "nvidia.NVreg_TemporaryFilePath=/var/tmp" ];
   boot.kernelModules = [
-    "sg"
-    "k10temp"
-    "nct6775"
+    "sg" # cdrom and dvd
+    "k10temp" # amd temp sensor
+    "nct6775" # fan speed control
   ];
-  # boot.plymouth.enable = true;
 
   # OS Basics
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
   networking.firewall.allowedTCPPorts = [
-    5173
-    11434
+    # 5173
   ];
   services.printing.enable = true;
-  services.xserver.enable = true;
-  services.xserver.excludePackages = with pkgs; [ xterm ];
+  # services.xserver.enable = true;
+  # services.xserver.excludePackages = with pkgs; [ xterm ];
   ## Localization
   services.localtimed.enable = true;
   console.keyMap = "de";
@@ -79,20 +83,12 @@ in
   };
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
-    open = true; # required for newer GPUs
+    open = true;
     powerManagement.enable = true;
     nvidiaSettings = false;
   };
 
   # Desktop Environment
-  ## Plasma
-  # services.desktopManager.plasma6.enable = true;
-  # services.displayManager.plasma-login-manager.enable = true;
-
-  ## Cosmic
-  # services.displayManager.cosmic-greeter.enable = true;
-  # services.desktopManager.cosmic.enable = true;
-
   ## Gnome
   services.desktopManager.gnome.enable = true;
   services.displayManager.gdm.enable = true;
@@ -107,7 +103,7 @@ in
     gnome-tour # unneeded
     # yelp # unneeded most of the time, but its nice to be able to access
   ];
-  # ### fix gnomes nautlis file browser media metadata display: https://github.com/NixOS/nixpkgs/issues/53631#issuecomment-3704189416
+  ### fix gnomes nautlis file browser media metadata display: https://github.com/NixOS/nixpkgs/issues/53631#issuecomment-3704189416
   environment.sessionVariables.GST_PLUGIN_SYSTEM_PATH_1_0 =
     lib.makeSearchPathOutput "lib" "lib/gstreamer-1.0"
       [
@@ -116,7 +112,6 @@ in
         pkgs.gst_all_1.gst-plugins-ugly
         pkgs.gst_all_1.gst-libav
       ];
-
   # Software
   services.flatpak.enable = true;
   programs.appimage = {
@@ -170,10 +165,6 @@ in
     ghostty
     ivpn-ui
     qbittorrent
-    opencode
-    (pkgs.ollama.override {
-      acceleration = "cuda";
-    })
     # beets # CVE-2026-42052
     # installed via flatpack:
     # Flatseal
@@ -200,6 +191,7 @@ in
     user = "sarcevic";
   };
   services.ivpn.enable = true;
+
   # User Config
   users.users.sarcevic = {
     isNormalUser = true;
@@ -211,21 +203,7 @@ in
   };
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "sarcevic";
-
-  # boot.initrd.systemd.enable = true;
-  # systemd.services.display-manager.serviceConfig.KeyringMode = "inherit";
-  # security.pam.services.plasmalogin-autologin.rules.auth = {
-  #   systemd_loadkey = {
-  #     order = 0;
-  #     control = "optional";
-  #     modulePath = "${pkgs.systemd}/lib/security/pam_systemd_loadkey.so";
-  #   };
-  #   plasmalogin = {
-  #     order = 1;
-  #     control = "include";
-  #     modulePath = "plasmalogin";
-  #   };
-  # };
+  security.pam.services.gdm.enableGnomeKeyring = true;
 
   # Environment
   environment.sessionVariables.NIXOS_OZONE_WL = "1"; # force Ozone Wayland in Chromium/Electron

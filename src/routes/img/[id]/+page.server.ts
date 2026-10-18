@@ -5,7 +5,7 @@ export const load = async ({ fetch, url, params }) => {
 	error(404)
 	const query = new URLSearchParams()
 	let response = await fetch(
-		`https://slink.linkplay.space/api/image/${params.id}/detail?${query.toString()}`
+		`https://slink.linkplay.space/api/image/${params.id}/public?${query.toString()}`
 	)
 	let json = await response.json()
 	if (!response.ok) error(response.status, `Fetch error: ${response.statusText}`)

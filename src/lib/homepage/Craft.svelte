@@ -18,6 +18,12 @@
 <p>love to craft user experiences with semantic HTML, modern CSS, TypeScript and SvelteKit.</p>
 <p>working as a web developer since 2019.</p>
 <p>earned a bachelor of science degree in media and communication computer science in 2020.</p>
+<hr />
+<p>technology as an means to an end, not for it's own sake.</p>
+<p>balance and sustainability over dogmatic approaches and infinite growth.</p>
+<p>figuring out what one actually needs from technology is often harder than building it.</p>
+<p>glueing together existing tools, instead of reinventing them.</p>
+<p>every option is a tradeoff. there is no one size fits all.</p>
 <p>always excellence over hustle.</p>
 
 <style>

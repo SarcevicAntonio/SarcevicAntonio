@@ -1,4 +1,5 @@
 <script lang="ts">
+	let { on_close = () => {} } = $props()
 	let dialog = $state<HTMLDialogElement>()
 	let closed = $state(false)
 	$effect(() => dialog?.showModal())
@@ -11,7 +12,14 @@
 			This page could trigger seizures for people with photosensitive epilepsy. Discretion is
 			advised.
 		</p>
-		<button onclick={() => (closed = true)}> OK </button>
+		<button
+			onclick={() => {
+				closed = true
+				on_close()
+			}}
+		>
+			OK
+		</button>
 	</dialog>
 {/if}
 

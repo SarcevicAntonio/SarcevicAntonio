@@ -1,20 +1,21 @@
 <script lang="ts">
 	import TriggerWarning from '#lib/TriggerWarning.svelte'
 	import throttle from 'raf-throttle'
-	import { spring } from 'svelte/motion'
+	import { Spring, spring } from 'svelte/motion'
 
-	const turn = spring(0)
-	const handle_mouse_move = throttle(
-		(e: MouseEvent) => ($turn = e.y / window.innerHeight - e.x / window.innerWidth)
+	let run = $state(false)
+	const turn = new Spring(0)
+	const handle_mouse_move = throttle((e: MouseEvent) =>
+		turn.set(e.y / window.innerHeight - e.x / window.innerWidth)
 	)
 </script>
 
-<svelte:body onmousemove={handle_mouse_move} />
+<svelte:body onmousemove={run ? handle_mouse_move : undefined} />
 
-<TriggerWarning />
+<TriggerWarning on_close={() => (run = true)} />
 
 <section>
-	<div style:--deg="{$turn}turn"></div>
+	<div style:--deg="{turn.current}turn"></div>
 </section>
 
 <style>

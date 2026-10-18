@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { preferred_theme, os_theme_preference } from '#lib/theme/index.js'
+	import { os_theme_preference, preferred_theme } from '#lib/theme/index.js'
 	import ThemeLink from '#lib/theme/ThemeLink.svelte'
 	import { page } from '$app/state'
 	import '@fontsource/space-mono/400.css'
@@ -25,7 +25,7 @@
 			<a href="/" title="homepage">
 				<Logo />
 			</a>
-			<a href="/entries" class="hide-on-mobile"> entries </a>
+			<a href="/img"> img </a>
 
 			<span class="spacer"></span>
 
@@ -52,10 +52,6 @@
 
 <style>
 	header {
-		/* position: sticky; */
-		z-index: 3;
-		top: 0;
-		background-color: var(--as-back-1);
 		font-size: 1.5rem;
 		max-width: var(--content-width);
 		margin: auto;

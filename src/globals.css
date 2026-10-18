@@ -51,7 +51,11 @@ body::before {
 }
 
 body {
-	font-family: 'Space Mono', 'Courier New', Courier, monospace, sans-serif;
+	--monospace:
+		'Space Mono', 'Iosevka Extended', 'JetBrains Mono Variable', 'Input Mono', 'IBM Plex',
+		'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', Menlo, Courier, monospace;
+
+	font-family: var(--monospace);
 	font-size: var(--step-0);
 	--body-padding: 2rem;
 	padding-inline: var(--body-padding);
@@ -59,9 +63,7 @@ body {
 
 code,
 pre {
-	font-family:
-		'Iosevka Extended', 'JetBrains Mono Variable', 'Input Mono', 'IBM Plex', 'Fira Code',
-		'Roboto Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+	font-family: var(--monospace);
 }
 
 a {

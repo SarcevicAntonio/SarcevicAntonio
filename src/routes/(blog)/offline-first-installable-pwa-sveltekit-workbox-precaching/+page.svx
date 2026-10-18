@@ -13,6 +13,8 @@ tags:
   import Callout from "#lib/Callout.svelte"
 </script>
 
+<Callout>this post is still using legacy SvelteKit 1/2 features</Callout>
+
 <Callout title="Like video tutorials better?">
 
 This blog post is also available in [video format on my YouTube channel](https://youtu.be/Enl4OPQ2OAM)!
@@ -61,9 +63,9 @@ Before we get going, just a tiny bit of context:
 
 PWA stands for _progressive web apps_. By that we mean a set of browser features web apps can use to make them behave more like a native app that is running directly on your operating system. We will use these features to make our web app work offline and be installable as an app in your operating system, so you can use it outside of your browser frame as a separate window.
 
-<Callout title="Learn More">
+<Callout title="Learn more about PWA">
 
-Learn more about PWA: [developer.mozilla.org - Progressive web apps (PWAs)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
+[developer.mozilla.org - Progressive web apps (PWAs)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 
 </Callout>
 
@@ -73,7 +75,7 @@ While implementing PWA features, we refer to the "Application" tab in our dev to
 
 The App Icon will be displayed in the users operating system launcher when they install it. You can create them yourself, or grab the pre-made icons I made for this guide below. In this section I will explain how I created my Icons.
 
-<Callout title="Hint">
+<Callout title="Download Icons for testing">
 
 If you don't have any icons yet, you can **download [this zip file](./attachments/offline-svelte-icons.zip)** with pre-made icons, and **extract them into the `/static/` folder inside your SvelteKit app.**
 
@@ -99,9 +101,9 @@ When you got the export settings right, **click the "Export icon" button and exp
 
 We need a Web App Manifest to provide metadata on our web app to the browser. This is important, so the browser can understand how to correctly describe and display our PWA.
 
-<Callout title="Learn More">
+<Callout title="Learn more about Web App Manifest">
 
-Learn more about Web App Manifest: [developer.mozilla.org - Web app manifests](https://developer.mozilla.org/en-US/docs/Web/Manifest)
+[developer.mozilla.org - Web app manifests](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 
 </Callout>
 
@@ -168,15 +170,15 @@ This section will also tell us if we have something missing, like the icons or i
 
 Service Workers can be used to progressively enhance web apps. They act as a proxy that sits between the web app and the outside network. This for example allows us to change how network requests are handled.
 
-<Callout title="Learn More">
+<Callout title="Learn more about Service Workers">
 
-Learn more about Service Workers: [developer.mozilla.org - Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+[developer.mozilla.org - Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 
 </Callout>
 
 We will use a Service Worker to enable offline support for our web app by caching all files that are required to load the client frontend that gets served by our SvelteKit app.
 
-<Callout type="warning" title="Attention">
+<Callout type="warning" title="Providing data offline">
 
 Please note that if your web app requires data from the network at runtime, you will need to explicitly handle it to provide a usable offline experience. In this guide we will only provide the web app itself for offline use. We can use the prerender page option to make pages available offline, but this only works at build time.
 

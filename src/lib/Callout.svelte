@@ -16,7 +16,7 @@
 	let {
 		type = 'info',
 		icon: Icon = icons[type],
-		title = capitalize(type),
+		title,
 		children,
 	}: {
 		type?: 'info' | 'warning'
@@ -29,15 +29,22 @@
 <section class={type}>
 	<p class="title">
 		<Icon />
-		{title}
+		{#if title}
+			{title}
+		{:else}
+			{@render children?.()}
+		{/if}
 	</p>
-	{@render children?.()}
+	{#if title}
+		{@render children?.()}
+	{/if}
 </section>
 
 <style>
 	section {
 		border: 0.1em solid var(--as-text-3);
 		margin-inline: 0.5rem;
+		margin-block: 1em;
 
 		& :global(svg) {
 			vertical-align: sub;
@@ -54,6 +61,11 @@
 		padding: 0.5rem 1rem;
 		background-color: var(--as-text-3);
 		color: var(--as-back-1);
+		margin-block-end: -0.25rem;
+
+		&:last-child {
+			margin-block-end: 0px;
+		}
 	}
 
 	.warning {

@@ -10,7 +10,7 @@
 </script>
 
 <svelte:head>
-	<title>{page.data.page_name} — my website</title>
+	<title>linkplay.space — my website</title>
 	<meta name="description" content="my corner of the internet" />
 </svelte:head>
 

@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>images — {page.data.page_name}</title>
+	<title>images — linkplay.space</title>
 	<meta name="description" content="cool images" />
 </svelte:head>
 

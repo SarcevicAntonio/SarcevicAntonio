@@ -14,7 +14,7 @@
 		{#if entry.type === 'blog_post'}
 			<span class="screen-reader-only"> Blog Post </span>
 			<MaterialSymbolsDocs aria-hidden="true" />
-			<span>{page.data.page_name}</span>
+			<span>linkplay.space</span>
 		{:else if entry.type === 'appearance'}
 			{#if entry.href.includes('youtube')}
 				<span class="screen-reader-only"> YouTube Link </span>

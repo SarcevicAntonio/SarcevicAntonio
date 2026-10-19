@@ -35,7 +35,7 @@
 		</h2>
 		<hr />
 		<p>
-			<a href="/">{page.data.page_name}</a> is powered by the following dependencies:
+			<a href="/">linkplay.space</a> is powered by the following dependencies:
 		</p>
 		<ul class="credits">
 			{#each dependencies as dependency (dependency.name)}

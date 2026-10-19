@@ -31,7 +31,7 @@
 </script>
 
 <svelte:head>
-	<title>{title.trim()} — sarcevic.dev</title>
+	<title>{title.trim()} — linkplay.space</title>
 	<meta name="description" content={summary.trim()} />
 </svelte:head>
 

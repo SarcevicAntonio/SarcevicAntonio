@@ -18,7 +18,7 @@ export const contact_links: Array<{
 	{
 		title: 'Bluesky',
 		icon: Bluesky,
-		href: 'https://bsky.app/profile/sarcevic.dev',
+		href: 'https://bsky.app/profile/linkplay.space',
 	},
 	{
 		title: 'Codeberg',

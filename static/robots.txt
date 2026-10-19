@@ -43,4 +43,4 @@ User-agent: Webzio-Extended
 User-agent: YouBot
 Disallow: /
 
-Sitemap: https://www.sarcevic.dev/sitemap.xml
+Sitemap: https://www.linkplay.space/sitemap.xml

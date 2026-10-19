@@ -2,13 +2,13 @@ import { is_valid_theme, type Theme } from '#lib/theme/index.js'
 import { building, dev } from '$app/env'
 import { sequence, type Handle } from '@sveltejs/kit/hooks'
 
-const redirect: Handle = async ({ event, resolve }) => {
+const redirect_to_www: Handle = async ({ event, resolve }) => {
 	const res = resolve(event)
 	if (dev || building) return res
-	if (!event.url.hostname.endsWith('sarcevic.dev')) return res
-	const redirect_url = new URL(event.url)
-	redirect_url.hostname = 'www.linkplay.space'
-	return new Response(undefined, { status: 308, headers: { location: String(redirect_url) } })
+	if (event.url.hostname.startsWith('www.')) return res
+	const www_url = new URL(event.url)
+	www_url.hostname = 'www.' + www_url.hostname
+	return new Response(undefined, { status: 308, headers: { location: String(www_url) } })
 }
 
 const setup_theme: Handle = async ({ event, resolve }) => {
@@ -22,4 +22,4 @@ const setup_theme: Handle = async ({ event, resolve }) => {
 	})
 }
 
-export const handle = sequence(redirect, setup_theme)
+export const handle = sequence(redirect_to_www, setup_theme)

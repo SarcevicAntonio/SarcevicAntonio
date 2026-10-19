@@ -5,7 +5,7 @@ import { sequence, type Handle } from '@sveltejs/kit/hooks'
 const redirect: Handle = async ({ event, resolve }) => {
 	const res = resolve(event)
 	if (dev || building) return res
-	if (event.url.hostname.endsWith('sarcevic.dev')) return res
+	if (!event.url.hostname.endsWith('sarcevic.dev')) return res
 	const redirect_url = new URL(event.url)
 	redirect_url.hostname = 'www.linkplay.space'
 	return new Response(undefined, { status: 308, headers: { location: String(redirect_url) } })

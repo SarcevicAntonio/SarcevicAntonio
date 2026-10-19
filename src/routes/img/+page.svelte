@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>{page.data.page_name} — images</title>
+	<title>images — {page.data.page_name}</title>
 	<meta name="description" content="cool images" />
 </svelte:head>
 

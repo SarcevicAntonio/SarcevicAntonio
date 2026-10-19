@@ -21,7 +21,7 @@ function get_feed(
 	return /*XML*/ `
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>${domain}/</id>
-    <title><![CDATA[ Antonio Sarcevic ]]></title>
+    <title><![CDATA[ linkplay.space ]]></title>
     <subtitle> <![CDATA[ my personal blog ]]> </subtitle>
     <icon>${domain}/favicon.png</icon>
     <link href="${domain}" />

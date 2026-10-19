@@ -1,6 +1,6 @@
 <script>
+	import EntryCard from '#lib/EntryCard.svelte'
 	import { page } from '$app/state'
-	import Entry from '#lib/Entry.svelte'
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 	import Logo from '../../Logo.svelte'
 
@@ -65,7 +65,7 @@
 	<ul>
 		{#each data.content as entry (entry.href)}
 			<li>
-				<Entry {entry} h_level={2} show_tags></Entry>
+				<EntryCard {entry} h_level={2} show_tags></EntryCard>
 			</li>
 		{/each}
 	</ul>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Entry from '#lib/Entry.svelte'
+	import EntryCard from '#lib/EntryCard.svelte'
 	import type { Appearance, BlogMetadata } from '#lib/server/entries.js'
 	import MaterialSymbolsArrowForwardRounded from '~icons/material-symbols/arrow-forward-rounded'
 
@@ -16,7 +16,7 @@
 <ul class="scroller">
 	{#each content as entry (entry.href)}
 		<li>
-			<Entry {entry} h_level={3}></Entry>
+			<EntryCard {entry} h_level={3}></EntryCard>
 		</li>
 	{/each}
 </ul>

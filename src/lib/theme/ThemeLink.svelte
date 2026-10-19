@@ -35,9 +35,9 @@
 	}
 </script>
 
-<a href="{href}?redirect={page.url.pathname}" {title} onclick={enhance}
-	><Icon aria-hidden="true" /></a
->
+<a href="{href}?redirect={page.url.pathname}" {title} onclick={enhance}>
+	<Icon aria-hidden="true" />
+</a>
 
 <style>
 	a {

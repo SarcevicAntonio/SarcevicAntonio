@@ -47,7 +47,7 @@
 				<li>
 					<a {href}>
 						{dependency.name}
-						via {dependency.licenseType}
+						(via {dependency.licenseType})
 					</a>
 				</li>
 			{/each}

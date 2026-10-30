@@ -32,13 +32,14 @@ in
   nix.gc = {
     automatic = true;
     dates = "05:00";
+    persistent = false;
   };
   nix.optimise = {
     automatic = true;
     dates = "05:15";
+    persistent = false;
   };
-
-  # Boot
+  ## Boot
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.timeout = 1;
@@ -50,15 +51,14 @@ in
     "nct6775" # fan speed control
   ];
 
-  # OS Basics
+  # # Networking
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
   networking.firewall.allowedTCPPorts = [
-    # 5173
+    # 5173 # vite dev
+    # 4173 # vite preview
   ];
   services.printing.enable = true;
-  # services.xserver.enable = true;
-  # services.xserver.excludePackages = with pkgs; [ xterm ];
   ## Localization
   services.localtimed.enable = true;
   console.keyMap = "de";
@@ -84,7 +84,6 @@ in
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     open = true;
-    powerManagement.enable = true;
     nvidiaSettings = false;
   };
 
@@ -96,12 +95,11 @@ in
   environment.gnome.excludePackages = with pkgs; [
     epiphany # replaced by vivaldi
     gnome-music # replaced by nocturne + jellyfin
-    gnome-system-monitor # replaced by resources
-    gnome-console # replaced by ghostty
-    gnome-connections # unneeded atm
-    simple-scan # unneeded atm
-    gnome-tour # unneeded
-    # yelp # unneeded most of the time, but its nice to be able to access
+    # gnome-system-monitor # replaced by resources
+    # gnome-console # replaced by ghostty
+    gnome-connections
+    simple-scan
+    gnome-tour
   ];
   ### fix gnomes nautlis file browser media metadata display: https://github.com/NixOS/nixpkgs/issues/53631#issuecomment-3704189416
   environment.sessionVariables.GST_PLUGIN_SYSTEM_PATH_1_0 =
@@ -112,6 +110,7 @@ in
         pkgs.gst_all_1.gst-plugins-ugly
         pkgs.gst_all_1.gst-libav
       ];
+
   # Software
   services.flatpak.enable = true;
   programs.appimage = {
@@ -119,31 +118,23 @@ in
     binfmt = true;
   };
   environment.systemPackages = with pkgs; [
+    nixfmt
     gnome-tweaks
     gnome-shell-extensions
-    gnomeExtensions.caffeine
-    gnomeExtensions.appindicator # steam forces tray icons ;(
+    gnomeExtensions.appindicator # steam and discord force tray icons ;(
     gnomeExtensions.copyous
-    nixfmt
     vivaldi
     firefox
-    nodejs
+    nodejs_26
     pnpm
     vscodium
     flyctl
-    quota
-    # vesktop # discord client w/o forced tray icons
     discord
-    telegram-desktop
     signal-desktop
     obsidian
     micro
-    jellyfin
-    jellyfin-web
-    jellyfin-ffmpeg
     handbrake
     makemkv
-    libdvdcss
     vlc
     lutris
     rpcs3
@@ -158,17 +149,16 @@ in
     gradia
     rclone
     pwvucontrol
-    qbz
     eartag
     tuba
     nocturne
     ghostty
     ivpn-ui
     qbittorrent
-    # beets # CVE-2026-42052
-    # installed via flatpack:
+    # cool apps installed via flatpack:
     # Flatseal
     # Laser
+    # Pins
   ];
   programs.zoxide.enable = true;
   programs.git.enable = true;
@@ -201,9 +191,7 @@ in
       "wheel"
     ];
   };
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "sarcevic";
-  security.pam.services.gdm.enableGnomeKeyring = true;
+  services.displayManager.gdm.autoSuspend = false;
 
   # Environment
   environment.sessionVariables.NIXOS_OZONE_WL = "1"; # force Ozone Wayland in Chromium/Electron

@@ -12,7 +12,7 @@ export function is_valid_theme(potential_theme: string | undefined): boolean {
 
 const query = '(prefers-color-scheme: dark)'
 
-export const os_theme_preference = readable<Theme>(
+export const os_theme = readable<Theme>(
 	browser ? (window.matchMedia(query).matches ? 'dark' : 'light') : undefined,
 	(set) => {
 		if (!browser) return
@@ -26,6 +26,3 @@ export const os_theme_preference = readable<Theme>(
 )
 
 export const preferred_theme = writable<Theme>(undefined)
-export const current_theme = derived([preferred_theme, os_theme_preference], ([$preferred, $os]) =>
-	$preferred ? $preferred : $os
-)

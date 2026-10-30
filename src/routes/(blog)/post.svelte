@@ -1,12 +1,11 @@
 <script>
 	import { date_string } from '#lib/date_helpers.js'
-	import { current_theme } from '#lib/theme/index.js'
 	import { afterNavigate } from '$app/navigation'
 	import '@fontsource/atkinson-hyperlegible/400.css'
 	import '@fontsource/atkinson-hyperlegible/700.css'
-	import '@twinkleplop/theme-github'
 	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
 	import Logo from '../Logo.svelte'
+	import './twinkleplop.css'
 
 	let { title, tags, published, updated, summary, children } = $props()
 	const copy_icon =
@@ -36,7 +35,7 @@
 </svelte:head>
 
 <!-- Remember if you edit markup here to change it in get_blog_posts html render cleanup -->
-<article class={{ dark: $current_theme === 'dark' }}>
+<article>
 	<h1>{title}</h1>
 	{#if published || updated || tags}
 		<!-- content here -->
@@ -138,7 +137,7 @@
 
 	article :global(pre) {
 		background-color: var(--twp-background);
-		color: var(--twp-punctuation);
+		color: var(--as-text-1);
 		position: relative;
 		overflow-y: auto;
 		border-radius: 0.3em;

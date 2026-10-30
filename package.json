@@ -26,7 +26,6 @@
 		"@twinkleplop/javascript": "^0.1.4",
 		"@twinkleplop/json": "^0.1.4",
 		"@twinkleplop/svelte": "^0.1.4",
-		"@twinkleplop/theme-github": "^0.1.1",
 		"@types/node": "^25.9.8",
 		"eslint": "^10.11.0",
 		"eslint-config-prettier": "^10.1.8",

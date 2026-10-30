@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { os_theme_preference, preferred_theme } from '#lib/theme/index.js'
+	import { os_theme, preferred_theme } from '#lib/theme/index.js'
 	import ThemeLink from '#lib/theme/ThemeLink.svelte'
 	import { page } from '$app/state'
 	import '@fontsource/space-mono/400.css'
@@ -32,9 +32,9 @@
 			{#if $preferred_theme}
 				<ThemeLink theme="os-preference" />
 			{/if}
-			{#if $preferred_theme === 'light' || (!$preferred_theme && $os_theme_preference === 'light')}
+			{#if $preferred_theme === 'light' || (!$preferred_theme && $os_theme === 'light')}
 				<ThemeLink theme="dark" />
-			{:else if $preferred_theme === 'dark' || (!$preferred_theme && $os_theme_preference === 'dark')}
+			{:else if $preferred_theme === 'dark' || (!$preferred_theme && $os_theme === 'dark')}
 				<ThemeLink theme="light" />
 			{:else}
 				<ThemeLink theme="dark" />

@@ -1,0 +1,71 @@
+:root {
+	--twp-background: light-dark(oklch(1 0 0), oklch(0.14 0.04 var(--hue)));
+	--twp-comment: light-dark(oklch(0.45 0.15 22.0413), oklch(0.75 0.13 22.0413));
+	--twp-constant: light-dark(oklch(0.45 0.15 307.8462), oklch(0.75 0.13 307.8462));
+	--twp-definition: light-dark(oklch(0.45 0.15 241.4071), oklch(0.75 0.13 241.4071));
+	--twp-muted: light-dark(oklch(0.58 0.06 var(--hue)), oklch(0.55 0.06 var(--hue)));
+	--twp-inserted: light-dark(oklch(0.45 0.15 143.8749), oklch(0.75 0.13 143.8749));
+}
+.twinkleplop :is(.comment, .deleted, .deleted_marker) {
+	color: var(--twp-comment);
+}
+.twinkleplop :is(.string, .template, .regex, .plain_scalar) {
+	color: var(--as-text-3);
+}
+.twinkleplop :is(.number, .boolean, .constant, .null, .entity, .unit, .bit, .datetime, .format) {
+	color: var(--twp-constant);
+}
+.twinkleplop
+	:is(
+		.function,
+		.class_name,
+		.type,
+		.namespace,
+		.tag_name,
+		.selector,
+		.heading,
+		.changed,
+		.changed_marker
+	) {
+	color: var(--twp-definition);
+}
+.twinkleplop
+	:is(
+		.punctuation,
+		.string_escape,
+		.escape,
+		.doctype,
+		.attr_sigil,
+		.prompt_prefix,
+		.hash,
+		.heading_marker,
+		.list_marker,
+		.blockquote_marker,
+		.code_fence,
+		.front_matter_marker,
+		.hr,
+		.task_marker,
+		.hard_break,
+		.doc_marker,
+		.block_scalar_header
+	) {
+	color: var(--twp-muted);
+}
+.twinkleplop :is(.inserted, .inserted_marker) {
+	color: var(--twp-inserted);
+}
+.twinkleplop .bold {
+	font-weight: bold;
+}
+.twinkleplop .italic {
+	font-style: italic;
+}
+.twinkleplop .strike {
+	text-decoration: line-through;
+}
+.twinkleplop .autolink {
+	text-decoration: underline;
+}
+.twinkleplop :is(.space, .tab, .newline) {
+	white-space: pre;
+}

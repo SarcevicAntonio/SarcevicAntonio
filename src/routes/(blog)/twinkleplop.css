@@ -1,3 +1,5 @@
+/* from https://tangled.org/linkplay.space/linkplay-space-theme/blob/main/build/twinkleplop/linkplay-space-twinkleplop.css */
+
 :root {
 	--twp-background: light-dark(oklch(1 0 0), oklch(0.14 0.04 var(--hue)));
 	--twp-comment: light-dark(oklch(0.44 0.12 143.8749), oklch(0.88 0.25 var(--hue)));

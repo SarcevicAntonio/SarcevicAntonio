@@ -42,4 +42,8 @@
 		max-width: var(--content-width);
 		text-wrap: balance;
 	}
+
+	hr {
+		max-width: var(--content-width);
+	}
 </style>

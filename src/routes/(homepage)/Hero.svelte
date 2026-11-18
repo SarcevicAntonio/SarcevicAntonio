@@ -51,8 +51,7 @@
 
 	<p class="tagline">
 		queer person living in münster.<br />
-		loves to craft solid web experiences.<br />
-		believes in healing from all this bullshit.
+		loves to craft solid web experiences.
 	</p>
 	<div class="bars">
 		<div></div>

@@ -57,8 +57,8 @@
 
 <style>
 	footer {
-		color: var(--as-back-1);
-		background-color: var(--as-text-1);
+		color: light-dark(var(--as-back-1), var(--as-text-1));
+		background-color: light-dark(var(--as-text-1), var(--as-back-2));
 		padding: var(--body-padding);
 		padding-block-end: 0;
 		font-size: var(--step--1);
@@ -86,6 +86,7 @@
 	hr {
 		margin-block: 2rem;
 		border-style: dashed;
+		border-color: light-dark(var(--as-back-2), var(--as-text-1));
 	}
 
 	ul.links {
@@ -97,7 +98,7 @@
 		font-size: var(--step-1);
 
 		& a {
-			color: var(--as-back-2);
+			color: light-dark(var(--as-back-2), var(--as-text-2));
 			& :global(svg) {
 				vertical-align: sub;
 			}
@@ -105,13 +106,13 @@
 
 		& a:hover,
 		a:focus {
-			color: var(--as-back-1);
+			color: light-dark(var(--as-back-1), var(--as-text-1));
 		}
 
 		& hr {
 			margin: 0.5em;
 			margin-block: 0.25em;
-			border-color: var(--as-back-2);
+			border-color: light-dark(var(--as-back-2), var(--as-text-2));
 			border-style: solid;
 		}
 	}

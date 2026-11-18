@@ -16,7 +16,7 @@
 
 	<a
 		class="theme-link"
-		href="{href}?redirect={page.url.pathname}"
+		{href}
 		title={{
 			'os-preference': 'Use Operating System Theme Preference',
 			dark: 'Use Dark Theme',

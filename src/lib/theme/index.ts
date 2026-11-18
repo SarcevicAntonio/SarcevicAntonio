@@ -1,6 +1,3 @@
-import { browser } from '$app/env'
-import { readable } from 'svelte/store'
-
 // credit to: https://github.com/ghostdevv/svelte-kit-theme-switcher-demo
 const themes = ['light', 'dark', undefined] as const
 

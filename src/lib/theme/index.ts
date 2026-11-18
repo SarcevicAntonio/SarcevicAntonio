@@ -1,5 +1,5 @@
 import { browser } from '$app/env'
-import { derived, readable, writable } from 'svelte/store'
+import { readable } from 'svelte/store'
 
 // credit to: https://github.com/ghostdevv/svelte-kit-theme-switcher-demo
 const themes = ['light', 'dark', undefined] as const
@@ -9,20 +9,3 @@ export type Theme = (typeof themes)[number]
 export function is_valid_theme(potential_theme: string | undefined): boolean {
 	return (themes as unknown as string[]).includes(potential_theme || '')
 }
-
-const query = '(prefers-color-scheme: dark)'
-
-export const os_theme = readable<Theme>(
-	browser ? (window.matchMedia(query).matches ? 'dark' : 'light') : undefined,
-	(set) => {
-		if (!browser) return
-		const media_query = window.matchMedia(query)
-		const update_store = ({ matches }: MediaQueryListEvent) => set(matches ? 'dark' : 'light')
-		media_query.addEventListener('change', update_store)
-		return () => {
-			media_query.removeEventListener('change', update_store)
-		}
-	}
-)
-
-export const preferred_theme = writable<Theme>(undefined)

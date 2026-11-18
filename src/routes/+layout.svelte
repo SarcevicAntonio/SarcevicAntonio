@@ -1,22 +1,13 @@
 <script lang="ts">
-	import { os_theme, preferred_theme } from '#lib/theme/index.js'
-	import ThemeLink from '#lib/theme/ThemeLink.svelte'
-	import { page } from '$app/state'
+	import ThemeLinks from '#lib/theme/ThemeLinks.svelte'
 	import '@fontsource/space-mono/400.css'
 	import '@fontsource/space-mono/700.css'
 	import '@fontsource/staatliches'
 	import '../app.css'
-
 	import Footer from './Footer.svelte'
 	import Logo from './Logo.svelte'
 
-	interface Props {
-		children?: import('svelte').Snippet
-	}
-
-	let { children }: Props = $props()
-
-	$preferred_theme = page.data.theme
+	let { children } = $props()
 </script>
 
 <header>
@@ -29,17 +20,7 @@
 
 			<span class="spacer"></span>
 
-			{#if $preferred_theme}
-				<ThemeLink theme="os-preference" />
-			{/if}
-			{#if $preferred_theme === 'light' || (!$preferred_theme && $os_theme === 'light')}
-				<ThemeLink theme="dark" />
-			{:else if $preferred_theme === 'dark' || (!$preferred_theme && $os_theme === 'dark')}
-				<ThemeLink theme="light" />
-			{:else}
-				<ThemeLink theme="dark" />
-				<ThemeLink theme="light" />
-			{/if}
+			<ThemeLinks />
 		</nav>
 	</div>
 </header>

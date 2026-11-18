@@ -1,6 +1,8 @@
 <script>
-	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
+	import { resolve } from '$app/paths'
 	import { page } from '$app/state'
+	import MaterialSymbolsArrowBackRounded from '~icons/material-symbols/arrow-back-rounded'
+	import Logo from './Logo.svelte'
 </script>
 
 <div class="error">
@@ -15,19 +17,20 @@
 			<p>Sorry about that 🫤</p>
 			<p>
 				Maybe you can find what you were looking for under
-				<a href="/content" class="arrow-link">
-					<MaterialSymbolsArrowBackRounded aria-hidden="true" />/content</a
+				<a
+					href={resolve('/[content=type_filter]/[[tag]]', { content: 'entries' })}
+					class="arrow-link"
+				>
+					<MaterialSymbolsArrowBackRounded aria-hidden="true" />/entries</a
 				>.
 			</p>
 		{:else}
 			<p>{page.error?.message}</p>
 		{/if}
 
-		<p>
-			<a href="/" class="arrow-link">
-				<MaterialSymbolsArrowBackRounded aria-hidden="true" />Or go to the main page /</a
-			>.
-		</p>
+		<a href="/" class="arrow-link" title="homepage">
+			<MaterialSymbolsArrowBackRounded aria-hidden="true" /><Logo />
+		</a>
 	</section>
 </div>
 
@@ -43,7 +46,11 @@
 		max-width: 25rem;
 	}
 
-	.arrow-link {
+	p .arrow-link {
 		display: inline;
+	}
+
+	.arrow-link {
+		justify-content: flex-start;
 	}
 </style>

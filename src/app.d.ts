@@ -11,11 +11,9 @@ declare global {
 		// interface Error {}
 		interface Locals {
 			theme: Theme
-			page_name: string
 		}
 		interface PageData {
 			theme: Theme
-			page_name: string
 		}
 		// interface Platform {}
 	}

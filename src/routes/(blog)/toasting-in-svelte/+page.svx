@@ -33,7 +33,7 @@ You need to have a SvelteKit compatible JavaScript runtime like Node.js (>= 16) 
 By toasts, I mean notification-like floating text messages that display brief informational text for users without requiring action.
 They are sometimes also called by other names like [Notifications in Carbon Design](https://www.carbondesignsystem.com/components/notification), [Snackbars in Material Design](https://material.io/components/snackbars) or [Alert in MUI](https://mui.com/components/alert/).
 
-![Anatomy of a Toast Component, with the Toast as a Container for Text Content and a Cancel Button](./anatomy.png)
+![Anatomy of a toast component: the toast container holds the text content and a cancel button](./anatomy.png)
 
 All of these have in common that they can display information to users without interrupting them, unlike a modal or dialog which require user interaction.
 
@@ -323,3 +323,10 @@ npm run package
 ```
 
 To publish your package, simply run `npm publish`. For more details check the [npm docs on publishing packages](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
+
+
+<style>
+	img {
+		background: light-dark(var(--as-back-1), var(--as-text-1));
+	}
+</style>

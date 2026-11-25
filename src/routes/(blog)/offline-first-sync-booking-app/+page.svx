@@ -23,7 +23,7 @@ The issue is, that you don't want too much overbooking. So we generate an allowa
 
 A more detailed description of the booking algorithm can be found inside the Project Documentation linked below. Its written in german but DeepL exists 😉 It also covers data structures used and the component organization of the frontend plus a user manual.
 
-![UI of Pirate Bay Tours Booking Client](./pbt-ui.png)
+![The Pirate Bay Tours booking client, showing pending bookings that need contact and a tour management list with seat counts](./pbt-ui.png)
 
 The web app was originally written using just jQuery and PouchDB. I later rewrote it in Svelte because i wanted to learn it. It's excellent. I've also added more features (auth, printing of reservations, adding themes, markdown tour descriptions) since the new codebase is much better to work in.
 

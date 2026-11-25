@@ -13,7 +13,7 @@ During my 5th semester of my Media and Communications Informatics Bachelor's deg
 The end result was an animation of the future development of the Sun and it's affects on the Earth, which can be seen here:
 
 <a href="https://www.youtube.com/watch?v=fLTLAEGBFCM">
-  <img src="./ip17.gif" alt="Small gif showing the first scene with a link to the full animation.">
+  <img src="./ip17.gif" alt="Looping preview of the first scene, showing the Sun beside the Earth from space.">
   Click here or on the image to see the full animation!
 </a>
 
@@ -78,7 +78,7 @@ the desired look.
 
 <figure class="flex-col">
 
-![Six different panels showing six different stages of the Sun expanding and the Earth changing shown from space.](./Idea_storyboard.jpg)
+![Storyboard of six panels showing the Sun growing larger and brighter while the Earth changes from blue and green to scorched brown and then to a frozen white globe.](./Idea_storyboard.jpg)
 
   <figcaption>
     First draft of storyboard by Laura Cosio.
@@ -98,7 +98,7 @@ scene and important dates added to give an idea of how fast transitions should o
 
 <figure class="flex-col">
 
-![14 different scenes showing different stages with different close up shots and space shots.](./completeSB.jpg)
+![Storyboard of 14 scenes showing the Sun expanding and the Earth changing over time, in wide shots from space and close-ups of the surface.](./completeSB.jpg)
 
   <figcaption>
     Final of storyboard by Laura Cosio.
@@ -132,7 +132,7 @@ Environment Texture node to the Color parameter from the Background node. Click 
 and select the edited Texture. Rotating the HDRI is possible using a Mapping node connected to the
 Vector property of the Environment Texture node
 
-![HDRI](./s4/1_HDRI.png)
+![Photoshop showing an equirectangular HDRI of clouds over a sea horizon, annotated with three numbered red boxes](./s4/1_HDRI.png)
 
 Create the gradient to replace the ocean in the HDRI. (1) Select the gradient tool. (2) Select
 a gradient from the picked color to transparent. (3) Click and drag from the ocean to the start of the
@@ -168,7 +168,7 @@ plugged into an Add Shader node and this Add Shader node gets plugged into the S
 the Material Output node. Recreate this material by using CTRL and A to add the nodes and copy the
 values from the image.
 
-![Finished Ocean Material](./s4/2-5_Ocean_Material.png)
+![Blender shader node graph for a water material, with a Glass BSDF and a Glossy BSDF mixed together and a Diffuse BSDF using a Foam attribute](./s4/2-5_Ocean_Material.png)
 
 ### 9.2.3 Ice sheets
 
@@ -187,7 +187,7 @@ and select Boolean under the Generative section. Under object select the newly m
 we placed to carve the ice then under Operation set it to Difference and press Apply. Then go ahead
 and delete the new block.
 
-![Ice Carving with other cube](./s4/4_Ice_carving2.png)
+![Blender viewport showing a flat, L-shaped block of ice being carved](./s4/4_Ice_carving2.png)
 
 One can repeat this progress to make unique shapes for the ice base. Then go to into the Sculpt
 Mode in the 3D Viewport and in the right-hand menu of the 3D Viewport select Matcap under Shading.
@@ -201,7 +201,7 @@ part requires a lot of trial and error. If you want to add material to work with
 to add more material. You can use the Smooth tool to fix mistakes or generally smooth the surface
 more, but a more “edged” look is more desirable.
 
-![Finished result of the sculpting process](./s4/5_Ice_sculpting.png)
+![Blender viewport showing the ice block after sculpting, its surface rounded into a smooth curved form](./s4/5_Ice_sculpting.png)
 
 Apply sculpting the object, leave Sculpt Mode and go back to Object Mode. After creating several
 ice sheets with different sizes and shapes, place them in the scene, copy and rotate some to fill the
@@ -226,7 +226,7 @@ and the Subsurface Scattering in both Shader inputs of the Mix Shader. This last
 Glossy BSDF from above both get plugged into an Add Shader and this gets plugged into the Surface
 input of the Material Output.
 
-![The finished ice material](./s4/5-5_Ice_Material.png)
+![Blender shader node graph for an ice material, with a Noise Texture and a Bright/Contrast node feeding a Glossy BSDF and Subsurface Scattering](./s4/5-5_Ice_Material.png)
 
 ### 9.2.4 Iceberg
 
@@ -247,7 +247,7 @@ settings until there is a desired result. Add the ice material used in the ice s
 
 This part of the scene is based off the beginning of the Tutorial [“Blender Tutorial- Create Realistic Mountains Free”](https://www.youtube.com/watch?v=qSafYNQrodk). View this video for further details.
 
-![Finished iceberg](./s4/7_Iceberg.png)
+![Blender viewport showing a low-poly white iceberg above the grid floor](./s4/7_Iceberg.png)
 
 ### 9.2.5 Keyframe animation
 
@@ -270,14 +270,14 @@ then Insert Keyframe and then select Scaling. Then go to the end of the animatio
 scale of all objects to 0 by holding ALT while clicking on Scale Z and typing in 0. Then add another
 keyframe through Object, Animation, Insert Keyframe and then Scaling.
 
-![A Frame from Scene 4, showing the ocean with ice pieces and an iceberg in the background, the sun above in the sky.](./scene4.png)
+![A frame from scene 4, showing the ocean with ice pieces and an iceberg in the background and the sun above in the sky.](./scene4.png)
 
 Thanks for reading this blog entry. Be sure to check out the entire animation and if you are interested you can read more in the Project Documentation attached below!
 
 ## Final Results
 
 <a href="https://www.youtube.com/watch?v=fLTLAEGBFCM">
-  <img src="./ip17.gif" alt="Small gif showing the first scene with a link to the full animation.">
+  <img src="./ip17.gif" alt="Looping preview of the first scene, showing the Sun beside the Earth from space.">
   Click here or on the image to see the full animation!
 </a>
 

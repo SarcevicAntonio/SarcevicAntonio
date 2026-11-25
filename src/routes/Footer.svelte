@@ -34,24 +34,26 @@
 			<span aria-hidden="true"> 💖 </span> by toni.
 		</h2>
 		<hr />
-		<p>
-			<a href="/">linkplay.space</a> is powered by the following dependencies:
-		</p>
-		<ul class="credits">
-			{#each dependencies as dependency (dependency.name)}
-				{@const href = dependency.link
-					.replace('git://', 'https://')
-					.replace('git+', '')
-					.replace('.git', '')
-					.replace('ssh://', 'https://')}
-				<li>
-					<a {href}>
-						{dependency.name}
-						(via {dependency.licenseType})
-					</a>
-				</li>
-			{/each}
-		</ul>
+		<details>
+			<summary>
+				<a href="/">linkplay.space</a> is powered by the following dependencies:
+			</summary>
+			<ul class="credits">
+				{#each dependencies as dependency (dependency.name)}
+					{@const href = dependency.link
+						.replace('git://', 'https://')
+						.replace('git+', '')
+						.replace('.git', '')
+						.replace('ssh://', 'https://')}
+					<li>
+						<a {href}>
+							{dependency.name}
+							(via {dependency.licenseType})
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</details>
 	</div>
 </footer>
 
@@ -117,10 +119,12 @@
 		}
 	}
 
+	details {
+		margin-block: 2rem;
+	}
+
 	ul.credits {
-		padding-inline-start: 1.5rem;
 		overflow: auto;
-		margin-block-end: 2rem;
 		& a:not(:hover) {
 			text-decoration: none;
 		}

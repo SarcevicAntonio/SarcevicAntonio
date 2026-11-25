@@ -48,14 +48,14 @@ only to native smartphone apps, but can now be implemented with web technologies
 [whatwebcando.today](https://whatwebcando.today/) provides a list of smartphone features, with an indication of whether they can
 be accessed via Web APIs.
 
-![Modulecounts graph, with npm and maven shown.](./modulecounts.png)
+![Line chart of Module Counts from 2012 to 2021, showing npm growing to about 1.5 million downloads and Maven Central to about 375,000.](./modulecounts.png)
 
 [Modulecounts.com](http://www.modulecounts.com/) shows that npm, with about 1,491,097 different packages compared to
 other package registries for other programming languages, offers far more packages, and thus allows for
 numerous different approaches to implementing features. Second place would be Maven, the
 common package manager for Java, with 373,177 packages _[the numbers are from the 2021-01-09 and will have changed by now]_.
 
-![Starhistory graph, with npm and maven shown.](./starhistory.png)
+![Line chart of GitHub stars from 2010 to 2020, showing Vue rising to about 178,000, Angular to about 71,000 and jQuery to about 54,000.](./starhistory.png)
 
 The website [Star-History.t9t.to](https://star-history.t9t.io/#angular/angular&vuejs/vue&jquery/jquery) shows the history of GitHub Stars in a graph. GitHub Stars are usually distributed by developers to
 repositories that are of interest to them. From the graph, you can see that emerging technologies
@@ -317,7 +317,7 @@ to an existing DOM tree via a shadow host. The trees are logically encapsulated 
 each other. The following graphic explains the structure of a DOM tree with an attached shadow
 root.
 
-[![Representation of a DOM tree with shadow root attached.](./shadowdom.png)
+[![Diagram of a document tree with a shadow host, showing the shadow tree it contains and the flattened tree used for rendering.](./shadowdom.png)
 Image from MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM)
 
 In the DOM tree, a shadow root, and thus a second so-called shadow tree, is inserted via the

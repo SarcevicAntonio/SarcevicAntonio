@@ -19,15 +19,9 @@
 		</a>
 	{/if}
 	{#each data.imgs as img (img.id)}
-		<figure>
-			<!-- TODO: figure out how to make this accessible -->
-			<!-- TODO: detail page <a href="/img/{img.id}"> -->
-			<img src="https://slink.linkplay.space{img.url}" />
-			<!-- </a> -->
-			{#if img.attributes.description}
-				<figcaption>{img.attributes.description}</figcaption>
-			{/if}
-		</figure>
+		<!-- TODO: detail page <a href="/img/{img.id}"> -->
+		<img src="https://slink.linkplay.space{img.url}" alt={img.attributes.description ?? ''} />
+		<!-- </a> -->
 	{/each}
 	{#if data.meta.nextCursor}
 		<a href="?cursor={data.meta.nextCursor}" class="arrow-link end">
@@ -48,22 +42,14 @@
 		margin-block-end: 10em;
 	}
 
-	figure {
-		display: grid;
-		place-content: center;
-		margin: 0;
-		margin-block-start: 10em;
-	}
-
-	figcaption {
-		margin-block-start: 1.25em;
-	}
-
 	a {
 		margin-block-start: 10em;
 	}
 
 	img {
+		display: block;
+		margin-block-start: 10em;
+		margin-inline: auto;
 		max-height: 60svh;
 		max-width: 100%;
 	}

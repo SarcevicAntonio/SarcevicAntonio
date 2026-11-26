@@ -27,6 +27,7 @@ export default defineConfig({
 			],
 		}),
 		sveltekit({
+			paths: { origin: 'https://www.linkplay.space' },
 			preprocess: [vitePreprocess()],
 			adapter: adapter(),
 		}),

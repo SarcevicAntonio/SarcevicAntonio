@@ -1,53 +1,38 @@
-import { get_all_tags, get_blog_posts, type BlogMetadata } from '#lib/server/entries.js'
+import { get_all_tags, get_blog_posts } from '#lib/server/entries.js'
+import { Feed } from 'feed'
 
 export const prerender = true
 
 export async function GET({ url }) {
-	const content = await get_blog_posts(true)
-	const tags = await get_all_tags(content)
+	const origin = url.origin
+	const get_url = (path: string) => new URL(path, origin).toString()
+	const posts = await get_blog_posts(true)
+	const tags = await get_all_tags(posts)
 
-	return new Response(/*XML*/ get_feed(content, tags, url.origin), {
-		headers: {
-			'content-type': 'application/xml',
-		},
+	const feed = new Feed({
+		id: origin,
+		link: origin,
+		language: 'en',
+		favicon: get_url('favicon.png'),
+		title: 'linkplay.space',
+		description: 'my blog posts',
+		author: { name: 'toni / link' },
+		feedLinks: { atom: get_url('atom.xml') },
 	})
-}
-// credit to: https://github.com/importantimport/urara
-function get_feed(content: BlogMetadata[], all_tags: string[], domain: string): string {
-	return /*XML*/ `
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>${domain}/</id>
-    <title><![CDATA[ linkplay.space ]]></title>
-    <subtitle> <![CDATA[ my personal blog ]]> </subtitle>
-    <icon>${domain}/favicon.png</icon>
-    <link href="${domain}" />
-    <link href="${domain}/atom.xml" rel="self" type="application/atom+xml" />
-    <updated>${new Date().toJSON()}</updated>
-    <author>
-        <name> <![CDATA[ Antonio Sarcevic ]]> </name>
-    </author>
-${all_tags
-	.map(
-		(tag) => /*XML*/ `    <category term="${tag}" scheme="${domain}/content/${encodeURI(tag)}"/>`
-	)
-	.join('\n')}
-${content.map(
-	(post) => /*XML*/ `    <entry>
-        <title type="html"><![CDATA[${post.title}]]></title>
-        <link href="${domain}${post.href}" />
-        <id>${domain}/${post.href}</id>
-        <published>${new Date(post.published).toJSON()}</published>
-        <updated>${new Date(post.updated || post.published).toJSON()}</updated>
-        ${post.summary ? /*XML*/ `<summary type="html"><![CDATA[${post.summary}]]></summary>` : ''}
-        <content type="html">
-            <![CDATA[${post.html}]]>
-        </content>
-    ${post.tags
-			?.map(
-				(tag) => /*XML*/ `<category term="${tag}" scheme="${domain}/content/${encodeURI(tag)}" />`
-			)
-			.join('')}
-    </entry>`
-)}
-</feed> `
+
+	for (const tag of tags) feed.addCategory(tag)
+	for (const post of posts) {
+		feed.addItem({
+			id: get_url(post.href),
+			link: get_url(post.href),
+			date: new Date(post.updated || post.published),
+			published: new Date(post.published),
+			title: post.title,
+			category: post.tags?.map((tag) => ({ term: tag })),
+			description: post.summary,
+			content: post.html,
+		})
+	}
+
+	return new Response(feed.atom1(), { headers: { 'content-type': 'application/atom+xml' } })
 }

@@ -10,12 +10,12 @@
 	<div class="content">
 		<ul class="links">
 			<li>
-				<a href="/atom.xml" title="RSS / Atom Feed">
+				<a href="/atom.xml" aria-label="RSS / Atom Feed">
 					<MaterialSymbolsRssFeedRounded aria-hidden="true" />
 				</a>
 			</li>
 			<li>
-				<a href="/sitemap.xml" title="Sitemap">
+				<a href="/sitemap.xml" aria-label="Sitemap">
 					<MaterialSymbolsAccountTreeRounded aria-hidden="true" />
 				</a>
 			</li>

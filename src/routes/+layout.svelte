@@ -13,7 +13,7 @@
 <header>
 	<div class="container">
 		<nav>
-			<a href="/" title="homepage">
+			<a href="/" aria-label="homepage">
 				<Logo />
 			</a>
 			<a href="/img"> img </a>

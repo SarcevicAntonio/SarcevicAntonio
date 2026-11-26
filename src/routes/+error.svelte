@@ -28,7 +28,7 @@
 			<p>{page.error?.message}</p>
 		{/if}
 
-		<a href="/" class="arrow-link" title="homepage">
+		<a href="/" class="arrow-link" aria-label="homepage">
 			<MaterialSymbolsArrowBackRounded aria-hidden="true" /><Logo />
 		</a>
 	</section>

@@ -28,11 +28,11 @@
 				</li>
 			{/each}
 		</ul>
-		<h2 class="notice">
+		<p class="notice">
 			page and content was hand-crafted with
 			<span class="screen-reader-only"> Love </span>
 			<span aria-hidden="true"> 💖 </span> by toni.
-		</h2>
+		</p>
 		<hr />
 		<details>
 			<summary>
@@ -74,11 +74,8 @@
 		max-width: var(--content-width);
 	}
 
-	h2 {
-		font-family: 'Space Mono', sans-serif;
+	.notice {
 		font-size: var(--step-0);
-		margin-block-start: 0.5rem;
-		font-weight: 400;
 	}
 
 	a {

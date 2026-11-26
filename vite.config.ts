@@ -1,3 +1,5 @@
+import { defineConfig } from 'vitest/config'
+import { playwright } from '@vitest/browser-playwright'
 import { anchors } from '@mdsvex/plugin-anchors'
 import { code_blocks } from '@mdsvex/plugin-code-blocks'
 import { toc } from '@mdsvex/plugin-toc'
@@ -8,7 +10,6 @@ import { mdsvex } from 'mdsvex'
 import path from 'path'
 import Icons from 'unplugin-icons/vite'
 import { fileURLToPath } from 'url'
-import { defineConfig } from 'vite'
 
 export default defineConfig({
 	plugins: [
@@ -31,4 +32,32 @@ export default defineConfig({
 		}),
 		Icons({ compiler: 'svelte' }),
 	],
+	test: {
+		expect: { requireAssertions: true },
+		projects: [
+			{
+				extends: './vite.config.ts',
+				test: {
+					name: 'client',
+					browser: {
+						enabled: true,
+						provider: playwright(),
+						instances: [{ browser: 'chromium', headless: true }],
+					},
+					include: ['src/**/*.svelte.{test,spec}.{js,ts}'],
+					exclude: ['src/lib/server/**'],
+				},
+			},
+
+			{
+				extends: './vite.config.ts',
+				test: {
+					name: 'server',
+					environment: 'node',
+					include: ['src/**/*.{test,spec}.{js,ts}'],
+					exclude: ['src/**/*.svelte.{test,spec}.{js,ts}'],
+				},
+			},
+		],
+	},
 })

@@ -13,11 +13,7 @@ export async function GET({ url }) {
 	})
 }
 // credit to: https://github.com/importantimport/urara
-function get_feed(
-	content: BlogMetadata[],
-	all_tags: string[],
-	domain: string
-): BodyInit | null | undefined {
+function get_feed(content: BlogMetadata[], all_tags: string[], domain: string): string {
 	return /*XML*/ `
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>${domain}/</id>

@@ -10,9 +10,11 @@
 	let { children } = $props()
 </script>
 
+<a href="#main" class="skip-link">Skip to content</a>
+
 <header>
 	<div class="container">
-		<nav>
+		<nav aria-label="Main">
 			<a href="/" aria-label="homepage">
 				<Logo />
 			</a>
@@ -25,13 +27,27 @@
 	</div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 	{@render children?.()}
 </main>
 
 <Footer />
 
 <style>
+	.skip-link {
+		position: fixed;
+		inset-block-start: 0;
+		inset-inline-start: 0;
+		z-index: 100;
+		padding: 0.5rem 1rem;
+		background-color: var(--as-back-2);
+		transform: translateY(-100%);
+
+		&:focus {
+			transform: none;
+		}
+	}
+
 	header {
 		font-size: 1.5rem;
 		max-width: var(--content-width);

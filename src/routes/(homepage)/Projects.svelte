@@ -109,7 +109,7 @@
 
 	@media (prefers-reduced-motion) {
 		img {
-			transition-duration: 0.4s;
+			transition-duration: 0.1s;
 		}
 
 		a:hover img,

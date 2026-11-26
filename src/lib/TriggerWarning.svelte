@@ -2,12 +2,13 @@
 	let { on_close = () => {} } = $props()
 	let dialog = $state<HTMLDialogElement>()
 	let closed = $state(false)
+	const id = $props.id()
 	$effect(() => dialog?.showModal())
 </script>
 
 {#if !closed}
-	<dialog bind:this={dialog}>
-		<h2>Photosensitive Seizure Warning!</h2>
+	<dialog bind:this={dialog} aria-labelledby={id}>
+		<h2 {id}>Photosensitive Seizure Warning!</h2>
 		<p>
 			This page could trigger seizures for people with photosensitive epilepsy. Discretion is
 			advised.

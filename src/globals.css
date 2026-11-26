@@ -8,8 +8,9 @@ pre {
 	tab-size: 3;
 }
 
-*:focus {
-	outline-width: 1rem;
+*:focus-visible {
+	outline-style: solid;
+	outline-width: 0.4rem;
 	outline-offset: 0.25rem;
 }
 

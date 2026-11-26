@@ -2,6 +2,13 @@ import type { AppearanceSource } from './server/entries'
 
 export const appearances: AppearanceSource[] = [
 	{
+		title: 'What are the worst intersections in Münster?',
+		summary: 'I look at which intersections in my town have the most accidents happen near them',
+		href: 'https://www.datawrapper.de/blog/intersection-accidents-munster',
+		published: '2026-11-19',
+		tags: ['weekly chart', 'datawrapper'],
+	},
+	{
 		title: 'Interview: Bi+ Vorurteile und Stereotype',
 		summary:
 			'IWWIT / Deutsche Aidshilfe interviewed me about biphobia and - erasure as part of their BICONIC action. This interview is in German.',

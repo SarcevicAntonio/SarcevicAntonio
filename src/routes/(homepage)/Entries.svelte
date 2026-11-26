@@ -7,7 +7,7 @@
 </script>
 
 <div class="header">
-	<h2>Latest Txt Entries</h2>
+	<h2>LATEST TEXT ENTRIES</h2>
 	<a href="/txt" class="arrow-link end">
 		all txt<MaterialSymbolsArrowForwardRounded />
 	</a>

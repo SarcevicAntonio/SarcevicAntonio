@@ -9,7 +9,7 @@
 
 	let { title, tags, published, updated, summary, children } = $props()
 	const copy_icon =
-		'<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5 22q-.825 0-1.413-.588T3 20V7q0-.425.288-.713T4 6q.425 0 .713.288T5 7v13h10q.425 0 .713.288T16 21q0 .425-.288.713T15 22H5Zm4-4q-.825 0-1.413-.588T7 16V4q0-.825.588-1.413T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.588 1.413T18 18H9Zm0-2h9V4H9v12Zm0 0V4v12Z"/></svg>'
+		'<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5 22q-.825 0-1.413-.588T3 20V7q0-.425.288-.713T4 6q.425 0 .713.288T5 7v13h10q.425 0 .713.288T16 21q0 .425-.288.713T15 22H5Zm4-4q-.825 0-1.413-.588T7 16V4q0-.825.588-1.413T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.588 1.413T18 18H9Zm0-2h9V4H9v12Zm0 0V4v12Z"/></svg>'
 
 	afterNavigate(function add_copy_button_to_codeblocks({ shallow }) {
 		if (shallow) return
@@ -17,7 +17,7 @@
 		for (const node of document.querySelectorAll('pre > code')) {
 			const button = document.createElement('button')
 			button.innerHTML = copy_icon
-			button.title = 'Copy contents'
+			button.setAttribute('aria-label', 'Copy contents')
 			button.onclick = () => {
 				navigator.clipboard.writeText(node.textContent || '')
 			}

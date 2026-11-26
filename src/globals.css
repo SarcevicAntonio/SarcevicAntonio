@@ -68,7 +68,7 @@ pre {
 
 a {
 	text-decoration: underline;
-	color: var(--as-text-3);
+	color: light-dark(oklch(20% 0.22 241), oklch(97% 0.05 241));
 	&:hover,
 	&:focus {
 		text-decoration: underline;

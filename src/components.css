@@ -2,7 +2,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: inherit;
 
 	& svg:first-of-type {
 		vertical-align: sub;

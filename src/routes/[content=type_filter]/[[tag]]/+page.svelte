@@ -123,10 +123,7 @@
 		}
 	}
 
-	a {
-		color: inherit;
-		& :global(svg) {
-			vertical-align: sub;
-		}
+	a :global(svg) {
+		vertical-align: sub;
 	}
 </style>

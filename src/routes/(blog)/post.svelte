@@ -34,7 +34,7 @@
 				<ul class="tags">
 					{#each tags as tag (tag)}
 						<li>
-							<a href="/entries/{tag}">
+							<a href="/txt/{tag}">
 								#{tag}
 							</a>
 						</li>
@@ -47,8 +47,8 @@
 </article>
 
 <section class="links">
-	<a href="/entries" class="arrow-link">
-		<MaterialSymbolsArrowBackRounded aria-hidden="true" />/entries
+	<a href="/txt" class="arrow-link">
+		<MaterialSymbolsArrowBackRounded aria-hidden="true" />/txt
 	</a>
 
 	<a href="/" class="arrow-link" aria-label="homepage">

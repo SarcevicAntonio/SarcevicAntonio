@@ -18,10 +18,10 @@
 			<p>
 				Maybe you can find what you were looking for under
 				<a
-					href={resolve('/[content=type_filter]/[[tag]]', { content: 'entries' })}
+					href={resolve('/[content=type_filter]/[[tag]]', { content: 'txt' })}
 					class="arrow-link"
 				>
-					<MaterialSymbolsArrowBackRounded aria-hidden="true" />/entries</a
+					<MaterialSymbolsArrowBackRounded aria-hidden="true" />/txt</a
 				>.
 			</p>
 		{:else}

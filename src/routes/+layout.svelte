@@ -18,6 +18,7 @@
 			<a href="/" aria-label="homepage">
 				<Logo />
 			</a>
+			<a href="/txt"> txt </a>
 			<a href="/img"> img </a>
 
 			<span class="spacer"></span>

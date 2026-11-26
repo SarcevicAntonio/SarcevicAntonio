@@ -7,9 +7,9 @@
 </script>
 
 <div class="header">
-	<h2>Entries</h2>
-	<a href="/entries" class="arrow-link end">
-		all entries<MaterialSymbolsArrowForwardRounded />
+	<h2>Latest Txt Entries</h2>
+	<a href="/txt" class="arrow-link end">
+		all txt<MaterialSymbolsArrowForwardRounded />
 	</a>
 </div>
 

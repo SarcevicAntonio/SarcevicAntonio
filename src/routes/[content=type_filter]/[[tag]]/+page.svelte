@@ -13,15 +13,15 @@
 
 <svelte:head>
 	{#if tag_filter}
-		<title>#{tag_filter} entries — linkplay.space</title>
-		<meta name="description" content="my #{tag_filter} entries on the internet" />
+		<title>#{tag_filter} text — linkplay.space</title>
+		<meta name="description" content="my #{tag_filter} text on the internet" />
 	{:else}
-		<title>entries — linkplay.space</title>
-		<meta name="description" content="my entries on the internet" />
+		<title>text — linkplay.space</title>
+		<meta name="description" content="my text on the internet" />
 	{/if}
 </svelte:head>
 
-<h1>Entries</h1>
+<h1>TEXT</h1>
 
 <section class="tags">
 	{#if type_filter}
@@ -35,7 +35,7 @@
 	{/if}
 
 	{#if tag_filter}
-		<p>showing entries with tag #{tag_filter}</p>
+		<p>showing text with tag #{tag_filter}</p>
 	{:else}
 		{@const available_tags = [...data.all_tags].filter(
 			(tag) => data.content.filter((e) => e.tags?.includes(tag)).length
@@ -54,7 +54,7 @@
 
 	{#if type_filter || tag_filter}
 		<hr />
-		<a href="/entries" class="arrow-link">
+		<a href="/txt" class="arrow-link">
 			<MaterialSymbolsArrowBackRounded />
 			remove filters
 		</a>

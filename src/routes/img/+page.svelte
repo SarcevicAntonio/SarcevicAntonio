@@ -8,7 +8,7 @@
 
 <svelte:head>
 	<title>images — linkplay.space</title>
-	<meta name="description" content="cool images" />
+	<meta name="description" content="my images on the internet" />
 </svelte:head>
 
 <section>

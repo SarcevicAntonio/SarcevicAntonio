@@ -42,15 +42,12 @@ const mdsvex_config = {
 		[
 			autolink,
 			{
-				properties: { class: 'autolink-header' },
-				content: [
-					{
-						type: 'element',
-						tagName: 'span',
-						properties: { title: 'link to this header' },
-						children: [{ type: 'text', value: '#' }],
-					},
-				],
+				properties: {
+					class: 'autolink-header',
+					'aria-hidden': 'true',
+					tabindex: '-1',
+				},
+				content: { type: 'text', value: '#' },
 			},
 		],
 	],

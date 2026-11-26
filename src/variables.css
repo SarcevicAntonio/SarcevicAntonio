@@ -6,7 +6,7 @@
 	--as-back-2: light-dark(oklch(92% 0.08 var(--hue)), oklch(40% 0.3 var(--hue)));
 	--as-text-1: light-dark(oklch(20% 0.22 var(--hue)), oklch(97% 0.05 var(--hue)));
 	--as-text-2: light-dark(oklch(32% 0.41 var(--hue)), oklch(92% 0.08 var(--hue)));
-	--as-text-3: light-dark(oklch(40% 0.3 var(--hue)), oklch(73% 0.08 var(--hue)));
+	--as-text-3: light-dark(oklch(40% 0.3 var(--hue)), oklch(78% 0.08 var(--hue)));
 
 	--in-colour: conic-gradient(
 		from 0deg at 50% 50% in oklab,

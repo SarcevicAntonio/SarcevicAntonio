@@ -30,20 +30,3 @@
 	height: 1px;
 	overflow: hidden;
 }
-
-.autolink-header {
-	font-size: 0.8em;
-	padding-inline-end: 0.2em;
-	margin-inline-start: -1ch;
-	vertical-align: 0.2em;
-	&:hover,
-	&:focus {
-		color: var(--as-text-1);
-	}
-}
-
-@media (max-width: 1000px) {
-	.autolink-header {
-		margin-inline-start: unset;
-	}
-}

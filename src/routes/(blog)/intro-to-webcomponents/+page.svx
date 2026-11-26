@@ -27,7 +27,7 @@ tags:
 
 During my 1th semester of my Informatics Masters's degree, late 2020, I wrote a paper on web components, their value, usage and authoring. I also wrote a part about creating Web Components with Svelte. The paper was originally written in german, so I thought I post a translated version here.
 
-## Table Of Contents
+::toc[Table of contents]
 
 ## 1 Introduction
 
@@ -152,7 +152,7 @@ button has its own appearance and animations according to the Material Design sp
 To use the paper-button, it can be installed via the npm package manager. To do this, execute
 the following command in a CLI with access to npm:
 
-```
+``` sh
 npm install --save @polymer/paper-button
 ```
 
@@ -183,9 +183,7 @@ server can be started with npx snowpack dev.
     <button>regular old button</button>
     <paper-button raised> fancy new paper-button </paper-button>
   </section>
-  <figcaption>
-    Comparison of an HTML button and the @polymer/paper-button.
-  </figcaption>
+  <figcaption>Comparison of an HTML button and the @polymer/paper-button.</figcaption>
 </figure>
 
 In this figure a regular HTML button is compared with the above imported and placed paper-button. From the appearance of the paper-button it can be seen that these component has supplied its own CSS styles. However, these do not affect the regular HTML button.
@@ -359,9 +357,7 @@ affecting the rest of the document. For example, you could create the following 
     <button>regular old button</button>
     <my-button> my-button </my-button>
   </section>
-  <figcaption>
-    Comparison of an HTML button and the encapsulated my-button.
-  </figcaption>
+  <figcaption>Comparison of an HTML button and the encapsulated my-button.</figcaption>
 </figure>
 
 Although the generic `button` CSS selector is used here, these CSS rules only affect our
@@ -417,9 +413,7 @@ can be defined by the content of the `my-button` tags like a regular button.
     <button>regular old button</button>
     <my-button> my new fancy button </my-button>
   </section>
-  <figcaption>
-    Comparison of an HTML button and the my-button, now with dynamic content.
-  </figcaption>
+  <figcaption>Comparison of an HTML button and the my-button, now with dynamic content.</figcaption>
 </figure>
 
 ### 2.5 HTMLImport / ES Modules
@@ -490,9 +484,7 @@ be able to be set externally by an attribute:
   <section class="example mark-buttons-red">
   <my-counter count="30"></my-counter>
   </section>
-  <figcaption>
-    my-counter component
-  </figcaption>
+  <figcaption>my-counter component</figcaption>
 </figure>
 
 To implement the `my-counter`, the following steps must be taken in the case of native
@@ -618,9 +610,7 @@ injection are very helpful.
 
 ## My Counter Web Component Code
 
-### my-counter.js (Vanilla Web Component)
-
-```js
+```js title="my-counter.js (Vanilla Web Component)"
 const counterTemplate = document.createElement('template')
 counterTemplate.innerHTML = `
 <style>
@@ -682,9 +672,7 @@ class MyCounter extends HTMLElement {
 window.customElements.define('my-counter', MyCounter)
 ```
 
-### MyCounter.svelte (Svelte w/ customElement option)
-
-```svelte
+```svelte title="MyCounter.svelte (Svelte w/ customElement option)"
 <svelte:options tag="my-svelte-counter" />
 <script>
 	export let count = 0

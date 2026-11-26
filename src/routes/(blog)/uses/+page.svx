@@ -11,7 +11,7 @@ updated: 2026-08-01
 
 this is my **[uses.tech](https://uses.tech/)** page, detailing my developer setup, gear, software and configs.
 
-## Table Of Contents
+::toc[Table of contents]
 
 ## software
 

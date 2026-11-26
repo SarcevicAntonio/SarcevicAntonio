@@ -19,7 +19,7 @@ The end result was an animation of the future development of the Sun and it's af
 
 In this post you can read a few chapters from the project documentation, that can be found in full (186 Pages) as an attachment at the bottom of this page. It details the whole research and animation process, broken down for each scene.
 
-## Table Of Contents
+::toc[Table of contents]
 
 ## 1 Introduction
 
@@ -80,9 +80,7 @@ the desired look.
 
 ![Storyboard of six panels showing the Sun growing larger and brighter while the Earth changes from blue and green to scorched brown and then to a frozen white globe.](./Idea_storyboard.jpg)
 
-  <figcaption>
-    First draft of storyboard by Laura Cosio.
-  </figcaption>
+  <figcaption>First draft of storyboard by Laura Cosio.</figcaption>
 </figure>
 
 After research had been completed, a final storyboard was created to document the timeline of the
@@ -100,9 +98,7 @@ scene and important dates added to give an idea of how fast transitions should o
 
 ![Storyboard of 14 scenes showing the Sun expanding and the Earth changing over time, in wide shots from space and close-ups of the surface.](./completeSB.jpg)
 
-  <figcaption>
-    Final of storyboard by Laura Cosio.
-  </figcaption>
+  <figcaption>Final of storyboard by Laura Cosio.</figcaption>
 </figure>
 
 ## 9.2 Scene 4: melting ice caps, sea levels rising; Animation: Close-Up View
